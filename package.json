@@ -1,0 +1,20 @@
+{
+  "name": "devvitetypo3",
+  "version": "1.0.0",
+  "description": "Get going quickly with TYPO3 CMS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sven Kalbhenn",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.62.1",
+    "vite": "^4.4.9"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.2",
+    "vite-plugin-full-reload": "^1.0.5"
+  }
+}

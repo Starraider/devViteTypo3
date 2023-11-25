@@ -1,0 +1,32 @@
+<cb:asset.css identifier="content-block-css-skom-klarovideo" file="Frontend.css"/>
+<cb:asset.script identifier="content-block-js-skom-klarovideo" file="Frontend.js"/>
+
+Frontend template for Content Block: skom/klarovideo<br>
+Header: {data.header}
+aspectratio: {data.aspectratio}<br>
+
+<f:if condition="{data.header}">
+    <f:if condition="{data.aspectratio}=='16:9'">
+        <f:then>
+            <div class="ratio ratio-16x9">
+        </f:then>
+        <f:else if="{data.aspectratio}=='4:3'">
+            <div class="ratio ratio-4x3">
+        </f:else>
+        <f:else if="{data.aspectratio}=='21:9'">
+            <div class="ratio ratio-21x9">
+        </f:else>
+        <f:else>
+            <div class="ratio ratio-1x1">
+        </f:else>
+    </f:if>
+    <iframe data-name="youtube" data-src="https://www.youtube-nocookie.com/embed/{data.header}" frameborder="0"
+        title="YouTube video player" allow="accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture" allowfullscreen>
+    </iframe>
+    </div>
+</f:if>

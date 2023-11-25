@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<xliff version="1.0">
+	<file datatype="plaintext" original="messages" source-language="en" product-name="person">
+		<header/>
+		<body>
+			<trans-unit id="skom.person.title" xml:space="preserve">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="skom.person.description" xml:space="preserve">
+				<source>A Person</source>
+			</trans-unit>
+			<trans-unit id="gender.label" xml:space="preserve">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="title.label" xml:space="preserve">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="title.description" xml:space="preserve">
+				<source>f.e. Dr., Prof., MdL, MdB etc.</source>
+			</trans-unit>
+			<trans-unit id="lastname.label" xml:space="preserve">
+				<source>Last name</source>
+			</trans-unit>
+			<trans-unit id="firstname.label" xml:space="preserve">
+				<source>First name</source>
+			</trans-unit>
+			<trans-unit id="street1.label" xml:space="preserve">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="street2.label" xml:space="preserve">
+				<source>Street 2</source>
+			</trans-unit>
+			<trans-unit id="zip.label" xml:space="preserve">
+				<source>ZIP-Code</source>
+			</trans-unit>
+			<trans-unit id="city.label" xml:space="preserve">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="phone_landline.label" xml:space="preserve">
+				<source>Phone (landline)</source>
+			</trans-unit>
+			<trans-unit id="phone_mobile.label" xml:space="preserve">
+				<source>Phone (mobile)</source>
+			</trans-unit>
+			<trans-unit id="email.label" xml:space="preserve">
+				<source>E-Mail</source>
+			</trans-unit>
+			<trans-unit id="whatsapp.label" xml:space="preserve">
+				<source>WhatsApp</source>
+			</trans-unit>
+			<trans-unit id="tabs.tab_info">
+        		<source>Information</source>
+    		</trans-unit>
+			<trans-unit id="status.label" xml:space="preserve">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="status_date.label" xml:space="preserve">
+				<source>Date of state change</source>
+			</trans-unit>
+			<trans-unit id="travel_options.label" xml:space="preserve">
+				<source>Anreisemöglichkeiten</source>
+			</trans-unit>
+			<trans-unit id="languages.label" xml:space="preserve">
+				<source>Spoken languages</source>
+			</trans-unit>
+			<trans-unit id="tabs.tab_payment">
+        		<source>Payment</source>
+    		</trans-unit>
+			<trans-unit id="payment_method.label" xml:space="preserve">
+				<source>Payment method</source>
+			</trans-unit>
+			<trans-unit id="iban.label" xml:space="preserve">
+				<source>IBAN</source>
+			</trans-unit>
+			<trans-unit id="swift.label" xml:space="preserve">
+				<source>SWIFT/BIC</source>
+			</trans-unit>
+			<trans-unit id="account_owner.label" xml:space="preserve">
+				<source>Account owner</source>
+			</trans-unit>
+			<trans-unit id="bankname.label" xml:space="preserve">
+				<source>Bank name</source>
+			</trans-unit>
+			<trans-unit id="paypal.label" xml:space="preserve">
+				<source>Paypal-ID</source>
+			</trans-unit>
+			<trans-unit id="paypal.description" xml:space="preserve">
+				<source>E-Mail, Name, Paypal username or mobile number.</source>
+			</trans-unit>
+			<trans-unit id="tabs.tab_documents">
+        		<source>Documents</source>
+    		</trans-unit>
+			<trans-unit id="file_fuehrungszeugnis.label" xml:space="preserve">
+				<source>Führungszeugnis</source>
+			</trans-unit>
+			<trans-unit id="file_mandat.label" xml:space="preserve">
+				<source>Mandatsreferenzmitteilung</source>
+			</trans-unit>
+			<trans-unit id="file_others.label" xml:space="preserve">
+				<source>Others</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

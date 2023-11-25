@@ -1,0 +1,121 @@
+######################
+#### DEPENDENCIES ####
+######################
+@import 'EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:dgvtbase/Configuration/TypoScript/Extension/Form/setup.typoscript'
+@import 'EXT:dgvtbase/Configuration/TypoScript/Extension/News/setup.typoscript'
+
+##########################
+#### Development-Mode ####
+##########################
+[applicationContext == "Development"]
+  config {
+    no_cache = 1
+    sendCacheHeaders = 0
+    compressJs = 0
+    concatenateCss = 0
+    concatenateJs = 0
+    compressCss = 0
+    admPanel = 1
+  }
+  page {
+    meta.robots = noindex,nofollow
+  }
+  sourceopt {
+    enabled = 0
+    formatHtml = 4
+    removeComments = 0
+  }
+  plugin {
+    tx_min.tinysource.enable = 0
+    bootstrap_package.settings.cssSourceMapping = 1
+  }
+[END]
+[applicationContext == "Production"]
+  config {
+    no_cache = 0
+    sendCacheHeaders = 1
+    compressJs = 1
+    concatenateCss = 1
+    concatenateJs = 1
+    compressCss = 1
+    admPanel = 0
+
+  }
+  page {
+    meta.robots = index,follow
+  }
+  sourceopt {
+    enabled = 1
+    removeGenerator = 1
+    formatHtml = 2
+    removeComments = 1
+  }
+  plugin {
+    tx_min.tinysource.enable = 1
+    bootstrap_package.settings.cssSourceMapping = 0
+  }
+[END]
+
+################
+#### config ####
+################
+config {
+  xmlprologue = none
+  xhtml_cleaning = all
+  disablePrefixComment = 1
+  headerComment = Development by SKom (sven@skom.de)
+  index_enable = 1
+  //======= Color Mode =======
+  htmlTag.attributes.data-bs-theme = light
+}
+
+##############
+#### PAGE ####
+##############
+page {
+    includeCSS {
+        //theme = EXT:vite_base_sitepackage/Resources/Public/Scss/Theme/theme.scss
+        theme >
+    }
+  includeCSSLibs {
+    googlewebfont >
+    bootstrappackageicon >
+  }
+
+  includeJSLibs {
+    modernizr >
+  }
+
+  includeJS {
+
+  }
+
+  includeJSFooterlibs {
+    jquery >
+    popper >
+    bootstrap >
+    bootstrap-js >
+
+    photoswipe_core >
+    photoswipe_ui >
+    bootstrap_accordion >
+    bootstrap_popover >
+    bootstrap_stickyheader >
+    bootstrap_smoothscroll >
+    bootstrap_lightbox >
+    bootstrap_navbar >
+  }
+
+  includeJSFooter {
+    //vite_base_sitepackage_scripts = EXT:vite_base_sitepackage/Resources/Public/JavaScript/Dist/scripts.js
+    photoswipe_core >
+    photoswipe_ui >
+    bootstrap_accordion >
+    bootstrap_popover >
+    bootstrap_stickyheader >
+    bootstrap_smoothscroll >
+    bootstrap_lightbox >
+    bootstrap_navbar >
+  }
+}

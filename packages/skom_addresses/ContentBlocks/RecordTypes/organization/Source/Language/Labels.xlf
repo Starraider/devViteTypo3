@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<xliff version="1.0">
+	<file datatype="plaintext" original="messages" source-language="en" product-name="organization">
+		<header/>
+		<body>
+			<trans-unit id="skom.organization.title" xml:space="preserve">
+				<source>Organization</source>
+			</trans-unit>
+			<trans-unit id="skom.organization.description" xml:space="preserve">
+				<source>Organisations, like event location, </source>
+			</trans-unit>
+			<trans-unit id="name.label" xml:space="preserve">
+				<source>Name der Organisation</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,23 @@
+
+page.includeJSLibs {
+  topwire = EXT:topwire/Resources/Public/JavaScript/topwire.js
+  topwire {
+    type = module
+    async = 1
+    defer = 1
+    disableCompression = 1
+    excludeFromConcatenation = 1
+  }
+}
+# Wrap content elements with a Turbo frame, when checkbox is checked in the content element
+tt_content.stdWrap.turboFrameWrap.field = cb_topwiredb_turbo_wrap_in_frame
+
+# Read the frame id from a text field in the content element
+tt_content.stdWrap.turboFrameWrap.frameId.field = cb_topwiredb_turbo_frame_id
+
+tt_content.stdWrap.turboFrameWrap.scopeFrame.field = cb_topwiredb_turbo_scope_frame
+
+tt_content.stdWrap.turboFrameWrap.propagateUrl.field = cb_topwiredb_turbo_propagate_url
+tt_content.stdWrap.turboFrameWrap.morph.field = cb_topwiredb_turbo_morph
+tt_content.stdWrap.turboFrameWrap.showWhenFrameMatches.field = cb_topwiredb_turbo_show_when_match
+tt_content.stdWrap.turboFrameWrap.path = tt_content

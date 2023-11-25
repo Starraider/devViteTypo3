@@ -1,0 +1,174 @@
+name: skom/person
+table: tx_skom_person
+aggregateRoot: true
+labelField:
+  - lastname
+  - firstname
+languageAware: false
+security:
+  ignorePageTypeRestriction: true
+sortField:
+  - identifier: lastname
+    order: desc
+fields:
+  - identifier: gender
+    type: Select
+    renderType: selectSingle
+    items:
+      - label: 'female'
+        value: female
+      - label: 'male'
+        value: male
+      - label: 'diverse'
+        value: diverse
+  - identifier: title
+    type: Text
+  - identifier: lastname
+    type: Text
+    required: true
+  - identifier: firstname
+    type: Text
+    required: true
+  - identifier: palette_address
+    type: Palette
+    label: Address
+    description: This is the address
+    fields:
+      - identifier: street1
+        type: Text
+      - identifier: street2
+        type: Text
+      - type: Linebreak
+      - identifier: zip
+        type: Text
+      - identifier: city
+        type: Text
+  - identifier: palette_contact
+    type: Palette
+    label: Contact
+    description: These are the contact information
+    fields:
+      - identifier: phone_landline
+        type: Text
+      - identifier: phone_mobile
+        type: Text
+      - type: Linebreak
+      - identifier: email
+        type: Email
+        required: true
+      - identifier: whatsapp
+        type: Text
+  - identifier: categories
+    type: Category
+    minitems: 1
+    treeConfig:
+      startingPoints: 1
+    relationship: manyToMany
+  - identifier: tab_info
+    type: Tab
+  - identifier: palette_status
+    type: Palette
+    label: Status
+    description: Current status of the person
+    fields:
+      - identifier: status
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'aktiv'
+            value: aktiv
+          - label: 'pausiert'
+            value: pausiert
+          - label: 'ausgeschieden'
+            value: ausgeschieden
+      - identifier: status_date
+        type: DateTime
+        format: date
+        dbType: date
+        required: true
+  - identifier: travel_options
+    type: Checkbox
+    items:
+      - label: 'Auto/Motorrad'
+      - label: 'Bus/Bahn'
+      - label: 'Fahrrad'
+    default: 1
+  - identifier: languages
+    type: Checkbox
+    items:
+    - label: 'German'
+    - label: 'English'
+    - label: 'French'
+    - label: 'Spanish'
+    - label: 'Turkish'
+    - label: 'Russian'
+    - label: 'Arabic'
+    - label: 'Farsi'
+    - label: 'Chinese'
+    default: 'German'
+    cols: 4
+  - identifier: palette_preferences
+    type: Palette
+    label: Preferences
+    description: Preferences of the person
+    fields:
+      - identifier: preference_agegroup
+        type: Checkbox
+        items:
+          - label: '0-4'
+          - label: '4-8'
+          - label: '8-12'
+          - label: '12-18'
+      - identifier: preference_organizationtype
+        type: Checkbox
+        items:
+          - label: 'Kindergarten'
+          - label: 'Schule'
+          - label: 'Bibliothek'
+          - label: 'Buchhandlung'
+          - label: 'Leseheimat'
+  - identifier: tab_payment
+    type: Tab
+  - identifier: payment_method
+    type: Select
+    renderType: selectSingle
+    items:
+      - label: 'Bank transfer'
+        value: bank_transfer
+      - label: 'Direct debit'
+        value: direct_debit
+      - label: 'Paypal'
+        value: paypal
+  - identifier: palette_bank_account
+    type: Palette
+    label: Bank Account
+    description: Bank account used for bank transfer or direct debit.
+    fields:
+      - identifier: iban
+        type: Text
+      - identifier: swift
+        type: Text
+      - type: Linebreak
+      - identifier: account_owner
+        type: Text
+      - identifier: bankname
+        type: Text
+  - identifier: palette_paypal
+    type: Palette
+    label: Paypal
+    fields:
+      - identifier: paypal
+        type: Text
+  - identifier: tab_documents
+    type: Tab
+  - identifier: file_fuehrungszeugnis
+    type: File
+    extendedPalette: false
+  - identifier: file_mandat
+    type: File
+    extendedPalette: false
+  - identifier: file_others
+    type: File
+    extendedPalette: false
+    minitems: 0
+    maxitems: 10

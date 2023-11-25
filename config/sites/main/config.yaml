@@ -1,0 +1,17 @@
+base: '%env(SITE_BASE)%'
+klaroConfiguration: 1
+klaroImprintUrl: 't3://page?uid=7'
+klaroPrivacyPolicyUrl: 't3://page?uid=8'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    locale: de_DE
+    navigationTitle: Deutsch
+    flag: de
+    hreflang: de-DE
+    websiteTitle: ''
+rootPageId: 1
+websiteTitle: ''

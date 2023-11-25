@@ -1,0 +1,35 @@
+name: skom/organization
+table: tx_skom_organization
+labelField:
+  - name
+languageAware: false
+security:
+  ignorePageTypeRestriction: true
+sortField:
+  - identifier: name
+    order: desc
+fields:
+  - identifier: name
+    type: Text
+  - identifier: contact_person
+    type: Relation
+    allowed: 'tx_skom_person'
+  - identifier: contact
+    type: Select
+    renderType: selectCheckBox
+    minitems: 0
+    maxitems: 3
+    foreign_table: tx_skom_person
+  - identifier: select_side_by_side
+    type: Select
+    renderType: selectMultipleSideBySide
+    default: 'one'
+    minitems: 1
+    maxitems: 1
+    foreign_table: tx_skom_person
+  - identifier: tab_staff
+    type: Tab
+  - identifier: employe
+    type: Select
+    renderType: selectSingle
+    foreign_table: tx_skom_person
