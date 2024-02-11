@@ -13,5 +13,5 @@ require __DIR__ . '/vendor/mittwald/deployer-recipes/recipes/deploy.php';
 
 set('repository', 'https://github.com/Starraider/devViteTypo3.git');
 
-mittwald_app('p-pey4f8')
+mittwald_app('e0131e04-65de-4a44-8d0a-9c4e6d5f3596')
     ->set('public_path', '/public');

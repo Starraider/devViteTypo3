@@ -1,7 +1,7 @@
 <?php
 return [
     'BE' => [
-        'debug' => true,
+        'debug' => false,
         'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$aDFsM0xTUVdDMFV4WnkwMg$TdiHWUZimpXPHUh8OnLNlgs6IGv9+8/q8MqS0OxYSo0',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
@@ -43,11 +43,18 @@ return [
             'disablePageTsTCEFORM' => '0',
             'disablePageTsTCEMAIN' => '0',
         ],
+        'extension_builder' => [
+            'backupDir' => 'var/tx_extensionbuilder/backups',
+            'backupExtension' => '1',
+            'enableRoundtrip' => '1',
+            'outputDir' => 'var/tx_extensionbuilder/test',
+        ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
         'klaro_consent_manager' => [
+            'klaroConfigurationPath' => '',
             'replaceUrl' => [
                 'reset' => 'https://KLARO_RESET.com',
                 'show' => 'https://KLARO_CONSENT.com',
@@ -80,7 +87,7 @@ return [
         'cacheHash' => [
             'enforceValidation' => true,
         ],
-        'debug' => true,
+        'debug' => false,
         'disableNoCacheParameter' => true,
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
@@ -102,7 +109,7 @@ return [
                     'writerConfiguration' => [
                         'notice' => [
                             'TYPO3\CMS\Core\Log\Writer\FileWriter' => [
-                                'disabled' => false,
+                                'disabled' => true,
                             ],
                         ],
                     ],
@@ -145,10 +152,10 @@ return [
                 ],
             ],
         ],
-        'devIPmask' => '*',
-        'displayErrors' => 1,
+        'devIPmask' => '',
+        'displayErrors' => 0,
         'encryptionKey' => 'f4750c05b53d96e9f8b81cb8e7a3bde7642b122e9d8c83a55d2bd7a48c879a50652d2ad8b01892d75b551962430afe48',
-        'exceptionalErrors' => 12290,
+        'exceptionalErrors' => 4096,
         'features' => [
             'security.backend.enforceContentSecurityPolicy' => true,
             'security.usePasswordPolicyForFrontendUsers' => true,
