@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace SKom\SkomPersons\Controller;
 
-use TYPO3\CMS\Core\Utility\DebugUtility;
+use Psr\Http\Message\ResponseInterface;
+use TYPO3\CMS\Extbase\Http\ForwardResponse;
 
 /**
  * This file is part of the "skom_persons" Extension for TYPO3 CMS.
@@ -34,7 +35,6 @@ class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     public function injectPersonRepository(\SKom\SkomPersons\Domain\Repository\PersonRepository $personRepository)
     {
         $this->personRepository = $personRepository;
-        //DebugUtility::debug($this, 'This');
     }
 
     /**
@@ -48,17 +48,6 @@ class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
         $this->view->assign('people', $people);
         return $this->htmlResponse();
     }
-
-    /**
-     * action index
-     *
-     * @return \Psr\Http\Message\ResponseInterface
-     */
-    public function indexAction(): \Psr\Http\Message\ResponseInterface
-    {
-        return $this->htmlResponse();
-    }
-
 
     /**
      * action show
@@ -91,7 +80,7 @@ class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
         $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::WARNING);
         $this->personRepository->add($newPerson);
-        $this->redirect('list');
+        return $this->redirect('list');
     }
 
     /**
@@ -116,7 +105,7 @@ class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
         $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::WARNING);
         $this->personRepository->update($person);
-        $this->redirect('list');
+        return $this->redirect('list');
     }
 
     /**
@@ -128,6 +117,6 @@ class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     {
         $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Type\ContextualFeedbackSeverity::WARNING);
         $this->personRepository->remove($person);
-        $this->redirect('list');
+        return $this->redirect('list');
     }
 }

@@ -103,11 +103,11 @@ return [
             'description' => 'LLL:EXT:skom_persons/Resources/Private/Language/locallang_db.xlf:tx_skompersons_domain_model_person.firstname.description',
             'config' => [
                 'type' => 'input',
-                'size' => 30,
+                'size' => 0,
                 'eval' => 'trim',
                 'default' => ''
             ],
         ],
-
+    
     ],
 ];

@@ -10,7 +10,7 @@
             "name": "Person",
             "value": {
                 "actionGroup": {
-                    "_default0_index": true,
+                    "_default0_index": false,
                     "_default1_list": true,
                     "_default2_show": true,
                     "_default3_new_create": true,
@@ -30,7 +30,7 @@
                     "parentClass": "",
                     "sorting": false,
                     "type": "Entity",
-                    "uid": "e3bcd19c-1996-4c28-888c-ea99935959c5"
+                    "uid": "b223603f-b617-4813-af64-36573ebd66b8"
                 },
                 "propertyGroup": {
                     "properties": [
@@ -71,7 +71,7 @@
                             "size": "",
                             "minItems": "",
                             "maxItems": "",
-                            "uid": "0b5d93d4-5f02-453e-8273-7a9bada769e3"
+                            "uid": "b06bbb74-ce2a-4e64-b52b-c251f4fad181"
                         }
                     ]
                 },
@@ -112,6 +112,15 @@
                 "description": "Personen Liste",
                 "key": "person_list",
                 "name": "Personen Liste"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "Person => show",
+                    "noncacheableActions": ""
+                },
+                "description": "Single Person",
+                "key": "person_view",
+                "name": "Personen View"
             }
         ],
         "vendorName": "SKom"
@@ -138,7 +147,7 @@
                 "mapToExistingTable": "",
                 "extendExistingModelClass": "",
                 "actions": {
-                    "actionIndex": true,
+                    "actionIndex": false,
                     "actionList": true,
                     "actionShow": true,
                     "actionNewCreate": true,
@@ -162,8 +171,8 @@
             "dragHandle": ".drag-handle",
             "draggable": true,
             "width": 300,
-            "height": 744,
-            "selected": true,
+            "height": 491,
+            "selected": false,
             "positionAbsolute": {
                 "x": 172,
                 "y": 69
@@ -174,7 +183,7 @@
     "edges": [],
     "storagePath": "\/var\/www\/html\/packages\/",
     "log": {
-        "last_modified": "2024-02-11 02:05",
+        "last_modified": "2024-02-11 06:22",
         "extension_builder_version": "v12.0.0-alpha.6",
         "be_user": " (1)"
     }

@@ -1,12 +1,29 @@
 <?php
 defined('TYPO3') || die();
 
+use SKom\SkomPersons\Controller\BlogController;
+
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
 (static function() {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
         'SkomPersons',
         'Person_list',
         [
-            \SKom\SkomPersons\Controller\PersonController::class => 'list, create, update, delete'
+            \SKom\SkomPersons\Controller\PersonController::class => 'list, show, new, create, edit, update, delete'
+        ],
+        // non-cacheable actions
+        [
+            \SKom\SkomPersons\Controller\PersonController::class => 'new, create, edit, update, delete'
+        ]
+    );
+
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'SkomPersons',
+        'Person_view',
+        [
+            \SKom\SkomPersons\Controller\PersonController::class => 'show, create, update, delete'
         ],
         // non-cacheable actions
         [
@@ -26,6 +43,15 @@ defined('TYPO3') || die();
                         tt_content_defValues {
                             CType = list
                             list_type = skompersons_person_list
+                        }
+                    }
+                    person_view {
+                        iconIdentifier = skom_persons-plugin-person_view
+                        title = LLL:EXT:skom_persons/Resources/Private/Language/locallang_db.xlf:tx_skom_persons_person_view.name
+                        description = LLL:EXT:skom_persons/Resources/Private/Language/locallang_db.xlf:tx_skom_persons_person_view.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = skompersons_person_view
                         }
                     }
                 }

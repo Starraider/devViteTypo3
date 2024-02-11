@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:skom_persons/Resources/Private/Language/locallang_db.xlf" date="2024-02-11T02:05:00Z" product-name="skom_persons">
+	<file source-language="en" datatype="plaintext" original="EXT:skom_persons/Resources/Private/Language/locallang_db.xlf" date="2024-02-11T06:22:54Z" product-name="skom_persons">
 		<header/>
 		<body>
 			<trans-unit id="tx_skompersons_domain_model_person" resname="tx_skompersons_domain_model_person">
@@ -20,6 +20,12 @@
 			</trans-unit>
 			<trans-unit id="tx_skom_persons_person_list.description" resname="tx_skom_persons_person_list.description">
 				<source>Personen Liste</source>
+			</trans-unit>
+			<trans-unit id="tx_skom_persons_person_view.name" resname="tx_skom_persons_person_view.name">
+				<source>Personen View</source>
+			</trans-unit>
+			<trans-unit id="tx_skom_persons_person_view.description" resname="tx_skom_persons_person_view.description">
+				<source>Single Person</source>
 			</trans-unit>
 		</body>
 	</file>

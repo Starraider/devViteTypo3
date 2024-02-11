@@ -12,3 +12,17 @@ plugin.tx_skompersons_person_list {
         storagePid = 13
     }
 }
+plugin.tx_skompersons_person_view {
+    view {
+        # cat=plugin.tx_skompersons_person_view/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:skom_persons/Resources/Private/Templates/
+        # cat=plugin.tx_skompersons_person_view/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:skom_persons/Resources/Private/Partials/
+        # cat=plugin.tx_skompersons_person_view/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:skom_persons/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_skompersons_person_view//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
