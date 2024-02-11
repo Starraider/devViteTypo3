@@ -33,6 +33,9 @@ return [
             'loginLogo' => '',
             'loginLogoAlt' => '',
         ],
+        'blog_example' => [
+            'registerSinglePlugin' => '1',
+        ],
         'bootstrap_package' => [
             'disableCssProcessing' => '0',
             'disableGoogleFontCaching' => '0',
