@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:skom_persons/Resources/Private/Language/locallang.xlf" date="2024-02-11T02:05:00Z" product-name="skom_persons">
+		<header/>
+		<body>
+			<trans-unit id="tx_skompersons_domain_model_person" resname="tx_skompersons_domain_model_person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_skompersons_domain_model_person.description" resname="tx_skompersons_domain_model_person.description">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_skompersons_domain_model_person.firstname" resname="tx_skompersons_domain_model_person.firstname">
+				<source>Firstname</source>
+			</trans-unit>
+			<trans-unit id="tx_skompersons_domain_model_person.firstname.description" resname="tx_skompersons_domain_model_person.firstname.description">
+				<source>Vorname</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

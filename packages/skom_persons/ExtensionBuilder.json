@@ -1,0 +1,181 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    172,
+                    69
+                ]
+            },
+            "name": "Person",
+            "value": {
+                "actionGroup": {
+                    "_default0_index": true,
+                    "_default1_list": true,
+                    "_default2_show": true,
+                    "_default3_new_create": true,
+                    "_default4_edit_update": true,
+                    "_default5_delete": true,
+                    "customActions": []
+                },
+                "name": "Person",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "Person",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "e3bcd19c-1996-4c28-888c-ea99935959c5"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "propertyDescription": "Vorname",
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsNullable": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "firstname",
+                            "propertyType": "String",
+                            "typeSelect": {
+                                "selectboxValues": "",
+                                "renderType": "selectSingle",
+                                "foreignTable": ""
+                            },
+                            "typeText": {
+                                "enableRichtext": false
+                            },
+                            "typeNumber": {
+                                "enableSlider": false,
+                                "steps": 1,
+                                "setRange": false,
+                                "upperRange": 255,
+                                "lowerRange": 0
+                            },
+                            "typeColor": {
+                                "setValuesColorPicker": false,
+                                "colorPickerValues": ""
+                            },
+                            "typeBoolean": {
+                                "renderType": "default",
+                                "booleanValues": ""
+                            },
+                            "typePassword": {
+                                "renderPasswordGenerator": false
+                            },
+                            "size": "",
+                            "minItems": "",
+                            "maxItems": "",
+                            "uid": "0b5d93d4-5f02-453e-8273-7a9bada769e3"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "Personen",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "generateDocumentationTemplate": false,
+            "generateEditorConfig": true,
+            "generateEmptyGitRepository": true,
+            "sourceLanguage": "en",
+            "state": "beta",
+            "targetVersion": "12.4",
+            "version": "0.0.1"
+        },
+        "extensionKey": "skom_persons",
+        "name": "skom_persons",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Person => list",
+                    "noncacheableActions": ""
+                },
+                "description": "Personen Liste",
+                "key": "person_list",
+                "name": "Personen Liste"
+            }
+        ],
+        "vendorName": "SKom"
+    },
+    "wires": [],
+    "nodes": [
+        {
+            "id": "dndnode_0",
+            "type": "customModel",
+            "position": {
+                "x": 172,
+                "y": 69
+            },
+            "data": {
+                "label": "Person",
+                "objectType": "",
+                "isAggregateRoot": true,
+                "enableSorting": false,
+                "addDeletedField": true,
+                "addHiddenField": true,
+                "addStarttimeEndtimeFields": true,
+                "enableCategorization": false,
+                "description": "Person",
+                "mapToExistingTable": "",
+                "extendExistingModelClass": "",
+                "actions": {
+                    "actionIndex": true,
+                    "actionList": true,
+                    "actionShow": true,
+                    "actionNewCreate": true,
+                    "actionEditUpdate": true,
+                    "actionDelete": true
+                },
+                "customActions": [],
+                "properties": [
+                    {
+                        "name": "firstname",
+                        "type": "String",
+                        "description": "Vorname",
+                        "isRequired": false,
+                        "isNullable": false,
+                        "isExcludeField": false,
+                        "isl10nModeExlude": false
+                    }
+                ],
+                "relations": []
+            },
+            "dragHandle": ".drag-handle",
+            "draggable": true,
+            "width": 300,
+            "height": 744,
+            "selected": true,
+            "positionAbsolute": {
+                "x": 172,
+                "y": 69
+            },
+            "dragging": false
+        }
+    ],
+    "edges": [],
+    "storagePath": "\/var\/www\/html\/packages\/",
+    "log": {
+        "last_modified": "2024-02-11 02:05",
+        "extension_builder_version": "v12.0.0-alpha.6",
+        "be_user": " (1)"
+    }
+}

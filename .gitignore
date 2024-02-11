@@ -60,4 +60,5 @@
 /secure_file_uploads/*
 /form_attachments/*
 
-### /packages/customer_sitepackage/Resources/Public/*
+/packages/skom_addresses/
+/packages/leseohren/

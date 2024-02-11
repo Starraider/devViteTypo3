@@ -1,5 +1,7 @@
 name: skom/person
 table: tx_skom_person
+title: Person
+description: Mitglieder, Vorlesepaten und Ansprechpartner
 aggregateRoot: true
 labelField:
   - lastname
@@ -29,6 +31,10 @@ fields:
   - identifier: firstname
     type: Text
     required: true
+  - identifier: birthday
+    type: DateTime
+    format: date
+    dbType: date
   - identifier: palette_address
     type: Palette
     label: Address
@@ -43,6 +49,59 @@ fields:
         type: Text
       - identifier: city
         type: Text
+        default: Stuttgart
+      - identifier: district
+        type: Select
+        renderType: selectSingle
+        items:
+          - label: 'Sonstige'
+            value: 'Sonstige'
+          - label: 'Bad Cannstatt'
+            value: 'Bad Cannstatt'
+          - label: 'Birkach'
+            value: 'Birkach'
+          - label: 'Botnang'
+            value: 'Botnang'
+          - label: 'Degerloch'
+            value: 'Degerloch'
+          - label: 'Feuerbach'
+            value: 'Feuerbach'
+          - label: 'Hedelfingen'
+            value: 'Hedelfingen'
+          - label: 'Möhringen'
+            value: 'Möhringen'
+          - label: 'Mühlhausen'
+            value: 'Mühlhausen'
+          - label: 'Münster'
+            value: 'Münster'
+          - label: 'Obertürkheim'
+            value: 'Obertürkheim'
+          - label: 'Plieningen'
+            value: 'Plieningen'
+          - label: 'Sillenbuch'
+            value: 'Sillenbuch'
+          - label: 'Stammheim'
+            value: 'Stammheim'
+          - label: 'Stuttgart‐Mitte'
+            value: 'Stuttgart‐Mitte'
+          - label: 'Stuttgart‐Nord'
+            value: 'Stuttgart‐Nord'
+          - label: 'Stuttgart‐Ost'
+            value: 'Stuttgart‐Ost'
+          - label: 'Stuttgart‐Süd'
+            value: 'Stuttgart‐Süd'
+          - label: 'Stuttgart‐West'
+            value: 'Stuttgart‐West'
+          - label: 'Untertürkheim'
+            value: 'Untertürkheim'
+          - label: 'Vaihingen'
+            value: 'Vaihingen'
+          - label: 'Wangen'
+            value: 'Wangen'
+          - label: 'Weilimdorf'
+            value: 'Weilimdorf'
+          - label: 'Zuffenhausen'
+            value: 'Zuffenhausen'
   - identifier: palette_contact
     type: Palette
     label: Contact
@@ -64,6 +123,10 @@ fields:
     treeConfig:
       startingPoints: 1
     relationship: manyToMany
+  - identifier: notes
+    type: Textarea
+    enableRichtext: false
+    rows: 5
   - identifier: tab_info
     type: Tab
   - identifier: palette_status
@@ -81,11 +144,16 @@ fields:
             value: pausiert
           - label: 'ausgeschieden'
             value: ausgeschieden
-      - identifier: status_date
+      - identifier: statusbegin_date
         type: DateTime
         format: date
         dbType: date
         required: true
+      - identifier: statusend_date
+        type: DateTime
+        format: date
+        dbType: date
+        nullable: true
   - identifier: travel_options
     type: Checkbox
     items:
@@ -172,3 +240,26 @@ fields:
     extendedPalette: false
     minitems: 0
     maxitems: 10
+  - identifier: tab_gifts
+    type: Tab
+  - identifier: gifts
+    type: Collection
+    labelField:
+      - gift_date
+      - gift
+    languageAware: false
+    fields:
+      - identifier: gift
+        type: Select
+        renderType: selectSingle
+        placeholder: '*** bitte wählen ***'
+        foreign_table: tx_skom_gift
+      - identifier: gift_date
+        type: DateTime
+        format: date
+        dbType: date
+        required: true
+      - identifier: given
+        type: Checkbox
+        renderType: checkboxToggle
+        default: 0
