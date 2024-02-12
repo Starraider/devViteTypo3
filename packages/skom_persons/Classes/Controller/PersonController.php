@@ -50,6 +50,16 @@ class PersonController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
     }
 
     /**
+     * action index
+     *
+     * @return \Psr\Http\Message\ResponseInterface
+     */
+    public function indexAction(): \Psr\Http\Message\ResponseInterface
+    {
+        return $this->htmlResponse();
+    }
+
+    /**
      * action show
      *
      * @param \SKom\SkomPersons\Domain\Model\Person $person

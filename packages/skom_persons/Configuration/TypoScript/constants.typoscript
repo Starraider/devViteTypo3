@@ -9,7 +9,7 @@ plugin.tx_skompersons_person_list {
     }
     persistence {
         # cat=plugin.tx_skompersons_person_list//a; type=string; label=Default storage PID
-        storagePid = 13
+        storagePid =
     }
 }
 plugin.tx_skompersons_person_view {

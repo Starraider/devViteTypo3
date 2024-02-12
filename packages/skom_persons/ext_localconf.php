@@ -1,17 +1,12 @@
 <?php
 defined('TYPO3') || die();
 
-use SKom\SkomPersons\Controller\BlogController;
-
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
-
 (static function() {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
         'SkomPersons',
         'Person_list',
         [
-            \SKom\SkomPersons\Controller\PersonController::class => 'list, show, new, create, edit, update, delete'
+            \SKom\SkomPersons\Controller\PersonController::class => 'list, index, show, new, create, edit, update, delete'
         ],
         // non-cacheable actions
         [
@@ -23,7 +18,7 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
         'SkomPersons',
         'Person_view',
         [
-            \SKom\SkomPersons\Controller\PersonController::class => 'show, create, update, delete'
+            \SKom\SkomPersons\Controller\PersonController::class => 'show'
         ],
         // non-cacheable actions
         [

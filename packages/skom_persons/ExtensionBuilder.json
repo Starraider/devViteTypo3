@@ -10,7 +10,7 @@
             "name": "Person",
             "value": {
                 "actionGroup": {
-                    "_default0_index": false,
+                    "_default0_index": true,
                     "_default1_list": true,
                     "_default2_show": true,
                     "_default3_new_create": true,
@@ -24,13 +24,13 @@
                     "addHiddenField": true,
                     "addStarttimeEndtimeFields": true,
                     "aggregateRoot": true,
-                    "categorizable": false,
+                    "categorizable": true,
                     "description": "Person",
                     "mapToTable": "",
                     "parentClass": "",
                     "sorting": false,
                     "type": "Entity",
-                    "uid": "b223603f-b617-4813-af64-36573ebd66b8"
+                    "uid": "9dc9e48a-aa19-4875-b744-a6970095ea23"
                 },
                 "propertyGroup": {
                     "properties": [
@@ -71,7 +71,7 @@
                             "size": "",
                             "minItems": "",
                             "maxItems": "",
-                            "uid": "b06bbb74-ce2a-4e64-b52b-c251f4fad181"
+                            "uid": "d678d451-0b5f-4a7f-b706-bf6e472028c5"
                         }
                     ]
                 },
@@ -88,7 +88,7 @@
             "category": "plugin",
             "custom_category": "",
             "dependsOn": "",
-            "disableLocalization": false,
+            "disableLocalization": true,
             "disableVersioning": false,
             "generateDocumentationTemplate": false,
             "generateEditorConfig": true,
@@ -142,12 +142,12 @@
                 "addDeletedField": true,
                 "addHiddenField": true,
                 "addStarttimeEndtimeFields": true,
-                "enableCategorization": false,
+                "enableCategorization": true,
                 "description": "Person",
                 "mapToExistingTable": "",
                 "extendExistingModelClass": "",
                 "actions": {
-                    "actionIndex": false,
+                    "actionIndex": true,
                     "actionList": true,
                     "actionShow": true,
                     "actionNewCreate": true,
@@ -171,7 +171,7 @@
             "dragHandle": ".drag-handle",
             "draggable": true,
             "width": 300,
-            "height": 491,
+            "height": 352,
             "selected": false,
             "positionAbsolute": {
                 "x": 172,
@@ -183,7 +183,7 @@
     "edges": [],
     "storagePath": "\/var\/www\/html\/packages\/",
     "log": {
-        "last_modified": "2024-02-11 06:22",
+        "last_modified": "2024-02-12 12:56",
         "extension_builder_version": "v12.0.0-alpha.6",
         "be_user": " (1)"
     }
