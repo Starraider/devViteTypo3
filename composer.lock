@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ff068fdcc17112301b9ca9f6e708e3b",
+    "content-hash": "4e452bc25533b4f5b109c4e41f621f4b",
     "packages": [
         {
             "name": "b13/container",
@@ -3054,8 +3054,55 @@
             "time": "2024-01-13T12:36:40+00:00"
         },
         {
+            "name": "skom/leseohren",
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "packages/leseohren",
+                "reference": "0a62628f73cd85f1219ba33822fbcabe1568ad87"
+            },
+            "require": {
+                "typo3/cms-core": "^12.4"
+            },
+            "replace": {
+                "typo3-ter/leseohren": "self.version"
+            },
+            "require-dev": {
+                "typo3/testing-framework": "^8.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "web-dir": ".Build/public",
+                    "extension-key": "leseohren"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SKom\\Leseohren\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "SKom\\Leseohren\\Tests\\": "Tests"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "TYPO3\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
+                ]
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Leseohren DB",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "skom/skom-persons",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "packages/skom_persons",
@@ -8591,12 +8638,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mittwald/deployer-recipes.git",
-                "reference": "0206668bfc98254c26c4609e66f612e8a588e146"
+                "reference": "941b3d45d907f3a6c64ce572c6bedd238ec2ccf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mittwald/deployer-recipes/zipball/0206668bfc98254c26c4609e66f612e8a588e146",
-                "reference": "0206668bfc98254c26c4609e66f612e8a588e146",
+                "url": "https://api.github.com/repos/mittwald/deployer-recipes/zipball/941b3d45d907f3a6c64ce572c6bedd238ec2ccf4",
+                "reference": "941b3d45d907f3a6c64ce572c6bedd238ec2ccf4",
                 "shasum": ""
             },
             "require": {
@@ -8634,14 +8681,15 @@
             "description": "A collection of Deployer recipies for easily deploying your applications onto the mittwald platform",
             "support": {
                 "issues": "https://github.com/mittwald/deployer-recipes/issues",
-                "source": "https://github.com/mittwald/deployer-recipes/tree/v1.0.0-beta5"
+                "source": "https://github.com/mittwald/deployer-recipes/tree/v1.0.0-beta6"
             },
-            "time": "2024-02-09T13:30:39+00:00"
+            "time": "2024-02-12T09:31:49+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "skom/leseohren": 20,
         "skom/skom-persons": 20,
         "skom/vite-base-sitepackage": 20,
         "t3docs/blog-example": 20,
