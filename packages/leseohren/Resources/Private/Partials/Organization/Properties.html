@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:debug inline="true" title="Partial:Properties">{organization}</f:debug>
+<table class="tx-leseohren">
+	<tr>
+		<td><f:translate key="tx_leseohren_domain_model_organization.name" /></td>
+		<td>{organization.name}</td>
+	</tr>
+    <tr>
+        <td>Kategorie:</td>
+        <td>
+            <f:if condition="{organization.categories}">
+                <f:for each="{organization.categories}" as="organizationCategory">
+                    <category>{organizationCategory.title -> f:format.htmlspecialchars()}</category>
+                </f:for>
+            </f:if>
+        </td>
+    </tr>
+    <tr>
+        <td>Ansprechpartner:</td>
+        <td>
+            <f:if condition="{organization.contactPerson}">
+                {organization.contactPerson.firstname} {organization.contactPerson.lastname}
+            </f:if>
+        </td>
+    </tr>
+</table>
+</html>

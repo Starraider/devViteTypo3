@@ -1,0 +1,28 @@
+plugin.tx_leseohren_personen {
+    view {
+        # cat=plugin.tx_leseohren_personen/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:leseohren/Resources/Private/Templates/
+        # cat=plugin.tx_leseohren_personen/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:leseohren/Resources/Private/Partials/
+        # cat=plugin.tx_leseohren_personen/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:leseohren/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_leseohren_personen//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_leseohren_organizations {
+    view {
+        # cat=plugin.tx_leseohren_organizations/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:leseohren/Resources/Private/Templates/
+        # cat=plugin.tx_leseohren_organizations/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:leseohren/Resources/Private/Partials/
+        # cat=plugin.tx_leseohren_organizations/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:leseohren/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_leseohren_organizations//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

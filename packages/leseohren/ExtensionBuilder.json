@@ -1,0 +1,425 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    122,
+                    103
+                ]
+            },
+            "name": "Person",
+            "value": {
+                "actionGroup": {
+                    "_default0_index": true,
+                    "_default1_list": true,
+                    "_default2_show": true,
+                    "_default3_new_create": true,
+                    "_default4_edit_update": true,
+                    "_default5_delete": true,
+                    "customActions": []
+                },
+                "name": "Person",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": true,
+                    "description": "Person",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "ce4ea8a0-edde-48a2-a2f7-c409e18021d9"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "propertyDescription": "Vorname",
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsNullable": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "firstname",
+                            "propertyType": "String",
+                            "typeSelect": {
+                                "selectboxValues": "",
+                                "renderType": "selectSingle",
+                                "foreignTable": ""
+                            },
+                            "typeText": {
+                                "enableRichtext": false
+                            },
+                            "typeNumber": {
+                                "enableSlider": false,
+                                "steps": 1,
+                                "setRange": false,
+                                "upperRange": 255,
+                                "lowerRange": 0
+                            },
+                            "typeColor": {
+                                "setValuesColorPicker": false,
+                                "colorPickerValues": ""
+                            },
+                            "typeBoolean": {
+                                "renderType": "default",
+                                "booleanValues": ""
+                            },
+                            "typePassword": {
+                                "renderPasswordGenerator": false
+                            },
+                            "size": "",
+                            "minItems": "",
+                            "maxItems": "",
+                            "uid": "9236e934-2e4f-4a52-9d04-eb77fd286282"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "propertyDescription": "",
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsNullable": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "lastname",
+                            "propertyType": "String",
+                            "typeSelect": {
+                                "selectboxValues": "",
+                                "renderType": "selectSingle",
+                                "foreignTable": ""
+                            },
+                            "typeText": {
+                                "enableRichtext": false
+                            },
+                            "typeNumber": {
+                                "enableSlider": false,
+                                "steps": 1,
+                                "setRange": false,
+                                "upperRange": 255,
+                                "lowerRange": 0
+                            },
+                            "typeColor": {
+                                "setValuesColorPicker": false,
+                                "colorPickerValues": ""
+                            },
+                            "typeBoolean": {
+                                "renderType": "default",
+                                "booleanValues": ""
+                            },
+                            "typePassword": {
+                                "renderPasswordGenerator": false
+                            },
+                            "size": "",
+                            "minItems": "",
+                            "maxItems": "",
+                            "uid": "107f2a5d-a9ee-4b9e-a070-51b1cb88ad23"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    508.5152837617552,
+                    56.24361243780435
+                ]
+            },
+            "name": "Organization",
+            "value": {
+                "actionGroup": {
+                    "_default0_index": true,
+                    "_default1_list": true,
+                    "_default2_show": true,
+                    "_default3_new_create": true,
+                    "_default4_edit_update": true,
+                    "_default5_delete": true,
+                    "customActions": []
+                },
+                "name": "Organization",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": true,
+                    "description": "Organisation",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "ce4f847b-a3ac-49d3-8d06-8f256e7ac63b"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "propertyDescription": "Name der Organisation",
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsNullable": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "name",
+                            "propertyType": "String",
+                            "typeSelect": {
+                                "selectboxValues": "",
+                                "renderType": "selectSingle",
+                                "foreignTable": ""
+                            },
+                            "typeText": {
+                                "enableRichtext": false
+                            },
+                            "typeNumber": {
+                                "enableSlider": false,
+                                "steps": 1,
+                                "setRange": false,
+                                "upperRange": 255,
+                                "lowerRange": 0
+                            },
+                            "typeColor": {
+                                "setValuesColorPicker": false,
+                                "colorPickerValues": ""
+                            },
+                            "typeBoolean": {
+                                "renderType": "default",
+                                "booleanValues": ""
+                            },
+                            "typePassword": {
+                                "renderPasswordGenerator": false
+                            },
+                            "size": "",
+                            "minItems": "",
+                            "maxItems": "",
+                            "uid": "32e68968-7a03-4a8c-b204-6bb0a81edbae"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": true,
+                            "propertyIsExcludeField": false,
+                            "relationDescription": "Kontaktperson",
+                            "relationName": "contactPerson",
+                            "relationType": "manyToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingle",
+                            "uid": "78474475-933a-4894-b5b4-b1627a84e002"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "Leseohren DB",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "",
+            "disableLocalization": true,
+            "disableVersioning": false,
+            "generateDocumentationTemplate": false,
+            "generateEditorConfig": true,
+            "generateEmptyGitRepository": true,
+            "sourceLanguage": "en",
+            "state": "beta",
+            "targetVersion": "12.4",
+            "version": "0.0.1"
+        },
+        "extensionKey": "leseohren",
+        "name": "Leseohren",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "SKom",
+                "email": "sven@skom.de",
+                "name": "Sven Kalbhenn",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Person =>  list, index, show, new, create, edit, update, delete",
+                    "noncacheableActions": "Person =>  new, create, edit, update, delete"
+                },
+                "description": "Personen",
+                "key": "personen",
+                "name": "Personen"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "Organization =>  list, index, show, new, create, edit, update, delete",
+                    "noncacheableActions": "Organization =>  new, create, edit, update, delete"
+                },
+                "description": "Organisationen",
+                "key": "organizations",
+                "name": "Organizations"
+            }
+        ],
+        "vendorName": "SKom"
+    },
+    "wires": [
+        {
+            "src": {
+                "moduleId": 1,
+                "moduleName": "Organization",
+                "terminal": "relationWire_0",
+                "uid": "reactflow__edge-dndnode_1relation-dndnode_1-0-dndnode_0customModelNode-dndnode_0"
+            },
+            "tgt": {
+                "moduleId": 0,
+                "moduleName": "Person",
+                "terminal": "SOURCES",
+                "uid": "dndnode_1"
+            }
+        }
+    ],
+    "nodes": [
+        {
+            "id": "dndnode_0",
+            "type": "customModel",
+            "position": {
+                "x": 122,
+                "y": 103
+            },
+            "data": {
+                "label": "Person",
+                "objectType": "",
+                "isAggregateRoot": true,
+                "enableSorting": false,
+                "addDeletedField": true,
+                "addHiddenField": true,
+                "addStarttimeEndtimeFields": true,
+                "enableCategorization": true,
+                "description": "Person",
+                "mapToExistingTable": "",
+                "extendExistingModelClass": "",
+                "actions": {
+                    "actionIndex": true,
+                    "actionList": true,
+                    "actionShow": true,
+                    "actionNewCreate": true,
+                    "actionEditUpdate": true,
+                    "actionDelete": true
+                },
+                "customActions": [],
+                "properties": [
+                    {
+                        "name": "firstname",
+                        "type": "String",
+                        "description": "Vorname",
+                        "isRequired": false,
+                        "isNullable": false,
+                        "isExcludeField": false,
+                        "isl10nModeExlude": false
+                    },
+                    {
+                        "name": "lastname",
+                        "type": "String",
+                        "description": "",
+                        "isRequired": false,
+                        "isNullable": false,
+                        "isExcludeField": false,
+                        "isl10nModeExlude": false
+                    }
+                ],
+                "relations": []
+            },
+            "dragHandle": ".drag-handle",
+            "draggable": true,
+            "width": 300,
+            "height": 257,
+            "selected": false,
+            "positionAbsolute": {
+                "x": 122,
+                "y": 103
+            },
+            "dragging": false
+        },
+        {
+            "id": "dndnode_1",
+            "type": "customModel",
+            "position": {
+                "x": 508.5152837617552,
+                "y": 56.24361243780435
+            },
+            "data": {
+                "label": "Organization",
+                "objectType": "",
+                "isAggregateRoot": true,
+                "enableSorting": false,
+                "addDeletedField": true,
+                "addHiddenField": true,
+                "addStarttimeEndtimeFields": true,
+                "enableCategorization": true,
+                "description": "Organisation",
+                "mapToExistingTable": "",
+                "extendExistingModelClass": "",
+                "actions": {
+                    "actionIndex": true,
+                    "actionList": true,
+                    "actionShow": true,
+                    "actionNewCreate": true,
+                    "actionEditUpdate": true,
+                    "actionDelete": true
+                },
+                "customActions": [],
+                "properties": [
+                    {
+                        "name": "name",
+                        "type": "String",
+                        "description": "Name der Organisation",
+                        "isRequired": true,
+                        "isNullable": false,
+                        "isExcludeField": false,
+                        "isl10nModeExlude": false
+                    }
+                ],
+                "relations": [
+                    {
+                        "foreignRelationClass": "",
+                        "lazyLoading": true,
+                        "excludeField": true,
+                        "relationDescription": "Kontaktperson",
+                        "relationName": "contactPerson",
+                        "relationType": "manyToOne",
+                        "relationWire": "",
+                        "renderType": "",
+                        "uid": "905857860343",
+                        "relationToExternalClass": "SKom\\Leseohren\\Domain\\Model\\Person"
+                    }
+                ]
+            },
+            "dragHandle": ".drag-handle",
+            "draggable": true,
+            "width": 300,
+            "height": 770,
+            "selected": false,
+            "positionAbsolute": {
+                "x": 508.5152837617552,
+                "y": 56.24361243780435
+            },
+            "dragging": false
+        }
+    ],
+    "edges": [
+        {
+            "source": "dndnode_1",
+            "sourceHandle": "relation-dndnode_1-0",
+            "target": "dndnode_0",
+            "targetHandle": "customModelNode-dndnode_0",
+            "id": "reactflow__edge-dndnode_1relation-dndnode_1-0-dndnode_0customModelNode-dndnode_0"
+        }
+    ],
+    "storagePath": "\/var\/www\/html\/packages\/",
+    "log": {
+        "last_modified": "2024-02-12 12:51",
+        "extension_builder_version": "v12.0.0-alpha.6",
+        "be_user": " (1)"
+    }
+}

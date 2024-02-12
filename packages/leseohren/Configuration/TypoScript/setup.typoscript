@@ -1,0 +1,78 @@
+plugin.tx_leseohren_personen {
+    view {
+        templateRootPaths.0 = EXT:leseohren/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_leseohren_personen.view.templateRootPath}
+        partialRootPaths.0 = EXT:leseohren/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_leseohren_personen.view.partialRootPath}
+        layoutRootPaths.0 = EXT:leseohren/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_leseohren_personen.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_leseohren_personen.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+plugin.tx_leseohren_organizations {
+    view {
+        templateRootPaths.0 = EXT:leseohren/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_leseohren_organizations.view.templateRootPath}
+        partialRootPaths.0 = EXT:leseohren/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_leseohren_organizations.view.partialRootPath}
+        layoutRootPaths.0 = EXT:leseohren/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_leseohren_organizations.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_leseohren_organizations.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+# these classes are only used in auto-generated templates
+plugin.tx_leseohren._CSS_DEFAULT_STYLE (
+    textarea.f3-form-error {
+        background-color: #FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    input.f3-form-error {
+        background-color: #FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-leseohren table {
+        border-collapse: separate;
+        border-spacing: 10px;
+    }
+
+    .tx-leseohren table th {
+        font-weight: bold;
+    }
+
+    .tx-leseohren table td {
+        vertical-align: top;
+    }
+
+    .typo3-messages .message-error {
+        color: red;
+    }
+
+    .typo3-messages .message-ok {
+        color: green;
+    }
+)

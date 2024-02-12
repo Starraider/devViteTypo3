@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang.xlf" date="2024-02-12T12:51:44Z" product-name="leseohren">
+		<header/>
+		<body>
+			<trans-unit id="tx_leseohren_domain_model_person" resname="tx_leseohren_domain_model_person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.description" resname="tx_leseohren_domain_model_person.description">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.firstname" resname="tx_leseohren_domain_model_person.firstname">
+				<source>Firstname</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.firstname.description" resname="tx_leseohren_domain_model_person.firstname.description">
+				<source>Vorname</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.lastname" resname="tx_leseohren_domain_model_person.lastname">
+				<source>Lastname</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.lastname.description" resname="tx_leseohren_domain_model_person.lastname.description">
+				<source>Lastname</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization" resname="tx_leseohren_domain_model_organization">
+				<source>Organization</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.description" resname="tx_leseohren_domain_model_organization.description">
+				<source>Organisation</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.name" resname="tx_leseohren_domain_model_organization.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.name.description" resname="tx_leseohren_domain_model_organization.name.description">
+				<source>Name Der Organisation</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.contact_person" resname="tx_leseohren_domain_model_organization.contact_person">
+				<source>Contact Person</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.contact_person.description" resname="tx_leseohren_domain_model_organization.contact_person.description">
+				<source>Kontaktperson</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

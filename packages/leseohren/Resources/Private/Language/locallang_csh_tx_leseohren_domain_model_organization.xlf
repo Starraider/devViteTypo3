@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang_csh_tx_leseohren_domain_model_organization.xlf" date="2024-02-12T12:51:44Z" product-name="leseohren">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>Name der Organisation</source>
+			</trans-unit>
+			<trans-unit id="contact_person.description" resname="contact_person.description">
+				<source>Kontaktperson</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
