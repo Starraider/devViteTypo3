@@ -46,6 +46,7 @@
 .ddev/data/*
 
 ### TYPO3 ###
+/var/
 /public/*
 !/public/build
 !/public/typo3conf
