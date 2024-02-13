@@ -1,10 +1,8 @@
 <?php
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person',
-        'label' => 'lastname',
-        'label_alt' => 'firstname',
-        'label_alt_force' => true,
+        'title' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_present',
+        'label' => 'gift_date',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -15,14 +13,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'firstname,lastname',
-        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_person.gif',
+        'searchFields' => '',
+        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_present.gif',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
     ],
     'types' => [
-        '1' => ['showitem' => 'firstname, lastname, categories, donations, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
+        '1' => ['showitem' => 'gift_date, given, gift, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
     ],
     'columns' => [
         'hidden' => [
@@ -69,52 +67,50 @@ return [
                 ]
             ],
         ],
-        'categories' => [
-            'config'=> [
-                'type' => 'category',
-            ],
-        ],
 
-        'firstname' => [
+        'gift_date' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.firstname',
-            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.firstname.description',
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_present.gift_date',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_present.gift_date.description',
             'config' => [
                 'type' => 'input',
-                'size' => 0,
-                'eval' => 'trim',
-                'default' => ''
+                'renderType' => 'inputDateTime',
+                'size' => 7,
+                'eval' => 'date,required',
+                'default' => time()
             ],
         ],
-        'lastname' => [
+        'given' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.lastname',
-            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.lastname.description',
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_present.given',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_present.given.description',
             'config' => [
-                'type' => 'input',
-                'size' => 0,
-                'eval' => 'trim',
-                'default' => ''
-            ],
-        ],
-        'donations' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.donations',
-            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.donations.description',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_leseohren_domain_model_present',
-                'foreign_field' => 'person',
-                'maxitems' => 9999,
-                'appearance' => [
-                    'collapseAll' => 1,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
+                'type' => 'check',
+                'renderType' => 'checkboxToggle',
+                'items' => [
+                    ['label' => 'Ja:1'],
                 ],
+                'default' => 0,
+            ]
+        ],
+        'gift' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_present.gift',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_present.gift.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_leseohren_domain_model_gift',
+                'default' => 0,
+                'minitems' => 0,
+                'maxitems' => 1,
             ],
 
+        ],
+        'person' => [
+            'config' => [
+                'type' => 'passthrough',
+            ],
         ],
 
     ],

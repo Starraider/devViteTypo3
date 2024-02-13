@@ -1,6 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-
-<f:debug inline="true" title="Partial:Properties">{person}</f:debug>
+<f:debug inline="true">{person}</f:debug>
 <table class="tx-leseohren">
 	<tr>
 		<td><f:translate key="tx_leseohren_domain_model_person.firstname" /></td>
@@ -16,6 +15,16 @@
             <f:if condition="{person.categories}">
                 <f:for each="{person.categories}" as="personCategory">
                     <category>{personCategory.title -> f:format.htmlspecialchars()}</category>
+                </f:for>
+            </f:if>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <f:if condition="{person.Donations}">
+                <f:for each="{person.Donations}" as="Donation">
+                    <p>{Donation.gift.title -> f:format.htmlspecialchars()}</p>
                 </f:for>
             </f:if>
         </td>

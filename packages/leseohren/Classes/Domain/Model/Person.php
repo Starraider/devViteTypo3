@@ -21,15 +21,12 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  */
 class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
+
     /**
      * @var ObjectStorage<Category>
      */
     public $categories;
 
-    public function __construct()
-    {
-        $this->categories = new ObjectStorage();
-    }
 
     /**
      * Vorname
@@ -45,6 +42,37 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $lastname = '';
 
+    /**
+     * Geschenke
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Present>
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     */
+    protected $Donations = null;
+
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+        // Do not remove the next line: It would break the functionality
+        $this->initializeObject();
+        $this->categories = new ObjectStorage();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties when model is reconstructed from DB (where __construct is not called)
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     *
+     * @return void
+     */
+    public function initializeObject()
+    {
+        $this->Donations = $this->Donations ?: new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
 
     /**
      * Add category to a blog
@@ -120,5 +148,48 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setLastname(string $lastname)
     {
         $this->lastname = $lastname;
+    }
+
+    /**
+     * Adds a Present
+     *
+     * @param \SKom\Leseohren\Domain\Model\Present $Donation
+     * @return void
+     */
+    public function addDonation(\SKom\Leseohren\Domain\Model\Present $Donation)
+    {
+        $this->Donations->attach($Donation);
+    }
+
+    /**
+     * Removes a Present
+     *
+     * @param \SKom\Leseohren\Domain\Model\Present $DonationToRemove The Present to be removed
+     * @return void
+     */
+    public function removeDonation(\SKom\Leseohren\Domain\Model\Present $DonationToRemove)
+    {
+        $this->Donations->detach($DonationToRemove);
+    }
+
+    /**
+     * Returns the Donations
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Present>
+     */
+    public function getDonations()
+    {
+        return $this->Donations;
+    }
+
+    /**
+     * Sets the Donations
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Present> $Donations
+     * @return void
+     */
+    public function setDonations(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $Donations)
+    {
+        $this->Donations = $Donations;
     }
 }

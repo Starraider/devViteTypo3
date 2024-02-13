@@ -30,7 +30,7 @@
                     "parentClass": "",
                     "sorting": false,
                     "type": "Entity",
-                    "uid": "ce4ea8a0-edde-48a2-a2f7-c409e18021d9"
+                    "uid": "75a7d794-3d63-4cab-9bdf-2addecfe6d9e"
                 },
                 "propertyGroup": {
                     "properties": [
@@ -71,7 +71,7 @@
                             "size": "",
                             "minItems": "",
                             "maxItems": "",
-                            "uid": "9236e934-2e4f-4a52-9d04-eb77fd286282"
+                            "uid": "c08b06cf-e1b5-415c-a13d-5cc965f1c8b3"
                         },
                         {
                             "allowedFileTypes": "",
@@ -110,12 +110,24 @@
                             "size": "",
                             "minItems": "",
                             "maxItems": "",
-                            "uid": "107f2a5d-a9ee-4b9e-a070-51b1cb88ad23"
+                            "uid": "c847f849-57c9-404c-9529-6c3942498c9b"
                         }
                     ]
                 },
                 "relationGroup": {
-                    "relations": []
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": true,
+                            "propertyIsExcludeField": false,
+                            "relationDescription": "Geschenke",
+                            "relationName": "Donations",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingle",
+                            "uid": "5afeef41-5cfb-4dce-909c-31cbf1e0e0dd"
+                        }
+                    ]
                 }
             }
         },
@@ -149,7 +161,7 @@
                     "parentClass": "",
                     "sorting": false,
                     "type": "Entity",
-                    "uid": "ce4f847b-a3ac-49d3-8d06-8f256e7ac63b"
+                    "uid": "c490f024-9003-4829-957b-d4fa8671ee22"
                 },
                 "propertyGroup": {
                     "properties": [
@@ -190,7 +202,7 @@
                             "size": "",
                             "minItems": "",
                             "maxItems": "",
-                            "uid": "32e68968-7a03-4a8c-b204-6bb0a81edbae"
+                            "uid": "9758018d-8bae-4a1b-bc2a-8784ca21caa4"
                         }
                     ]
                 },
@@ -205,7 +217,257 @@
                             "relationType": "manyToOne",
                             "relationWire": "[wired]",
                             "renderType": "selectSingle",
-                            "uid": "78474475-933a-4894-b5b4-b1627a84e002"
+                            "uid": "aadca24d-59c9-4383-b35a-00e98cdeb7d3"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    605.7130863733391,
+                    1091.0355303958959
+                ]
+            },
+            "name": "Gift",
+            "value": {
+                "actionGroup": {
+                    "_default0_index": true,
+                    "_default1_list": true,
+                    "_default2_show": true,
+                    "_default3_new_create": true,
+                    "_default4_edit_update": true,
+                    "_default5_delete": true,
+                    "customActions": []
+                },
+                "name": "Gift",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "Geschenk",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "23566675-4358-4aba-9633-f277dceff92e"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "propertyDescription": "",
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsNullable": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "title",
+                            "propertyType": "String",
+                            "typeSelect": {
+                                "selectboxValues": "",
+                                "renderType": "selectSingle",
+                                "foreignTable": ""
+                            },
+                            "typeText": {
+                                "enableRichtext": false
+                            },
+                            "typeNumber": {
+                                "enableSlider": false,
+                                "steps": 1,
+                                "setRange": false,
+                                "upperRange": 255,
+                                "lowerRange": 0
+                            },
+                            "typeColor": {
+                                "setValuesColorPicker": false,
+                                "colorPickerValues": ""
+                            },
+                            "typeBoolean": {
+                                "renderType": "default",
+                                "booleanValues": ""
+                            },
+                            "typePassword": {
+                                "renderPasswordGenerator": false
+                            },
+                            "size": "",
+                            "minItems": "",
+                            "maxItems": "",
+                            "uid": "1a85b16d-6259-4cac-9760-f131fc88df56"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "propertyDescription": "",
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsNullable": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "description",
+                            "propertyType": "Text",
+                            "typeSelect": {
+                                "selectboxValues": "",
+                                "renderType": "selectSingle",
+                                "foreignTable": ""
+                            },
+                            "typeText": {
+                                "enableRichtext": true
+                            },
+                            "typeNumber": {
+                                "enableSlider": false,
+                                "steps": 1,
+                                "setRange": false,
+                                "upperRange": 255,
+                                "lowerRange": 0
+                            },
+                            "typeColor": {
+                                "setValuesColorPicker": false,
+                                "colorPickerValues": ""
+                            },
+                            "typeBoolean": {
+                                "renderType": "default",
+                                "booleanValues": ""
+                            },
+                            "typePassword": {
+                                "renderPasswordGenerator": false
+                            },
+                            "size": "",
+                            "minItems": "",
+                            "maxItems": "",
+                            "uid": "f285fce7-8664-4566-be1c-f75df39460c9"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    139.0516227385922,
+                    997.7886815171886
+                ]
+            },
+            "name": "Present",
+            "value": {
+                "actionGroup": {
+                    "_default0_index": true,
+                    "_default1_list": true,
+                    "_default2_show": true,
+                    "_default3_new_create": true,
+                    "_default4_edit_update": true,
+                    "_default5_delete": true,
+                    "customActions": []
+                },
+                "name": "Present",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "Schenkungen",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "4e483992-da40-49a3-aa2a-90bb759d2bc9"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "propertyDescription": "",
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsNullable": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "gift_date",
+                            "propertyType": "Date",
+                            "typeSelect": {
+                                "selectboxValues": "",
+                                "renderType": "selectSingle",
+                                "foreignTable": ""
+                            },
+                            "typeText": {
+                                "enableRichtext": false
+                            },
+                            "typeNumber": {
+                                "enableSlider": false,
+                                "steps": 1,
+                                "setRange": false,
+                                "upperRange": 255,
+                                "lowerRange": 0
+                            },
+                            "typeColor": {
+                                "setValuesColorPicker": false,
+                                "colorPickerValues": ""
+                            },
+                            "typeBoolean": {
+                                "renderType": "default",
+                                "booleanValues": ""
+                            },
+                            "typePassword": {
+                                "renderPasswordGenerator": false
+                            },
+                            "size": "",
+                            "minItems": "",
+                            "maxItems": "",
+                            "uid": "d33c5524-3524-46e1-a970-afed781c834e"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "propertyDescription": "",
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsNullable": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "given",
+                            "propertyType": "Boolean",
+                            "typeSelect": {
+                                "selectboxValues": "",
+                                "renderType": "selectSingle",
+                                "foreignTable": ""
+                            },
+                            "typeText": {
+                                "enableRichtext": false
+                            },
+                            "typeNumber": {
+                                "enableSlider": false,
+                                "steps": 1,
+                                "setRange": false,
+                                "upperRange": 255,
+                                "lowerRange": 0
+                            },
+                            "typeColor": {
+                                "setValuesColorPicker": false,
+                                "colorPickerValues": ""
+                            },
+                            "typeBoolean": {
+                                "renderType": "checkboxToggle",
+                                "booleanValues": "Ja:1\nNein:0"
+                            },
+                            "typePassword": {
+                                "renderPasswordGenerator": false
+                            },
+                            "size": "",
+                            "minItems": "",
+                            "maxItems": "",
+                            "uid": "d09fc40c-da80-48a7-b66d-e5e6e16493f8"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": true,
+                            "propertyIsExcludeField": false,
+                            "relationDescription": "",
+                            "relationName": "gift",
+                            "relationType": "manyToOne",
+                            "relationWire": "[wired]",
+                            "renderType": "selectSingle",
+                            "uid": "f30eb000-b8c9-425a-be4c-f73b07f53f37"
                         }
                     ]
                 }
@@ -277,6 +539,34 @@
                 "terminal": "SOURCES",
                 "uid": "dndnode_1"
             }
+        },
+        {
+            "src": {
+                "moduleId": 3,
+                "moduleName": "Present",
+                "terminal": "relationWire_0",
+                "uid": "reactflow__edge-dndnode_3relation-dndnode_3-0-dndnode_2customModelNode-dndnode_2"
+            },
+            "tgt": {
+                "moduleId": 2,
+                "moduleName": "Gift",
+                "terminal": "SOURCES",
+                "uid": "dndnode_3"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 0,
+                "moduleName": "Person",
+                "terminal": "relationWire_0",
+                "uid": "reactflow__edge-dndnode_0relation-dndnode_0-0-dndnode_3customModelNode-dndnode_3"
+            },
+            "tgt": {
+                "moduleId": 3,
+                "moduleName": "Present",
+                "terminal": "SOURCES",
+                "uid": "dndnode_0"
+            }
         }
     ],
     "nodes": [
@@ -328,12 +618,25 @@
                         "isl10nModeExlude": false
                     }
                 ],
-                "relations": []
+                "relations": [
+                    {
+                        "foreignRelationClass": "",
+                        "lazyLoading": true,
+                        "excludeField": true,
+                        "relationDescription": "Geschenke",
+                        "relationName": "Donations",
+                        "relationType": "zeroToMany",
+                        "relationWire": "",
+                        "renderType": "",
+                        "uid": "905857860343",
+                        "relationToExternalClass": "SKom\\Leseohren\\Domain\\Model\\Present"
+                    }
+                ]
             },
             "dragHandle": ".drag-handle",
             "draggable": true,
             "width": 300,
-            "height": 257,
+            "height": 770,
             "selected": false,
             "positionAbsolute": {
                 "x": 122,
@@ -398,11 +701,153 @@
             "dragHandle": ".drag-handle",
             "draggable": true,
             "width": 300,
-            "height": 770,
+            "height": 302,
             "selected": false,
             "positionAbsolute": {
                 "x": 508.5152837617552,
                 "y": 56.24361243780435
+            },
+            "dragging": false
+        },
+        {
+            "id": "dndnode_2",
+            "type": "customModel",
+            "position": {
+                "x": 605.7130863733391,
+                "y": 1091.0355303958959
+            },
+            "data": {
+                "label": "Gift",
+                "objectType": "",
+                "isAggregateRoot": true,
+                "enableSorting": false,
+                "addDeletedField": true,
+                "addHiddenField": true,
+                "addStarttimeEndtimeFields": true,
+                "enableCategorization": false,
+                "description": "Geschenk",
+                "mapToExistingTable": "",
+                "extendExistingModelClass": "",
+                "actions": {
+                    "actionIndex": true,
+                    "actionList": true,
+                    "actionShow": true,
+                    "actionNewCreate": true,
+                    "actionEditUpdate": true,
+                    "actionDelete": true
+                },
+                "customActions": [],
+                "properties": [
+                    {
+                        "name": "title",
+                        "type": "String",
+                        "description": "",
+                        "isRequired": true,
+                        "isNullable": false,
+                        "isExcludeField": false,
+                        "isl10nModeExlude": false
+                    },
+                    {
+                        "name": "description",
+                        "type": "Text",
+                        "description": "",
+                        "isRequired": false,
+                        "isNullable": false,
+                        "isExcludeField": false,
+                        "isl10nModeExlude": false,
+                        "typeText": {
+                            "enableRichtext": true
+                        }
+                    }
+                ],
+                "relations": []
+            },
+            "dragHandle": ".drag-handle",
+            "draggable": true,
+            "width": 300,
+            "height": 257,
+            "selected": false,
+            "positionAbsolute": {
+                "x": 605.7130863733391,
+                "y": 1091.0355303958959
+            },
+            "dragging": false
+        },
+        {
+            "id": "dndnode_3",
+            "type": "customModel",
+            "position": {
+                "x": 139.0516227385922,
+                "y": 997.7886815171886
+            },
+            "data": {
+                "label": "Present",
+                "objectType": "",
+                "isAggregateRoot": false,
+                "enableSorting": false,
+                "addDeletedField": true,
+                "addHiddenField": true,
+                "addStarttimeEndtimeFields": true,
+                "enableCategorization": false,
+                "description": "Schenkungen",
+                "mapToExistingTable": "",
+                "extendExistingModelClass": "",
+                "actions": {
+                    "actionIndex": true,
+                    "actionList": true,
+                    "actionShow": true,
+                    "actionNewCreate": true,
+                    "actionEditUpdate": true,
+                    "actionDelete": true
+                },
+                "customActions": [],
+                "properties": [
+                    {
+                        "name": "gift_date",
+                        "type": "Date",
+                        "description": "",
+                        "isRequired": true,
+                        "isNullable": false,
+                        "isExcludeField": false,
+                        "isl10nModeExlude": false
+                    },
+                    {
+                        "name": "given",
+                        "type": "Boolean",
+                        "description": "",
+                        "isRequired": false,
+                        "isNullable": false,
+                        "isExcludeField": false,
+                        "isl10nModeExlude": false,
+                        "typeBoolean": {
+                            "renderType": "checkboxToggle",
+                            "booleanValues": "Ja:1\nNein:0"
+                        }
+                    }
+                ],
+                "relations": [
+                    {
+                        "foreignRelationClass": "",
+                        "lazyLoading": true,
+                        "excludeField": true,
+                        "relationDescription": "",
+                        "relationName": "gift",
+                        "relationType": "manyToOne",
+                        "relationWire": "",
+                        "renderType": "",
+                        "uid": "905857860343",
+                        "relationToExternalClass": "SKom\\Leseohren\\Domain\\Model\\Gift"
+                    }
+                ]
+            },
+            "dragHandle": ".drag-handle",
+            "draggable": true,
+            "width": 300,
+            "height": 302,
+            "selected": false,
+            "positionAbsolute": {
+                "x": 139.0516227385922,
+                "y": 997.7886815171886
             },
             "dragging": false
         }
@@ -414,11 +859,25 @@
             "target": "dndnode_0",
             "targetHandle": "customModelNode-dndnode_0",
             "id": "reactflow__edge-dndnode_1relation-dndnode_1-0-dndnode_0customModelNode-dndnode_0"
+        },
+        {
+            "source": "dndnode_3",
+            "sourceHandle": "relation-dndnode_3-0",
+            "target": "dndnode_2",
+            "targetHandle": "customModelNode-dndnode_2",
+            "id": "reactflow__edge-dndnode_3relation-dndnode_3-0-dndnode_2customModelNode-dndnode_2"
+        },
+        {
+            "source": "dndnode_0",
+            "sourceHandle": "relation-dndnode_0-0",
+            "target": "dndnode_3",
+            "targetHandle": "customModelNode-dndnode_3",
+            "id": "reactflow__edge-dndnode_0relation-dndnode_0-0-dndnode_3customModelNode-dndnode_3"
         }
     ],
     "storagePath": "\/var\/www\/html\/packages\/",
     "log": {
-        "last_modified": "2024-02-12 12:51",
+        "last_modified": "2024-02-13 11:31",
         "extension_builder_version": "v12.0.0-alpha.6",
         "be_user": " (1)"
     }

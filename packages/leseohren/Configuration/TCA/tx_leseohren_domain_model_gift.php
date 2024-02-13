@@ -1,10 +1,8 @@
 <?php
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person',
-        'label' => 'lastname',
-        'label_alt' => 'firstname',
-        'label_alt_force' => true,
+        'title' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_gift',
+        'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -15,14 +13,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'firstname,lastname',
-        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_person.gif',
+        'searchFields' => 'title,description',
+        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_gift.gif',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
     ],
     'types' => [
-        '1' => ['showitem' => 'firstname, lastname, categories, donations, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
+        '1' => ['showitem' => 'title, description, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
     ],
     'columns' => [
         'hidden' => [
@@ -69,53 +67,31 @@ return [
                 ]
             ],
         ],
-        'categories' => [
-            'config'=> [
-                'type' => 'category',
-            ],
-        ],
 
-        'firstname' => [
+        'title' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.firstname',
-            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.firstname.description',
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_gift.title',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_gift.title.description',
             'config' => [
                 'type' => 'input',
                 'size' => 0,
                 'eval' => 'trim',
+                'required' => true,
                 'default' => ''
             ],
         ],
-        'lastname' => [
+        'description' => [
             'exclude' => false,
-            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.lastname',
-            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.lastname.description',
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_gift.description',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_gift.description.description',
             'config' => [
-                'type' => 'input',
-                'size' => 0,
+                'type' => 'text',
+                'enableRichtext' => 'true',
+                'rows' => 15,
                 'eval' => 'trim',
                 'default' => ''
-            ],
+            ]
         ],
-        'donations' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.donations',
-            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.donations.description',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_leseohren_domain_model_present',
-                'foreign_field' => 'person',
-                'maxitems' => 9999,
-                'appearance' => [
-                    'collapseAll' => 1,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
-            ],
-
-        ],
-
+    
     ],
 ];

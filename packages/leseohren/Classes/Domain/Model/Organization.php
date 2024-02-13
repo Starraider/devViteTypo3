@@ -48,7 +48,6 @@ class Organization extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     protected $contactPerson = null;
 
-
     /**
      * Add category to a blog
      *

@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="gift_date">
+	<f:translate key="tx_leseohren_domain_model_present.gift_date" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="gift_date" id="gift_date" value="{present.gift_date->f:format.date()}" /><br />
+<label for="given">
+	<f:translate key="tx_leseohren_domain_model_present.given" />
+</label><br />
+	<f:form.checkbox property="given" id="given" value="1" /><br />
+</html>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang_csh_tx_leseohren_domain_model_person.xlf" date="2024-02-12T12:51:44Z" product-name="leseohren">
+	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang_csh_tx_leseohren_domain_model_person.xlf" date="2024-02-13T11:31:17Z" product-name="leseohren">
 		<header/>
 		<body>
 			<trans-unit id="firstname.description" resname="firstname.description">
@@ -8,6 +8,9 @@
 			</trans-unit>
 			<trans-unit id="lastname.description" resname="lastname.description">
 				<source>lastname</source>
+			</trans-unit>
+			<trans-unit id="donations.description" resname="donations.description">
+				<source>Geschenke</source>
 			</trans-unit>
 		</body>
 	</file>

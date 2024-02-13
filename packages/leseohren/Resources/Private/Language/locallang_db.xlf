@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang_db.xlf" date="2024-02-12T12:51:44Z" product-name="leseohren">
+	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang_db.xlf" date="2024-02-13T11:31:17Z" product-name="leseohren">
 		<header/>
 		<body>
 			<trans-unit id="tx_leseohren_domain_model_person" resname="tx_leseohren_domain_model_person">
@@ -21,6 +21,12 @@
 			<trans-unit id="tx_leseohren_domain_model_person.lastname.description" resname="tx_leseohren_domain_model_person.lastname.description">
 				<source>Lastname</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.donations" resname="tx_leseohren_domain_model_person.donations">
+				<source>Donations</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.donations.description" resname="tx_leseohren_domain_model_person.donations.description">
+				<source>Geschenke</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization" resname="tx_leseohren_domain_model_organization">
 				<source>Organization</source>
 			</trans-unit>
@@ -38,6 +44,45 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.contact_person.description" resname="tx_leseohren_domain_model_organization.contact_person.description">
 				<source>Kontaktperson</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_gift" resname="tx_leseohren_domain_model_gift">
+				<source>Gift</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_gift.description" resname="tx_leseohren_domain_model_gift.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_gift.title" resname="tx_leseohren_domain_model_gift.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_gift.title.description" resname="tx_leseohren_domain_model_gift.title.description">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_gift.description.description" resname="tx_leseohren_domain_model_gift.description.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present" resname="tx_leseohren_domain_model_present">
+				<source>Present</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.description" resname="tx_leseohren_domain_model_present.description">
+				<source>Schenkungen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.gift_date" resname="tx_leseohren_domain_model_present.gift_date">
+				<source>Gift Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.gift_date.description" resname="tx_leseohren_domain_model_present.gift_date.description">
+				<source>Gift Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.given" resname="tx_leseohren_domain_model_present.given">
+				<source>Given</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.given.description" resname="tx_leseohren_domain_model_present.given.description">
+				<source>Given</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.gift" resname="tx_leseohren_domain_model_present.gift">
+				<source>Gift</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.gift.description" resname="tx_leseohren_domain_model_present.gift.description">
+				<source>Gift</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_personen.name" resname="tx_leseohren_personen.name">
 				<source>Personen</source>

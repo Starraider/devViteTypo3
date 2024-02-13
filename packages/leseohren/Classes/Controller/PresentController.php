@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Controller;
 
+
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -14,25 +15,10 @@ namespace SKom\Leseohren\Controller;
  */
 
 /**
- * OrganizationController
+ * PresentController
  */
-class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class PresentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
-
-    /**
-     * organizationRepository
-     *
-     * @var \SKom\Leseohren\Domain\Repository\OrganizationRepository
-     */
-    protected $organizationRepository = null;
-
-    /**
-     * @param \SKom\Leseohren\Domain\Repository\OrganizationRepository $organizationRepository
-     */
-    public function injectOrganizationRepository(\SKom\Leseohren\Domain\Repository\OrganizationRepository $organizationRepository)
-    {
-        $this->organizationRepository = $organizationRepository;
-    }
 
     /**
      * action index
@@ -51,20 +37,20 @@ class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      */
     public function listAction(): \Psr\Http\Message\ResponseInterface
     {
-        $organizations = $this->organizationRepository->findAll();
-        $this->view->assign('organizations', $organizations);
+        $presents = $this->presentRepository->findAll();
+        $this->view->assign('presents', $presents);
         return $this->htmlResponse();
     }
 
     /**
      * action show
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
+     * @param \SKom\Leseohren\Domain\Model\Present $present
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function showAction(\SKom\Leseohren\Domain\Model\Organization $organization): \Psr\Http\Message\ResponseInterface
+    public function showAction(\SKom\Leseohren\Domain\Model\Present $present): \Psr\Http\Message\ResponseInterface
     {
-        $this->view->assign('organization', $organization);
+        $this->view->assign('present', $present);
         return $this->htmlResponse();
     }
 
@@ -81,49 +67,49 @@ class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     /**
      * action create
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $newOrganization
+     * @param \SKom\Leseohren\Domain\Model\Present $newPresent
      */
-    public function createAction(\SKom\Leseohren\Domain\Model\Organization $newOrganization)
+    public function createAction(\SKom\Leseohren\Domain\Model\Present $newPresent)
     {
         $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->organizationRepository->add($newOrganization);
+        $this->presentRepository->add($newPresent);
         return $this->redirect('list');
     }
 
     /**
      * action edit
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
-     * @TYPO3\CMS\Extbase\Annotation\IgnoreValidation("organization")
+     * @param \SKom\Leseohren\Domain\Model\Present $present
+     * @TYPO3\CMS\Extbase\Annotation\IgnoreValidation("present")
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function editAction(\SKom\Leseohren\Domain\Model\Organization $organization): \Psr\Http\Message\ResponseInterface
+    public function editAction(\SKom\Leseohren\Domain\Model\Present $present): \Psr\Http\Message\ResponseInterface
     {
-        $this->view->assign('organization', $organization);
+        $this->view->assign('present', $present);
         return $this->htmlResponse();
     }
 
     /**
      * action update
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
+     * @param \SKom\Leseohren\Domain\Model\Present $present
      */
-    public function updateAction(\SKom\Leseohren\Domain\Model\Organization $organization)
+    public function updateAction(\SKom\Leseohren\Domain\Model\Present $present)
     {
         $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->organizationRepository->update($organization);
+        $this->presentRepository->update($present);
         return $this->redirect('list');
     }
 
     /**
      * action delete
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
+     * @param \SKom\Leseohren\Domain\Model\Present $present
      */
-    public function deleteAction(\SKom\Leseohren\Domain\Model\Organization $organization)
+    public function deleteAction(\SKom\Leseohren\Domain\Model\Present $present)
     {
         $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->organizationRepository->remove($organization);
+        $this->presentRepository->remove($present);
         return $this->redirect('list');
     }
 }

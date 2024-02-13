@@ -76,4 +76,63 @@ class PersonTest extends UnitTestCase
 
         self::assertEquals('Conceived at T3CON10', $this->subject->_get('lastname'));
     }
+
+    /**
+     * @test
+     */
+    public function getDonationsReturnsInitialValueForPresent(): void
+    {
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
+            $this->subject->getDonations()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setDonationsForObjectStorageContainingPresentSetsDonations(): void
+    {
+        $Donation = new \SKom\Leseohren\Domain\Model\Present();
+        $objectStorageHoldingExactlyOneDonations = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneDonations->attach($Donation);
+        $this->subject->setDonations($objectStorageHoldingExactlyOneDonations);
+
+        self::assertEquals($objectStorageHoldingExactlyOneDonations, $this->subject->_get('Donations'));
+    }
+
+    /**
+     * @test
+     */
+    public function addDonationToObjectStorageHoldingDonations(): void
+    {
+        $Donation = new \SKom\Leseohren\Domain\Model\Present();
+        $DonationsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->onlyMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $DonationsObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($Donation));
+        $this->subject->_set('Donations', $DonationsObjectStorageMock);
+
+        $this->subject->addDonation($Donation);
+    }
+
+    /**
+     * @test
+     */
+    public function removeDonationFromObjectStorageHoldingDonations(): void
+    {
+        $Donation = new \SKom\Leseohren\Domain\Model\Present();
+        $DonationsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->onlyMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $DonationsObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($Donation));
+        $this->subject->_set('Donations', $DonationsObjectStorageMock);
+
+        $this->subject->removeDonation($Donation);
+    }
 }
