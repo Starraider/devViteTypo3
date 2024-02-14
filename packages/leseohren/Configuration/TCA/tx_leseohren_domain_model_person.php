@@ -22,7 +22,7 @@ return [
         ],
     ],
     'types' => [
-        '1' => ['showitem' => 'firstname, lastname, donations, categories, blackboards, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
+        '1' => ['showitem' => 'gender, firstname, lastname, donations, categories, blackboards, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
     ],
     'columns' => [
         'hidden' => [
@@ -76,6 +76,25 @@ return [
                     'startingPoints' => '1',
                     'nonSelectableLevels' => 0,
                 ],
+            ],
+        ],
+
+        'gender' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.gender',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.gender.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['-- bitte wählen --', 0],
+                    ['weiblich', 1],
+                    ['männlich', 2],
+                    ['divers', 3],
+                ],
+                'size' => 1,
+                'maxitems' => 1,
+                'eval' => ''
             ],
         ],
 

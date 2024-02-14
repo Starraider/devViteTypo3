@@ -4,6 +4,10 @@
 <h1>{person.lastname}, {person.firstname}</h1>
 <table class="tx-leseohren">
     <tr>
+		<td><f:translate key="tx_leseohren_domain_model_person.gender" /></td>
+		<td>{person.gender}</td>
+	</tr>
+    <tr>
         <td></td>
         <td>
             <f:if condition="{person.categories}">

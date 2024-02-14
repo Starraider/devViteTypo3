@@ -9,6 +9,12 @@
 			<trans-unit id="tx_leseohren_domain_model_person.description" resname="tx_leseohren_domain_model_person.description">
 				<source>Person</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.gender" resname="tx_leseohren_domain_model_person.gender">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.gender.description" resname="tx_leseohren_domain_model_person.gender.description">
+				<source>Geschlecht</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.firstname" resname="tx_leseohren_domain_model_person.firstname">
 				<source>Firstname</source>
 			</trans-unit>

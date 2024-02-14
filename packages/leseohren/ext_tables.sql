@@ -1,4 +1,5 @@
 CREATE TABLE tx_leseohren_domain_model_person (
+	gender int(11) DEFAULT '0' NOT NULL,
 	firstname varchar(255) NOT NULL DEFAULT '',
 	lastname varchar(255) NOT NULL DEFAULT '',
 	donations int(11) unsigned NOT NULL DEFAULT '0',

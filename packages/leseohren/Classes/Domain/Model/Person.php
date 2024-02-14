@@ -28,6 +28,13 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public $categories;
 
     /**
+     * gender
+     *
+     * @var int
+     */
+    protected $gender = 0;
+
+    /**
      * Vorname
      *
      * @var string
@@ -114,6 +121,27 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function removeCategory(Category $category)
     {
         $this->categories->detach($category);
+    }
+
+    /**
+     * Returns the gender
+     *
+     * @return int
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * Sets the gender
+     *
+     * @param int $gender
+     * @return void
+     */
+    public function setGender(int $gender)
+    {
+        $this->gender = $gender;
     }
 
     /**
