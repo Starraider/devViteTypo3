@@ -26,6 +26,30 @@ defined('TYPO3') || die();
         ]
     );
 
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Leseohren',
+        'Events',
+        [
+            \SKom\Leseohren\Controller\EventController::class => 'list, index, show, new, create, edit, update, delete'
+        ],
+        // non-cacheable actions
+        [
+            \SKom\Leseohren\Controller\EventController::class => 'new, create, edit, update, delete'
+        ]
+    );
+
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Leseohren',
+        'Blackboards',
+        [
+            \SKom\Leseohren\Controller\BlackboardController::class => 'list, index, show, new, create, edit, update, delete'
+        ],
+        // non-cacheable actions
+        [
+            \SKom\Leseohren\Controller\BlackboardController::class => 'new, create, edit, update, delete'
+        ]
+    );
+
     // wizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
         'mod {
@@ -47,6 +71,24 @@ defined('TYPO3') || die();
                         tt_content_defValues {
                             CType = list
                             list_type = leseohren_organizations
+                        }
+                    }
+                    events {
+                        iconIdentifier = leseohren-plugin-events
+                        title = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_events.name
+                        description = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_events.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = leseohren_events
+                        }
+                    }
+                    blackboards {
+                        iconIdentifier = leseohren-plugin-blackboards
+                        title = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_blackboards.name
+                        description = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_blackboards.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = leseohren_blackboards
                         }
                     }
                 }

@@ -27,7 +27,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public $categories;
 
-
     /**
      * Vorname
      *
@@ -52,13 +51,21 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $Donations = null;
 
     /**
+     * Blackboards
+     *
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Blackboard>
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     */
+    protected $Blackboards = null;
+
+    /**
      * __construct
      */
     public function __construct()
     {
-        // Do not remove the next line: It would break the functionality
-        $this->initializeObject();
         $this->categories = new ObjectStorage();
+        $this->initializeObject();
     }
 
     /**
@@ -72,6 +79,7 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function initializeObject()
     {
         $this->Donations = $this->Donations ?: new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->Blackboards = $this->Blackboards ?: new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -191,5 +199,48 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setDonations(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $Donations)
     {
         $this->Donations = $Donations;
+    }
+
+    /**
+     * Adds a Blackboard
+     *
+     * @param \SKom\Leseohren\Domain\Model\Blackboard $Blackboard
+     * @return void
+     */
+    public function addBlackboard(\SKom\Leseohren\Domain\Model\Blackboard $Blackboard)
+    {
+        $this->Blackboards->attach($Blackboard);
+    }
+
+    /**
+     * Removes a Blackboard
+     *
+     * @param \SKom\Leseohren\Domain\Model\Blackboard $BlackboardToRemove The Blackboard to be removed
+     * @return void
+     */
+    public function removeBlackboard(\SKom\Leseohren\Domain\Model\Blackboard $BlackboardToRemove)
+    {
+        $this->Blackboards->detach($BlackboardToRemove);
+    }
+
+    /**
+     * Returns the Blackboards
+     *
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Blackboard>
+     */
+    public function getBlackboards()
+    {
+        return $this->Blackboards;
+    }
+
+    /**
+     * Sets the Blackboards
+     *
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Blackboard> $Blackboards
+     * @return void
+     */
+    public function setBlackboards(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $Blackboards)
+    {
+        $this->Blackboards = $Blackboards;
     }
 }

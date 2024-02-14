@@ -9,4 +9,12 @@ return [
         'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         'source' => 'EXT:leseohren/Resources/Public/Icons/user_plugin_organizations.svg'
     ],
+    'leseohren-plugin-events' => [
+        'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        'source' => 'EXT:leseohren/Resources/Public/Icons/user_plugin_events.svg'
+    ],
+    'leseohren-plugin-blackboards' => [
+        'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        'source' => 'EXT:leseohren/Resources/Public/Icons/user_plugin_blackboards.svg'
+    ],
 ];

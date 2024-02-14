@@ -15,24 +15,24 @@ namespace SKom\Leseohren\Controller;
  */
 
 /**
- * OrganizationController
+ * EventController
  */
-class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 
     /**
-     * organizationRepository
+     * eventRepository
      *
-     * @var \SKom\Leseohren\Domain\Repository\OrganizationRepository
+     * @var \SKom\Leseohren\Domain\Repository\EventRepository
      */
-    protected $organizationRepository = null;
+    protected $eventRepository = null;
 
     /**
-     * @param \SKom\Leseohren\Domain\Repository\OrganizationRepository $organizationRepository
+     * @param \SKom\Leseohren\Domain\Repository\EventRepository $eventRepository
      */
-    public function injectOrganizationRepository(\SKom\Leseohren\Domain\Repository\OrganizationRepository $organizationRepository)
+    public function injectEventRepository(\SKom\Leseohren\Domain\Repository\EventRepository $eventRepository)
     {
-        $this->organizationRepository = $organizationRepository;
+        $this->eventRepository = $eventRepository;
     }
 
     /**
@@ -52,20 +52,20 @@ class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      */
     public function listAction(): \Psr\Http\Message\ResponseInterface
     {
-        $organizations = $this->organizationRepository->findAll();
-        $this->view->assign('organizations', $organizations);
+        $events = $this->eventRepository->findAll();
+        $this->view->assign('events', $events);
         return $this->htmlResponse();
     }
 
     /**
      * action show
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
+     * @param \SKom\Leseohren\Domain\Model\Event $event
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function showAction(\SKom\Leseohren\Domain\Model\Organization $organization): \Psr\Http\Message\ResponseInterface
+    public function showAction(\SKom\Leseohren\Domain\Model\Event $event): \Psr\Http\Message\ResponseInterface
     {
-        $this->view->assign('organization', $organization);
+        $this->view->assign('event', $event);
         return $this->htmlResponse();
     }
 
@@ -82,49 +82,49 @@ class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     /**
      * action create
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $newOrganization
+     * @param \SKom\Leseohren\Domain\Model\Event $newEvent
      */
-    public function createAction(\SKom\Leseohren\Domain\Model\Organization $newOrganization)
+    public function createAction(\SKom\Leseohren\Domain\Model\Event $newEvent)
     {
         $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->organizationRepository->add($newOrganization);
+        $this->eventRepository->add($newEvent);
         return $this->redirect('list');
     }
 
     /**
      * action edit
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
-     * @TYPO3\CMS\Extbase\Annotation\IgnoreValidation("organization")
+     * @param \SKom\Leseohren\Domain\Model\Event $event
+     * @TYPO3\CMS\Extbase\Annotation\IgnoreValidation("event")
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function editAction(\SKom\Leseohren\Domain\Model\Organization $organization): \Psr\Http\Message\ResponseInterface
+    public function editAction(\SKom\Leseohren\Domain\Model\Event $event): \Psr\Http\Message\ResponseInterface
     {
-        $this->view->assign('organization', $organization);
+        $this->view->assign('event', $event);
         return $this->htmlResponse();
     }
 
     /**
      * action update
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
+     * @param \SKom\Leseohren\Domain\Model\Event $event
      */
-    public function updateAction(\SKom\Leseohren\Domain\Model\Organization $organization)
+    public function updateAction(\SKom\Leseohren\Domain\Model\Event $event)
     {
         $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->organizationRepository->update($organization);
+        $this->eventRepository->update($event);
         return $this->redirect('list');
     }
 
     /**
      * action delete
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
+     * @param \SKom\Leseohren\Domain\Model\Event $event
      */
-    public function deleteAction(\SKom\Leseohren\Domain\Model\Organization $organization)
+    public function deleteAction(\SKom\Leseohren\Domain\Model\Event $event)
     {
         $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->organizationRepository->remove($organization);
+        $this->eventRepository->remove($event);
         return $this->redirect('list');
     }
 }

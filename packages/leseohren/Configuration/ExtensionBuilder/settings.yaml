@@ -46,14 +46,14 @@ overwriteSettings:
 
   Configuration:
     # TCA merge not possible - use overrides directory
-    #TypoScript: keep
+    TypoScript: keep
 
   Resources:
     Private:
-      #Language: merge
-      #Layouts: keep
-      #Partials: keep
-      #Templates: keep
+      Language: merge
+      Layouts: keep
+      Partials: keep
+      Templates: keep
       Backend:
         #Layouts: keep
         #Partials: keep

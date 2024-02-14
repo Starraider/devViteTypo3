@@ -20,7 +20,7 @@ return [
         ],
     ],
     'types' => [
-        '1' => ['showitem' => 'name, contact_person, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
+        '1' => ['showitem' => 'name, contact_person, categories, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
     ],
     'columns' => [
         'hidden' => [
@@ -70,6 +70,10 @@ return [
         'categories' => [
             'config'=> [
                 'type' => 'category',
+                'treeConfig' => [
+                    'startingPoints' => '10',
+                    'nonSelectableLevels' => '0',
+                ],
             ],
         ],
 
@@ -97,8 +101,8 @@ return [
                 'minitems' => 0,
                 'maxitems' => 1,
             ],
-            
+
         ],
-    
+
     ],
 ];

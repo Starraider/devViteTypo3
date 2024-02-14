@@ -15,24 +15,24 @@ namespace SKom\Leseohren\Controller;
  */
 
 /**
- * OrganizationController
+ * BlackboardController
  */
-class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class BlackboardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
 
     /**
-     * organizationRepository
+     * blackboardRepository
      *
-     * @var \SKom\Leseohren\Domain\Repository\OrganizationRepository
+     * @var \SKom\Leseohren\Domain\Repository\BlackboardRepository
      */
-    protected $organizationRepository = null;
+    protected $blackboardRepository = null;
 
     /**
-     * @param \SKom\Leseohren\Domain\Repository\OrganizationRepository $organizationRepository
+     * @param \SKom\Leseohren\Domain\Repository\BlackboardRepository $blackboardRepository
      */
-    public function injectOrganizationRepository(\SKom\Leseohren\Domain\Repository\OrganizationRepository $organizationRepository)
+    public function injectBlackboardRepository(\SKom\Leseohren\Domain\Repository\BlackboardRepository $blackboardRepository)
     {
-        $this->organizationRepository = $organizationRepository;
+        $this->blackboardRepository = $blackboardRepository;
     }
 
     /**
@@ -52,20 +52,20 @@ class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
      */
     public function listAction(): \Psr\Http\Message\ResponseInterface
     {
-        $organizations = $this->organizationRepository->findAll();
-        $this->view->assign('organizations', $organizations);
+        $blackboards = $this->blackboardRepository->findAll();
+        $this->view->assign('blackboards', $blackboards);
         return $this->htmlResponse();
     }
 
     /**
      * action show
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
+     * @param \SKom\Leseohren\Domain\Model\Blackboard $blackboard
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function showAction(\SKom\Leseohren\Domain\Model\Organization $organization): \Psr\Http\Message\ResponseInterface
+    public function showAction(\SKom\Leseohren\Domain\Model\Blackboard $blackboard): \Psr\Http\Message\ResponseInterface
     {
-        $this->view->assign('organization', $organization);
+        $this->view->assign('blackboard', $blackboard);
         return $this->htmlResponse();
     }
 
@@ -82,49 +82,49 @@ class OrganizationController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
     /**
      * action create
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $newOrganization
+     * @param \SKom\Leseohren\Domain\Model\Blackboard $newBlackboard
      */
-    public function createAction(\SKom\Leseohren\Domain\Model\Organization $newOrganization)
+    public function createAction(\SKom\Leseohren\Domain\Model\Blackboard $newBlackboard)
     {
         $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->organizationRepository->add($newOrganization);
+        $this->blackboardRepository->add($newBlackboard);
         return $this->redirect('list');
     }
 
     /**
      * action edit
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
-     * @TYPO3\CMS\Extbase\Annotation\IgnoreValidation("organization")
+     * @param \SKom\Leseohren\Domain\Model\Blackboard $blackboard
+     * @TYPO3\CMS\Extbase\Annotation\IgnoreValidation("blackboard")
      * @return \Psr\Http\Message\ResponseInterface
      */
-    public function editAction(\SKom\Leseohren\Domain\Model\Organization $organization): \Psr\Http\Message\ResponseInterface
+    public function editAction(\SKom\Leseohren\Domain\Model\Blackboard $blackboard): \Psr\Http\Message\ResponseInterface
     {
-        $this->view->assign('organization', $organization);
+        $this->view->assign('blackboard', $blackboard);
         return $this->htmlResponse();
     }
 
     /**
      * action update
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
+     * @param \SKom\Leseohren\Domain\Model\Blackboard $blackboard
      */
-    public function updateAction(\SKom\Leseohren\Domain\Model\Organization $organization)
+    public function updateAction(\SKom\Leseohren\Domain\Model\Blackboard $blackboard)
     {
         $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->organizationRepository->update($organization);
+        $this->blackboardRepository->update($blackboard);
         return $this->redirect('list');
     }
 
     /**
      * action delete
      *
-     * @param \SKom\Leseohren\Domain\Model\Organization $organization
+     * @param \SKom\Leseohren\Domain\Model\Blackboard $blackboard
      */
-    public function deleteAction(\SKom\Leseohren\Domain\Model\Organization $organization)
+    public function deleteAction(\SKom\Leseohren\Domain\Model\Blackboard $blackboard)
     {
         $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
-        $this->organizationRepository->remove($organization);
+        $this->blackboardRepository->remove($blackboard);
         return $this->redirect('list');
     }
 }

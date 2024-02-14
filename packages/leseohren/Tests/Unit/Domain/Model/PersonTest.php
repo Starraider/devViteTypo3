@@ -135,4 +135,63 @@ class PersonTest extends UnitTestCase
 
         $this->subject->removeDonation($Donation);
     }
+
+    /**
+     * @test
+     */
+    public function getBlackboardsReturnsInitialValueForBlackboard(): void
+    {
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
+            $this->subject->getBlackboards()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setBlackboardsForObjectStorageContainingBlackboardSetsBlackboards(): void
+    {
+        $Blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
+        $objectStorageHoldingExactlyOneBlackboards = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneBlackboards->attach($Blackboard);
+        $this->subject->setBlackboards($objectStorageHoldingExactlyOneBlackboards);
+
+        self::assertEquals($objectStorageHoldingExactlyOneBlackboards, $this->subject->_get('Blackboards'));
+    }
+
+    /**
+     * @test
+     */
+    public function addBlackboardToObjectStorageHoldingBlackboards(): void
+    {
+        $Blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
+        $BlackboardsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->onlyMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $BlackboardsObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($Blackboard));
+        $this->subject->_set('Blackboards', $BlackboardsObjectStorageMock);
+
+        $this->subject->addBlackboard($Blackboard);
+    }
+
+    /**
+     * @test
+     */
+    public function removeBlackboardFromObjectStorageHoldingBlackboards(): void
+    {
+        $Blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
+        $BlackboardsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->onlyMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $BlackboardsObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($Blackboard));
+        $this->subject->_set('Blackboards', $BlackboardsObjectStorageMock);
+
+        $this->subject->removeBlackboard($Blackboard);
+    }
 }

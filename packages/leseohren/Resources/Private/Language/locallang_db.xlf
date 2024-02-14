@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang_db.xlf" date="2024-02-13T11:31:17Z" product-name="leseohren">
+	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang_db.xlf" date="2024-02-13T18:30:06Z" product-name="leseohren">
 		<header/>
 		<body>
 			<trans-unit id="tx_leseohren_domain_model_person" resname="tx_leseohren_domain_model_person">
@@ -26,6 +26,12 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.donations.description" resname="tx_leseohren_domain_model_person.donations.description">
 				<source>Geschenke</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.blackboards" resname="tx_leseohren_domain_model_person.blackboards">
+				<source>Blackboards</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.blackboards.description" resname="tx_leseohren_domain_model_person.blackboards.description">
+				<source>Blackboards</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization" resname="tx_leseohren_domain_model_organization">
 				<source>Organization</source>
@@ -84,6 +90,72 @@
 			<trans-unit id="tx_leseohren_domain_model_present.gift.description" resname="tx_leseohren_domain_model_present.gift.description">
 				<source>Gift</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard" resname="tx_leseohren_domain_model_blackboard">
+				<source>Blackboard</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.description" resname="tx_leseohren_domain_model_blackboard.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.title" resname="tx_leseohren_domain_model_blackboard.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.title.description" resname="tx_leseohren_domain_model_blackboard.title.description">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.description.description" resname="tx_leseohren_domain_model_blackboard.description.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.start_date" resname="tx_leseohren_domain_model_blackboard.start_date">
+				<source>Start Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.start_date.description" resname="tx_leseohren_domain_model_blackboard.start_date.description">
+				<source>Start Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.end_date" resname="tx_leseohren_domain_model_blackboard.end_date">
+				<source>End Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.end_date.description" resname="tx_leseohren_domain_model_blackboard.end_date.description">
+				<source>End Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event" resname="tx_leseohren_domain_model_event">
+				<source>Event</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.description" resname="tx_leseohren_domain_model_event.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.title" resname="tx_leseohren_domain_model_event.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.title.description" resname="tx_leseohren_domain_model_event.title.description">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.description.description" resname="tx_leseohren_domain_model_event.description.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.start_date" resname="tx_leseohren_domain_model_event.start_date">
+				<source>Start Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.start_date.description" resname="tx_leseohren_domain_model_event.start_date.description">
+				<source>Start Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.end_date" resname="tx_leseohren_domain_model_event.end_date">
+				<source>End Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.end_date.description" resname="tx_leseohren_domain_model_event.end_date.description">
+				<source>End Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.location" resname="tx_leseohren_domain_model_event.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.location.description" resname="tx_leseohren_domain_model_event.location.description">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.participants" resname="tx_leseohren_domain_model_event.participants">
+				<source>Participants</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.participants.description" resname="tx_leseohren_domain_model_event.participants.description">
+				<source>Participants</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_personen.name" resname="tx_leseohren_personen.name">
 				<source>Personen</source>
 			</trans-unit>
@@ -95,6 +167,18 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_organizations.description" resname="tx_leseohren_organizations.description">
 				<source>Organisationen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_events.name" resname="tx_leseohren_events.name">
+				<source>Events</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_events.description" resname="tx_leseohren_events.description">
+				<source>Veranstaltungen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_blackboards.name" resname="tx_leseohren_blackboards.name">
+				<source>Blackboards</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_blackboards.description" resname="tx_leseohren_blackboards.description">
+				<source>Schwarze Bretter</source>
 			</trans-unit>
 		</body>
 	</file>

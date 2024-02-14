@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-leseohren">
+	<tr>
+		<td><f:translate key="tx_leseohren_domain_model_event.title" /></td>
+		<td>{event.title}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_leseohren_domain_model_event.description" /></td>
+		<td>{event.description}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_leseohren_domain_model_event.start_date" /></td>
+		<td>{event.startDate -> f:format.date()}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_leseohren_domain_model_event.end_date" /></td>
+		<td>{event.endDate -> f:format.date()}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_leseohren_domain_model_event.location" /></td>
+		<td>{event.location}</td>
+	</tr>
+</table>
+</html>

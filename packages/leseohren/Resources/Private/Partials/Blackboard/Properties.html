@@ -1,0 +1,20 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<table class="tx-leseohren">
+	<tr>
+		<td><f:translate key="tx_leseohren_domain_model_blackboard.title" /></td>
+		<td>{blackboard.title}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_leseohren_domain_model_blackboard.description" /></td>
+		<td>{blackboard.description}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_leseohren_domain_model_blackboard.start_date" /></td>
+		<td>{blackboard.startDate -> f:format.date()}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_leseohren_domain_model_blackboard.end_date" /></td>
+		<td>{blackboard.endDate -> f:format.date()}</td>
+	</tr>
+</table>
+</html>

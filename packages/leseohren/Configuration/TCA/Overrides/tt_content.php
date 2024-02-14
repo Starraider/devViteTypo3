@@ -12,3 +12,15 @@ defined('TYPO3') || die();
     'Organizations',
     'Organizations'
 );
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Leseohren',
+    'Events',
+    'Events'
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Leseohren',
+    'Blackboards',
+    'Blackboards'
+);

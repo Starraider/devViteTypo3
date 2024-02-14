@@ -8,16 +8,17 @@ in /Configuration/ExtensionBuilder/settings.yaml:
   Resources:
     Private:
       Templates:
-        Person:
+        Event:
           Show.html: keep
 
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
+    <h1>Single View for Event</h1>
 
     <f:flashMessages />
-    <f:render partial="Person/Properties" arguments="{person:person}" />
+    <f:render partial="Event/Properties" arguments="{event:event}" />
     <f:link.action action="list">Back to list</f:link.action><br />
-    <f:link.action action="new">New Person</f:link.action>
+    <f:link.action action="new">New Event</f:link.action>
 </f:section>
 </html>

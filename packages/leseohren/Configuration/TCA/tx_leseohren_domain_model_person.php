@@ -22,7 +22,7 @@ return [
         ],
     ],
     'types' => [
-        '1' => ['showitem' => 'firstname, lastname, categories, donations, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
+        '1' => ['showitem' => 'firstname, lastname, donations, categories, blackboards, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
     ],
     'columns' => [
         'hidden' => [
@@ -72,6 +72,10 @@ return [
         'categories' => [
             'config'=> [
                 'type' => 'category',
+                'treeConfig' => [
+                    'startingPoints' => '1',
+                    'nonSelectableLevels' => 0,
+                ],
             ],
         ],
 
@@ -104,6 +108,25 @@ return [
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => 'tx_leseohren_domain_model_present',
+                'foreign_field' => 'person',
+                'maxitems' => 9999,
+                'appearance' => [
+                    'collapseAll' => 1,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
+
+        ],
+        'blackboards' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.blackboards',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.blackboards.description',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_leseohren_domain_model_blackboard',
                 'foreign_field' => 'person',
                 'maxitems' => 9999,
                 'appearance' => [
