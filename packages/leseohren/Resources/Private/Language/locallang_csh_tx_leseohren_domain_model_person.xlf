@@ -4,13 +4,97 @@
 		<header/>
 		<body>
 			<trans-unit id="firstname.description" resname="firstname.description">
-				<source>Vorname</source>
+				<source>firstname</source>
 			</trans-unit>
 			<trans-unit id="lastname.description" resname="lastname.description">
 				<source>lastname</source>
 			</trans-unit>
+			<trans-unit id="gender.description" resname="gender.description">
+				<source>gender</source>
+			</trans-unit>
+			<trans-unit id="birthday.description" resname="birthday.description">
+				<source>birthday</source>
+			</trans-unit>
+			<trans-unit id="street1.description" resname="street1.description">
+				<source>street1</source>
+			</trans-unit>
+			<trans-unit id="street2.description" resname="street2.description">
+				<source>street2</source>
+			</trans-unit>
+			<trans-unit id="zip.description" resname="zip.description">
+				<source>zip</source>
+			</trans-unit>
+			<trans-unit id="city.description" resname="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="district.description" resname="district.description">
+				<source>district</source>
+			</trans-unit>
+			<trans-unit id="phone_landline.description" resname="phone_landline.description">
+				<source>phoneLandline</source>
+			</trans-unit>
+			<trans-unit id="phone_mobile.description" resname="phone_mobile.description">
+				<source>phoneMobile</source>
+			</trans-unit>
+			<trans-unit id="email.description" resname="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="whatsapp.description" resname="whatsapp.description">
+				<source>whatsapp</source>
+			</trans-unit>
+			<trans-unit id="notes.description" resname="notes.description">
+				<source>notes</source>
+			</trans-unit>
+			<trans-unit id="status.description" resname="status.description">
+				<source>status</source>
+			</trans-unit>
+			<trans-unit id="statusbegin_date.description" resname="statusbegin_date.description">
+				<source>statusbeginDate</source>
+			</trans-unit>
+			<trans-unit id="statusend_date.description" resname="statusend_date.description">
+				<source>statusendDate</source>
+			</trans-unit>
+			<trans-unit id="travel_options.description" resname="travel_options.description">
+				<source>travelOptions</source>
+			</trans-unit>
+			<trans-unit id="languages.description" resname="languages.description">
+				<source>languages</source>
+			</trans-unit>
+			<trans-unit id="preference_agegroup.description" resname="preference_agegroup.description">
+				<source>preferenceAgegroup</source>
+			</trans-unit>
+			<trans-unit id="preference_organization_type.description" resname="preference_organization_type.description">
+				<source>preferenceOrganizationType</source>
+			</trans-unit>
+			<trans-unit id="payment_method.description" resname="payment_method.description">
+				<source>paymentMethod</source>
+			</trans-unit>
+			<trans-unit id="iban.description" resname="iban.description">
+				<source>iban</source>
+			</trans-unit>
+			<trans-unit id="swift.description" resname="swift.description">
+				<source>swift</source>
+			</trans-unit>
+			<trans-unit id="account_owner.description" resname="account_owner.description">
+				<source>accountOwner</source>
+			</trans-unit>
+			<trans-unit id="bankname.description" resname="bankname.description">
+				<source>bankname</source>
+			</trans-unit>
+			<trans-unit id="paypal.description" resname="paypal.description">
+				<source>paypal</source>
+			</trans-unit>
+			<trans-unit id="file_fuehrungszeugnis.description" resname="file_fuehrungszeugnis.description">
+				<source>fileFuehrungszeugnis</source>
+			</trans-unit>
+			<trans-unit id="file_mandat.description" resname="file_mandat.description">
+				<source>fileMandat</source>
+			</trans-unit>
+			<trans-unit id="file_others.description" resname="file_others.description">
+				<source>fileOthers</source>
+			</trans-unit>
 			<trans-unit id="donations.description" resname="donations.description">
-				<source>Geschenke</source>
+				<source>Gifts</source>
 			</trans-unit>
 			<trans-unit id="blackboards.description" resname="blackboards.description">
 				<source>Blackboards</source>

@@ -49,6 +49,198 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $lastname = '';
 
     /**
+     * birthday
+     *
+     * @var \DateTime
+     */
+    protected $birthday = null;
+
+    /**
+     * street1
+     *
+     * @var string
+     */
+    protected $street1 = '';
+
+    /**
+     * street2
+     *
+     * @var string
+     */
+    protected $street2 = '';
+
+    /**
+     * zip
+     *
+     * @var string
+     */
+    protected $zip = '';
+
+    /**
+     * city
+     *
+     * @var string
+     */
+    protected $city = '';
+
+    /**
+     * district
+     *
+     * @var int
+     */
+    protected $district = 0;
+
+    /**
+     * phoneLandline
+     *
+     * @var string
+     */
+    protected $phoneLandline = '';
+
+    /**
+     * phoneMobile
+     *
+     * @var string
+     */
+    protected $phoneMobile = '';
+
+    /**
+     * email
+     *
+     * @var string
+     */
+    protected $email = '';
+
+    /**
+     * whatsapp
+     *
+     * @var string
+     */
+    protected $whatsapp = '';
+
+    /**
+     * notes
+     *
+     * @var string
+     */
+    protected $notes = '';
+
+    /**
+     * status
+     *
+     * @var int
+     */
+    protected $status = 0;
+
+    /**
+     * statusbeginDate
+     *
+     * @var \DateTime
+     */
+    protected $statusbeginDate = null;
+
+    /**
+     * statusendDate
+     *
+     * @var \DateTime
+     */
+    protected $statusendDate = null;
+
+    /**
+     * travelOptions
+     *
+     * @var int
+     */
+    protected $travelOptions = 0;
+
+    /**
+     * languages
+     *
+     * @var int
+     */
+    protected $languages = 0;
+
+    /**
+     * preferenceAgegroup
+     *
+     * @var int
+     */
+    protected $preferenceAgegroup = 0;
+
+    /**
+     * preferenceOrganizationType
+     *
+     * @var int
+     */
+    protected $preferenceOrganizationType = 0;
+
+    /**
+     * paymentMethod
+     *
+     * @var int
+     */
+    protected $paymentMethod = 0;
+
+    /**
+     * iban
+     *
+     * @var string
+     */
+    protected $iban = '';
+
+    /**
+     * swift
+     *
+     * @var string
+     */
+    protected $swift = '';
+
+    /**
+     * accountOwner
+     *
+     * @var string
+     */
+    protected $accountOwner = '';
+
+    /**
+     * bankname
+     *
+     * @var string
+     */
+    protected $bankname = '';
+
+    /**
+     * paypal
+     *
+     * @var string
+     */
+    protected $paypal = '';
+
+    /**
+     * fileFuehrungszeugnis
+     *
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     */
+    protected $fileFuehrungszeugnis = null;
+
+    /**
+     * fileMandat
+     *
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     */
+    protected $fileMandat = null;
+
+    /**
+     * fileOthers
+     *
+     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     */
+    protected $fileOthers = null;
+
+    /**
      * Geschenke
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Present>
@@ -184,6 +376,573 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setLastname(string $lastname)
     {
         $this->lastname = $lastname;
+    }
+
+    /**
+     * Returns the birthday
+     *
+     * @return \DateTime
+     */
+    public function getBirthday()
+    {
+        return $this->birthday;
+    }
+
+    /**
+     * Sets the birthday
+     *
+     * @param \DateTime $birthday
+     * @return void
+     */
+    public function setBirthday(\DateTime $birthday)
+    {
+        $this->birthday = $birthday;
+    }
+
+    /**
+     * Returns the street1
+     *
+     * @return string
+     */
+    public function getStreet1()
+    {
+        return $this->street1;
+    }
+
+    /**
+     * Sets the street1
+     *
+     * @param string $street1
+     * @return void
+     */
+    public function setStreet1(string $street1)
+    {
+        $this->street1 = $street1;
+    }
+
+    /**
+     * Returns the street2
+     *
+     * @return string
+     */
+    public function getStreet2()
+    {
+        return $this->street2;
+    }
+
+    /**
+     * Sets the street2
+     *
+     * @param string $street2
+     * @return void
+     */
+    public function setStreet2(string $street2)
+    {
+        $this->street2 = $street2;
+    }
+
+    /**
+     * Returns the zip
+     *
+     * @return string
+     */
+    public function getZip()
+    {
+        return $this->zip;
+    }
+
+    /**
+     * Sets the zip
+     *
+     * @param string $zip
+     * @return void
+     */
+    public function setZip(string $zip)
+    {
+        $this->zip = $zip;
+    }
+
+    /**
+     * Returns the city
+     *
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Sets the city
+     *
+     * @param string $city
+     * @return void
+     */
+    public function setCity(string $city)
+    {
+        $this->city = $city;
+    }
+
+    /**
+     * Returns the district
+     *
+     * @return int
+     */
+    public function getDistrict()
+    {
+        return $this->district;
+    }
+
+    /**
+     * Sets the district
+     *
+     * @param int $district
+     * @return void
+     */
+    public function setDistrict(int $district)
+    {
+        $this->district = $district;
+    }
+
+    /**
+     * Returns the phoneLandline
+     *
+     * @return string
+     */
+    public function getPhoneLandline()
+    {
+        return $this->phoneLandline;
+    }
+
+    /**
+     * Sets the phoneLandline
+     *
+     * @param string $phoneLandline
+     * @return void
+     */
+    public function setPhoneLandline(string $phoneLandline)
+    {
+        $this->phoneLandline = $phoneLandline;
+    }
+
+    /**
+     * Returns the phoneMobile
+     *
+     * @return string
+     */
+    public function getPhoneMobile()
+    {
+        return $this->phoneMobile;
+    }
+
+    /**
+     * Sets the phoneMobile
+     *
+     * @param string $phoneMobile
+     * @return void
+     */
+    public function setPhoneMobile(string $phoneMobile)
+    {
+        $this->phoneMobile = $phoneMobile;
+    }
+
+    /**
+     * Returns the email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Sets the email
+     *
+     * @param string $email
+     * @return void
+     */
+    public function setEmail(string $email)
+    {
+        $this->email = $email;
+    }
+
+    /**
+     * Returns the whatsapp
+     *
+     * @return string
+     */
+    public function getWhatsapp()
+    {
+        return $this->whatsapp;
+    }
+
+    /**
+     * Sets the whatsapp
+     *
+     * @param string $whatsapp
+     * @return void
+     */
+    public function setWhatsapp(string $whatsapp)
+    {
+        $this->whatsapp = $whatsapp;
+    }
+
+    /**
+     * Returns the notes
+     *
+     * @return string
+     */
+    public function getNotes()
+    {
+        return $this->notes;
+    }
+
+    /**
+     * Sets the notes
+     *
+     * @param string $notes
+     * @return void
+     */
+    public function setNotes(string $notes)
+    {
+        $this->notes = $notes;
+    }
+
+    /**
+     * Returns the status
+     *
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Sets the status
+     *
+     * @param int $status
+     * @return void
+     */
+    public function setStatus(int $status)
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * Returns the statusbeginDate
+     *
+     * @return \DateTime
+     */
+    public function getStatusbeginDate()
+    {
+        return $this->statusbeginDate;
+    }
+
+    /**
+     * Sets the statusbeginDate
+     *
+     * @param \DateTime $statusbeginDate
+     * @return void
+     */
+    public function setStatusbeginDate(\DateTime $statusbeginDate)
+    {
+        $this->statusbeginDate = $statusbeginDate;
+    }
+
+    /**
+     * Returns the statusendDate
+     *
+     * @return \DateTime
+     */
+    public function getStatusendDate()
+    {
+        return $this->statusendDate;
+    }
+
+    /**
+     * Sets the statusendDate
+     *
+     * @param \DateTime $statusendDate
+     * @return void
+     */
+    public function setStatusendDate(\DateTime $statusendDate)
+    {
+        $this->statusendDate = $statusendDate;
+    }
+
+    /**
+     * Returns the travelOptions
+     *
+     * @return int
+     */
+    public function getTravelOptions()
+    {
+        return $this->travelOptions;
+    }
+
+    /**
+     * Sets the travelOptions
+     *
+     * @param int $travelOptions
+     * @return void
+     */
+    public function setTravelOptions(int $travelOptions)
+    {
+        $this->travelOptions = $travelOptions;
+    }
+
+    /**
+     * Returns the languages
+     *
+     * @return int
+     */
+    public function getLanguages()
+    {
+        return $this->languages;
+    }
+
+    /**
+     * Sets the languages
+     *
+     * @param int $languages
+     * @return void
+     */
+    public function setLanguages(int $languages)
+    {
+        $this->languages = $languages;
+    }
+
+    /**
+     * Returns the preferenceAgegroup
+     *
+     * @return int
+     */
+    public function getPreferenceAgegroup()
+    {
+        return $this->preferenceAgegroup;
+    }
+
+    /**
+     * Sets the preferenceAgegroup
+     *
+     * @param int $preferenceAgegroup
+     * @return void
+     */
+    public function setPreferenceAgegroup(int $preferenceAgegroup)
+    {
+        $this->preferenceAgegroup = $preferenceAgegroup;
+    }
+
+    /**
+     * Returns the preferenceOrganizationType
+     *
+     * @return int
+     */
+    public function getPreferenceOrganizationType()
+    {
+        return $this->preferenceOrganizationType;
+    }
+
+    /**
+     * Sets the preferenceOrganizationType
+     *
+     * @param int $preferenceOrganizationType
+     * @return void
+     */
+    public function setPreferenceOrganizationType(int $preferenceOrganizationType)
+    {
+        $this->preferenceOrganizationType = $preferenceOrganizationType;
+    }
+
+    /**
+     * Returns the paymentMethod
+     *
+     * @return int
+     */
+    public function getPaymentMethod()
+    {
+        return $this->paymentMethod;
+    }
+
+    /**
+     * Sets the paymentMethod
+     *
+     * @param int $paymentMethod
+     * @return void
+     */
+    public function setPaymentMethod(int $paymentMethod)
+    {
+        $this->paymentMethod = $paymentMethod;
+    }
+
+    /**
+     * Returns the iban
+     *
+     * @return string
+     */
+    public function getIban()
+    {
+        return $this->iban;
+    }
+
+    /**
+     * Sets the iban
+     *
+     * @param string $iban
+     * @return void
+     */
+    public function setIban(string $iban)
+    {
+        $this->iban = $iban;
+    }
+
+    /**
+     * Returns the swift
+     *
+     * @return string
+     */
+    public function getSwift()
+    {
+        return $this->swift;
+    }
+
+    /**
+     * Sets the swift
+     *
+     * @param string $swift
+     * @return void
+     */
+    public function setSwift(string $swift)
+    {
+        $this->swift = $swift;
+    }
+
+    /**
+     * Returns the accountOwner
+     *
+     * @return string
+     */
+    public function getAccountOwner()
+    {
+        return $this->accountOwner;
+    }
+
+    /**
+     * Sets the accountOwner
+     *
+     * @param string $accountOwner
+     * @return void
+     */
+    public function setAccountOwner(string $accountOwner)
+    {
+        $this->accountOwner = $accountOwner;
+    }
+
+    /**
+     * Returns the bankname
+     *
+     * @return string
+     */
+    public function getBankname()
+    {
+        return $this->bankname;
+    }
+
+    /**
+     * Sets the bankname
+     *
+     * @param string $bankname
+     * @return void
+     */
+    public function setBankname(string $bankname)
+    {
+        $this->bankname = $bankname;
+    }
+
+    /**
+     * Returns the paypal
+     *
+     * @return string
+     */
+    public function getPaypal()
+    {
+        return $this->paypal;
+    }
+
+    /**
+     * Sets the paypal
+     *
+     * @param string $paypal
+     * @return void
+     */
+    public function setPaypal(string $paypal)
+    {
+        $this->paypal = $paypal;
+    }
+
+    /**
+     * Returns the fileFuehrungszeugnis
+     *
+     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     */
+    public function getFileFuehrungszeugnis()
+    {
+        return $this->fileFuehrungszeugnis;
+    }
+
+    /**
+     * Sets the fileFuehrungszeugnis
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $fileFuehrungszeugnis
+     * @return void
+     */
+    public function setFileFuehrungszeugnis(\TYPO3\CMS\Extbase\Domain\Model\FileReference $fileFuehrungszeugnis)
+    {
+        $this->fileFuehrungszeugnis = $fileFuehrungszeugnis;
+    }
+
+    /**
+     * Returns the fileMandat
+     *
+     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     */
+    public function getFileMandat()
+    {
+        return $this->fileMandat;
+    }
+
+    /**
+     * Sets the fileMandat
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $fileMandat
+     * @return void
+     */
+    public function setFileMandat(\TYPO3\CMS\Extbase\Domain\Model\FileReference $fileMandat)
+    {
+        $this->fileMandat = $fileMandat;
+    }
+
+    /**
+     * Returns the fileOthers
+     *
+     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     */
+    public function getFileOthers()
+    {
+        return $this->fileOthers;
+    }
+
+    /**
+     * Sets the fileOthers
+     *
+     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $fileOthers
+     * @return void
+     */
+    public function setFileOthers(\TYPO3\CMS\Extbase\Domain\Model\FileReference $fileOthers)
+    {
+        $this->fileOthers = $fileOthers;
     }
 
     /**

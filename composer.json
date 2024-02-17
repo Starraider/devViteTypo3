@@ -73,7 +73,9 @@
 	},
 	"require-dev": {
 		"deployer/deployer": "^7.3",
+		"friendsoftypo3/extension-builder": "@dev",
 		"mittwald/deployer-recipes": "@dev",
-		"friendsoftypo3/extension-builder": "@dev"
+		"ssch/typo3-rector": "^2.0",
+		"typo3/testing-framework": "^8.0"
 	}
 }
