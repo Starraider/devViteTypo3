@@ -286,7 +286,8 @@ return [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.email',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.email.description',
             'config' => [
-                'type' => 'email'
+                'type' => 'email',
+                'eval' => 'nospace,email',
             ]
         ],
         'whatsapp' => [
@@ -447,8 +448,10 @@ return [
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.iban.description',
             'config' => [
                 'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim',
+                'size' => 34,
+                'min' => 14,
+                'max' => 22,
+                'eval' => 'alphanum,upper,nospace',
                 'default' => ''
             ],
         ],
@@ -459,7 +462,9 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim',
+                'min' => 8,
+                'max' => 11,
+                'eval' => 'alphanum,upper,nospace',
                 'default' => ''
             ],
         ],
