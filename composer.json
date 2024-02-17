@@ -76,6 +76,7 @@
 		"friendsoftypo3/extension-builder": "@dev",
 		"mittwald/deployer-recipes": "@dev",
 		"ssch/typo3-rector": "^2.0",
+		"typo3/cms-styleguide": "^12.0",
 		"typo3/testing-framework": "^8.0"
 	}
 }
