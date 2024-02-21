@@ -1,35 +1,14 @@
 {
 	"name": "typo3/cms-base-distribution",
-	"description" : "TYPO3 CMS Base Distribution",
+	"description": "TYPO3 CMS Base Distribution",
 	"license": "GPL-2.0-or-later",
 	"type": "project",
-    "authors": [
+	"authors": [
 		{
 			"name": "Sven Kalbhenn",
 			"email": "sven@skom.de",
 			"homepage": "https://www.skom.de",
 			"role": "Developer"
-		}
-	],
-	"config": {
-		"allow-plugins": {
-			"typo3/class-alias-loader": true,
-			"typo3/cms-composer-installers": true,
-			"helhum/dotenv-connector": true
-		},
-		"platform": {
-			"php": "8.2"
-		},
-		"sort-packages": true
-	},
-    "repositories": [
-		{
-			"type": "path",
-			"url": "packages/*"
-		},
-		{
-			"type": "composer",
-			"url": "https://composer.typo3.org/"
 		}
 	],
 	"require": {
@@ -73,10 +52,47 @@
 	},
 	"require-dev": {
 		"deployer/deployer": "^7.3",
+		"ergebnis/composer-normalize": "^2.42",
 		"friendsoftypo3/extension-builder": "@dev",
 		"mittwald/deployer-recipes": "@dev",
+		"seld/jsonlint": "^1.10",
+		"squizlabs/php_codesniffer": "^3.9",
 		"ssch/typo3-rector": "^2.0",
 		"typo3/cms-styleguide": "^12.0",
 		"typo3/testing-framework": "^8.0"
+	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "packages/*"
+		},
+		{
+			"type": "composer",
+			"url": "https://composer.typo3.org/"
+		}
+	],
+	"config": {
+		"allow-plugins": {
+			"ergebnis/composer-normalize": true,
+			"helhum/dotenv-connector": true,
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"platform": {
+			"php": "8.2"
+		},
+		"sort-packages": true
+	},
+	"scripts": {
+		"ci:composer:normalize": "@composer normalize --dry-run",
+		"ci:json:lint": "find . ! -path '*public/*' ! -path '*vendor/*' ! -path '*.vscode/*' ! -path '*var/*' -name '*.json' | xargs -r php ./vendor/bin/jsonlint",
+		"ci:php:sniff": "exec ./vendor/bin/phpcs packages/leseohren",
+		"fix:composer": "@composer normalize"
+	},
+	"scripts-descriptions": {
+		"ci:composer:normalize": "Check if composer.json is normalized",
+		"ci:json:lint": "Lints the JSON files.",
+		"ci:php:sniff": "Checks the code style with PHP_CodeSniffer (PHPCS).",
+		"fix:composer": "Normalize composer.json"
 	}
 }
