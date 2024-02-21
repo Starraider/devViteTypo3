@@ -1,7 +1,8 @@
 <?php
+
 defined('TYPO3') || die();
 
-(static function() {
+(static function () {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
         'Leseohren',
         'Personen',

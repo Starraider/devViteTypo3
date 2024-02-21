@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Domain\Model;
 
+use SKom\Leseohren\Domain\Model\Organization;
+use SKom\Leseohren\Domain\Model\Person;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -16,7 +18,7 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 class OrganizationTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Domain\Model\Organization|MockObject|AccessibleObjectInterface
+     * @var Organization|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
@@ -25,7 +27,7 @@ class OrganizationTest extends UnitTestCase
         parent::setUp();
 
         $this->subject = $this->getAccessibleMock(
-            \SKom\Leseohren\Domain\Model\Organization::class,
+            Organization::class,
             ['dummy']
         );
     }
@@ -72,7 +74,7 @@ class OrganizationTest extends UnitTestCase
      */
     public function setContactPersonForPersonSetsContactPerson(): void
     {
-        $contactPersonFixture = new \SKom\Leseohren\Domain\Model\Person();
+        $contactPersonFixture = new Person();
         $this->subject->setContactPerson($contactPersonFixture);
 
         self::assertEquals($contactPersonFixture, $this->subject->_get('contactPerson'));

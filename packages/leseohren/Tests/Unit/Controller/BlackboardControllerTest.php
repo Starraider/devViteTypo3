@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Controller;
 
+use SKom\Leseohren\Controller\BlackboardController;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use SKom\Leseohren\Domain\Repository\BlackboardRepository;
+use SKom\Leseohren\Domain\Model\Blackboard;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -17,14 +21,14 @@ use TYPO3Fluid\Fluid\View\ViewInterface;
 class BlackboardControllerTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Controller\BlackboardController|MockObject|AccessibleObjectInterface
+     * @var BlackboardController|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->subject = $this->getMockBuilder($this->buildAccessibleProxy(\SKom\Leseohren\Controller\BlackboardController::class))
+        $this->subject = $this->getMockBuilder($this->buildAccessibleProxy(BlackboardController::class))
             ->onlyMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -40,11 +44,11 @@ class BlackboardControllerTest extends UnitTestCase
      */
     public function listActionFetchesAllBlackboardsFromRepositoryAndAssignsThemToView(): void
     {
-        $allBlackboards = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $allBlackboards = $this->getMockBuilder(ObjectStorage::class)
             ->disableOriginalConstructor()
             ->getMock();
 
-        $blackboardRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\BlackboardRepository::class)
+        $blackboardRepository = $this->getMockBuilder(BlackboardRepository::class)
             ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -63,7 +67,7 @@ class BlackboardControllerTest extends UnitTestCase
      */
     public function showActionAssignsTheGivenBlackboardToView(): void
     {
-        $blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
+        $blackboard = new Blackboard();
 
         $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->subject->_set('view', $view);
@@ -77,9 +81,9 @@ class BlackboardControllerTest extends UnitTestCase
      */
     public function createActionAddsTheGivenBlackboardToBlackboardRepository(): void
     {
-        $blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
+        $blackboard = new Blackboard();
 
-        $blackboardRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\BlackboardRepository::class)
+        $blackboardRepository = $this->getMockBuilder(BlackboardRepository::class)
             ->onlyMethods(['add'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -95,7 +99,7 @@ class BlackboardControllerTest extends UnitTestCase
      */
     public function editActionAssignsTheGivenBlackboardToView(): void
     {
-        $blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
+        $blackboard = new Blackboard();
 
         $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->subject->_set('view', $view);
@@ -109,9 +113,9 @@ class BlackboardControllerTest extends UnitTestCase
      */
     public function updateActionUpdatesTheGivenBlackboardInBlackboardRepository(): void
     {
-        $blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
+        $blackboard = new Blackboard();
 
-        $blackboardRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\BlackboardRepository::class)
+        $blackboardRepository = $this->getMockBuilder(BlackboardRepository::class)
             ->onlyMethods(['update'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -127,9 +131,9 @@ class BlackboardControllerTest extends UnitTestCase
      */
     public function deleteActionRemovesTheGivenBlackboardFromBlackboardRepository(): void
     {
-        $blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
+        $blackboard = new Blackboard();
 
-        $blackboardRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\BlackboardRepository::class)
+        $blackboardRepository = $this->getMockBuilder(BlackboardRepository::class)
             ->onlyMethods(['remove'])
             ->disableOriginalConstructor()
             ->getMock();

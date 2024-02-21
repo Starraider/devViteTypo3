@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Domain\Repository;
 
-
+use TYPO3\CMS\Extbase\Persistence\Repository;
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -13,10 +13,9 @@ namespace SKom\Leseohren\Domain\Repository;
  *
  * (c) 2024 Sven Kalbhenn <sven@skom.de>, SKom
  */
-
 /**
  * The repository for Blackboards
  */
-class BlackboardRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class BlackboardRepository extends Repository
 {
 }

@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Domain\Model;
 
+use SKom\Leseohren\Domain\Model\Person;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use SKom\Leseohren\Domain\Model\Present;
+use SKom\Leseohren\Domain\Model\Blackboard;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -16,7 +20,7 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 class PersonTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Domain\Model\Person|MockObject|AccessibleObjectInterface
+     * @var Person|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
@@ -25,7 +29,7 @@ class PersonTest extends UnitTestCase
         parent::setUp();
 
         $this->subject = $this->getAccessibleMock(
-            \SKom\Leseohren\Domain\Model\Person::class,
+            Person::class,
             ['dummy']
         );
     }
@@ -82,7 +86,7 @@ class PersonTest extends UnitTestCase
      */
     public function getDonationsReturnsInitialValueForPresent(): void
     {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $newObjectStorage = new ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
             $this->subject->getDonations()
@@ -94,8 +98,8 @@ class PersonTest extends UnitTestCase
      */
     public function setDonationsForObjectStorageContainingPresentSetsDonations(): void
     {
-        $Donation = new \SKom\Leseohren\Domain\Model\Present();
-        $objectStorageHoldingExactlyOneDonations = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $Donation = new Present();
+        $objectStorageHoldingExactlyOneDonations = new ObjectStorage();
         $objectStorageHoldingExactlyOneDonations->attach($Donation);
         $this->subject->setDonations($objectStorageHoldingExactlyOneDonations);
 
@@ -107,8 +111,8 @@ class PersonTest extends UnitTestCase
      */
     public function addDonationToObjectStorageHoldingDonations(): void
     {
-        $Donation = new \SKom\Leseohren\Domain\Model\Present();
-        $DonationsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $Donation = new Present();
+        $DonationsObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->onlyMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -124,8 +128,8 @@ class PersonTest extends UnitTestCase
      */
     public function removeDonationFromObjectStorageHoldingDonations(): void
     {
-        $Donation = new \SKom\Leseohren\Domain\Model\Present();
-        $DonationsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $Donation = new Present();
+        $DonationsObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->onlyMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -141,7 +145,7 @@ class PersonTest extends UnitTestCase
      */
     public function getBlackboardsReturnsInitialValueForBlackboard(): void
     {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $newObjectStorage = new ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
             $this->subject->getBlackboards()
@@ -153,8 +157,8 @@ class PersonTest extends UnitTestCase
      */
     public function setBlackboardsForObjectStorageContainingBlackboardSetsBlackboards(): void
     {
-        $Blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
-        $objectStorageHoldingExactlyOneBlackboards = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $Blackboard = new Blackboard();
+        $objectStorageHoldingExactlyOneBlackboards = new ObjectStorage();
         $objectStorageHoldingExactlyOneBlackboards->attach($Blackboard);
         $this->subject->setBlackboards($objectStorageHoldingExactlyOneBlackboards);
 
@@ -166,8 +170,8 @@ class PersonTest extends UnitTestCase
      */
     public function addBlackboardToObjectStorageHoldingBlackboards(): void
     {
-        $Blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
-        $BlackboardsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $Blackboard = new Blackboard();
+        $BlackboardsObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->onlyMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -183,8 +187,8 @@ class PersonTest extends UnitTestCase
      */
     public function removeBlackboardFromObjectStorageHoldingBlackboards(): void
     {
-        $Blackboard = new \SKom\Leseohren\Domain\Model\Blackboard();
-        $BlackboardsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $Blackboard = new Blackboard();
+        $BlackboardsObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->onlyMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();

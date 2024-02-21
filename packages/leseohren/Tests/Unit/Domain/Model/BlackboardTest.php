@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Domain\Model;
 
+use SKom\Leseohren\Domain\Model\Blackboard;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -16,7 +17,7 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 class BlackboardTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Domain\Model\Blackboard|MockObject|AccessibleObjectInterface
+     * @var Blackboard|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
@@ -25,7 +26,7 @@ class BlackboardTest extends UnitTestCase
         parent::setUp();
 
         $this->subject = $this->getAccessibleMock(
-            \SKom\Leseohren\Domain\Model\Blackboard::class,
+            Blackboard::class,
             ['dummy']
         );
     }

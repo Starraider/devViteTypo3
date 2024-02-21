@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Domain\Model;
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Domain\Model\Category;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -19,7 +23,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 /**
  * Person
  */
-class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Person extends AbstractEntity
 {
 
     /**
@@ -219,43 +223,43 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * fileFuehrungszeugnis
      *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @var FileReference
      */
+    #[Cascade(['value' => 'remove'])]
     protected $fileFuehrungszeugnis = null;
 
     /**
      * fileMandat
      *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @var FileReference
      */
+    #[Cascade(['value' => 'remove'])]
     protected $fileMandat = null;
 
     /**
      * fileOthers
      *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     * @var FileReference
      */
+    #[Cascade(['value' => 'remove'])]
     protected $fileOthers = null;
 
     /**
      * Geschenke
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Present>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     * @var ObjectStorage<Present>
      */
+    #[Cascade(['value' => 'remove'])]
+    #[Lazy]
     protected $Donations = null;
 
     /**
      * Blackboards
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Blackboard>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     * @var ObjectStorage<Blackboard>
      */
+    #[Cascade(['value' => 'remove'])]
+    #[Lazy]
     protected $Blackboards = null;
 
     /**
@@ -277,14 +281,12 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function initializeObject()
     {
-        $this->Donations = $this->Donations ?: new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
-        $this->Blackboards = $this->Blackboards ?: new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->Donations = $this->Donations ?: new ObjectStorage();
+        $this->Blackboards = $this->Blackboards ?: new ObjectStorage();
     }
 
     /**
      * Add category to a blog
-     *
-     * @param Category $category
      */
     public function addCategory(Category $category)
     {
@@ -328,7 +330,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the gender
      *
-     * @param int $gender
      * @return void
      */
     public function setGender(int $gender)
@@ -349,7 +350,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the firstname
      *
-     * @param string $firstname
      * @return void
      */
     public function setFirstname(string $firstname)
@@ -370,7 +370,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the lastname
      *
-     * @param string $lastname
      * @return void
      */
     public function setLastname(string $lastname)
@@ -391,7 +390,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the birthday
      *
-     * @param \DateTime $birthday
      * @return void
      */
     public function setBirthday(\DateTime $birthday)
@@ -412,7 +410,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the street1
      *
-     * @param string $street1
      * @return void
      */
     public function setStreet1(string $street1)
@@ -433,7 +430,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the street2
      *
-     * @param string $street2
      * @return void
      */
     public function setStreet2(string $street2)
@@ -454,7 +450,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the zip
      *
-     * @param string $zip
      * @return void
      */
     public function setZip(string $zip)
@@ -475,7 +470,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the city
      *
-     * @param string $city
      * @return void
      */
     public function setCity(string $city)
@@ -496,7 +490,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the district
      *
-     * @param int $district
      * @return void
      */
     public function setDistrict(int $district)
@@ -517,7 +510,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the phoneLandline
      *
-     * @param string $phoneLandline
      * @return void
      */
     public function setPhoneLandline(string $phoneLandline)
@@ -538,7 +530,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the phoneMobile
      *
-     * @param string $phoneMobile
      * @return void
      */
     public function setPhoneMobile(string $phoneMobile)
@@ -559,7 +550,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the email
      *
-     * @param string $email
      * @return void
      */
     public function setEmail(string $email)
@@ -580,7 +570,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the whatsapp
      *
-     * @param string $whatsapp
      * @return void
      */
     public function setWhatsapp(string $whatsapp)
@@ -601,7 +590,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the notes
      *
-     * @param string $notes
      * @return void
      */
     public function setNotes(string $notes)
@@ -622,7 +610,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the status
      *
-     * @param int $status
      * @return void
      */
     public function setStatus(int $status)
@@ -643,7 +630,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the statusbeginDate
      *
-     * @param \DateTime $statusbeginDate
      * @return void
      */
     public function setStatusbeginDate(\DateTime $statusbeginDate)
@@ -664,7 +650,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the statusendDate
      *
-     * @param \DateTime $statusendDate
      * @return void
      */
     public function setStatusendDate(\DateTime $statusendDate)
@@ -685,7 +670,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the travelOptions
      *
-     * @param int $travelOptions
      * @return void
      */
     public function setTravelOptions(int $travelOptions)
@@ -706,7 +690,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the languages
      *
-     * @param int $languages
      * @return void
      */
     public function setLanguages(int $languages)
@@ -727,7 +710,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the preferenceAgegroup
      *
-     * @param int $preferenceAgegroup
      * @return void
      */
     public function setPreferenceAgegroup(int $preferenceAgegroup)
@@ -748,7 +730,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the preferenceOrganizationType
      *
-     * @param int $preferenceOrganizationType
      * @return void
      */
     public function setPreferenceOrganizationType(int $preferenceOrganizationType)
@@ -769,7 +750,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the paymentMethod
      *
-     * @param int $paymentMethod
      * @return void
      */
     public function setPaymentMethod(int $paymentMethod)
@@ -790,7 +770,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the iban
      *
-     * @param string $iban
      * @return void
      */
     public function setIban(string $iban)
@@ -811,7 +790,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the swift
      *
-     * @param string $swift
      * @return void
      */
     public function setSwift(string $swift)
@@ -832,7 +810,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the accountOwner
      *
-     * @param string $accountOwner
      * @return void
      */
     public function setAccountOwner(string $accountOwner)
@@ -853,7 +830,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the bankname
      *
-     * @param string $bankname
      * @return void
      */
     public function setBankname(string $bankname)
@@ -874,7 +850,6 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the paypal
      *
-     * @param string $paypal
      * @return void
      */
     public function setPaypal(string $paypal)
@@ -885,7 +860,7 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the fileFuehrungszeugnis
      *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @return FileReference
      */
     public function getFileFuehrungszeugnis()
     {
@@ -895,10 +870,9 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the fileFuehrungszeugnis
      *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $fileFuehrungszeugnis
      * @return void
      */
-    public function setFileFuehrungszeugnis(\TYPO3\CMS\Extbase\Domain\Model\FileReference $fileFuehrungszeugnis)
+    public function setFileFuehrungszeugnis(FileReference $fileFuehrungszeugnis)
     {
         $this->fileFuehrungszeugnis = $fileFuehrungszeugnis;
     }
@@ -906,7 +880,7 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the fileMandat
      *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @return FileReference
      */
     public function getFileMandat()
     {
@@ -916,10 +890,9 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the fileMandat
      *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $fileMandat
      * @return void
      */
-    public function setFileMandat(\TYPO3\CMS\Extbase\Domain\Model\FileReference $fileMandat)
+    public function setFileMandat(FileReference $fileMandat)
     {
         $this->fileMandat = $fileMandat;
     }
@@ -927,7 +900,7 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the fileOthers
      *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @return FileReference
      */
     public function getFileOthers()
     {
@@ -937,10 +910,9 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the fileOthers
      *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $fileOthers
      * @return void
      */
-    public function setFileOthers(\TYPO3\CMS\Extbase\Domain\Model\FileReference $fileOthers)
+    public function setFileOthers(FileReference $fileOthers)
     {
         $this->fileOthers = $fileOthers;
     }
@@ -948,10 +920,9 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Present
      *
-     * @param \SKom\Leseohren\Domain\Model\Present $Donation
      * @return void
      */
-    public function addDonation(\SKom\Leseohren\Domain\Model\Present $Donation)
+    public function addDonation(Present $Donation)
     {
         $this->Donations->attach($Donation);
     }
@@ -959,10 +930,10 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Present
      *
-     * @param \SKom\Leseohren\Domain\Model\Present $DonationToRemove The Present to be removed
+     * @param Present $DonationToRemove The Present to be removed
      * @return void
      */
-    public function removeDonation(\SKom\Leseohren\Domain\Model\Present $DonationToRemove)
+    public function removeDonation(Present $DonationToRemove)
     {
         $this->Donations->detach($DonationToRemove);
     }
@@ -970,7 +941,7 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the Donations
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Present>
+     * @return ObjectStorage<Present>
      */
     public function getDonations()
     {
@@ -980,10 +951,10 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the Donations
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Present> $Donations
+     * @param ObjectStorage<Present> $Donations
      * @return void
      */
-    public function setDonations(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $Donations)
+    public function setDonations(ObjectStorage $Donations)
     {
         $this->Donations = $Donations;
     }
@@ -991,10 +962,9 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Blackboard
      *
-     * @param \SKom\Leseohren\Domain\Model\Blackboard $Blackboard
      * @return void
      */
-    public function addBlackboard(\SKom\Leseohren\Domain\Model\Blackboard $Blackboard)
+    public function addBlackboard(Blackboard $Blackboard)
     {
         $this->Blackboards->attach($Blackboard);
     }
@@ -1002,10 +972,10 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Blackboard
      *
-     * @param \SKom\Leseohren\Domain\Model\Blackboard $BlackboardToRemove The Blackboard to be removed
+     * @param Blackboard $BlackboardToRemove The Blackboard to be removed
      * @return void
      */
-    public function removeBlackboard(\SKom\Leseohren\Domain\Model\Blackboard $BlackboardToRemove)
+    public function removeBlackboard(Blackboard $BlackboardToRemove)
     {
         $this->Blackboards->detach($BlackboardToRemove);
     }
@@ -1013,7 +983,7 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the Blackboards
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Blackboard>
+     * @return ObjectStorage<Blackboard>
      */
     public function getBlackboards()
     {
@@ -1023,10 +993,10 @@ class Person extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the Blackboards
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Blackboard> $Blackboards
+     * @param ObjectStorage<Blackboard> $Blackboards
      * @return void
      */
-    public function setBlackboards(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $Blackboards)
+    public function setBlackboards(ObjectStorage $Blackboards)
     {
         $this->Blackboards = $Blackboards;
     }

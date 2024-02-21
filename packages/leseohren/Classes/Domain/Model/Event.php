@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Domain\Model;
 
-
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Annotation\Validate;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -13,19 +16,18 @@ namespace SKom\Leseohren\Domain\Model;
  *
  * (c) 2024 Sven Kalbhenn <sven@skom.de>, SKom
  */
-
 /**
  * Event
  */
-class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Event extends AbstractEntity
 {
 
     /**
      * title
      *
      * @var string
-     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $title = '';
 
     /**
@@ -59,9 +61,9 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Participants
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Person>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     * @var ObjectStorage<Person>
      */
+    #[Lazy]
     protected $Participants = null;
 
     /**
@@ -84,7 +86,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
     public function initializeObject()
     {
-        $this->Participants = $this->Participants ?: new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->Participants = $this->Participants ?: new ObjectStorage();
     }
 
     /**
@@ -100,7 +102,6 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the title
      *
-     * @param string $title
      * @return void
      */
     public function setTitle(string $title)
@@ -121,7 +122,6 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the description
      *
-     * @param string $description
      * @return void
      */
     public function setDescription(string $description)
@@ -142,7 +142,6 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the startDate
      *
-     * @param \DateTime $startDate
      * @return void
      */
     public function setStartDate(\DateTime $startDate)
@@ -163,7 +162,6 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the endDate
      *
-     * @param \DateTime $endDate
      * @return void
      */
     public function setEndDate(\DateTime $endDate)
@@ -184,7 +182,6 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the location
      *
-     * @param string $location
      * @return void
      */
     public function setLocation(string $location)
@@ -195,10 +192,9 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Person
      *
-     * @param \SKom\Leseohren\Domain\Model\Person $Participant
      * @return void
      */
-    public function addParticipant(\SKom\Leseohren\Domain\Model\Person $Participant)
+    public function addParticipant(Person $Participant)
     {
         $this->Participants->attach($Participant);
     }
@@ -206,10 +202,10 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Person
      *
-     * @param \SKom\Leseohren\Domain\Model\Person $ParticipantToRemove The Person to be removed
+     * @param Person $ParticipantToRemove The Person to be removed
      * @return void
      */
-    public function removeParticipant(\SKom\Leseohren\Domain\Model\Person $ParticipantToRemove)
+    public function removeParticipant(Person $ParticipantToRemove)
     {
         $this->Participants->detach($ParticipantToRemove);
     }
@@ -217,7 +213,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the Participants
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Person>
+     * @return ObjectStorage<Person>
      */
     public function getParticipants()
     {
@@ -227,10 +223,10 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the Participants
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\SKom\Leseohren\Domain\Model\Person> $Participants
+     * @param ObjectStorage<Person> $Participants
      * @return void
      */
-    public function setParticipants(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $Participants)
+    public function setParticipants(ObjectStorage $Participants)
     {
         $this->Participants = $Participants;
     }

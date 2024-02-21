@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Controller;
 
+use SKom\Leseohren\Controller\GiftController;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use SKom\Leseohren\Domain\Repository\GiftRepository;
+use SKom\Leseohren\Domain\Model\Gift;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -17,14 +21,14 @@ use TYPO3Fluid\Fluid\View\ViewInterface;
 class GiftControllerTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Controller\GiftController|MockObject|AccessibleObjectInterface
+     * @var GiftController|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->subject = $this->getMockBuilder($this->buildAccessibleProxy(\SKom\Leseohren\Controller\GiftController::class))
+        $this->subject = $this->getMockBuilder($this->buildAccessibleProxy(GiftController::class))
             ->onlyMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -40,11 +44,11 @@ class GiftControllerTest extends UnitTestCase
      */
     public function listActionFetchesAllGiftsFromRepositoryAndAssignsThemToView(): void
     {
-        $allGifts = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $allGifts = $this->getMockBuilder(ObjectStorage::class)
             ->disableOriginalConstructor()
             ->getMock();
 
-        $giftRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\GiftRepository::class)
+        $giftRepository = $this->getMockBuilder(GiftRepository::class)
             ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -63,7 +67,7 @@ class GiftControllerTest extends UnitTestCase
      */
     public function showActionAssignsTheGivenGiftToView(): void
     {
-        $gift = new \SKom\Leseohren\Domain\Model\Gift();
+        $gift = new Gift();
 
         $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->subject->_set('view', $view);
@@ -77,9 +81,9 @@ class GiftControllerTest extends UnitTestCase
      */
     public function createActionAddsTheGivenGiftToGiftRepository(): void
     {
-        $gift = new \SKom\Leseohren\Domain\Model\Gift();
+        $gift = new Gift();
 
-        $giftRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\GiftRepository::class)
+        $giftRepository = $this->getMockBuilder(GiftRepository::class)
             ->onlyMethods(['add'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -95,7 +99,7 @@ class GiftControllerTest extends UnitTestCase
      */
     public function editActionAssignsTheGivenGiftToView(): void
     {
-        $gift = new \SKom\Leseohren\Domain\Model\Gift();
+        $gift = new Gift();
 
         $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->subject->_set('view', $view);
@@ -109,9 +113,9 @@ class GiftControllerTest extends UnitTestCase
      */
     public function updateActionUpdatesTheGivenGiftInGiftRepository(): void
     {
-        $gift = new \SKom\Leseohren\Domain\Model\Gift();
+        $gift = new Gift();
 
-        $giftRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\GiftRepository::class)
+        $giftRepository = $this->getMockBuilder(GiftRepository::class)
             ->onlyMethods(['update'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -127,9 +131,9 @@ class GiftControllerTest extends UnitTestCase
      */
     public function deleteActionRemovesTheGivenGiftFromGiftRepository(): void
     {
-        $gift = new \SKom\Leseohren\Domain\Model\Gift();
+        $gift = new Gift();
 
-        $giftRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\GiftRepository::class)
+        $giftRepository = $this->getMockBuilder(GiftRepository::class)
             ->onlyMethods(['remove'])
             ->disableOriginalConstructor()
             ->getMock();

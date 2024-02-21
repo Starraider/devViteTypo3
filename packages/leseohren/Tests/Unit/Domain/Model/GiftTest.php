@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Domain\Model;
 
+use SKom\Leseohren\Domain\Model\Gift;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -16,7 +17,7 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 class GiftTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Domain\Model\Gift|MockObject|AccessibleObjectInterface
+     * @var Gift|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
@@ -25,7 +26,7 @@ class GiftTest extends UnitTestCase
         parent::setUp();
 
         $this->subject = $this->getAccessibleMock(
-            \SKom\Leseohren\Domain\Model\Gift::class,
+            Gift::class,
             ['dummy']
         );
     }

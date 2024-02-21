@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Controller;
 
+use SKom\Leseohren\Controller\EventController;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use SKom\Leseohren\Domain\Repository\EventRepository;
+use SKom\Leseohren\Domain\Model\Event;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -17,14 +21,14 @@ use TYPO3Fluid\Fluid\View\ViewInterface;
 class EventControllerTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Controller\EventController|MockObject|AccessibleObjectInterface
+     * @var EventController|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->subject = $this->getMockBuilder($this->buildAccessibleProxy(\SKom\Leseohren\Controller\EventController::class))
+        $this->subject = $this->getMockBuilder($this->buildAccessibleProxy(EventController::class))
             ->onlyMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -40,11 +44,11 @@ class EventControllerTest extends UnitTestCase
      */
     public function listActionFetchesAllEventsFromRepositoryAndAssignsThemToView(): void
     {
-        $allEvents = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $allEvents = $this->getMockBuilder(ObjectStorage::class)
             ->disableOriginalConstructor()
             ->getMock();
 
-        $eventRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\EventRepository::class)
+        $eventRepository = $this->getMockBuilder(EventRepository::class)
             ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -63,7 +67,7 @@ class EventControllerTest extends UnitTestCase
      */
     public function showActionAssignsTheGivenEventToView(): void
     {
-        $event = new \SKom\Leseohren\Domain\Model\Event();
+        $event = new Event();
 
         $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->subject->_set('view', $view);
@@ -77,9 +81,9 @@ class EventControllerTest extends UnitTestCase
      */
     public function createActionAddsTheGivenEventToEventRepository(): void
     {
-        $event = new \SKom\Leseohren\Domain\Model\Event();
+        $event = new Event();
 
-        $eventRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\EventRepository::class)
+        $eventRepository = $this->getMockBuilder(EventRepository::class)
             ->onlyMethods(['add'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -95,7 +99,7 @@ class EventControllerTest extends UnitTestCase
      */
     public function editActionAssignsTheGivenEventToView(): void
     {
-        $event = new \SKom\Leseohren\Domain\Model\Event();
+        $event = new Event();
 
         $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->subject->_set('view', $view);
@@ -109,9 +113,9 @@ class EventControllerTest extends UnitTestCase
      */
     public function updateActionUpdatesTheGivenEventInEventRepository(): void
     {
-        $event = new \SKom\Leseohren\Domain\Model\Event();
+        $event = new Event();
 
-        $eventRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\EventRepository::class)
+        $eventRepository = $this->getMockBuilder(EventRepository::class)
             ->onlyMethods(['update'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -127,9 +131,9 @@ class EventControllerTest extends UnitTestCase
      */
     public function deleteActionRemovesTheGivenEventFromEventRepository(): void
     {
-        $event = new \SKom\Leseohren\Domain\Model\Event();
+        $event = new Event();
 
-        $eventRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\EventRepository::class)
+        $eventRepository = $this->getMockBuilder(EventRepository::class)
             ->onlyMethods(['remove'])
             ->disableOriginalConstructor()
             ->getMock();

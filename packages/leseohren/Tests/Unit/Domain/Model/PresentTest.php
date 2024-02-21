@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Domain\Model;
 
+use SKom\Leseohren\Domain\Model\Present;
+use SKom\Leseohren\Domain\Model\Gift;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -16,7 +18,7 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 class PresentTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Domain\Model\Present|MockObject|AccessibleObjectInterface
+     * @var Present|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
@@ -25,7 +27,7 @@ class PresentTest extends UnitTestCase
         parent::setUp();
 
         $this->subject = $this->getAccessibleMock(
-            \SKom\Leseohren\Domain\Model\Present::class,
+            Present::class,
             ['dummy']
         );
     }
@@ -91,7 +93,7 @@ class PresentTest extends UnitTestCase
      */
     public function setGiftForGiftSetsGift(): void
     {
-        $giftFixture = new \SKom\Leseohren\Domain\Model\Gift();
+        $giftFixture = new Gift();
         $this->subject->setGift($giftFixture);
 
         self::assertEquals($giftFixture, $this->subject->_get('gift'));

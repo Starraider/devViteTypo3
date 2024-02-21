@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Domain\Model;
 
-
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Annotation\Validate;
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -13,19 +15,18 @@ namespace SKom\Leseohren\Domain\Model;
  *
  * (c) 2024 Sven Kalbhenn <sven@skom.de>, SKom
  */
-
 /**
  * Schenkungen
  */
-class Present extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Present extends AbstractEntity
 {
 
     /**
      * gift_date
      *
      * @var \DateTime
-     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $gift_date = null;
 
     /**
@@ -38,9 +39,9 @@ class Present extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * gift
      *
-     * @var \SKom\Leseohren\Domain\Model\Gift
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     * @var Gift
      */
+    #[Lazy]
     protected $gift = null;
 
     /**
@@ -56,7 +57,6 @@ class Present extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the gift_date
      *
-     * @param \DateTime $gift_date
      * @return void
      */
     public function setGift_date(\DateTime $gift_date)
@@ -77,7 +77,6 @@ class Present extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the given
      *
-     * @param bool $given
      * @return void
      */
     public function setGiven(bool $given)
@@ -98,7 +97,7 @@ class Present extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the gift
      *
-     * @return \SKom\Leseohren\Domain\Model\Gift
+     * @return Gift
      */
     public function getGift()
     {
@@ -108,10 +107,9 @@ class Present extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the gift
      *
-     * @param \SKom\Leseohren\Domain\Model\Gift $gift
      * @return void
      */
-    public function setGift(\SKom\Leseohren\Domain\Model\Gift $gift)
+    public function setGift(Gift $gift)
     {
         $this->gift = $gift;
     }

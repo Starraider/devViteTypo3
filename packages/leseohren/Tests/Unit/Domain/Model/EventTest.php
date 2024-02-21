@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Domain\Model;
 
+use SKom\Leseohren\Domain\Model\Event;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use SKom\Leseohren\Domain\Model\Person;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -16,7 +19,7 @@ use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 class EventTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Domain\Model\Event|MockObject|AccessibleObjectInterface
+     * @var Event|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
@@ -25,7 +28,7 @@ class EventTest extends UnitTestCase
         parent::setUp();
 
         $this->subject = $this->getAccessibleMock(
-            \SKom\Leseohren\Domain\Model\Event::class,
+            Event::class,
             ['dummy']
         );
     }
@@ -147,7 +150,7 @@ class EventTest extends UnitTestCase
      */
     public function getParticipantsReturnsInitialValueForPerson(): void
     {
-        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $newObjectStorage = new ObjectStorage();
         self::assertEquals(
             $newObjectStorage,
             $this->subject->getParticipants()
@@ -159,8 +162,8 @@ class EventTest extends UnitTestCase
      */
     public function setParticipantsForObjectStorageContainingPersonSetsParticipants(): void
     {
-        $Participant = new \SKom\Leseohren\Domain\Model\Person();
-        $objectStorageHoldingExactlyOneParticipants = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $Participant = new Person();
+        $objectStorageHoldingExactlyOneParticipants = new ObjectStorage();
         $objectStorageHoldingExactlyOneParticipants->attach($Participant);
         $this->subject->setParticipants($objectStorageHoldingExactlyOneParticipants);
 
@@ -172,8 +175,8 @@ class EventTest extends UnitTestCase
      */
     public function addParticipantToObjectStorageHoldingParticipants(): void
     {
-        $Participant = new \SKom\Leseohren\Domain\Model\Person();
-        $ParticipantsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $Participant = new Person();
+        $ParticipantsObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->onlyMethods(['attach'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -189,8 +192,8 @@ class EventTest extends UnitTestCase
      */
     public function removeParticipantFromObjectStorageHoldingParticipants(): void
     {
-        $Participant = new \SKom\Leseohren\Domain\Model\Person();
-        $ParticipantsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $Participant = new Person();
+        $ParticipantsObjectStorageMock = $this->getMockBuilder(ObjectStorage::class)
             ->onlyMethods(['detach'])
             ->disableOriginalConstructor()
             ->getMock();

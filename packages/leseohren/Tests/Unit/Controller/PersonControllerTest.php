@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Controller;
 
+use SKom\Leseohren\Controller\PersonController;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use SKom\Leseohren\Domain\Repository\PersonRepository;
+use SKom\Leseohren\Domain\Model\Person;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -17,14 +21,14 @@ use TYPO3Fluid\Fluid\View\ViewInterface;
 class PersonControllerTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Controller\PersonController|MockObject|AccessibleObjectInterface
+     * @var PersonController|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->subject = $this->getMockBuilder($this->buildAccessibleProxy(\SKom\Leseohren\Controller\PersonController::class))
+        $this->subject = $this->getMockBuilder($this->buildAccessibleProxy(PersonController::class))
             ->onlyMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -40,11 +44,11 @@ class PersonControllerTest extends UnitTestCase
      */
     public function listActionFetchesAllpeopleFromRepositoryAndAssignsThemToView(): void
     {
-        $allpeople = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $allpeople = $this->getMockBuilder(ObjectStorage::class)
             ->disableOriginalConstructor()
             ->getMock();
 
-        $personRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\PersonRepository::class)
+        $personRepository = $this->getMockBuilder(PersonRepository::class)
             ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -63,7 +67,7 @@ class PersonControllerTest extends UnitTestCase
      */
     public function showActionAssignsTheGivenPersonToView(): void
     {
-        $person = new \SKom\Leseohren\Domain\Model\Person();
+        $person = new Person();
 
         $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->subject->_set('view', $view);
@@ -77,9 +81,9 @@ class PersonControllerTest extends UnitTestCase
      */
     public function createActionAddsTheGivenPersonToPersonRepository(): void
     {
-        $person = new \SKom\Leseohren\Domain\Model\Person();
+        $person = new Person();
 
-        $personRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\PersonRepository::class)
+        $personRepository = $this->getMockBuilder(PersonRepository::class)
             ->onlyMethods(['add'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -95,7 +99,7 @@ class PersonControllerTest extends UnitTestCase
      */
     public function editActionAssignsTheGivenPersonToView(): void
     {
-        $person = new \SKom\Leseohren\Domain\Model\Person();
+        $person = new Person();
 
         $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->subject->_set('view', $view);
@@ -109,9 +113,9 @@ class PersonControllerTest extends UnitTestCase
      */
     public function updateActionUpdatesTheGivenPersonInPersonRepository(): void
     {
-        $person = new \SKom\Leseohren\Domain\Model\Person();
+        $person = new Person();
 
-        $personRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\PersonRepository::class)
+        $personRepository = $this->getMockBuilder(PersonRepository::class)
             ->onlyMethods(['update'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -127,9 +131,9 @@ class PersonControllerTest extends UnitTestCase
      */
     public function deleteActionRemovesTheGivenPersonFromPersonRepository(): void
     {
-        $person = new \SKom\Leseohren\Domain\Model\Person();
+        $person = new Person();
 
-        $personRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\PersonRepository::class)
+        $personRepository = $this->getMockBuilder(PersonRepository::class)
             ->onlyMethods(['remove'])
             ->disableOriginalConstructor()
             ->getMock();

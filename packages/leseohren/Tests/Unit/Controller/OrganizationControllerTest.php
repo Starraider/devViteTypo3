@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Tests\Unit\Controller;
 
+use SKom\Leseohren\Controller\OrganizationController;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use SKom\Leseohren\Domain\Repository\OrganizationRepository;
+use SKom\Leseohren\Domain\Model\Organization;
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
@@ -17,14 +21,14 @@ use TYPO3Fluid\Fluid\View\ViewInterface;
 class OrganizationControllerTest extends UnitTestCase
 {
     /**
-     * @var \SKom\Leseohren\Controller\OrganizationController|MockObject|AccessibleObjectInterface
+     * @var OrganizationController|MockObject|AccessibleObjectInterface
      */
     protected $subject;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->subject = $this->getMockBuilder($this->buildAccessibleProxy(\SKom\Leseohren\Controller\OrganizationController::class))
+        $this->subject = $this->getMockBuilder($this->buildAccessibleProxy(OrganizationController::class))
             ->onlyMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -40,11 +44,11 @@ class OrganizationControllerTest extends UnitTestCase
      */
     public function listActionFetchesAllOrganizationsFromRepositoryAndAssignsThemToView(): void
     {
-        $allOrganizations = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+        $allOrganizations = $this->getMockBuilder(ObjectStorage::class)
             ->disableOriginalConstructor()
             ->getMock();
 
-        $organizationRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\OrganizationRepository::class)
+        $organizationRepository = $this->getMockBuilder(OrganizationRepository::class)
             ->onlyMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -63,7 +67,7 @@ class OrganizationControllerTest extends UnitTestCase
      */
     public function showActionAssignsTheGivenOrganizationToView(): void
     {
-        $organization = new \SKom\Leseohren\Domain\Model\Organization();
+        $organization = new Organization();
 
         $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->subject->_set('view', $view);
@@ -77,9 +81,9 @@ class OrganizationControllerTest extends UnitTestCase
      */
     public function createActionAddsTheGivenOrganizationToOrganizationRepository(): void
     {
-        $organization = new \SKom\Leseohren\Domain\Model\Organization();
+        $organization = new Organization();
 
-        $organizationRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\OrganizationRepository::class)
+        $organizationRepository = $this->getMockBuilder(OrganizationRepository::class)
             ->onlyMethods(['add'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -95,7 +99,7 @@ class OrganizationControllerTest extends UnitTestCase
      */
     public function editActionAssignsTheGivenOrganizationToView(): void
     {
-        $organization = new \SKom\Leseohren\Domain\Model\Organization();
+        $organization = new Organization();
 
         $view = $this->getMockBuilder(ViewInterface::class)->getMock();
         $this->subject->_set('view', $view);
@@ -109,9 +113,9 @@ class OrganizationControllerTest extends UnitTestCase
      */
     public function updateActionUpdatesTheGivenOrganizationInOrganizationRepository(): void
     {
-        $organization = new \SKom\Leseohren\Domain\Model\Organization();
+        $organization = new Organization();
 
-        $organizationRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\OrganizationRepository::class)
+        $organizationRepository = $this->getMockBuilder(OrganizationRepository::class)
             ->onlyMethods(['update'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -127,9 +131,9 @@ class OrganizationControllerTest extends UnitTestCase
      */
     public function deleteActionRemovesTheGivenOrganizationFromOrganizationRepository(): void
     {
-        $organization = new \SKom\Leseohren\Domain\Model\Organization();
+        $organization = new Organization();
 
-        $organizationRepository = $this->getMockBuilder(\SKom\Leseohren\Domain\Repository\OrganizationRepository::class)
+        $organizationRepository = $this->getMockBuilder(OrganizationRepository::class)
             ->onlyMethods(['remove'])
             ->disableOriginalConstructor()
             ->getMock();

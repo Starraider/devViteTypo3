@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Domain\Model;
 
+use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Annotation\Validate;
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Domain\Model\Category;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -19,7 +22,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 /**
  * Organisation
  */
-class Organization extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class Organization extends AbstractEntity
 {
 
     /**
@@ -36,22 +39,20 @@ class Organization extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * Name der Organisation
      *
      * @var string
-     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $name = '';
 
     /**
      * Kontaktperson
      *
-     * @var \SKom\Leseohren\Domain\Model\Person
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Lazy
+     * @var Person
      */
+    #[Lazy]
     protected $contactPerson = null;
 
     /**
      * Add category to a blog
-     *
-     * @param Category $category
      */
     public function addCategory(Category $category)
     {
@@ -95,7 +96,6 @@ class Organization extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the name
      *
-     * @param string $name
      * @return void
      */
     public function setName(string $name)
@@ -106,7 +106,7 @@ class Organization extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the contactPerson
      *
-     * @return \SKom\Leseohren\Domain\Model\Person
+     * @return Person
      */
     public function getContactPerson()
     {
@@ -116,10 +116,9 @@ class Organization extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the contactPerson
      *
-     * @param \SKom\Leseohren\Domain\Model\Person $contactPerson
      * @return void
      */
-    public function setContactPerson(\SKom\Leseohren\Domain\Model\Person $contactPerson)
+    public function setContactPerson(Person $contactPerson)
     {
         $this->contactPerson = $contactPerson;
     }

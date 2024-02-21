@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace SKom\Leseohren\Controller;
 
-
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use SKom\Leseohren\Domain\Repository\BlackboardRepository;
+use Psr\Http\Message\ResponseInterface;
+use SKom\Leseohren\Domain\Model\Blackboard;
+use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
+use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -13,24 +18,20 @@ namespace SKom\Leseohren\Controller;
  *
  * (c) 2024 Sven Kalbhenn <sven@skom.de>, SKom
  */
-
 /**
  * BlackboardController
  */
-class BlackboardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class BlackboardController extends ActionController
 {
 
     /**
      * blackboardRepository
      *
-     * @var \SKom\Leseohren\Domain\Repository\BlackboardRepository
+     * @var BlackboardRepository
      */
     protected $blackboardRepository = null;
 
-    /**
-     * @param \SKom\Leseohren\Domain\Repository\BlackboardRepository $blackboardRepository
-     */
-    public function injectBlackboardRepository(\SKom\Leseohren\Domain\Repository\BlackboardRepository $blackboardRepository)
+    public function injectBlackboardRepository(BlackboardRepository $blackboardRepository)
     {
         $this->blackboardRepository = $blackboardRepository;
     }
@@ -38,9 +39,9 @@ class BlackboardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     /**
      * action index
      *
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return ResponseInterface
      */
-    public function indexAction(): \Psr\Http\Message\ResponseInterface
+    public function indexAction(): ResponseInterface
     {
         return $this->htmlResponse();
     }
@@ -48,9 +49,9 @@ class BlackboardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     /**
      * action list
      *
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return ResponseInterface
      */
-    public function listAction(): \Psr\Http\Message\ResponseInterface
+    public function listAction(): ResponseInterface
     {
         $blackboards = $this->blackboardRepository->findAll();
         $this->view->assign('blackboards', $blackboards);
@@ -60,10 +61,9 @@ class BlackboardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     /**
      * action show
      *
-     * @param \SKom\Leseohren\Domain\Model\Blackboard $blackboard
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return ResponseInterface
      */
-    public function showAction(\SKom\Leseohren\Domain\Model\Blackboard $blackboard): \Psr\Http\Message\ResponseInterface
+    public function showAction(Blackboard $blackboard): ResponseInterface
     {
         $this->view->assign('blackboard', $blackboard);
         return $this->htmlResponse();
@@ -72,21 +72,19 @@ class BlackboardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     /**
      * action new
      *
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return ResponseInterface
      */
-    public function newAction(): \Psr\Http\Message\ResponseInterface
+    public function newAction(): ResponseInterface
     {
         return $this->htmlResponse();
     }
 
     /**
      * action create
-     *
-     * @param \SKom\Leseohren\Domain\Model\Blackboard $newBlackboard
      */
-    public function createAction(\SKom\Leseohren\Domain\Model\Blackboard $newBlackboard)
+    public function createAction(Blackboard $newBlackboard)
     {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
         $this->blackboardRepository->add($newBlackboard);
         return $this->redirect('list');
     }
@@ -94,11 +92,10 @@ class BlackboardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
     /**
      * action edit
      *
-     * @param \SKom\Leseohren\Domain\Model\Blackboard $blackboard
-     * @TYPO3\CMS\Extbase\Annotation\IgnoreValidation("blackboard")
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return ResponseInterface
      */
-    public function editAction(\SKom\Leseohren\Domain\Model\Blackboard $blackboard): \Psr\Http\Message\ResponseInterface
+    #[IgnoreValidation(['value' => 'blackboard'])]
+    public function editAction(Blackboard $blackboard): ResponseInterface
     {
         $this->view->assign('blackboard', $blackboard);
         return $this->htmlResponse();
@@ -106,24 +103,20 @@ class BlackboardController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 
     /**
      * action update
-     *
-     * @param \SKom\Leseohren\Domain\Model\Blackboard $blackboard
      */
-    public function updateAction(\SKom\Leseohren\Domain\Model\Blackboard $blackboard)
+    public function updateAction(Blackboard $blackboard)
     {
-        $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+        $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
         $this->blackboardRepository->update($blackboard);
         return $this->redirect('list');
     }
 
     /**
      * action delete
-     *
-     * @param \SKom\Leseohren\Domain\Model\Blackboard $blackboard
      */
-    public function deleteAction(\SKom\Leseohren\Domain\Model\Blackboard $blackboard)
+    public function deleteAction(Blackboard $blackboard)
     {
-        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
         $this->blackboardRepository->remove($blackboard);
         return $this->redirect('list');
     }
