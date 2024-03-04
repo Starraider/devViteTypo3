@@ -21,7 +21,6 @@
 		"helhum/typo3-console": "^8.0",
 		"praetorius/vite-asset-collector": "^1.3",
 		"skom/leseohren": "@dev",
-		"skom/skom-persons": "@dev",
 		"skom/vite-base-sitepackage": "@dev",
 		"t3docs/blog-example": "@dev",
 		"typo3/cms-backend": "^12.4.0",

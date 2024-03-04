@@ -11,6 +11,7 @@ database:
     version: "10.4"
 use_dns_when_possible: true
 composer_version: "2"
+mutagen_enabled: true
 timezone: Europe/Berlin
 web_environment:
   - TYPO3_CONTEXT=Development
