@@ -12,6 +12,15 @@
 			<trans-unit id="gender.description" resname="gender.description">
 				<source>gender</source>
 			</trans-unit>
+			<trans-unit id="gender.1" resname="gender.1">
+				<source>female</source>
+			</trans-unit>
+			<trans-unit id="gender.2" resname="gender.2">
+				<source>male</source>
+			</trans-unit>
+			<trans-unit id="gender.3" resname="gender.3">
+				<source>diverse</source>
+			</trans-unit>
 			<trans-unit id="birthday.description" resname="birthday.description">
 				<source>birthday</source>
 			</trans-unit>

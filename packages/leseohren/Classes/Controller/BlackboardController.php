@@ -8,8 +8,10 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use SKom\Leseohren\Domain\Repository\BlackboardRepository;
 use Psr\Http\Message\ResponseInterface;
 use SKom\Leseohren\Domain\Model\Blackboard;
+use SKom\Leseohren\Domain\Model\Person;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -18,12 +20,12 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
  *
  * (c) 2024 Sven Kalbhenn <sven@skom.de>, SKom
  */
+
 /**
  * BlackboardController
  */
 class BlackboardController extends ActionController
 {
-
     /**
      * blackboardRepository
      *
@@ -74,8 +76,10 @@ class BlackboardController extends ActionController
      *
      * @return ResponseInterface
      */
-    public function newAction(): ResponseInterface
+    public function newAction(Person $person, Blackboard $blackboard = null): ResponseInterface
     {
+        $this->view->assign('person', $person);
+        $this->view->assign('blackboard', $blackboard);
         return $this->htmlResponse();
     }
 

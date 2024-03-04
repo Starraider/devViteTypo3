@@ -15,6 +15,9 @@
 			<trans-unit id="tx_leseohren_domain_model_person.gender.description" resname="tx_leseohren_domain_model_person.gender.description">
 				<source>Geschlecht</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.gender.2" resname="tx_leseohren_domain_model_person.gender.2">
+				<source>male</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.firstname" resname="tx_leseohren_domain_model_person.firstname">
 				<source>Firstname</source>
 			</trans-unit>
@@ -213,6 +216,96 @@
 			<trans-unit id="tx_leseohren_domain_model_organization.name.description" resname="tx_leseohren_domain_model_organization.name.description">
 				<source>Name Der Organisation</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.street1" resname="tx_leseohren_domain_model_organization.street1">
+				<source>Street1</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.street1.description" resname="tx_leseohren_domain_model_organization.street1.description">
+				<source>Street1</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.street2" resname="tx_leseohren_domain_model_organization.street2">
+				<source>Street2</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.street2.description" resname="tx_leseohren_domain_model_organization.street2.description">
+				<source>Street2</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.zip" resname="tx_leseohren_domain_model_organization.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.zip.description" resname="tx_leseohren_domain_model_organization.zip.description">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.city" resname="tx_leseohren_domain_model_organization.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.city.description" resname="tx_leseohren_domain_model_organization.city.description">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.district" resname="tx_leseohren_domain_model_organization.district">
+				<source>District</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.district.description" resname="tx_leseohren_domain_model_organization.district.description">
+				<source>District</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.phone1" resname="tx_leseohren_domain_model_organization.phone1">
+				<source>Phone1</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.phone1.description" resname="tx_leseohren_domain_model_organization.phone1.description">
+				<source>Phone1</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.phone2" resname="tx_leseohren_domain_model_organization.phone2">
+				<source>Phone2</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.phone2.description" resname="tx_leseohren_domain_model_organization.phone2.description">
+				<source>Phone2</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.email" resname="tx_leseohren_domain_model_organization.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.email.description" resname="tx_leseohren_domain_model_organization.email.description">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.url" resname="tx_leseohren_domain_model_organization.url">
+				<source>Url</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.url.description" resname="tx_leseohren_domain_model_organization.url.description">
+				<source>Url</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.whatsapp" resname="tx_leseohren_domain_model_organization.whatsapp">
+				<source>Whatsapp</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.whatsapp.description" resname="tx_leseohren_domain_model_organization.whatsapp.description">
+				<source>Whatsapp</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.opening_hours" resname="tx_leseohren_domain_model_organization.opening_hours">
+				<source>Opening Hours</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.opening_hours.description" resname="tx_leseohren_domain_model_organization.opening_hours.description">
+				<source>Opening Hours</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.notes" resname="tx_leseohren_domain_model_organization.notes">
+				<source>Notes</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.notes.description" resname="tx_leseohren_domain_model_organization.notes.description">
+				<source>Notes</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.reading_times" resname="tx_leseohren_domain_model_organization.reading_times">
+				<source>Reading Times</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.reading_times.description" resname="tx_leseohren_domain_model_organization.reading_times.description">
+				<source>Reading Times</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.vp_languages" resname="tx_leseohren_domain_model_organization.vp_languages">
+				<source>Vp Languages</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.vp_languages.description" resname="tx_leseohren_domain_model_organization.vp_languages.description">
+				<source>Vp Languages</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.vp_number" resname="tx_leseohren_domain_model_organization.vp_number">
+				<source>Vp Number</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.vp_number.description" resname="tx_leseohren_domain_model_organization.vp_number.description">
+				<source>Vp Number</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.contact_person" resname="tx_leseohren_domain_model_organization.contact_person">
 				<source>Contact Person</source>
 			</trans-unit>
@@ -299,6 +392,9 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.description.description" resname="tx_leseohren_domain_model_event.description.description">
 				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.datePalette.description" resname="tx_leseohren_domain_model_event.datePalette.description">
+				<source>Date of the event</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.start_date" resname="tx_leseohren_domain_model_event.start_date">
 				<source>Start Date</source>

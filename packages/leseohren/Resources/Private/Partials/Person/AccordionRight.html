@@ -1,0 +1,148 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="accordion" id="accordionInfo">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Bankdaten
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
+            <div class="accordion-body">
+                <f:translate key="tx_leseohren_domain_model_person.payment_method" />:
+                {person.paymentMethod}</br>
+                <f:translate key="tx_leseohren_domain_model_person.iban" />: {person.iban}</br>
+                <f:translate key="tx_leseohren_domain_model_person.swift" />: {person.swift}</br>
+                <f:translate key="tx_leseohren_domain_model_person.bankname" />: {person.bankname}</br>
+                <f:translate key="tx_leseohren_domain_model_person.account_owner" />:
+                {person.accountOwner}</br>
+                <f:translate key="tx_leseohren_domain_model_person.paypal" />: {person.paypal}</br>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Files
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
+            <div class="accordion-body">
+                <f:if condition="{person.fileFuehrungszeugnis}">
+                    <div class="c-person__file-link">
+                        <f:translate key="tx_leseohren_domain_model_person.file_fuehrungszeugnis" />:
+                        <a href="{person.fileFuehrungszeugnis.originalResource.publicUrl}">
+                            {person.fileFuehrungszeugnis.originalResource.name}
+                        </a>
+                    </div>
+                </f:if>
+                <f:if condition="{person.file_mandat}">
+                    <div class="c-person__file-link">
+                        <f:translate key="tx_leseohren_domain_model_person.file_mandat" />:
+                        <a href="{person.fileMandat.originalResource.publicUrl}">
+                            {person.fileMandat.originalResource.name}
+                        </a>
+                    </div>
+                </f:if>
+                <f:if condition="{person.file_others}">
+                    <div class="c-person__file-link">
+                        <f:translate key="tx_leseohren_domain_model_person.file_others" />:
+                        <a href="{person.fileOthers.originalResource.publicUrl}">
+                            {person.fileOthers.originalResource.name}
+                        </a>
+                    </div>
+                </f:if>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Preferences
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
+            <div class="accordion-body">
+                <div class="c-person__travelOptions">
+                    <f:translate key="tx_leseohren_domain_model_person.travel_options" />: &nbsp;
+                    {person.travelOptions}
+                </div>
+                <div class="c-person__languages">
+                    <f:translate key="tx_leseohren_domain_model_person.languages" />: &nbsp;
+                    {person.languages}
+                </div>
+                <div class="c-person__preferenceAgegroup">
+                    <f:translate key="tx_leseohren_domain_model_person.preferenceAgegroup" />: &nbsp;
+                    {person.preferenceAgegroup}
+                </div>
+                <div class="c-person__preferenceOrganizationType">
+                    <f:translate key="tx_leseohren_domain_model_person.preferenceOrganizationType" />: &nbsp;
+                    {person.preferenceOrganizationType}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Gifts
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
+            <div class="accordion-body">
+                <f:if condition="{person.donations}">
+                    <f:for each="{person.donations}" as="donation">
+                        <div class="c-person__donation">
+                            <f:format.date pattern="dd.MM.Y">{donation.giftDate}</f:format.date>:
+                            <strong>{donation.gift.title -> f:format.htmlspecialchars()}</strong>
+                            <f:if condition="{donation.given}">
+                                <i class="bi bi-check-lg"></i>
+                            </f:if>
+                        </div>
+                    </f:for>
+                </f:if>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Schwarze Bretter
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
+            <div class="accordion-body">
+                <f:if condition="{person.blackboards}">
+                    <f:for each="{person.blackboards}" as="blackboard" iteration="boardIterator">
+                        <div class="c-person_blackboard">
+                            {blackboard.title}
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#boardModal{boardIterator.index}">
+                                <i class="bi bi-eye-fill"></i>
+                            </a>
+                            <f:link.action controller="Blackboard" action="edit" arguments="{blackboard: blackboard}">
+                                <i class="bi bi-pencil-fill"></i>
+                            </f:link.action>
+                            <f:link.action controller="Blackboard" action="delete" arguments="{blackboard: blackboard}">
+                                <i class="bi bi-trash-fill"></i>
+                            </f:link.action>
+                        </div>
+                        <f:render partial="Person/BlackboardModal" arguments="{blackboard: blackboard, boardIterator:boardIterator}" />
+                    </f:for>
+                </f:if>
+                <f:link.action controller="Blackboard" action="new" arguments="{person: person}"
+                    class="btn btn-primary btn-sm">
+                    <i class="bi bi-plus-square"></i>
+                </f:link.action>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

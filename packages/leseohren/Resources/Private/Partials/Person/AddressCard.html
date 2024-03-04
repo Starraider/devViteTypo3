@@ -1,0 +1,54 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="card">
+    <div class="card-header">Address</div>
+    <div class="card-body c-person__address">
+        <p class="card-text">
+            <f:if condition="{person.street1}">
+                {person.street1}</br>
+            </f:if>
+            <f:if condition="{person.street2}">
+                {person.street2}</br>
+            </f:if>
+            {person.zip} {person.city}</br>
+            <f:translate key="tx_leseohren_domain_model_person.district" />: {person.district}
+        </p>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Contact</h5>
+        <p class="card-text">
+            <f:if condition="{person.phoneLandline}">
+                <i class="bi bi-telephone"></i>&nbsp;
+                {person.phoneLandline}</br>
+            </f:if>
+            <f:if condition="{person.phoneMobile}">
+                <i class="bi bi-phone-vibrate"></i>&nbsp;
+                {person.phoneMobile}</br>
+            </f:if>
+            <f:if condition="{person.email}">
+                <i class="bi bi-envelope-at"></i>&nbsp;
+                <f:link.email email="{person.email}" /></br>
+            </f:if>
+            <f:if condition="{person.whatsapp}">
+                <i class="bi bi-whatsapp"></i>&nbsp; {person.whatsapp}
+            </f:if>
+        </p>
+    </div>
+    <f:if condition="{person.birthday} || {person.notes}">
+        <div class="card-body">
+            <h5 class="card-title">Info</h5>
+            <p class="card-text">
+                <f:if condition="{person.birthday}">
+                    <f:translate key="tx_leseohren_domain_model_person.birthday" />:
+                    {person.birthday -> f:format.date(format: 'd.m.Y')}</br>
+                </f:if>
+                <f:if condition="{person.notes}">
+                    <f:translate key="tx_leseohren_domain_model_person.notes" />:</br>
+                    <small></small><f:format.nl2br>{person.notes}</f:format.nl2br></small>
+                </f:if>
+            </p>
+        </div>
+    </f:if>
+</div>
+
+</html>

@@ -1,19 +1,8 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
 <f:debug inline="true">{organization}</f:debug>
+<h1>{organization.name}</h1>
 <table class="tx-leseohren">
-	<tr>
-		<td><f:translate key="tx_leseohren_domain_model_organization.name" /></td>
-		<td>{organization.name}</td>
-	</tr>
-    <tr>
-		<td>Kontaktperson</td>
-		<td>
-            <f:if condition="{organization.contactPerson}">
-                {organization.contactPerson.lastname}, {organization.contactPerson.firstname}
-            </f:if>
-        </td>
-	</tr>
     <tr>
         <td></td>
         <td>
@@ -24,5 +13,31 @@
             </f:if>
         </td>
     </tr>
+    <tr>
+		<td>Kontaktperson</td>
+		<td>
+            <f:if condition="{organization.contactPerson}">
+                {organization.contactPerson.lastname}, {organization.contactPerson.firstname}
+            </f:if>
+        </td>
+	</tr>
+    <tr>
+		<td><h2>Anschrift</h2></td>
+		<td>
+            <f:if condition="{organization.street1}">
+                {organization.contactPerson.street1}</br>
+            </f:if>
+            <f:if condition="{organization.street2}">
+                {organization.contactPerson.street2}</br>
+            </f:if>
+            <f:if condition="{organization.zip}">
+                {organization.contactPerson.zip}
+            </f:if>
+            <f:if condition="{organization.city}">
+                {organization.contactPerson.city}
+            </f:if>
+        </td>
+	</tr>
+
 </table>
 </html>

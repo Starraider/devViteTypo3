@@ -1,36 +1,45 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 
-This template is responsible for creating a table of domain objects.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Organization:
-          List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
 <f:section name="content">
     <h1>Listing for Organization</h1>
 
     <f:flashMessages />
 
-    <table class="tx_leseohren">
-        <tr>
-            <th><f:translate key="tx_leseohren_domain_model_organization.name" /></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <f:for each="{organizations}" as="organization">
+    <table id="organizationList" class="table table-striped display">
+        <thead>
             <tr>
-                <td><f:link.action action="show" arguments="{organization : organization}">{organization.name}</f:link.action></td>
-                <td><f:link.action action="edit" arguments="{organization : organization}">Edit</f:link.action></td>
-                <td><f:link.action action="delete" arguments="{organization : organization}">Delete</f:link.action></td>
+                <th><f:translate key="tx_leseohren_domain_model_organization.name" /></th>
+                <th>Kategorien</th>
+                <th><f:translate key="tx_leseohren_domain_model_organization.zip" /></th>
+                <th><f:translate key="tx_leseohren_domain_model_organization.city" /></th>
+                <th>Action</th>
             </tr>
-        </f:for>
+        </thead>
+        <tbody>
+            <f:for each="{organizations}" as="organization">
+                <tr>
+                    <td><f:link.action action="show" arguments="{organization : organization}">{organization.name}</f:link.action></td>
+                    <td>
+                        <f:if condition="{organization.categories}">
+                            <f:for each="{organization.categories}" as="organizationCategory">
+                                <category class="c-organization__categories">
+                                    <span class="badge bg-secondary">
+                                        {organizationCategory.title -> f:format.htmlspecialchars()}
+                                    </span>
+                                </category>
+                            </f:for>
+                        </f:if>
+                    </td>
+                    <td>{organization.zip}</td>
+                    <td>{organization.city}</td>
+                    <td>
+                        <f:link.action action="edit" arguments="{organization : organization}">Edit</f:link.action>
+                        <f:link.action action="delete" arguments="{organization : organization}">Delete</f:link.action>
+                    </td>
+                </tr>
+            </f:for>
+        </tbody>
     </table>
 
     <f:link.action action="new">New Organization</f:link.action>

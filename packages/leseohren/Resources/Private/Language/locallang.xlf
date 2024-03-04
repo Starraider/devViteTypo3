@@ -27,6 +27,15 @@
 			<trans-unit id="tx_leseohren_domain_model_person.gender.description" resname="tx_leseohren_domain_model_person.gender.description">
 				<source>Gender</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.gender.1" resname="tx_leseohren_domain_model_person.gender.1">
+				<source>female</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.gender.2" resname="tx_leseohren_domain_model_person.gender.2">
+				<source>male</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.gender.3" resname="tx_leseohren_domain_model_person.gender.3">
+				<source>diverse</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.birthday" resname="tx_leseohren_domain_model_person.birthday">
 				<source>Birthday</source>
 			</trans-unit>
@@ -212,6 +221,12 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.name.description" resname="tx_leseohren_domain_model_organization.name.description">
 				<source>Name Der Organisation</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.zip" resname="tx_leseohren_domain_model_organization.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.city" resname="tx_leseohren_domain_model_organization.city">
+				<source>City</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.contact_person" resname="tx_leseohren_domain_model_organization.contact_person">
 				<source>Contact Person</source>

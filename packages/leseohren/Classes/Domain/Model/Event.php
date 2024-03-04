@@ -8,6 +8,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Domain\Model\Category;
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -21,6 +22,11 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
  */
 class Event extends AbstractEntity
 {
+
+    /**
+     * @var ObjectStorage<Category>
+     */
+    public $categories;
 
     /**
      * title
@@ -64,15 +70,14 @@ class Event extends AbstractEntity
      * @var ObjectStorage<Person>
      */
     #[Lazy]
-    protected $Participants = null;
+    protected $participants = null;
 
     /**
      * __construct
      */
     public function __construct()
     {
-
-        // Do not remove the next line: It would break the functionality
+        $this->categories = new ObjectStorage();
         $this->initializeObject();
     }
 
@@ -86,7 +91,39 @@ class Event extends AbstractEntity
      */
     public function initializeObject()
     {
-        $this->Participants = $this->Participants ?: new ObjectStorage();
+        $this->participants = $this->participants ?: new ObjectStorage();
+    }
+
+    /**
+     * Add category to a blog
+     */
+    public function addCategory(Category $category)
+    {
+        $this->categories->attach($category);
+    }
+
+    /**
+     * Set categories
+     */
+    public function setCategories(ObjectStorage $categories)
+    {
+        $this->categories = $categories;
+    }
+
+    /**
+     * Get categories
+     */
+    public function getCategories(): ObjectStorage
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Remove category from organisation
+     */
+    public function removeCategory(Category $category)
+    {
+        $this->categories->detach($category);
     }
 
     /**
@@ -194,20 +231,20 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function addParticipant(Person $Participant)
+    public function addParticipant(Person $participant)
     {
-        $this->Participants->attach($Participant);
+        $this->participants->attach($participant);
     }
 
     /**
      * Removes a Person
      *
-     * @param Person $ParticipantToRemove The Person to be removed
+     * @param Person $participantToRemove The Person to be removed
      * @return void
      */
-    public function removeParticipant(Person $ParticipantToRemove)
+    public function removeParticipant(Person $participantToRemove)
     {
-        $this->Participants->detach($ParticipantToRemove);
+        $this->participants->detach($participantToRemove);
     }
 
     /**
@@ -217,17 +254,17 @@ class Event extends AbstractEntity
      */
     public function getParticipants()
     {
-        return $this->Participants;
+        return $this->participants;
     }
 
     /**
      * Sets the Participants
      *
-     * @param ObjectStorage<Person> $Participants
+     * @param ObjectStorage<Person> $participants
      * @return void
      */
-    public function setParticipants(ObjectStorage $Participants)
+    public function setParticipants(ObjectStorage $participants)
     {
-        $this->Participants = $Participants;
+        $this->participants = $participants;
     }
 }

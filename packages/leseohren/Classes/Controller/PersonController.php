@@ -10,6 +10,8 @@ use Psr\Http\Message\ResponseInterface;
 use SKom\Leseohren\Domain\Model\Person;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -18,12 +20,12 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
  *
  * (c) 2024 Sven Kalbhenn <sven@skom.de>, SKom
  */
+
 /**
  * PersonController
  */
 class PersonController extends ActionController
 {
-
     /**
      * personRepository
      *
@@ -84,8 +86,8 @@ class PersonController extends ActionController
      */
     public function createAction(Person $newPerson)
     {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
         $this->personRepository->add($newPerson);
+        $this->addFlashMessage('Die neue Person wurde erfolgreich gespeichert!', '', ContextualFeedbackSeverity::OK);
         return $this->redirect('list');
     }
 
@@ -106,8 +108,8 @@ class PersonController extends ActionController
      */
     public function updateAction(Person $person)
     {
-        $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
         $this->personRepository->update($person);
+        $this->addFlashMessage('Die Änderungen wurden erfolgreich gespeichert!', '', ContextualFeedbackSeverity::OK);
         return $this->redirect('list');
     }
 
@@ -116,8 +118,8 @@ class PersonController extends ActionController
      */
     public function deleteAction(Person $person)
     {
-        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
         $this->personRepository->remove($person);
+        $this->addFlashMessage('Die Person wurde aus der Datenbank entfernt!', '', ContextualFeedbackSeverity::INFO);
         return $this->redirect('list');
     }
 }

@@ -9,7 +9,18 @@ plugin.tx_leseohren_personen {
     }
     persistence {
         storagePid = {$plugin.tx_leseohren_personen.persistence.storagePid}
-        #recursive = 1
+        recursive = 1
+        classes {
+            SKom\Leseohren\Domain\Model\Blackboard {
+                newRecordStoragePid = {$plugin.tx_leseohren_personen.persistence.blackboardStoragePid}
+            }
+            SKom\Leseohren\Domain\Model\Gift {
+                newRecordStoragePid = {$plugin.tx_leseohren_personen.persistence.giftsStoragePid}
+            }
+            SKom\Leseohren\Domain\Model\Present {
+                newRecordStoragePid = {$plugin.tx_leseohren_personen.persistence.giftsStoragePid}
+            }
+        }
     }
     features {
         #skipDefaultArguments = 1
@@ -42,37 +53,47 @@ plugin.tx_leseohren_organizations {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
-
-# these classes are only used in auto-generated templates
-plugin.tx_leseohren._CSS_DEFAULT_STYLE (
-    textarea.f3-form-error {
-        background-color: #FF9F9F;
-        border: 1px #FF0000 solid;
+plugin.tx_leseohren_events {
+    view {
+        templateRootPaths.0 = EXT:leseohren/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_leseohren_events.view.templateRootPath}
+        partialRootPaths.0 = EXT:leseohren/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_leseohren_events.view.partialRootPath}
+        layoutRootPaths.0 = EXT:leseohren/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_leseohren_events.view.layoutRootPath}
     }
-
-    input.f3-form-error {
-        background-color: #FF9F9F;
-        border: 1px #FF0000 solid;
+    persistence {
+        storagePid = {$plugin.tx_leseohren_events.persistence.storagePid}
+        #recursive = 1
     }
-
-    .tx-leseohren table {
-        border-collapse: separate;
-        border-spacing: 10px;
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
     }
-
-    .tx-leseohren table th {
-        font-weight: bold;
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
     }
-
-    .tx-leseohren table td {
-        vertical-align: top;
+}
+plugin.tx_leseohren_blackboards {
+    view {
+        templateRootPaths.0 = EXT:leseohren/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_leseohren_blackboards.view.templateRootPath}
+        partialRootPaths.0 = EXT:leseohren/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_leseohren_blackboards.view.partialRootPath}
+        layoutRootPaths.0 = EXT:leseohren/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_leseohren_blackboards.view.layoutRootPath}
     }
-
-    .typo3-messages .message-error {
-        color: red;
+    persistence {
+        storagePid = {$plugin.tx_leseohren_blackboards.persistence.storagePid}
+        #recursive = 1
     }
-
-    .typo3-messages .message-ok {
-        color: green;
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
     }
-)
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}

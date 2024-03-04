@@ -13,7 +13,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'title,description',
-        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_gift.gif',
+        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_gift.svg',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
@@ -86,6 +86,6 @@ return [
                 'default' => ''
             ]
         ],
-    
+
     ],
 ];

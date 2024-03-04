@@ -9,6 +9,7 @@ use Psr\Http\Message\ResponseInterface;
 use SKom\Leseohren\Domain\Model\Present;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -17,12 +18,12 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
  *
  * (c) 2024 Sven Kalbhenn <sven@skom.de>, SKom
  */
+
 /**
  * PresentController
  */
 class PresentController extends ActionController
 {
-
     /**
      * action index
      *

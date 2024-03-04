@@ -10,6 +10,8 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Domain\Model\Category;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+use TYPO3\CMS\Extbase\Annotation\Validate;
+use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -50,6 +52,7 @@ class Person extends AbstractEntity
      *
      * @var string
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $lastname = '';
 
     /**
@@ -113,6 +116,8 @@ class Person extends AbstractEntity
      *
      * @var string
      */
+    #[Validate(['validator' => 'NotEmpty'])]
+    #[Validate(['validator' => 'EmailAddress'])]
     protected $email = '';
 
     /**
@@ -245,22 +250,22 @@ class Person extends AbstractEntity
     protected $fileOthers = null;
 
     /**
-     * Geschenke
+     * donations
      *
      * @var ObjectStorage<Present>
      */
     #[Cascade(['value' => 'remove'])]
     #[Lazy]
-    protected $Donations = null;
+    protected $donations = null;
 
     /**
-     * Blackboards
+     * blackboards
      *
      * @var ObjectStorage<Blackboard>
      */
-    #[Cascade(['value' => 'remove'])]
+    #[cascade(['value' => 'remove'])]
     #[Lazy]
-    protected $Blackboards = null;
+    public $blackboards = null;
 
     /**
      * __construct
@@ -281,12 +286,13 @@ class Person extends AbstractEntity
      */
     public function initializeObject()
     {
-        $this->Donations = $this->Donations ?: new ObjectStorage();
-        $this->Blackboards = $this->Blackboards ?: new ObjectStorage();
+        $this->donations = $this->donations ?: new ObjectStorage();
+        $this->blackboards = $this->blackboards ?: new ObjectStorage();
+        //$this->blackboards = new ObjectStorage();
     }
 
     /**
-     * Add category to a blog
+     * Add category to a person
      */
     public function addCategory(Category $category)
     {
@@ -918,86 +924,85 @@ class Person extends AbstractEntity
     }
 
     /**
-     * Adds a Present
+     * Adds a donation
      *
      * @return void
      */
-    public function addDonation(Present $Donation)
+    public function addDonation(Present $donation)
     {
-        $this->Donations->attach($Donation);
+        $this->donations->attach($donation);
     }
 
     /**
-     * Removes a Present
+     * Removes a donations
      *
-     * @param Present $DonationToRemove The Present to be removed
+     * @param Present $donationToRemove The Present to be removed
      * @return void
      */
-    public function removeDonation(Present $DonationToRemove)
+    public function removeDonation(Present $donationToRemove)
     {
-        $this->Donations->detach($DonationToRemove);
+        $this->donations->detach($donationToRemove);
     }
 
     /**
-     * Returns the Donations
+     * Returns the donations
      *
      * @return ObjectStorage<Present>
      */
     public function getDonations()
     {
-        return $this->Donations;
+        return $this->donations;
     }
 
     /**
-     * Sets the Donations
+     * Sets the donations
      *
-     * @param ObjectStorage<Present> $Donations
+     * @param ObjectStorage<Present> $donations
      * @return void
      */
-    public function setDonations(ObjectStorage $Donations)
+    public function setDonations(ObjectStorage $donations)
     {
-        $this->Donations = $Donations;
+        $this->donations = $donations;
     }
 
     /**
-     * Adds a Blackboard
+     * Adds a blackboard
      *
      * @return void
      */
-    public function addBlackboard(Blackboard $Blackboard)
+    public function addBlackboard(Blackboard $blackboard)
     {
-        $this->Blackboards->attach($Blackboard);
+        $this->blackboards->attach($blackboard);
     }
 
     /**
-     * Removes a Blackboard
+     * Removes a blackboard
      *
-     * @param Blackboard $BlackboardToRemove The Blackboard to be removed
+     * @param Blackboard $blackboardToRemove The Blackboard to be removed
      * @return void
      */
-    public function removeBlackboard(Blackboard $BlackboardToRemove)
+    public function removeBlackboard(Blackboard $blackboardToRemove)
     {
-        $this->Blackboards->detach($BlackboardToRemove);
+        $this->blackboards->detach($blackboardToRemove);
     }
 
     /**
-     * Returns the Blackboards
+     * Returns the blackboards
      *
-     * @return ObjectStorage<Blackboard>
      */
-    public function getBlackboards()
+    public function getBlackboards(): ObjectStorage
     {
-        return $this->Blackboards;
+        return $this->blackboards;
     }
 
     /**
-     * Sets the Blackboards
+     * Sets the blackboards
      *
-     * @param ObjectStorage<Blackboard> $Blackboards
+     * @param ObjectStorage<Blackboard> $blackboards
      * @return void
      */
-    public function setBlackboards(ObjectStorage $Blackboards)
+    public function setBlackboards(ObjectStorage $blackboards)
     {
-        $this->Blackboards = $Blackboards;
+        $this->blackboards = $blackboards;
     }
 }

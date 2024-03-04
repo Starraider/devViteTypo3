@@ -15,7 +15,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'firstname,lastname',
-        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_person.gif',
+        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_person.svg',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
@@ -27,6 +27,8 @@ return [
                     --palette--;;addressPalette,
                     --palette--;;contactPalette,
                     notes,
+                --div--;Categories,
+                    categories,
                 --div--;Information,
                     --palette--;;statusPalette,
                     travel_options, languages,
@@ -156,7 +158,8 @@ return [
                 'type' => 'input',
                 'size' => 0,
                 'eval' => 'trim',
-                'default' => ''
+                'default' => '',
+                'required' => true
             ],
         ],
         'birthday' => [
@@ -166,7 +169,7 @@ return [
             'config' => [
                 'type' => 'datetime',
                 'format' => 'date',
-                'required' => true,
+                'required' => false,
                 'size' => 20,
                 'default' => 0,
             ],
@@ -282,6 +285,7 @@ return [
             'config' => [
                 'type' => 'email',
                 'eval' => 'nospace,email',
+                'required' => true,
             ]
         ],
         'whatsapp' => [

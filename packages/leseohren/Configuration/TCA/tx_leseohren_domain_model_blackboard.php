@@ -13,13 +13,13 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'title,description',
-        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_blackboard.gif',
+        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_blackboard.svg',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
     ],
     'types' => [
-        '1' => ['showitem' => 'title, description, start_date, end_date, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
+        '1' => ['showitem' => 'title, person, description, start_date, end_date, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
     ],
     'columns' => [
         'hidden' => [
@@ -112,7 +112,11 @@ return [
         ],
         'person' => [
             'config' => [
-                'type' => 'passthrough',
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_leseohren_domain_model_person',
+                'minitems' => 1,
+                'maxitems' => 1,
             ],
         ],
 

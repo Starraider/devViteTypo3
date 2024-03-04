@@ -32,6 +32,21 @@ CREATE TABLE tx_leseohren_domain_model_person (
 
 CREATE TABLE tx_leseohren_domain_model_organization (
 	name varchar(255) NOT NULL DEFAULT '',
+	street1 varchar(255) NOT NULL DEFAULT '',
+	street2 varchar(255) NOT NULL DEFAULT '',
+	zip varchar(255) NOT NULL DEFAULT '',
+	city varchar(255) NOT NULL DEFAULT '',
+	district int(11) DEFAULT '0' NOT NULL,
+	phone1 varchar(255) NOT NULL DEFAULT '',
+	phone2 varchar(255) NOT NULL DEFAULT '',
+	email varchar(255) NOT NULL DEFAULT '',
+	url varchar(255) NOT NULL DEFAULT '',
+	whatsapp varchar(255) NOT NULL DEFAULT '',
+	opening_hours text NOT NULL DEFAULT '',
+	notes text NOT NULL DEFAULT '',
+	reading_times text NOT NULL DEFAULT '',
+	vp_languages varchar(255) NOT NULL DEFAULT '',
+	vp_number int(11) NOT NULL DEFAULT '0',
 	contact_person int(11) unsigned DEFAULT '0'
 );
 

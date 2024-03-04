@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SKom\Leseohren\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Annotation\Validate;
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -19,6 +20,11 @@ use TYPO3\CMS\Extbase\Annotation\Validate;
  */
 class Blackboard extends AbstractEntity
 {
+
+    /**
+     * @var ObjectStorage<Person>
+     */
+    public $person;
 
     /**
      * title
@@ -48,6 +54,31 @@ class Blackboard extends AbstractEntity
      * @var \DateTime
      */
     protected $endDate = null;
+
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+        $this->person = new ObjectStorage();
+    }
+
+    /**
+     * Returns the person
+     *
+     */
+    public function getPerson(): ObjectStorage
+    {
+        return $this->person;
+    }
+
+    /**
+     * Set person
+     */
+    public function setPerson(ObjectStorage $person)
+    {
+        $this->person = $person;
+    }
 
     /**
      * Returns the title

@@ -13,13 +13,30 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'title,description,location',
-        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_event.gif',
+        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_event.svg',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
     ],
     'types' => [
-        '1' => ['showitem' => 'title, description, start_date, end_date, location, categories, participants, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
+        '1' => ['showitem' => '
+            --div--;Event,
+                title,
+                --palette--;;datePalette,
+                description,
+                location,
+                categories,
+                participants,
+            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                hidden,
+                starttime,
+                endtime'],
+    ],
+    'palettes' => [
+        'datePalette' => [
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.datePalette.description',
+            'showitem' => 'start_date, end_date',
+        ],
     ],
     'columns' => [
         'hidden' => [
@@ -64,6 +81,10 @@ return [
         'categories' => [
             'config'=> [
                 'type' => 'category',
+                'treeConfig' => [
+                    'startingPoints' => '18',
+                    'nonSelectableLevels' => 0,
+                ],
             ],
         ],
 
@@ -121,7 +142,7 @@ return [
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.location.description',
             'config' => [
                 'type' => 'text',
-                'rows' => 15,
+                'rows' => 5,
                 'eval' => 'trim',
                 'default' => ''
             ]
@@ -132,9 +153,11 @@ return [
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.participants.description',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectSingle',
+                'renderType' => 'selectMultipleSideBySide',
                 'foreign_table' => 'tx_leseohren_domain_model_person',
                 'MM' => 'tx_leseohren_event_person_mm',
+                'size' => 10,
+                'autoSizeMax' => 20,
             ],
 
         ],

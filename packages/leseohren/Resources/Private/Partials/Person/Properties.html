@@ -1,248 +1,52 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:debug inline="true">{person}</f:debug>
 
-<h1>{person.lastname}, {person.firstname}</h1>
-<table class="tx-leseohren">
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.gender" />
-        </td>
-        <td>{person.gender}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.birthday" />
-        </td>
-        <td>
-            <f:format.date pattern="dd.MM.Y">{person.birthday}</f:format.date>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.street1" />
-        </td>
-        <td>{person.street1}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.street2" />
-        </td>
-        <td>{person.street2}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.zip" />
-            <f:translate key="tx_leseohren_domain_model_person.city" />
-        </td>
-        <td>{person.zip} {person.city}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.district" />
-        </td>
-        <td>{person.district}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.phone_landline" />
-        </td>
-        <td>{person.phoneLandline}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.phone_mobile" />
-        </td>
-        <td>{person.phoneMobile}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.email" />
-        </td>
-        <td>
-            <f:link.email email="{person.email}" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.whatsapp" />
-        </td>
-        <td>{person.whatsapp}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.notes" />
-        </td>
-        <td>{person.notes}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.status" />
-        </td>
-        <td>{person.status}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.statusbegin_date" />
-        </td>
-        <td>
-            <f:format.date pattern="dd.MM.Y">{person.statusbeginDate}</f:format.date>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.statusend_date" />
-        </td>
-        <td>
-            <f:format.date pattern="dd.MM.Y">{person.statusendDate}</f:format.date>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.travel_options" />
-        </td>
-        <td>{person.travelOptions}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.languages" />
-        </td>
-        <td>{person.languages}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.preference_agegroup" />
-        </td>
-        <td>{person.preferenceAgegroup}</td>
-    </tr>
-    <tr>
-        <td>
-            <f:translate key="tx_leseohren_domain_model_person.preference_organization_type" />
-        </td>
-        <td>{person.preferenceOrganizationType}</td>
-    </tr>
-
-
-    <tr>
-        <td></td>
-        <td>
+<div class="container c-person">
+    <div class="row">
+        <div class="col-10 row-header">
+            <h1 class="c-person__name">{person.lastname}, {person.firstname}
+                <small class="c-person__gender-icon">
+                    <f:switch expression="{person.gender}">
+                        <f:case value="1"><i class="bi bi-gender-female"></i></f:case>
+                        <f:case value="2"><i class="bi bi-gender-male"></i></f:case>
+                        <f:case value="3"><i class="bi bi-gender-ambiguous"></i></f:case>
+                        <f:defaultCase></f:defaultCase>
+                    </f:switch>
+                </small>
+            </h1>
             <f:if condition="{person.categories}">
                 <f:for each="{person.categories}" as="personCategory">
-                    <category>
+                    <category class="c-person__categories">
                         <span class="badge bg-secondary">
                             {personCategory.title -> f:format.htmlspecialchars()}
                         </span>
                     </category>
                 </f:for>
             </f:if>
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-            <f:if condition="{person.Donations}">
-                <f:for each="{person.Donations}" as="Donation">
-                    <p>{Donation.gift.title -> f:format.htmlspecialchars()}</p>
-                </f:for>
-            </f:if>
-        </td>
-    </tr>
-</table>
-
-
-<ul class="nav nav-tabs nav-fill mb-3" id="ex1" role="tablist">
-    <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="ex2-tab-1" data-bs-toggle="tab" href="#ex2-tabs-1" role="tab"
-            aria-controls="ex2-tabs-1" aria-selected="true">Information</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" id="ex2-tab-2" data-bs-toggle="tab" href="#ex2-tabs-2" role="tab" aria-controls="ex2-tabs-2"
-            aria-selected="false">Payment</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" id="ex2-tab-3" data-bs-toggle="tab" href="#ex2-tabs-3" role="tab" aria-controls="ex2-tabs-3"
-            aria-selected="false">Files</a>
-    </li>
-</ul>
-<div class="tab-content" id="ex2-content">
-    <div class="tab-pane fade show active" id="ex2-tabs-1" role="tabpanel" aria-labelledby="ex2-tab-1">
-        Tab 1 content
+        </div>
+        <div class="col-2">
+            <div class="c-person__status">
+                <f:translate key="tx_leseohren_domain_model_person.status" />: {person.status}
+                (<f:format.date pattern="dd.MM.Y">{person.statusbeginDate}</f:format.date>
+                <f:if condition="{person.statusendDate}">
+                    - <f:format.date pattern="dd.MM.Y">{person.statusendDate}</f:format.date>
+                </f:if>)
+            </div>
+        </div>
     </div>
-    <div class="tab-pane fade" id="ex2-tabs-2" role="tabpanel" aria-labelledby="ex2-tab-2">
-        <table>
-            <tr>
-                <td>
-                    <f:translate key="tx_leseohren_domain_model_person.payment_method" />
-                </td>
-                <td>{person.paymentMethod}</td>
-            </tr>
-            <tr>
-                <td>
-                    <f:translate key="tx_leseohren_domain_model_person.iban" />
-                </td>
-                <td>{person.iban}</td>
-            </tr>
-            <tr>
-                <td>
-                    <f:translate key="tx_leseohren_domain_model_person.swift" />
-                </td>
-                <td>{person.swift}</td>
-            </tr>
-            <tr>
-                <td>
-                    <f:translate key="tx_leseohren_domain_model_person.account_owner" />
-                </td>
-                <td>{person.accountOwner}</td>
-            </tr>
-            <tr>
-                <td>
-                    <f:translate key="tx_leseohren_domain_model_person.bankname" />
-                </td>
-                <td>{person.bankname}</td>
-            </tr>
-            <tr>
-                <td>
-                    <f:translate key="tx_leseohren_domain_model_person.paypal" />
-                </td>
-                <td>{person.paypal}</td>
-            </tr>
-        </table>
-    </div>
-    <div class="tab-pane fade" id="ex2-tabs-3" role="tabpanel" aria-labelledby="ex2-tab-3">
-        <table>
-            <tr>
-                <td>
-                    <f:translate key="tx_leseohren_domain_model_person.file_fuehrungszeugnis" />
-                </td>
-                <td>
-                    <a href="{person.fileFuehrungszeugnis.originalResource.publicUrl}">
-                        {person.fileFuehrungszeugnis.originalResource.name}
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <f:translate key="tx_leseohren_domain_model_person.file_mandat" />
-                </td>
-                <td>
-                    <a href="{person.fileMandat.originalResource.publicUrl}">
-                        {person.fileMandat.originalResource.name}
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <f:translate key="tx_leseohren_domain_model_person.file_others" />
-                </td>
-                <td>
-                    <a href="{person.fileOthers.originalResource.publicUrl}">
-                        {person.fileOthers.originalResource.name}
-                    </a>
-                </td>
-            </tr>
-        </table>
+    <div class="row">
+        <div class="col-4">
+            <f:render partial="Person/AddressCard" arguments="{person: person}" />
+        </div>
+        <div class="col-4">
+
+        </div>
+        <div class="col-4">
+            <f:render partial="Person/AccordionRight" arguments="{person: person}" />
+
+        </div>
     </div>
 </div>
 
-<p></p>
+
 
 </html>

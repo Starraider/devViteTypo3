@@ -13,13 +13,36 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'name',
-        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_organization.gif',
+        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_organization.svg',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],
     ],
     'types' => [
-        '1' => ['showitem' => 'name, contact_person, categories, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
+        '1' => ['showitem' => '
+            --div--;Organization,
+                name,
+                contact_person,
+                --palette--;;addressPalette,
+                --palette--;;contactPalette,
+                categories,
+                notes,
+            --div--;Vorlesepaten,
+                reading_times, vp_languages, vp_number,
+            --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                hidden,
+                starttime,
+                endtime'],
+    ],
+    'palettes' => [
+        'addressPalette' => [
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.addressPalette.description',
+            'showitem' => 'street1, street2, --linebreak--, zip, city, district',
+        ],
+        'contactPalette' => [
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.contactPalette.description',
+            'showitem' => 'phone1, phone2, --linebreak--, email, url, --linebreak--, opening_hours, whatsapp',
+        ],
     ],
     'columns' => [
         'hidden' => [
@@ -82,6 +105,175 @@ return [
                 'required' => true,
                 'default' => ''
             ],
+        ],
+        'street1' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.street1',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.street1.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+                'default' => ''
+            ],
+        ],
+        'street2' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.street2',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.street2.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+                'default' => ''
+            ],
+        ],
+        'zip' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.zip',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.zip.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+                'default' => ''
+            ],
+        ],
+        'city' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.city',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.city.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+                'default' => ''
+            ],
+        ],
+        'district' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.district',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.district.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['label' => '-- Label --', 'value' => 0],
+                ],
+                'size' => 1,
+                'maxitems' => 1,
+                'eval' => ''
+            ],
+        ],
+        'phone1' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.phone1',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.phone1.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+                'default' => ''
+            ],
+        ],
+        'phone2' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.phone2',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.phone2.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+                'default' => ''
+            ],
+        ],
+        'email' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.email',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.email.description',
+            'config' => [
+                'type' => 'email',
+                'size' => 30,
+                'eval' => 'nospace',
+                'default' => ''
+            ]
+        ],
+        'url' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.url',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.url.description',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputLink',
+            ]
+        ],
+        'whatsapp' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.whatsapp',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.whatsapp.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+                'default' => ''
+            ],
+        ],
+        'opening_hours' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.opening_hours',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.opening_hours.description',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim',
+                'default' => ''
+            ]
+        ],
+        'notes' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.notes',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.notes.description',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim',
+                'default' => ''
+            ]
+        ],
+        'reading_times' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.reading_times',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.reading_times.description',
+            'config' => [
+                'type' => 'text',
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim',
+                'default' => ''
+            ]
+        ],
+        'vp_languages' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.vp_languages',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.vp_languages.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+                'default' => ''
+            ],
+        ],
+        'vp_number' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.vp_number',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.vp_number.description',
+            'config' => [
+                'type' => 'number',
+                'size' => 4,
+                'default' => 0
+            ]
         ],
         'contact_person' => [
             'exclude' => false,

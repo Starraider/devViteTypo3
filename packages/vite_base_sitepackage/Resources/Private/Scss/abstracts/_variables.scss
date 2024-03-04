@@ -17,8 +17,8 @@ $gray-800:                          #313131;
 $gray-900:                          #212121;
 $black:                             #000000;
 
-$primary:                           #1c5d73;
-$secondary:                         #629ab0;
+$primary:                           #f90;
+$secondary:                         lighten($primary, 10%);
 $tertiary:                          #c6d6dd;
 $quaternary:                        #f3f7f8;
 
@@ -64,7 +64,7 @@ $enable-responsive-font-sizes:      true;
 //
 // Fonts
 // --------------------------------------------------
-$font-family-sans-serif:            PTSansRegular, Helvetica, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-sans-serif:            "Helvetica Neue", Helvetica, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-size-base:                    1rem;
 $font-size-sm:                      $font-size-base * .875;
 $font-size-lg:                      $font-size-base * 1.125; //18px
@@ -81,7 +81,7 @@ $h5-font-size:                      $font-size-base * 1.125;
 $h6-font-size:                      $font-size-base * 1;
 
 
-$headings-font-family:              PTSansBold, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-family:              "Helvetica Neue", Helvetica, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $headings-font-style:               null;
 $headings-font-weight:              normal;
 $headings-line-height:              $line-height-sm;
@@ -152,6 +152,12 @@ $accordion-body-padding-y:          $accordion-padding-x;
 $accordion-body-padding-x:          $accordion-padding-x;
 
 //
+// Buttons
+// --------------------------------------------------
+$btn-color:                         $white;
+$btn-link-color:                    $white;
+$btn-link-hover-color:              $white;
+//
 // Forms
 // --------------------------------------------------
 $input-bg:                          $gray-100;
@@ -165,9 +171,9 @@ $footer-sections: ();
 $footer-sections: map-merge(
     (
         'content': (
-            'background':   $primary,
-            'color':        $white,
-            'link-color':   $white
+            'background':   $light,
+            'color':        $black,
+            'link-color':   $link-color
         ),
         'addressbar': (
             'background':   $quaternary,

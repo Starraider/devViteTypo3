@@ -27,7 +27,7 @@ class Present extends AbstractEntity
      * @var \DateTime
      */
     #[Validate(['validator' => 'NotEmpty'])]
-    protected $gift_date = null;
+    protected $giftDate = null;
 
     /**
      * given
@@ -49,9 +49,9 @@ class Present extends AbstractEntity
      *
      * @return \DateTime
      */
-    public function getGift_date()
+    public function getGiftDate()
     {
-        return $this->gift_date;
+        return $this->giftDate;
     }
 
     /**
@@ -59,9 +59,9 @@ class Present extends AbstractEntity
      *
      * @return void
      */
-    public function setGift_date(\DateTime $gift_date)
+    public function setGiftDate(\DateTime $giftDate)
     {
-        $this->gift_date = $gift_date;
+        $this->giftDate = $giftDate;
     }
 
     /**

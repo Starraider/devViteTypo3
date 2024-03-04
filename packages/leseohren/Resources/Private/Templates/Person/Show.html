@@ -1,23 +1,36 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 
-This template is responsible for displaying a single view for a domain object
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Person:
-          Show.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
 <f:section name="content">
 
     <f:flashMessages />
     <f:render partial="Person/Properties" arguments="{person:person}" />
-    <f:link.action action="list">Back to list</f:link.action><br />
-    <f:link.action action="new">New Person</f:link.action>
+    <div class="container button-list-bottom">
+        <div class="row">
+            <div class="col-4">
+                <f:link.action action="list" class="btn btn-primary btn-sm">
+                    <i class="bi bi-arrow-left-square-fill"></i>&nbsp;Back to list
+                </f:link.action>
+            </div>
+            <div class="col-4 text-center">
+                <f:link.action action="new" class="btn btn-primary btn-sm">
+                    <i class="bi bi-person-fill-add"></i>&nbsp;New Person
+                </f:link.action>
+                &nbsp;&nbsp;
+                <f:link.action action="edit" arguments="{person : person}" class="btn btn-primary btn-sm">
+                    <i class="bi bi-person-fill-gear"></i>&nbsp;Edit
+                </f:link.action>
+                &nbsp;&nbsp;
+                <f:link.action action="delete" arguments="{person : person}" class="btn btn-primary btn-sm">
+                    <i class="bi bi-person-fill-x"></i>&nbsp;Delete
+                </f:link.action>
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+    </div>
+
+
 </f:section>
 </html>

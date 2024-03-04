@@ -1,24 +1,23 @@
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
-import FullReload from 'vite-plugin-full-reload'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import autoOrigin from 'vite-plugin-auto-origin'
 
 // TYPO3 root path (relative to this config file)
 const VITE_TYPO3_ROOT = './'
 
 // Vite input files (relative to TYPO3 root path)
 const VITE_ENTRYPOINTS = [
-  'packages/vite_base_sitepackage/Resources/Private/Javascript/Main.entry.js',
+  'packages/vite_base_sitepackage/Resources/Private/Main.entry.js',
 ]
 
 // Output path for generated assets
 const VITE_OUTPUT_PATH = 'public/_assets/vite/'
 
-const rootPath = resolve(__dirname, VITE_TYPO3_ROOT)
+const currentDir = dirname(fileURLToPath(import.meta.url))
+const rootPath = resolve(currentDir, VITE_TYPO3_ROOT)
 export default defineConfig({
   base: '',
-  plugins: [
-    FullReload(['packages/vite_base_sitepackage/Resources/Private/**/*.html']),
-  ],
   build: {
     manifest: true,
     rollupOptions: {
@@ -26,5 +25,9 @@ export default defineConfig({
     },
     outDir: resolve(rootPath, VITE_OUTPUT_PATH),
   },
+  css: {
+    devSourcemap: true,
+  },
+  plugins: [autoOrigin()],
   publicDir: false,
 })

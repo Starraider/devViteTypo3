@@ -15,7 +15,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => '',
-        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_present.gif',
+        'iconfile' => 'EXT:leseohren/Resources/Public/Icons/tx_leseohren_domain_model_present.svg',
         'security' => [
             'ignorePageTypeRestriction' => true,
         ],

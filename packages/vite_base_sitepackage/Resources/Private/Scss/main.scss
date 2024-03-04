@@ -11,6 +11,7 @@
 // third-party stylesheets
 //
 @import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
 
 // Bootstrap Compat
 @import "../../../../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/bootstrap5/compat/text";
@@ -75,7 +76,7 @@
 // plugins
 // TYPO3 plugins
 //
-//@import "plugins/news";
+@import "plugins/plugins";
 //@import "plugins/forms";
 
 //
