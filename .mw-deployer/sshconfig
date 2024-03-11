@@ -1,5 +1,5 @@
-Host mittwald
-	HostName ssh.schmalge.project.host
-StrictHostKeyChecking accept-new
-	IdentityFile ~/.ssh/id_rsa
+Host beta
+    HostName ssh.schmalge.project.host
+    StrictHostKeyChecking accept-new
+    IdentityFile ~/.ssh/id_rsa
 
