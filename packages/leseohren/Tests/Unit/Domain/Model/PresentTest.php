@@ -40,7 +40,7 @@ class PresentTest extends UnitTestCase
     /**
      * @test
      */
-    public function getGift_dateReturnsInitialValueForDateTime(): void
+    public function getGiftDateReturnsInitialValueForDateTime(): void
     {
         self::assertEquals(
             null,
@@ -51,7 +51,7 @@ class PresentTest extends UnitTestCase
     /**
      * @test
      */
-    public function setGift_dateForDateTimeSetsGift_date(): void
+    public function setGiftDateForDateTimeSetsGift_date(): void
     {
         $dateTimeFixture = new \DateTime();
         $this->subject->setGift_date($dateTimeFixture);

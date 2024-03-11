@@ -3,6 +3,9 @@
 	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang_db.xlf" date="2024-02-13T18:30:06Z" product-name="leseohren">
 		<header/>
 		<body>
+			<trans-unit id="pleaseChoose" resname="pleaseChoose">
+				<source>--bitte wählen--</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person" resname="tx_leseohren_domain_model_person">
 				<source>Person</source>
 			</trans-unit>
@@ -137,6 +140,12 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.preference_organization_type.description" resname="tx_leseohren_domain_model_person.preference_organization_type.description">
 				<source>Wich organization types does this person prefer?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.organizations" resname="tx_leseohren_domain_model_person.organizations">
+				<source>Vorlesepate-Organisationen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.organizations.description" resname="tx_leseohren_domain_model_person.organizations.description">
+				<source>In welchen Organisationen liest diese Person?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.payment_method" resname="tx_leseohren_domain_model_person.payment_method">
 				<source>Payment Method</source>
@@ -301,10 +310,16 @@
 				<source>Vp Languages</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.vp_number" resname="tx_leseohren_domain_model_organization.vp_number">
-				<source>Vp Number</source>
+				<source>Anzahl gewünschter Vorlesepaten</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.vp_number.description" resname="tx_leseohren_domain_model_organization.vp_number.description">
-				<source>Vp Number</source>
+				<source>Wieviele Vorlesepaten sind gewünscht</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.vlpaten" resname="tx_leseohren_domain_model_organization.vlpaten">
+				<source>Vorlesepaten</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.vlpaten.description" resname="tx_leseohren_domain_model_organization.vlpaten.description">
+				<source>Wer ist zur Zeit Vorlesepate in dieser Organisation?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.contact_person" resname="tx_leseohren_domain_model_organization.contact_person">
 				<source>Contact Person</source>
@@ -392,6 +407,9 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.description.description" resname="tx_leseohren_domain_model_event.description.description">
 				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.categories" resname="tx_leseohren_domain_model_event.categories">
+				<source>Categories</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.datePalette.description" resname="tx_leseohren_domain_model_event.datePalette.description">
 				<source>Date of the event</source>

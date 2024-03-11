@@ -1,4 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 
 <div class="container c-event">
     <div class="row">
@@ -47,7 +48,7 @@
                 <div class="col-4">
                     <div class="card">
                         <div class="card-header">
-                            <f:translate key="tx_leseohren_domain_model_event.location" />
+                            <v:l key="tx_leseohren_domain_model_event.location" />
                         </div>
                         <div class="card-body">
                             {event.location -> f:format.nl2br()}

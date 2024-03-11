@@ -30,11 +30,6 @@ class Organization extends AbstractEntity
      */
     public $categories;
 
-    public function __construct()
-    {
-        $this->categories = new ObjectStorage();
-    }
-
     /**
      * Name der Organisation
      *
@@ -74,9 +69,9 @@ class Organization extends AbstractEntity
     /**
      * district
      *
-     * @var int
+     * @var string
      */
-    protected $district = 0;
+    protected $district = '';
 
     /**
      * phone1
@@ -155,6 +150,33 @@ class Organization extends AbstractEntity
      */
     #[Lazy]
     protected $contactPerson = null;
+
+    /**
+     * vlpaten
+     *
+     * @var ObjectStorage<Person>
+     */
+    #[Lazy]
+    protected $vlpaten = null;
+
+    public function __construct()
+    {
+        $this->categories = new ObjectStorage();
+        $this->initializeObject();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties when model is reconstructed from DB (where __construct is not called)
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     *
+     * @return void
+     */
+    public function initializeObject()
+    {
+        $this->vlpaten = $this->vlpaten ?: new ObjectStorage();
+    }
 
     /**
      * Add category to a blog
@@ -291,7 +313,7 @@ class Organization extends AbstractEntity
     /**
      * Returns the district
      *
-     * @return int
+     * @return string
      */
     public function getDistrict()
     {
@@ -303,7 +325,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setDistrict(int $district)
+    public function setDistrict(string $district)
     {
         $this->district = $district;
     }
@@ -526,5 +548,47 @@ class Organization extends AbstractEntity
     public function setContactPerson(Person $contactPerson)
     {
         $this->contactPerson = $contactPerson;
+    }
+
+    /**
+     * Adds a vlpaten
+     *
+     * @return void
+     */
+    public function addVlpaten(Person $vlpaten)
+    {
+        $this->vlpaten->attach($vlpaten);
+    }
+
+    /**
+     * Removes a vlpaten
+     *
+     * @param Person $vlpatenToRemove The vlpaten to be removed
+     * @return void
+     */
+    public function removeVlpaten(Person $vlpatenToRemove)
+    {
+        $this->vlpaten->detach($vlpatenToRemove);
+    }
+
+    /**
+     * Returns the vlpaten
+     *
+     * @return ObjectStorage<Person>
+     */
+    public function getVlpaten()
+    {
+        return $this->vlpaten;
+    }
+
+    /**
+     * Sets the vlpaten
+     *
+     * @param ObjectStorage<Person> $vlpaten
+     * @return void
+     */
+    public function setVlpaten(ObjectStorage $vlpaten)
+    {
+        $this->vlpaten = $vlpaten;
     }
 }

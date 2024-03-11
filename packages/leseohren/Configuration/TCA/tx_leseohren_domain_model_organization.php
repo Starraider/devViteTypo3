@@ -28,7 +28,7 @@ return [
                 categories,
                 notes,
             --div--;Vorlesepaten,
-                reading_times, vp_languages, vp_number,
+                vp_number, vlpaten, reading_times, vp_languages,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
                 hidden,
                 starttime,
@@ -93,14 +93,13 @@ return [
                 ],
             ],
         ],
-
         'name' => [
             'exclude' => false,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.name',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.name.description',
             'config' => [
                 'type' => 'input',
-                'size' => 0,
+                'size' => 30,
                 'eval' => 'trim',
                 'required' => true,
                 'default' => ''
@@ -158,7 +157,30 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'items' => [
-                    ['label' => '-- Label --', 'value' => 0],
+                    ['label' => 'Sonstige', 'value' => 'Sonstige'],
+                    ['label' => 'Bad Cannstatt', 'value' => 'Bad Cannstatt'],
+                    ['label' => 'Birkach', 'value' => 'Birkach'],
+                    ['label' => 'Botnang', 'value' => 'Botnang'],
+                    ['label' => 'Degerloch', 'value' => 'Degerloch'],
+                    ['label' => 'Feuerbach', 'value' => 'Feuerbach'],
+                    ['label' => 'Hedelfingen', 'value' => 'Hedelfingen'],
+                    ['label' => 'Möhringen', 'value' => 'Möhringen'],
+                    ['label' => 'Mühlhausen', 'value' => 'Mühlhausen'],
+                    ['label' => 'Münster', 'value' => 'Münster'],
+                    ['label' => 'Obertürkheim', 'value' => 'Obertürkheim'],
+                    ['label' => 'Plieningen', 'value' => 'Plieningen'],
+                    ['label' => 'Sillenbuch', 'value' => 'Sillenbuch'],
+                    ['label' => 'Stammheim', 'value' => 'Stammheim'],
+                    ['label' => 'Stuttgart‐Mitte', 'value' => 'Stuttgart‐Mitte'],
+                    ['label' => 'Stuttgart‐Nord', 'value' => 'Stuttgart‐Nord'],
+                    ['label' => 'Stuttgart‐Ost', 'value' => 'Stuttgart‐Ost'],
+                    ['label' => 'Stuttgart‐Süd', 'value' => 'Stuttgart‐Süd'],
+                    ['label' => 'Stuttgart‐West', 'value' => 'Stuttgart‐West'],
+                    ['label' => 'Untertürkheim', 'value' => 'Untertürkheim'],
+                    ['label' => 'Vaihingen', 'value' => 'Vaihingen'],
+                    ['label' => 'Wangen', 'value' => 'Wangen'],
+                    ['label' => 'Weilimdorf', 'value' => 'Weilimdorf'],
+                    ['label' => 'Zuffenhausen', 'value' => 'Zuffenhausen'],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
@@ -203,8 +225,7 @@ return [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.url',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.url.description',
             'config' => [
-                'type' => 'input',
-                'renderType' => 'inputLink',
+                'type' => 'link',
             ]
         ],
         'whatsapp' => [
@@ -225,7 +246,7 @@ return [
             'config' => [
                 'type' => 'text',
                 'cols' => 40,
-                'rows' => 15,
+                'rows' => 5,
                 'eval' => 'trim',
                 'default' => ''
             ]
@@ -249,7 +270,7 @@ return [
             'config' => [
                 'type' => 'text',
                 'cols' => 40,
-                'rows' => 15,
+                'rows' => 5,
                 'eval' => 'trim',
                 'default' => ''
             ]
@@ -259,10 +280,20 @@ return [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.vp_languages',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.vp_languages.description',
             'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim',
-                'default' => ''
+                'type' => 'select',
+                'renderType' => 'selectCheckBox',
+                'items' => [
+                    ['label' => 'Deutsch','value' => '0'],
+                    ['label' => 'Englisch','value' => '1'],
+                    ['label' => 'Französisch','value' => '2'],
+                    ['label' => 'Italienisch','value' => '3'],
+                    ['label' => 'Spanisch','value' => '4'],
+                    ['label' => 'Türkisch','value' => '5'],
+                    ['label' => 'Russisch','value' => '6'],
+                    ['label' => 'Arabisch','value' => '7'],
+                    ['label' => 'Farsi/Persisch','value' => '8'],
+                    ['label' => 'Sonstiges','value' => '9'],
+                ],
             ],
         ],
         'vp_number' => [
@@ -274,6 +305,19 @@ return [
                 'size' => 4,
                 'default' => 0
             ]
+        ],
+        'vlpaten' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.vlpaten',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_organization.vlpaten.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_leseohren_domain_model_person',
+                'MM' => 'tx_leseohren_organization_person_mm',
+                'size' => 10,
+                'autoSizeMax' => 20,
+            ],
         ],
         'contact_person' => [
             'exclude' => false,

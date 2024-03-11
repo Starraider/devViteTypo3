@@ -1,4 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 
 <div class="accordion" id="accordionInfo">
     <div class="accordion-item">
@@ -10,14 +11,41 @@
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
             <div class="accordion-body">
-                <f:translate key="tx_leseohren_domain_model_person.payment_method" />:
-                {person.paymentMethod}</br>
-                <f:translate key="tx_leseohren_domain_model_person.iban" />: {person.iban}</br>
-                <f:translate key="tx_leseohren_domain_model_person.swift" />: {person.swift}</br>
-                <f:translate key="tx_leseohren_domain_model_person.bankname" />: {person.bankname}</br>
-                <f:translate key="tx_leseohren_domain_model_person.account_owner" />:
-                {person.accountOwner}</br>
-                <f:translate key="tx_leseohren_domain_model_person.paypal" />: {person.paypal}</br>
+                <strong>
+                    <v:l key="tx_leseohren.paymentMethod" />:
+                </strong>
+                <f:switch expression="{person.paymentMethod}">
+                    <f:case value="0"><i class="bi bi-bank"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.0" /></f:case>
+                    <f:case value="1"><i class="bi bi-currency-euro"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.1" /></f:case>
+                    <f:case value="2"><i class="bi bi-paypal"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.2" /></f:case>
+                    <f:defaultCase></f:defaultCase>
+                </f:switch>
+                </br>
+                <f:if condition="{person.paymentMethod} < 2">
+                    <f:then>
+                        <strong>
+                            <f:translate key="tx_leseohren_domain_model_person.iban" />:
+                        </strong>
+                        {person.iban}</br>
+                        <strong>
+                            <f:translate key="tx_leseohren_domain_model_person.swift" />:
+                        </strong>
+                        {person.swift}</br>
+                        <strong>
+                            <f:translate key="tx_leseohren_domain_model_person.bankname" />:
+                        </strong>
+                        {person.bankname}</br>
+                        <strong>
+                            <f:translate key="tx_leseohren_domain_model_person.account_owner" />:
+                        </strong>
+                        {person.accountOwner}</br>
+                    </f:then>
+                    <f:else>
+                        <strong>
+                            <f:translate key="tx_leseohren_domain_model_person.paypal" />:
+                        </strong> {person.paypal}</br>
+                    </f:else>
+                </f:if>
             </div>
         </div>
     </div>
@@ -32,7 +60,9 @@
             <div class="accordion-body">
                 <f:if condition="{person.fileFuehrungszeugnis}">
                     <div class="c-person__file-link">
-                        <f:translate key="tx_leseohren_domain_model_person.file_fuehrungszeugnis" />:
+                        <strong>
+                            <f:translate key="tx_leseohren_domain_model_person.file_fuehrungszeugnis" />:
+                        </strong><br />
                         <a href="{person.fileFuehrungszeugnis.originalResource.publicUrl}">
                             {person.fileFuehrungszeugnis.originalResource.name}
                         </a>
@@ -40,7 +70,9 @@
                 </f:if>
                 <f:if condition="{person.file_mandat}">
                     <div class="c-person__file-link">
-                        <f:translate key="tx_leseohren_domain_model_person.file_mandat" />:
+                        <strong>
+                            <f:translate key="tx_leseohren_domain_model_person.file_mandat" />:
+                        </strong><br />
                         <a href="{person.fileMandat.originalResource.publicUrl}">
                             {person.fileMandat.originalResource.name}
                         </a>
@@ -48,7 +80,9 @@
                 </f:if>
                 <f:if condition="{person.file_others}">
                     <div class="c-person__file-link">
-                        <f:translate key="tx_leseohren_domain_model_person.file_others" />:
+                        <strong>
+                            <f:translate key="tx_leseohren_domain_model_person.file_others" />
+                        </strong>:<br />
                         <a href="{person.fileOthers.originalResource.publicUrl}">
                             {person.fileOthers.originalResource.name}
                         </a>
@@ -67,20 +101,44 @@
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
             <div class="accordion-body">
                 <div class="c-person__travelOptions">
-                    <f:translate key="tx_leseohren_domain_model_person.travel_options" />: &nbsp;
-                    {person.travelOptions}
-                </div>
-                <div class="c-person__languages">
-                    <f:translate key="tx_leseohren_domain_model_person.languages" />: &nbsp;
-                    {person.languages}
+                    <strong>
+                        <v:l key="tx_leseohren.travelOptions" />:
+                    </strong> &nbsp;
+                    <f:switch expression="{person.travelOptions}">
+                        <f:case value="0"><i class="bi bi-car-front"></i>&nbsp;<v:l key="tx_leseohren.travelOptions.0" /></f:case>
+                        <f:case value="1"><v:l key="tx_leseohren.travelOptions.1" /></f:case>
+                        <f:case value="2"><i class="bi bi-bus-front"></i>&nbsp;<v:l key="tx_leseohren.travelOptions.2" /></f:case>
+                        <f:case value="3"><i class="bi bi-bicycle"></i>&nbsp;<v:l key="tx_leseohren.travelOptions.3" /></f:case>
+                        <f:case value="4"><i class="bi bi-person-walking"></i>&nbsp;<v:l key="tx_leseohren.travelOptions.4" /></f:case>
+                        <f:case value="5"><v:l key="tx_leseohren.travelOptions.5" /></f:case>
+                        <f:defaultCase></f:defaultCase>
+                    </f:switch>
                 </div>
                 <div class="c-person__preferenceAgegroup">
-                    <f:translate key="tx_leseohren_domain_model_person.preferenceAgegroup" />: &nbsp;
-                    {person.preferenceAgegroup}
+                    <strong>
+                        <v:l key="tx_leseohren.ageGroup" />:
+                    </strong> &nbsp;
+                    <v:iterator.explode content="{person.preferenceAgegroup}" glue="," as="ageIDs">
+                        <f:for each="{ageIDs}" as="ageID" iteration="ageIterator">
+                            <f:if condition="{ageIterator.isLast}">
+                                <f:then><v:l key="tx_leseohren.ageGroup.{ageID}" /></f:then>
+                                <f:else><v:l key="tx_leseohren.ageGroup.{ageID}" />,</f:else>
+                            </f:if>
+                        </f:for>
+                    </v:iterator.explode>
                 </div>
                 <div class="c-person__preferenceOrganizationType">
-                    <f:translate key="tx_leseohren_domain_model_person.preferenceOrganizationType" />: &nbsp;
-                    {person.preferenceOrganizationType}
+                    <strong>
+                        <v:l key="tx_leseohren.orgType" />:
+                    </strong> &nbsp;
+                    <v:iterator.explode content="{person.preferenceOrganizationType}" glue="," as="orgTypeIDs">
+                        <f:for each="{orgTypeIDs}" as="orgTypeID" iteration="orgTypeIterator">
+                            <f:if condition="{orgTypeIterator.isLast}">
+                                <f:then><v:l key="tx_leseohren.orgType.{orgTypeID}" /></f:then>
+                                <f:else><v:l key="tx_leseohren.orgType.{orgTypeID}" />,</f:else>
+                            </f:if>
+                        </f:for>
+                    </v:iterator.explode>
                 </div>
             </div>
         </div>

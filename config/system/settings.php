@@ -123,6 +123,9 @@ return [
             'wrap_1' => 'value',
             'wrap_2' => '',
         ],
+        'vhs' => [
+            'disableAssetHandling' => '0',
+        ],
         'vite_asset_collector' => [
             'defaultManifest' => '_assets/vite/manifest.json',
             'devServerUri' => 'auto',

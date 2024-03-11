@@ -3,6 +3,123 @@
 	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang.xlf" date="2024-02-13T18:30:06Z" product-name="leseohren">
 		<header/>
 		<body>
+			<trans-unit id="tx_leseohren.gender.0" resname="tx_leseohren.gender.0">
+				<source>weiblich</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.gender.1" resname="tx_leseohren.gender.1">
+				<source>mänlich</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.gender.2" resname="tx_leseohren.gender.2">
+				<source>divers</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.status.0" resname="tx_leseohren.status.0">
+				<source>aktiv</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.status.1" resname="tx_leseohren.status.1">
+				<source>pausiert</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.status.2" resname="tx_leseohren.status.2">
+				<source>ausgeschieden</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.paymentMethod" resname="tx_leseohren.paymentMethod">
+				<source>Payment method</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.paymentMethod.0" resname="tx_leseohren.paymentMethod.0">
+				<source>Bank transfer</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.paymentMethod.1" resname="tx_leseohren.paymentMethod.1">
+				<source>Direct debit</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.paymentMethod.2" resname="tx_leseohren.paymentMethod.2">
+				<source>Paypal</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.ageGroup" resname="tx_leseohren.ageGroup">
+				<source>Age Group</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.ageGroup.0" resname="tx_leseohren.ageGroup.0">
+				<source>0-4 Jahre</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.ageGroup.1" resname="tx_leseohren.ageGroup.1">
+				<source>4-8 Jahre</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.ageGroup.2" resname="tx_leseohren.ageGroup.2">
+				<source>8-12 Jahre</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.ageGroup.3" resname="tx_leseohren.ageGroup.3">
+				<source>12-16 Jahre</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.ageGroup.4" resname="tx_leseohren.ageGroup.4">
+				<source>16-18 Jahre</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType" resname="tx_leseohren.orgType">
+				<source>Organization Type</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType.0" resname="tx_leseohren.orgType.0">
+				<source>Kindergarten</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType.1" resname="tx_leseohren.orgType.1">
+				<source>Schule</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType.2" resname="tx_leseohren.orgType.2">
+				<source>Bibliothek</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType.3" resname="tx_leseohren.orgType.3">
+				<source>Buchhandlung</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType.4" resname="tx_leseohren.orgType.4">
+				<source>Leseheimat</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.travelOptions" resname="tx_leseohren.travelOptions">
+				<source>Travel Options</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.travelOptions.0" resname="tx_leseohren.travelOptions.0">
+				<source>Auto</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.travelOptions.1" resname="tx_leseohren.travelOptions.1">
+				<source>Motorrad/Scooter</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.travelOptions.2" resname="tx_leseohren.travelOptions.2">
+				<source>ÖNV</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.travelOptions.3" resname="tx_leseohren.travelOptions.3">
+				<source>Fahrrad</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.travelOptions.4" resname="tx_leseohren.travelOptions.4">
+				<source>zu Fuß</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.travelOptions.5" resname="tx_leseohren.travelOptions.5">
+				<source>Sonstige</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.0" resname="tx_leseohren.languages.0">
+				<source>Deutsch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.1" resname="tx_leseohren.languages.1">
+				<source>Englisch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.2" resname="tx_leseohren.languages.2">
+				<source>Französisch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.3" resname="tx_leseohren.languages.3">
+				<source>Italienisch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.4" resname="tx_leseohren.languages.4">
+				<source>Spanisch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.5" resname="tx_leseohren.languages.5">
+				<source>Türkisch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.6" resname="tx_leseohren.languages.6">
+				<source>Russisch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.7" resname="tx_leseohren.languages.7">
+				<source>Arabisch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.8" resname="tx_leseohren.languages.8">
+				<source>Farsi/Persisch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.9" resname="tx_leseohren.languages.9">
+				<source>Sonstige</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person" resname="tx_leseohren_domain_model_person">
 				<source>Person</source>
 			</trans-unit>
@@ -228,11 +345,23 @@
 			<trans-unit id="tx_leseohren_domain_model_organization.city" resname="tx_leseohren_domain_model_organization.city">
 				<source>City</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.district" resname="tx_leseohren_domain_model_organization.district">
+				<source>District</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.contact_person" resname="tx_leseohren_domain_model_organization.contact_person">
 				<source>Contact Person</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.contact_person.description" resname="tx_leseohren_domain_model_organization.contact_person.description">
 				<source>Kontaktperson</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.readers" resname="tx_leseohren_domain_model_organization.readers">
+				<source>Vorlesepaten</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.openingHours" resname="tx_leseohren_domain_model_organization.openingHours">
+				<source>Opening hours</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.notes" resname="tx_leseohren_domain_model_organization.notes">
+				<source>Notes</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_gift" resname="tx_leseohren_domain_model_gift">
 				<source>Gift</source>

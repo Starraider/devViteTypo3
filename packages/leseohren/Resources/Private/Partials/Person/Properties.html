@@ -2,13 +2,13 @@
 
 <div class="container c-person">
     <div class="row">
-        <div class="col-10 row-header">
+        <div class="col-9 row-header">
             <h1 class="c-person__name">{person.lastname}, {person.firstname}
                 <small class="c-person__gender-icon">
                     <f:switch expression="{person.gender}">
-                        <f:case value="1"><i class="bi bi-gender-female"></i></f:case>
-                        <f:case value="2"><i class="bi bi-gender-male"></i></f:case>
-                        <f:case value="3"><i class="bi bi-gender-ambiguous"></i></f:case>
+                        <f:case value="0"><i class="bi bi-gender-female"></i></f:case>
+                        <f:case value="1"><i class="bi bi-gender-male"></i></f:case>
+                        <f:case value="2"><i class="bi bi-gender-ambiguous"></i></f:case>
                         <f:defaultCase></f:defaultCase>
                     </f:switch>
                 </small>
@@ -23,9 +23,32 @@
                 </f:for>
             </f:if>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <div class="c-person__status">
-                <f:translate key="tx_leseohren_domain_model_person.status" />: {person.status}
+                <strong>
+                    <v:l key="tx_leseohren_domain_model_person.status" />:
+                </strong>
+                <f:switch expression="{person.status}">
+                    <f:case value="0">
+                        <span class="c-person__status--active text-success">
+                            <v:l key="tx_leseohren.status.{person.status}" /><i class="bi bi-check-lg"></i>
+                        </span>
+                    </f:case>
+                    <f:case value="1">
+                        <span class="c-person__status--paused text-warning">
+                            <v:l key="tx_leseohren.status.{person.status}" /><i class="bi bi-exclamation-diamond"></i>
+                        </span>
+                    </f:case>
+                    <f:case value="2">
+                        <span class="c-person__status--ended text-danger">
+                            <v:l key="tx_leseohren.status.{person.status}" /><i class="bi bi-exclamation-triangle"></i>
+                        </span>
+                    </f:case>
+                    <f:defaultCase>
+                        <span class="text-danger"><i class="bi bi-question-lg"></i></span>
+                    </f:defaultCase>
+                </f:switch>
+
                 (<f:format.date pattern="dd.MM.Y">{person.statusbeginDate}</f:format.date>
                 <f:if condition="{person.statusendDate}">
                     - <f:format.date pattern="dd.MM.Y">{person.statusendDate}</f:format.date>

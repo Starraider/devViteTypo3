@@ -34,14 +34,29 @@
                     <td>{organization.zip}</td>
                     <td>{organization.city}</td>
                     <td>
-                        <f:link.action action="edit" arguments="{organization : organization}">Edit</f:link.action>
-                        <f:link.action action="delete" arguments="{organization : organization}">Delete</f:link.action>
+                        <f:link.action action="edit" arguments="{organization : organization}"><i class="bi bi-pencil"></i></f:link.action>
+                        <f:link.action action="delete" arguments="{organization : organization}"><i class="bi bi-trash3"></i></f:link.action>
                     </td>
                 </tr>
             </f:for>
         </tbody>
     </table>
 
-    <f:link.action action="new">New Organization</f:link.action>
+
+    <div class="container button-list-bottom">
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+            <div class="col-4 text-center">
+                <f:link.action action="new" class="btn btn-primary btn-sm">
+                    <i class="bi bi-plus-lg"></i>&nbsp;New Organization
+                </f:link.action>
+            </div>
+            <div class="col-4 text-center">
+
+            </div>
+        </div>
+    </div>
 </f:section>
 </html>

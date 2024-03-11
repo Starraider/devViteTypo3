@@ -14,7 +14,7 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	notes text NOT NULL DEFAULT '',
 	status int(11) DEFAULT '0' NOT NULL,
 	travel_options int(11) DEFAULT '0' NOT NULL,
-	languages text NOT NULL DEFAULT '',
+	languages varchar(255) NOT NULL DEFAULT '',
 	preference_agegroup text NOT NULL DEFAULT '',
 	preference_organization_type text NOT NULL DEFAULT '',
 	payment_method int(11) DEFAULT '0' NOT NULL,
@@ -27,7 +27,9 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	file_mandat int(11) unsigned NOT NULL DEFAULT '0',
 	file_others int(11) unsigned NOT NULL DEFAULT '0',
 	donations int(11) unsigned NOT NULL DEFAULT '0',
-	blackboards int(11) unsigned NOT NULL DEFAULT '0'
+	blackboards int(11) unsigned NOT NULL DEFAULT '0',
+	events int(11) unsigned NOT NULL DEFAULT '0',
+	organizations int(11) unsigned NOT NULL DEFAULT '0',
 );
 
 CREATE TABLE tx_leseohren_domain_model_organization (
@@ -36,7 +38,7 @@ CREATE TABLE tx_leseohren_domain_model_organization (
 	street2 varchar(255) NOT NULL DEFAULT '',
 	zip varchar(255) NOT NULL DEFAULT '',
 	city varchar(255) NOT NULL DEFAULT '',
-	district int(11) DEFAULT '0' NOT NULL,
+	district varchar(255) NOT NULL DEFAULT '',
 	phone1 varchar(255) NOT NULL DEFAULT '',
 	phone2 varchar(255) NOT NULL DEFAULT '',
 	email varchar(255) NOT NULL DEFAULT '',
@@ -47,6 +49,7 @@ CREATE TABLE tx_leseohren_domain_model_organization (
 	reading_times text NOT NULL DEFAULT '',
 	vp_languages varchar(255) NOT NULL DEFAULT '',
 	vp_number int(11) NOT NULL DEFAULT '0',
+	vlpaten int(11) unsigned NOT NULL DEFAULT '0',
 	contact_person int(11) unsigned DEFAULT '0'
 );
 

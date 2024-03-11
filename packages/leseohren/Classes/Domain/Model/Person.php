@@ -93,9 +93,9 @@ class Person extends AbstractEntity
     /**
      * district
      *
-     * @var int
+     * @var string
      */
-    protected $district = 0;
+    protected $district = '';
 
     /**
      * phoneLandline
@@ -165,23 +165,23 @@ class Person extends AbstractEntity
     /**
      * languages
      *
-     * @var int
+     * @var string
      */
-    protected $languages = 0;
+    protected $languages = '';
 
     /**
      * preferenceAgegroup
      *
-     * @var int
+     * @var string
      */
-    protected $preferenceAgegroup = 0;
+    protected $preferenceAgegroup = '';
 
     /**
      * preferenceOrganizationType
      *
-     * @var int
+     * @var string
      */
-    protected $preferenceOrganizationType = 0;
+    protected $preferenceOrganizationType = '';
 
     /**
      * paymentMethod
@@ -486,7 +486,7 @@ class Person extends AbstractEntity
     /**
      * Returns the district
      *
-     * @return int
+     * @return string
      */
     public function getDistrict()
     {
@@ -498,7 +498,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setDistrict(int $district)
+    public function setDistrict(string $district)
     {
         $this->district = $district;
     }
@@ -686,7 +686,7 @@ class Person extends AbstractEntity
     /**
      * Returns the languages
      *
-     * @return int
+     * @return string
      */
     public function getLanguages()
     {
@@ -698,7 +698,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setLanguages(int $languages)
+    public function setLanguages(string $languages)
     {
         $this->languages = $languages;
     }
@@ -706,7 +706,7 @@ class Person extends AbstractEntity
     /**
      * Returns the preferenceAgegroup
      *
-     * @return int
+     * @return string
      */
     public function getPreferenceAgegroup()
     {
@@ -718,7 +718,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setPreferenceAgegroup(int $preferenceAgegroup)
+    public function setPreferenceAgegroup(string $preferenceAgegroup)
     {
         $this->preferenceAgegroup = $preferenceAgegroup;
     }
@@ -726,7 +726,7 @@ class Person extends AbstractEntity
     /**
      * Returns the preferenceOrganizationType
      *
-     * @return int
+     * @return string
      */
     public function getPreferenceOrganizationType()
     {
@@ -738,7 +738,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setPreferenceOrganizationType(int $preferenceOrganizationType)
+    public function setPreferenceOrganizationType(string $preferenceOrganizationType)
     {
         $this->preferenceOrganizationType = $preferenceOrganizationType;
     }

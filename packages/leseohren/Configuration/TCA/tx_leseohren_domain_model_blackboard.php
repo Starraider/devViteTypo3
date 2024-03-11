@@ -3,6 +3,9 @@ return [
     'ctrl' => [
         'title' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_blackboard',
         'label' => 'title',
+        'label_alt' => 'start_date',
+        'label_alt_force' => true,
+        'default_sortby' => 'start_date DESC',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'versioningWS' => true,
@@ -68,7 +71,7 @@ return [
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_blackboard.title.description',
             'config' => [
                 'type' => 'input',
-                'size' => 0,
+                'size' => 30,
                 'eval' => 'trim',
                 'required' => true,
                 'default' => ''

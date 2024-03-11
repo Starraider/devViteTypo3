@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SKom\Leseohren\Domain\Repository;
 
 use TYPO3\CMS\Extbase\Persistence\Repository;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -18,4 +19,7 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
  */
 class BlackboardRepository extends Repository
 {
+    protected $defaultOrderings = [
+        'start_date' => QueryInterface::ORDER_DESCENDING
+    ];
 }

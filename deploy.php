@@ -46,11 +46,11 @@ set('writable_dirs', [
 
 set('shared_files', ['.env', '{{typo3_webroot}}/.htaccess']);
 
-mittwald_app('5ce01532-2256-4463-9109-4a5ea9950c5a', hostname: 'beta')
+mittwald_app('148383dc-31bb-476b-95f4-7610e7c62854', hostname: 'beta')
     ->set('branch', 'develop')
     ->set('mittwald_domains', ['p-pey4f8.project.space']);
 
-mittwald_app('9bcae0f5-bf78-4d2e-adf1-5ee5c18ccc1d', hostname: 'live')
-    ->set('branch', 'main');
+//mittwald_app('9bcae0f5-bf78-4d2e-adf1-5ee5c18ccc1d', hostname: 'live')
+//    ->set('branch', 'main');
 
 after('deploy:failed', 'deploy:unlock');

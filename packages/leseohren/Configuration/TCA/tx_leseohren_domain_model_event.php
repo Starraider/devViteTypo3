@@ -2,7 +2,10 @@
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event',
-        'label' => 'title',
+        'label' => 'start_date',
+        'label_alt' => 'title',
+        'label_alt_force' => true,
+        'default_sortby' => 'start_date DESC',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'versioningWS' => true,
@@ -26,6 +29,7 @@ return [
                 description,
                 location,
                 categories,
+            --div--;Teilnehmer,
                 participants,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
                 hidden,
@@ -94,7 +98,7 @@ return [
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.title.description',
             'config' => [
                 'type' => 'input',
-                'size' => 0,
+                'size' => 30,
                 'eval' => 'trim',
                 'required' => true,
                 'default' => ''
@@ -159,8 +163,6 @@ return [
                 'size' => 10,
                 'autoSizeMax' => 20,
             ],
-
         ],
-
     ],
 ];
