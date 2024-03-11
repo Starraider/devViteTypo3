@@ -8,6 +8,7 @@
 /*
  * Project-ID: p-pey4f8
  * mw context set --project-id=p-pey4f8
+ * dep deploy -vvv
  */
 
 namespace Deployer;
@@ -46,7 +47,7 @@ set('writable_dirs', [
 
 set('shared_files', ['.env', '{{typo3_webroot}}/.htaccess']);
 
-mittwald_app('148383dc-31bb-476b-95f4-7610e7c62854', hostname: 'beta')
+mittwald_app('2e9967b6-8ff0-4e0d-ac55-866fe5b357a9', hostname: 'beta')
     ->set('branch', 'develop')
     ->set('mittwald_domains', ['p-pey4f8.project.space']);
 
