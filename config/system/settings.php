@@ -13,6 +13,11 @@ return [
             'Default' => [
                 'charset' => 'utf8',
                 'driver' => 'mysqli',
+                'dbname' => getenv('TYPO3__DB__Connections__Default__dbname'),
+                'host' => getenv('TYPO3__DB__Connections__Default__host'),
+                'password' => getenv('TYPO3__DB__Connections__Default__password'),
+                'port' => getenv('TYPO3__DB__Connections__Default__port'),
+                'user' => getenv('TYPO3__DB__Connections__Default__user'),
             ],
         ],
     ],
@@ -144,12 +149,13 @@ return [
         ],
     ],
     'GFX' => [
-        'processor' => 'GraphicsMagick',
         'processor_allowTemporaryMasksAsPng' => false,
         'processor_colorspace' => 'RGB',
         'processor_effects' => false,
         'processor_enabled' => true,
-        'processor_path' => '/usr/bin/',
+        'processor' => getenv('TYPO3_GFX_PROCESSOR'),
+        'processor_path' => getenv('TYPO3_GFX_PROCESSOR_PATH'),
+        'processor_path_lzw' => getenv('TYPO3_GFX_PROCESSOR_PATH_LZW'),
     ],
     'LOG' => [
         'TYPO3' => [
@@ -167,12 +173,11 @@ return [
         ],
     ],
     'MAIL' => [
-        'transport' => 'sendmail',
-        'transport_sendmail_command' => '/usr/local/bin/mailhog sendmail -t test@example.org --smtp-addr 127.0.0.1:1025',
-        'transport_smtp_encrypt' => '',
-        'transport_smtp_password' => '',
-        'transport_smtp_server' => '',
-        'transport_smtp_username' => '',
+        'transport' => getenv('TYPO3_MAIL_TRANSPORT'),
+        'transport_smtp_server' => getenv('TYPO3_MAIL_TRANSPORT_SMTP_SERVER'),
+        'transport_smtp_username' => getenv('TYPO3_MAIL_TRANSPORT_SMTP_USERNAME'),
+        'transport_smtp_password' => getenv('TYPO3_MAIL_TRANSPORT_SMTP_PASSWORD'),
+        'defaultMailFromAddress' => getenv('TYPO3_MAIL_DEFAULTMAILFROMADDRESS'),
     ],
     'SYS' => [
         'UTF8filesystem' => true,
@@ -201,8 +206,9 @@ return [
                 ],
             ],
         ],
-        'devIPmask' => '',
-        'displayErrors' => 0,
+        'trustedHostsPattern' => getenv('TYPO3_TRUSTED_HOST_PATTERN'),
+        'devIPmask' => '*',
+        'displayErrors' => getenv('TYPO3_DISPLAY_ERRORS'),
         'encryptionKey' => 'f4750c05b53d96e9f8b81cb8e7a3bde7642b122e9d8c83a55d2bd7a48c879a50652d2ad8b01892d75b551962430afe48',
         'exceptionalErrors' => 4096,
         'features' => [
