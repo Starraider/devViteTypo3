@@ -1,0 +1,36 @@
+<div class="accordion" id="accordionBlackboard">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Schwarze Bretter
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionBlackboard">
+            <div class="accordion-body">
+                <f:if condition="{person.blackboards}">
+                    <f:for each="{person.blackboards}" as="blackboard" iteration="boardIterator">
+                        <div class="c-person_blackboard">
+                            {blackboard.title}
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#boardModal{boardIterator.index}">
+                                <i class="bi bi-eye-fill"></i>
+                            </a>
+                            <f:link.action controller="Blackboard" action="edit" arguments="{blackboard: blackboard}">
+                                <i class="bi bi-pencil-fill"></i>
+                            </f:link.action>
+                            <f:link.action controller="Blackboard" action="delete" arguments="{blackboard: blackboard}">
+                                <i class="bi bi-trash-fill"></i>
+                            </f:link.action>
+                        </div>
+                        <f:render partial="Person/BlackboardModal" arguments="{blackboard: blackboard, boardIterator:boardIterator}" />
+                    </f:for>
+                </f:if>
+                <f:link.action controller="Blackboard" action="new" arguments="{person: person}"
+                    class="btn btn-primary btn-sm">
+                    <i class="bi bi-plus-square"></i>
+                </f:link.action>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,7 +13,7 @@
             <div class="accordion-body">
                 <strong>
                     <v:l key="tx_leseohren.paymentMethod" />:
-                </strong>
+                </strong><br />
                 <f:switch expression="{person.paymentMethod}">
                     <f:case value="0"><i class="bi bi-bank"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.0" /></f:case>
                     <f:case value="1"><i class="bi bi-currency-euro"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.1" /></f:case>
@@ -25,25 +25,25 @@
                     <f:then>
                         <strong>
                             <f:translate key="tx_leseohren_domain_model_person.iban" />:
-                        </strong>
+                        </strong><br />
                         {person.iban}</br>
                         <strong>
                             <f:translate key="tx_leseohren_domain_model_person.swift" />:
-                        </strong>
+                        </strong><br />
                         {person.swift}</br>
                         <strong>
                             <f:translate key="tx_leseohren_domain_model_person.bankname" />:
-                        </strong>
+                        </strong><br />
                         {person.bankname}</br>
                         <strong>
                             <f:translate key="tx_leseohren_domain_model_person.account_owner" />:
-                        </strong>
+                        </strong><br />
                         {person.accountOwner}</br>
                     </f:then>
                     <f:else>
                         <strong>
                             <f:translate key="tx_leseohren_domain_model_person.paypal" />:
-                        </strong> {person.paypal}</br>
+                        </strong><br /> {person.paypal}</br>
                     </f:else>
                 </f:if>
             </div>
@@ -53,7 +53,7 @@
         <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Files
+                Dateien
             </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
@@ -95,7 +95,7 @@
         <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Preferences
+                Präferenzen
             </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
@@ -103,7 +103,7 @@
                 <div class="c-person__travelOptions">
                     <strong>
                         <v:l key="tx_leseohren.travelOptions" />:
-                    </strong> &nbsp;
+                    </strong> <br />
                     <f:switch expression="{person.travelOptions}">
                         <f:case value="0"><i class="bi bi-car-front"></i>&nbsp;<v:l key="tx_leseohren.travelOptions.0" /></f:case>
                         <f:case value="1"><v:l key="tx_leseohren.travelOptions.1" /></f:case>
@@ -117,7 +117,7 @@
                 <div class="c-person__preferenceAgegroup">
                     <strong>
                         <v:l key="tx_leseohren.ageGroup" />:
-                    </strong> &nbsp;
+                    </strong> <br />
                     <v:iterator.explode content="{person.preferenceAgegroup}" glue="," as="ageIDs">
                         <f:for each="{ageIDs}" as="ageID" iteration="ageIterator">
                             <f:if condition="{ageIterator.isLast}">
@@ -130,7 +130,7 @@
                 <div class="c-person__preferenceOrganizationType">
                     <strong>
                         <v:l key="tx_leseohren.orgType" />:
-                    </strong> &nbsp;
+                    </strong> <br />
                     <v:iterator.explode content="{person.preferenceOrganizationType}" glue="," as="orgTypeIDs">
                         <f:for each="{orgTypeIDs}" as="orgTypeID" iteration="orgTypeIterator">
                             <f:if condition="{orgTypeIterator.isLast}">
@@ -147,7 +147,7 @@
         <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Gifts
+                Geschenke
             </button>
         </h2>
         <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
@@ -166,41 +166,5 @@
             </div>
         </div>
     </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                Schwarze Bretter
-            </button>
-        </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
-            <div class="accordion-body">
-                <f:if condition="{person.blackboards}">
-                    <f:for each="{person.blackboards}" as="blackboard" iteration="boardIterator">
-                        <div class="c-person_blackboard">
-                            {blackboard.title}
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#boardModal{boardIterator.index}">
-                                <i class="bi bi-eye-fill"></i>
-                            </a>
-                            <f:link.action controller="Blackboard" action="edit" arguments="{blackboard: blackboard}">
-                                <i class="bi bi-pencil-fill"></i>
-                            </f:link.action>
-                            <f:link.action controller="Blackboard" action="delete" arguments="{blackboard: blackboard}">
-                                <i class="bi bi-trash-fill"></i>
-                            </f:link.action>
-                        </div>
-                        <f:render partial="Person/BlackboardModal" arguments="{blackboard: blackboard, boardIterator:boardIterator}" />
-                    </f:for>
-                </f:if>
-                <f:link.action controller="Blackboard" action="new" arguments="{person: person}"
-                    class="btn btn-primary btn-sm">
-                    <i class="bi bi-plus-square"></i>
-                </f:link.action>
-
-            </div>
-        </div>
-    </div>
-
-
 
 </div>

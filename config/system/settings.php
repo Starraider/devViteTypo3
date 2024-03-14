@@ -12,12 +12,12 @@ return [
         'Connections' => [
             'Default' => [
                 'charset' => 'utf8',
+                'dbname' => 'db',
                 'driver' => 'mysqli',
-                'dbname' => getenv('TYPO3__DB__Connections__Default__dbname'),
-                'host' => getenv('TYPO3__DB__Connections__Default__host'),
-                'password' => getenv('TYPO3__DB__Connections__Default__password'),
-                'port' => getenv('TYPO3__DB__Connections__Default__port'),
-                'user' => getenv('TYPO3__DB__Connections__Default__user'),
+                'host' => 'ddev-devViteTypo3-db',
+                'password' => 'db',
+                'port' => '3306',
+                'user' => 'db',
             ],
         ],
     ],
@@ -37,9 +37,6 @@ return [
             'loginHighlightColor' => '',
             'loginLogo' => '',
             'loginLogoAlt' => '',
-        ],
-        'blog_example' => [
-            'registerSinglePlugin' => '1',
         ],
         'bootstrap_package' => [
             'disableCssProcessing' => '0',
@@ -149,13 +146,12 @@ return [
         ],
     ],
     'GFX' => [
+        'processor' => 'ImageMagick',
         'processor_allowTemporaryMasksAsPng' => false,
         'processor_colorspace' => 'RGB',
         'processor_effects' => false,
         'processor_enabled' => true,
-        'processor' => getenv('TYPO3_GFX_PROCESSOR'),
-        'processor_path' => getenv('TYPO3_GFX_PROCESSOR_PATH'),
-        'processor_path_lzw' => getenv('TYPO3_GFX_PROCESSOR_PATH_LZW'),
+        'processor_path' => '/usr/bin/',
     ],
     'LOG' => [
         'TYPO3' => [
@@ -173,11 +169,11 @@ return [
         ],
     ],
     'MAIL' => [
-        'transport' => getenv('TYPO3_MAIL_TRANSPORT'),
-        'transport_smtp_server' => getenv('TYPO3_MAIL_TRANSPORT_SMTP_SERVER'),
-        'transport_smtp_username' => getenv('TYPO3_MAIL_TRANSPORT_SMTP_USERNAME'),
-        'transport_smtp_password' => getenv('TYPO3_MAIL_TRANSPORT_SMTP_PASSWORD'),
-        'defaultMailFromAddress' => getenv('TYPO3_MAIL_DEFAULTMAILFROMADDRESS'),
+        'defaultMailFromAddress' => 'no-reply@skom.de',
+        'transport' => 'smtp',
+        'transport_smtp_password' => '',
+        'transport_smtp_server' => 'localhost:1025',
+        'transport_smtp_username' => '',
     ],
     'SYS' => [
         'UTF8filesystem' => true,
@@ -206,9 +202,8 @@ return [
                 ],
             ],
         ],
-        'trustedHostsPattern' => getenv('TYPO3_TRUSTED_HOST_PATTERN'),
         'devIPmask' => '*',
-        'displayErrors' => getenv('TYPO3_DISPLAY_ERRORS'),
+        'displayErrors' => '1',
         'encryptionKey' => 'f4750c05b53d96e9f8b81cb8e7a3bde7642b122e9d8c83a55d2bd7a48c879a50652d2ad8b01892d75b551962430afe48',
         'exceptionalErrors' => 4096,
         'features' => [
@@ -219,5 +214,6 @@ return [
         'systemMaintainers' => [
             1,
         ],
+        'trustedHostsPattern' => '.*.*',
     ],
 ];

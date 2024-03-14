@@ -57,15 +57,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-4">
+        <div class="col-3">
             <f:render partial="Person/AddressCard" arguments="{person: person}" />
         </div>
-        <div class="col-4">
-
+        <div class="col-6">
+            <f:render partial="Person/Events" arguments="{person: person}" />
+            <f:render partial="Person/Blackboards" arguments="{person: person}" />
         </div>
-        <div class="col-4">
+        <div class="col-3">
             <f:render partial="Person/AccordionRight" arguments="{person: person}" />
-
         </div>
     </div>
 </div>
