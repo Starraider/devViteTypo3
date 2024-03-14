@@ -59,6 +59,7 @@
 !/public/fileadmin/index.html
 !/public/.htaccess
 
+
 ### secure files
 /secure_file_uploads/*
 /form_attachments/*

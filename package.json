@@ -4,6 +4,7 @@
   "description": "Get going quickly with TYPO3 CMS.",
   "main": "index.js",
   "scripts": {
+		"build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sven Kalbhenn",

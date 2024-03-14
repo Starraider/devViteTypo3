@@ -8,11 +8,11 @@ const VITE_TYPO3_ROOT = './'
 
 // Vite input files (relative to TYPO3 root path)
 const VITE_ENTRYPOINTS = [
-  'packages/vite_base_sitepackage/Resources/Private/Main.entry.js',
+  'packages/vite_base_sitepackage/Resources/Private/Javascript/Main.entry.js',
 ]
 
 // Output path for generated assets
-const VITE_OUTPUT_PATH = 'public/_assets/vite/'
+const VITE_OUTPUT_PATH = 'packages/vite_base_sitepackage/Resources/Public/Vite/'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 const rootPath = resolve(currentDir, VITE_TYPO3_ROOT)
