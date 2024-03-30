@@ -10,7 +10,11 @@ use Psr\Http\Message\ResponseInterface;
 use SKom\Leseohren\Domain\Model\Person;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
-use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+//use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use TYPO3\CMS\Core\Utility\DebugUtility;
+use SKom\Leseohren\Domain\Repository\CategoryRepository;
+use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
+
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -36,6 +40,24 @@ class PersonController extends ActionController
     public function injectPersonRepository(PersonRepository $personRepository)
     {
         $this->personRepository = $personRepository;
+    }
+
+    /**
+     * categoryRepository
+     *
+     * @var CategoryRepository
+     */
+    protected $categoryRepository = null;
+
+    public function injectCategoryRepository(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
+
+
+    public function __construct(PersistenceManager $persistenceManager)
+    {
+        $this->persistenceManager = $persistenceManager;
     }
 
     /**
@@ -78,8 +100,21 @@ class PersonController extends ActionController
      */
     public function newAction(): ResponseInterface
     {
+        $categories = $this->categoryRepository->findByParent('1');
+        $this->view->assign('categories', $categories);
         return $this->htmlResponse();
     }
+
+    /**
+     * initialize create action
+     *
+     * @param void
+     */
+    public function initializeCreateAction() {
+        $this->arguments->getArgument('newPerson')
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
+    }
+
 
     /**
      * action create
@@ -99,8 +134,21 @@ class PersonController extends ActionController
     #[IgnoreValidation(['value' => 'person'])]
     public function editAction(Person $person): ResponseInterface
     {
+        // ToDo: Read Parent-ID from Settings
+        $categories = $this->categoryRepository->findByParent('1');
+        $this->view->assign('categories', $categories);
         $this->view->assign('person', $person);
         return $this->htmlResponse();
+    }
+
+    /**
+     * initialize update action
+     *
+     * @param void
+     */
+    public function initializeUpdateAction() {
+        $this->arguments->getArgument('person')
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
     }
 
     /**

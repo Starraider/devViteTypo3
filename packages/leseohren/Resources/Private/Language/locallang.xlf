@@ -3,6 +3,9 @@
 	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang.xlf" date="2024-02-13T18:30:06Z" product-name="leseohren">
 		<header/>
 		<body>
+			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
+				<source>Contact</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.gender.0" resname="tx_leseohren.gender.0">
 				<source>weiblich</source>
 			</trans-unit>
@@ -11,6 +14,9 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren.gender.2" resname="tx_leseohren.gender.2">
 				<source>divers</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.status" resname="tx_leseohren.status">
+				<source>Status</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.status.0" resname="tx_leseohren.status.0">
 				<source>aktiv</source>
@@ -120,6 +126,87 @@
 			<trans-unit id="tx_leseohren.languages.9" resname="tx_leseohren.languages.9">
 				<source>Sonstige</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.district" resname="tx_leseohren.district">
+				<source>District</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.description" resname="tx_leseohren.district.description">
+				<source>District</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.0" resname="tx_leseohren.district.0">
+				<source>Sonstige</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.1" resname="tx_leseohren.district.1">
+				<source>Bad Cannstatt</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.2" resname="tx_leseohren.district.2">
+				<source>Birkach</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.3" resname="tx_leseohren.district.3">
+				<source>Botnang</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.4" resname="tx_leseohren.district.4">
+				<source>Degerloch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.5" resname="tx_leseohren.district.5">
+				<source>Feuerbach</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.6" resname="tx_leseohren.district.6">
+				<source>Hedelfingen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.7" resname="tx_leseohren.district.7">
+				<source>Möhringen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.8" resname="tx_leseohren.district.8">
+				<source>Mühlhausen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.9" resname="tx_leseohren.district.9">
+				<source>Münster</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.10" resname="tx_leseohren.district.10">
+				<source>Obertürkheim</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.11" resname="tx_leseohren.district.11">
+				<source>Plieningen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.12" resname="tx_leseohren.district.12">
+				<source>Sillenbuch</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.13" resname="tx_leseohren.district.13">
+				<source>Stammheim</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.14" resname="tx_leseohren.district.14">
+				<source>Stuttgart‐Mitte</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.15" resname="tx_leseohren.district.15">
+				<source>Stuttgart‐Nord</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.16" resname="tx_leseohren.district.16">
+				<source>Stuttgart‐Ost</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.17" resname="tx_leseohren.district.17">
+				<source>Stuttgart‐Süd</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.18" resname="tx_leseohren.district.18">
+				<source>Stuttgart‐West</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.19" resname="tx_leseohren.district.19">
+				<source>Untertürkheim</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.20" resname="tx_leseohren.district.20">
+				<source>Vaihingen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.21" resname="tx_leseohren.district.21">
+				<source>Wangen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.22" resname="tx_leseohren.district.22">
+				<source>Weilimdorf</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.23" resname="tx_leseohren.district.23">
+				<source>Zuffenhausen</source>
+			</trans-unit>
+
+
+
 			<trans-unit id="tx_leseohren_domain_model_person" resname="tx_leseohren_domain_model_person">
 				<source>Person</source>
 			</trans-unit>
@@ -159,6 +246,12 @@
 			<trans-unit id="tx_leseohren_domain_model_person.birthday.description" resname="tx_leseohren_domain_model_person.birthday.description">
 				<source>Birthday</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.categories" resname="tx_leseohren_domain_model_person.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.categories.description" resname="tx_leseohren_domain_model_person.categories.description">
+				<source>Press and hold cmd to select multiple</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.street1" resname="tx_leseohren_domain_model_person.street1">
 				<source>Street1</source>
 			</trans-unit>
@@ -189,16 +282,16 @@
 			<trans-unit id="tx_leseohren_domain_model_person.district.description" resname="tx_leseohren_domain_model_person.district.description">
 				<source>District</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.phone_landline" resname="tx_leseohren_domain_model_person.phone_landline">
+			<trans-unit id="tx_leseohren_domain_model_person.phoneLandline" resname="tx_leseohren_domain_model_person.phoneLandline">
 				<source>Phone Landline</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.phone_landline.description" resname="tx_leseohren_domain_model_person.phone_landline.description">
+			<trans-unit id="tx_leseohren_domain_model_person.phoneLandline.description" resname="tx_leseohren_domain_model_person.phoneLandline.description">
 				<source>Phone Landline</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.phone_mobile" resname="tx_leseohren_domain_model_person.phone_mobile">
+			<trans-unit id="tx_leseohren_domain_model_person.phoneMobile" resname="tx_leseohren_domain_model_person.phoneMobile">
 				<source>Phone Mobile</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.phone_mobile.description" resname="tx_leseohren_domain_model_person.phone_mobile.description">
+			<trans-unit id="tx_leseohren_domain_model_person.phoneMobile.description" resname="tx_leseohren_domain_model_person.phoneMobile.description">
 				<source>Phone Mobile</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.email" resname="tx_leseohren_domain_model_person.email">
@@ -225,16 +318,16 @@
 			<trans-unit id="tx_leseohren_domain_model_person.status.description" resname="tx_leseohren_domain_model_person.status.description">
 				<source>Status</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.statusbegin_date" resname="tx_leseohren_domain_model_person.statusbegin_date">
+			<trans-unit id="tx_leseohren_domain_model_person.statusbeginDate" resname="tx_leseohren_domain_model_person.statusbeginDate">
 				<source>Statusbegin Date</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.statusbegin_date.description" resname="tx_leseohren_domain_model_person.statusbegin_date.description">
+			<trans-unit id="tx_leseohren_domain_model_person.statusbeginDate.description" resname="tx_leseohren_domain_model_person.statusbeginDate.description">
 				<source>Statusbegin Date</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.statusend_date" resname="tx_leseohren_domain_model_person.statusend_date">
+			<trans-unit id="tx_leseohren_domain_model_person.statusendDate" resname="tx_leseohren_domain_model_person.statusendDate">
 				<source>Statusend Date</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.statusend_date.description" resname="tx_leseohren_domain_model_person.statusend_date.description">
+			<trans-unit id="tx_leseohren_domain_model_person.statusendDate.description" resname="tx_leseohren_domain_model_person.statusendDate.description">
 				<source>Statusend Date</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.travel_options" resname="tx_leseohren_domain_model_person.travel_options">
@@ -248,6 +341,9 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.languages.description" resname="tx_leseohren_domain_model_person.languages.description">
 				<source>Languages</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.preferences" resname="tx_leseohren.preferences">
+				<source>Preferences</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.preference_agegroup" resname="tx_leseohren_domain_model_person.preference_agegroup">
 				<source>Preference Agegroup</source>

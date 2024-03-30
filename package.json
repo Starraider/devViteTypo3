@@ -4,7 +4,7 @@
   "description": "Get going quickly with TYPO3 CMS.",
   "main": "index.js",
   "scripts": {
-		"build": "vite build",
+    "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sven Kalbhenn",
@@ -30,7 +30,7 @@
     "jszip": "^3.10.1",
     "luxon": "^3.4.4",
     "moment": "^2.30.1",
-    "pdfmake": "^0.2.9",
+    "pdfmake": "^0.2.10",
     "vite-plugin-full-reload": "^1.1.0"
   }
 }

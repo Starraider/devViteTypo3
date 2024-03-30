@@ -9,7 +9,7 @@
     <f:render partial="FormErrors" />
 
     <f:form action="update" name="person" object="{person}" >
-    <f:render partial="Person/FormFields" arguments="{person:person}" />
+    <f:render partial="Person/FormFields" arguments="{person:person, categories:categories}" />
     <f:form.submit value="Save" class="btn btn-primary"/>
     </f:form>
 </f:section>
