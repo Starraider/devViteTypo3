@@ -694,21 +694,22 @@ class Person extends AbstractEntity
     /**
      * Returns the languages
      *
-     * @return string
+     * @return array
      */
     public function getLanguages()
     {
-        return $this->languages;
+        return explode(',', $this->languages);
     }
 
     /**
      * Sets the languages
      *
+     * @param array $languages
      * @return void
      */
-    public function setLanguages(string $languages)
+    public function setLanguages(array $languages)
     {
-        $this->languages = $languages;
+        $this->languages = implode(',', $languages);
     }
 
     /**

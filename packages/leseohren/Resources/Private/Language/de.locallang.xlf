@@ -55,6 +55,10 @@
 				<source>Age Group</source>
 				<target>Altersgruppe</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.ageGroup.description" resname="tx_leseohren.ageGroup.description">
+				<source>Press and hold cmd-key to select multiple.</source>
+				<target>Drücke und halte cmd-Taste um mehrere auszuwählen.</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.ageGroup.0" resname="tx_leseohren.ageGroup.0">
 				<source>0-4 years</source>
 				<target>0-4 Jahre</target>
@@ -126,6 +130,14 @@
 			<trans-unit id="tx_leseohren.travelOptions.5" resname="tx_leseohren.travelOptions.5">
 				<source>Other</source>
 				<target>Sonstige</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages" resname="tx_leseohren.languages">
+				<source>Languages</source>
+				<target>Sprachen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.description" resname="tx_leseohren.languages.description">
+				<source>Press cmd to select multiple.</source>
+				<target>Drücken und halten Sie cmd, um mehrere auszuwählen.</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.0" resname="tx_leseohren.languages.0">
 				<source>German</source>
