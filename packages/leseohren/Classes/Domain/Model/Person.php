@@ -715,41 +715,43 @@ class Person extends AbstractEntity
     /**
      * Returns the preferenceAgegroup
      *
-     * @return string
+     * @return array
      */
     public function getPreferenceAgegroup()
     {
-        return $this->preferenceAgegroup;
+        return explode(',', $this->preferenceAgegroup);
     }
 
     /**
      * Sets the preferenceAgegroup
      *
+     * @param array $preferenceAgegroup
      * @return void
      */
-    public function setPreferenceAgegroup(string $preferenceAgegroup)
+    public function setPreferenceAgegroup(array $preferenceAgegroup)
     {
-        $this->preferenceAgegroup = $preferenceAgegroup;
+        $this->preferenceAgegroup = implode(',', $preferenceAgegroup);
     }
 
     /**
      * Returns the preferenceOrganizationType
      *
-     * @return string
+     * @return array
      */
     public function getPreferenceOrganizationType()
     {
-        return $this->preferenceOrganizationType;
+        return explode(',', $this->preferenceOrganizationType);
     }
 
     /**
      * Sets the preferenceOrganizationType
      *
+     * @param array $preferenceOrganizationType
      * @return void
      */
-    public function setPreferenceOrganizationType(string $preferenceOrganizationType)
+    public function setPreferenceOrganizationType(array $preferenceOrganizationType)
     {
-        $this->preferenceOrganizationType = $preferenceOrganizationType;
+        $this->preferenceOrganizationType = implode(',', $preferenceOrganizationType);
     }
 
     /**

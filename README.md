@@ -19,7 +19,7 @@ npm run build
 ACHTUNG: Vorher ein Build durchführen!
 
 ```bash
-vendor/bin/dep deploy live -vvv
+vendor/bin/dep deploy beta -vvv
 ```
 
 ## License
