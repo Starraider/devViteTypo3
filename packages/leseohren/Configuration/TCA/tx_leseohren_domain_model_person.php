@@ -288,7 +288,6 @@ return [
             'config' => [
                 'type' => 'email',
                 'eval' => 'nospace,email',
-                'required' => true,
             ]
         ],
         'whatsapp' => [

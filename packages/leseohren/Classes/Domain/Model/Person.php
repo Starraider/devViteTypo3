@@ -116,7 +116,6 @@ class Person extends AbstractEntity
      *
      * @var string
      */
-    #[Validate(['validator' => 'NotEmpty'])]
     #[Validate(['validator' => 'EmailAddress'])]
     protected $email = '';
 
