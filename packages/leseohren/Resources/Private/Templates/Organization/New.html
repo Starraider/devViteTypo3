@@ -2,14 +2,14 @@
 <f:layout name="Default" />
 
 <f:section name="content">
-    <h1>New Organization</h1>
+    <h1><f:translate key="tx_leseohren_domain_model_organization.newOrganization" /></h1>
 
     <f:flashMessages />
     <f:render partial="FormErrors" />
 
     <f:form action="create" name="newOrganization" object="{newOrganization}">
-    <f:render partial="Organization/FormFields" />
-    <f:form.submit value="Create new" />
+    <f:render partial="Organization/FormFields" arguments="{_all}" />
+    <f:form.submit value="{f:translate(key: 'tx_leseohren.save')}" class="btn btn-primary" />
     </f:form>
 </f:section>
 </html>

@@ -2,15 +2,15 @@
 <f:layout name="Default" />
 
 <f:section name="content">
-    <h1>Edit Person</h1>
+    <h1><f:translate key="tx_leseohren_domain_model_person.editPerson" /></h1>
 
     <f:flashMessages />
 
     <f:render partial="FormErrors" />
 
     <f:form action="update" name="person" object="{person}" >
-    <f:render partial="Person/FormFields" arguments="{person:person, categories:categories}" />
-    <f:form.submit value="Save" class="btn btn-primary"/>
+        <f:render partial="Person/FormFields" arguments="{person:person, categories:categories}" />
+        <f:form.submit value="{f:translate(key: 'tx_leseohren.save')}" class="btn btn-primary" />
     </f:form>
 </f:section>
 </html>

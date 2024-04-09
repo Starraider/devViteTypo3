@@ -8,6 +8,7 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use SKom\Leseohren\Domain\Repository\OrganizationRepository;
 use Psr\Http\Message\ResponseInterface;
 use SKom\Leseohren\Domain\Model\Organization;
+use SKom\Leseohren\Domain\Repository\CategoryRepository;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 
@@ -35,6 +36,18 @@ class OrganizationController extends ActionController
     public function injectOrganizationRepository(OrganizationRepository $organizationRepository)
     {
         $this->organizationRepository = $organizationRepository;
+    }
+
+    /**
+     * categoryRepository
+     *
+     * @var CategoryRepository
+     */
+    protected $categoryRepository = null;
+
+    public function injectCategoryRepository(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
     }
 
     /**
@@ -77,6 +90,8 @@ class OrganizationController extends ActionController
      */
     public function newAction(): ResponseInterface
     {
+        $categories = $this->categoryRepository->findByParent('10');
+        $this->view->assign('categories', $categories);
         return $this->htmlResponse();
     }
 
@@ -98,6 +113,9 @@ class OrganizationController extends ActionController
     #[IgnoreValidation(['value' => 'organization'])]
     public function editAction(Organization $organization): ResponseInterface
     {
+        // ToDo: Read Parent-ID from Settings
+        $categories = $this->categoryRepository->findByParent('10');
+        $this->view->assign('categories', $categories);
         $this->view->assign('organization', $organization);
         return $this->htmlResponse();
     }

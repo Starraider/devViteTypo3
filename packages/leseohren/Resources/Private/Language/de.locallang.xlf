@@ -3,6 +3,18 @@
 	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang.xlf" date="2024-02-13T18:30:06Z" product-name="leseohren">
 		<header/>
 		<body>
+			<trans-unit id="tx_leseohren.save" resname="tx_leseohren.save">
+				<source>Save</source>
+				<target>Speichern</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.edit" resname="tx_leseohren.edit">
+				<source>Edit</source>
+				<target>Bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.delete" resname="tx_leseohren.delete">
+				<source>Delete</source>
+				<target>Löschen</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
 				<source>Contact</source>
 				<target>Kontakt</target>
@@ -290,6 +302,18 @@
 			<trans-unit id="tx_leseohren_domain_model_person.description" resname="tx_leseohren_domain_model_person.description">
 				<source>Person like members, employes etc.</source>
 				<source>Person wie z.B. Vorlesepaten, Mitglieder usw.</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.personList" resname="tx_leseohren_domain_model_person.personList">
+				<source>Person List</source>
+				<target>Personen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.newPerson" resname="tx_leseohren_domain_model_person.newPerson">
+				<source>New Person</source>
+				<target>Neue Person</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.editPerson" resname="tx_leseohren_domain_model_person.editPerson">
+				<source>Edit Person</source>
+				<target>Person bearbeiten</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.firstname" resname="tx_leseohren_domain_model_person.firstname">
 				<source>Firstname</source>
@@ -579,6 +603,14 @@
 				<source>Organisations</source>
 				<target>Organisationen</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.newOrganization" resname="tx_leseohren_domain_model_organization.newOrganization">
+				<source>New Organization</source>
+				<target>Neue Organisation</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.editOrganization" resname="tx_leseohren_domain_model_organization.editOrganization">
+				<source>Edit Organization</source>
+				<target>Organisation bearbeiten</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.name" resname="tx_leseohren_domain_model_organization.name">
 				<source>Name</source>
 				<target>Name</target>
@@ -586,6 +618,22 @@
 			<trans-unit id="tx_leseohren_domain_model_organization.name.description" resname="tx_leseohren_domain_model_organization.name.description">
 				<source>Name of the organisation</source>
 				<target>Name der Organisation</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.categories" resname="tx_leseohren_domain_model_organization.categories">
+				<source>Categories</source>
+				<target>Kategorien</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.categories.description" resname="tx_leseohren_domain_model_organization.categories.description">
+				<source>Press and hold cmd to select multiple</source>
+				<target>Drücken und halten Sie cmd, um mehrere auszuwählen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.street1" resname="tx_leseohren_domain_model_organization.street1">
+				<source>Street</source>
+				<target>Straße</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.street2" resname="tx_leseohren_domain_model_organization.street2">
+				<source>Street 2</source>
+				<target>Adresszusatz</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.zip" resname="tx_leseohren_domain_model_organization.zip">
 				<source>Zip</source>
@@ -598,6 +646,26 @@
 			<trans-unit id="tx_leseohren_domain_model_organization.district" resname="tx_leseohren_domain_model_organization.district">
 				<source>District</source>
 				<target>Stadtbezirk</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.district" resname="tx_leseohren_domain_model_organization.district">
+				<source>District</source>
+				<target>Stadtbezirk</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.phone1" resname="tx_leseohren_domain_model_organization.phone1">
+				<source>Phone 1</source>
+				<target>Telefon 1</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.phone2" resname="tx_leseohren_domain_model_organization.phone2">
+				<source>Phone 2</source>
+				<target>Telefon 2</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.email" resname="tx_leseohren_domain_model_organization.email">
+				<source>E-Mail</source>
+				<target>E-Mail</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.whatsapp" resname="tx_leseohren_domain_model_organization.whatsapp">
+				<source>WhatsApp</source>
+				<target>WhatsApp</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.contact_person" resname="tx_leseohren_domain_model_organization.contact_person">
 				<source>Contact Person</source>
@@ -618,6 +686,10 @@
 			<trans-unit id="tx_leseohren_domain_model_organization.notes" resname="tx_leseohren_domain_model_organization.notes">
 				<source>Notes</source>
 				<target>Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.url" resname="tx_leseohren_domain_model_organization.url">
+				<source>URL</source>
+				<target>URL</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_gift" resname="tx_leseohren_domain_model_gift">
 				<source>Gift</source>
