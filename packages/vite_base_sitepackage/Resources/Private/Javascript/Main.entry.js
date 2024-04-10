@@ -3,6 +3,10 @@ import '../Scss/main.scss'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
 
+// Import vanillajs-datepicker
+// See https://mymth.github.io/vanillajs-datepicker/#/
+import { Datepicker } from 'vanillajs-datepicker'
+
 // Import all of DataTables.net's JS
 // See https://datatables.net
 import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'
@@ -144,6 +148,34 @@ let tableEventList = new DataTable('#eventList', {
       targets: [3],
     },
   ],
+})
+
+const birthday = document.querySelector('input[id="birthday"]')
+const datepicker1 = new Datepicker(birthday, {
+  format: 'dd.mm.yyyy',
+  buttonClass: 'btn',
+  autohide: true,
+  todayButton: true,
+  clearButton: true,
+  todayHighlight: true,
+})
+const statusbeginDate = document.querySelector('input[id="statusbeginDate"]')
+const datepicker2 = new Datepicker(statusbeginDate, {
+  format: 'dd.mm.yyyy',
+  buttonClass: 'btn',
+  autohide: true,
+  todayButton: true,
+  clearButton: true,
+  todayHighlight: true,
+})
+const statusendDate = document.querySelector('input[id="statusendDate"]')
+const datepicker3 = new Datepicker(statusendDate, {
+  format: 'dd.mm.yyyy',
+  buttonClass: 'btn',
+  autohide: true,
+  todayButton: true,
+  clearButton: true,
+  todayHighlight: true,
 })
 
 console.log('Hello Vite, hello TYPO3!')

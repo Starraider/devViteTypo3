@@ -58,6 +58,8 @@
 @import "../../../../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/components/contentcontainer";
 
 @import "../../../../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/plugins/photoswipe";
+
+@import 'vanillajs-datepicker/sass/datepicker';
 //
 // base
 // boilerplate used throughout the entire site
@@ -83,6 +85,6 @@
 // components
 // reusable components
 //
-//@import "components/buttons";
+@import "components/buttons";
 //@import "components/filelinks";
 //@import "components/links";
