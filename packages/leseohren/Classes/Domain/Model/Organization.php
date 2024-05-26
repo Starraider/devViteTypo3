@@ -146,7 +146,7 @@ class Organization extends AbstractEntity
     /**
      * Kontaktperson
      *
-     * @var Person
+     * @var ObjectStorage<Person>
      */
     #[Lazy]
     protected $contactPerson = null;
@@ -533,7 +533,7 @@ class Organization extends AbstractEntity
     /**
      * Returns the contactPerson
      *
-     * @return Person
+     * @return ObjectStorage<Person>
      */
     public function getContactPerson()
     {
