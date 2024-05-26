@@ -11,7 +11,6 @@
         <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionInfo">
             <div class="accordion-body">
                 <f:if condition="{organization.contactPerson}">
-                    <f:debug inline="false">{organization.contactPerson}</f:debug>
                     <f:for each="{organization.contactPerson}" as="contactPerson">
                         <f:link.action pageUid="12" action="show" controller="Person" arguments="{person: contactPerson}">
                             <h5>{contactPerson.lastname}, {contactPerson.firstname}</h5>
