@@ -177,5 +177,23 @@ const datepicker3 = new Datepicker(statusendDate, {
   clearButton: true,
   todayHighlight: true,
 })
+const startDate = document.querySelector('input[id="startDate"]')
+const datepicker4 = new Datepicker(startDate, {
+  format: 'dd.mm.yyyy',
+  buttonClass: 'btn',
+  autohide: true,
+  todayButton: true,
+  clearButton: true,
+  todayHighlight: true,
+})
+const endDate = document.querySelector('input[id="endDate"]')
+const datepicker5 = new Datepicker(endDate, {
+  format: 'dd.mm.yyyy',
+  buttonClass: 'btn',
+  autohide: true,
+  todayButton: true,
+  clearButton: true,
+  todayHighlight: true,
+})
 
 console.log('Hello Vite, hello TYPO3!')

@@ -585,8 +585,11 @@
 			<trans-unit id="tx_leseohren_domain_model_event.title.description" resname="tx_leseohren_domain_model_event.title.description">
 				<source>Title</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.description.description" resname="tx_leseohren_domain_model_event.description.description">
+			<trans-unit id="tx_leseohren_domain_model_event.description" resname="tx_leseohren_domain_model_event.description">
 				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.description.description" resname="tx_leseohren_domain_model_event.description.description">
+				<source>Description of the event</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.start_date" resname="tx_leseohren_domain_model_event.start_date">
 				<source>Start Date</source>

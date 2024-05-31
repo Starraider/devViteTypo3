@@ -275,6 +275,14 @@ class Person extends AbstractEntity
     public $events = null;
 
     /**
+     * Organizations
+     *
+     * @var ObjectStorage<Organization>
+     */
+    #[Lazy]
+    public $organizations = null;
+
+    /**
      * __construct
      */
     public function __construct()
@@ -296,6 +304,7 @@ class Person extends AbstractEntity
         $this->donations = $this->donations ?: new ObjectStorage();
         $this->blackboards = $this->blackboards ?: new ObjectStorage();
         $this->events = $this->events ?: new ObjectStorage();
+        $this->organizations = $this->organizations ?: new ObjectStorage();
     }
 
     /**
@@ -1055,5 +1064,46 @@ class Person extends AbstractEntity
     public function setEvents(ObjectStorage $events)
     {
         $this->events = $events;
+    }
+
+    /**
+     * Adds an organization
+     *
+     * @return void
+     */
+    public function addOrganization(Organization $organization)
+    {
+        $this->organizations->attach($organization);
+    }
+
+    /**
+     * Removes an organization
+     *
+     * @param Organization $organizationToRemove The Organization to be removed
+     * @return void
+     */
+    public function removeOrganization(Organization $organizationToRemove)
+    {
+        $this->organizations>detach($organizationToRemove);
+    }
+
+    /**
+     * Returns the organizations
+     *
+     */
+    public function getOrganizations(): ObjectStorage
+    {
+        return $this->organizations;
+    }
+
+    /**
+     * Sets the organizations
+     *
+     * @param ObjectStorage<Organization> $organizations
+     * @return void
+     */
+    public function setOrganizations(ObjectStorage $organizations)
+    {
+        $this->organizations = $organizations;
     }
 }
