@@ -84,11 +84,21 @@ class BlackboardController extends ActionController
     }
 
     /**
+     * initialize create action
+     *
+     * @param void
+     */
+    public function initializeCreateAction() {
+        $this->arguments->getArgument('newBlackboard')
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
+    }
+
+    /**
      * action create
      */
     public function createAction(Blackboard $newBlackboard)
     {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('The new notice board was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
         $this->blackboardRepository->add($newBlackboard);
         return $this->redirect('list');
     }
@@ -104,6 +114,15 @@ class BlackboardController extends ActionController
         $this->view->assign('blackboard', $blackboard);
         return $this->htmlResponse();
     }
+
+    /**
+     * initialize update action
+     *
+     * @param void
+     */
+    public function initializeUpdateAction() {
+        $this->arguments->getArgument('blackboard')
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');    }
 
     /**
      * action update

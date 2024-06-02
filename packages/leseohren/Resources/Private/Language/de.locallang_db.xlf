@@ -416,6 +416,10 @@
 			<trans-unit id="tx_leseohren_domain_model_blackboard.description" resname="tx_leseohren_domain_model_blackboard.description">
 				<source>Description</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.edit_blackboard" resname="tx_leseohren_domain_model_blackboard.edit_blackboard">
+				<source>Edit Blackboard</source>
+				<target>Schwarzes Brett bearbeiten</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_blackboard.title" resname="tx_leseohren_domain_model_blackboard.title">
 				<source>Title</source>
 			</trans-unit>
