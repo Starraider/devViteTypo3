@@ -1,4 +1,12 @@
 plugin.tx_leseohren_personen {
+    settings {
+      pageIDs {
+        personShowPid = {$pageIDs.personShowPid}
+        organizationShowPid = {$pageIDs.organizationShowPid}
+        eventShowPid = {$pageIDs.eventShowPid}
+        blackboardShowPid = {$pageIDs.blackboardShowPid}
+      }
+    }
     view {
         templateRootPaths.0 = EXT:leseohren/Resources/Private/Templates/
         templateRootPaths.1 = {$plugin.tx_leseohren_personen.view.templateRootPath}
@@ -32,6 +40,14 @@ plugin.tx_leseohren_personen {
     }
 }
 plugin.tx_leseohren_organizations {
+    settings {
+      pageIDs {
+        personShowPid = {$pageIDs.personShowPid}
+        organizationShowPid = {$pageIDs.organizationShowPid}
+        eventShowPid = {$pageIDs.eventShowPid}
+        blackboardShowPid = {$pageIDs.blackboardShowPid}
+      }
+    }
     view {
         templateRootPaths.0 = EXT:leseohren/Resources/Private/Templates/
         templateRootPaths.1 = {$plugin.tx_leseohren_organizations.view.templateRootPath}
@@ -54,6 +70,14 @@ plugin.tx_leseohren_organizations {
     }
 }
 plugin.tx_leseohren_events {
+    settings {
+      pageIDs {
+        personShowPid = {$pageIDs.personShowPid}
+        organizationShowPid = {$pageIDs.organizationShowPid}
+        eventShowPid = {$pageIDs.eventShowPid}
+        blackboardShowPid = {$pageIDs.blackboardShowPid}
+      }
+    }
     view {
         templateRootPaths.0 = EXT:leseohren/Resources/Private/Templates/
         templateRootPaths.1 = {$plugin.tx_leseohren_events.view.templateRootPath}
@@ -76,6 +100,14 @@ plugin.tx_leseohren_events {
     }
 }
 plugin.tx_leseohren_blackboards {
+    settings {
+      pageIDs {
+        personShowPid = {$pageIDs.personShowPid}
+        organizationShowPid = {$pageIDs.organizationShowPid}
+        eventShowPid = {$pageIDs.eventShowPid}
+        blackboardShowPid = {$pageIDs.blackboardShowPid}
+      }
+    }
     view {
         templateRootPaths.0 = EXT:leseohren/Resources/Private/Templates/
         templateRootPaths.1 = {$plugin.tx_leseohren_blackboards.view.templateRootPath}

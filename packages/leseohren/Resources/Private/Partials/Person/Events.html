@@ -22,7 +22,7 @@
                         <f:for each="{person.events}" as="event">
                             <tr>
                                 <td data-search="{event.startDate -> f:format.date(format: 'Y/m/d')}">
-                                    <f:link.action pageUid="225" action="show" controller="Event" arguments="{event: event}">
+                                    <f:link.action pageUid="{settings.pageIDs.eventShowPid}" action="show" controller="Event" arguments="{event: event}">
                                         {event.startDate -> f:format.date(format: 'Y/m/d')}
                                     </f:link.action>
                                 </td>

@@ -18,13 +18,13 @@
                 <label for="startDate" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_event.start_date" />:
                 </label>
-                <f:form.textfield property="startDate" id="startDate" value="{event.startDate->f:format.date(format: 'd.m.Y\TH:i:sP')}" class="form-control" />
+                <f:form.textfield property="startDate" id="startDate" value="{event.startDate->f:format.date(format: 'd.m.Y')}" class="form-control" />
             </div>
             <div class="col-sm-6">
                 <label for="endDate" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_event.end_date" />:
                 </label>
-                <f:form.textfield property="endDate" id="endDate" value="{event.endDate->f:format.date(format: 'H:i d.m.Y')}" class="form-control" />
+                <f:form.textfield property="endDate" id="endDate" value="{event.endDate->f:format.date(format: 'd.m.Y')}" class="form-control" />
             </div>
         </div>
         <div class="row mb-3">

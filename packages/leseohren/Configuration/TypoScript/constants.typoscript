@@ -19,7 +19,12 @@ page {
   }
 }
 
-
+pageIDs {
+  personShowPid = 12
+  organizationShowPid = 19
+  eventShowPid = 225
+  blackboardShowPid = 228
+}
 
 plugin.tx_leseohren_personen {
     view {

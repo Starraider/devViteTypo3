@@ -15,17 +15,17 @@
                             <a href="#" data-bs-toggle="modal" data-bs-target="#boardModal{boardIterator.index}">
                                 <i class="bi bi-eye-fill"></i>
                             </a>
-                            <f:link.action controller="Blackboard" action="edit" arguments="{blackboard: blackboard}">
+                            <f:link.action pageUid="{settings.pageIDs.blackboardShowPid}" controller="Blackboard" action="edit" arguments="{blackboard: blackboard}">
                                 <i class="bi bi-pencil-fill"></i>
                             </f:link.action>
-                            <f:link.action controller="Blackboard" action="delete" arguments="{blackboard: blackboard}">
+                            <f:link.action pageUid="{settings.pageIDs.blackboardShowPid}" controller="Blackboard" action="delete" arguments="{blackboard: blackboard}">
                                 <i class="bi bi-trash-fill"></i>
                             </f:link.action>
                         </div>
                         <f:render partial="Person/BlackboardModal" arguments="{blackboard: blackboard, boardIterator:boardIterator}" />
                     </f:for>
                 </f:if>
-                <f:link.action controller="Blackboard" action="new" arguments="{person: person}"
+                <f:link.action pageUid="{settings.pageIDs.blackboardShowPid}" controller="Blackboard" action="new" arguments="{person: person}"
                     class="btn btn-primary btn-sm">
                     <i class="bi bi-plus-square"></i>
                 </f:link.action>
