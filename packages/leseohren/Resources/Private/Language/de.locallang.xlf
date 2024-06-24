@@ -15,6 +15,10 @@
 				<source>Delete</source>
 				<target>Löschen</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.backToList" resname="tx_leseohren.backToList">
+				<source>Back to list</source>
+				<target>Zurück zur Liste</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
 				<source>Contact</source>
 				<target>Kontakt</target>
@@ -46,6 +50,10 @@
 			<trans-unit id="tx_leseohren.status.2" resname="tx_leseohren.status.2">
 				<source>retired</source>
 				<target>ausgeschieden</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.bankData" resname="tx_leseohren.bankData">
+				<source>Bank data</source>
+				<target>Bankdaten</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.paymentMethod" resname="tx_leseohren.paymentMethod">
 				<source>Payment method</source>
@@ -541,7 +549,7 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.bankname" resname="tx_leseohren_domain_model_person.bankname">
 				<source>Bankname</source>
-				<target>Bankname</target>
+				<target>Name der Bank</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.bankname.description" resname="tx_leseohren_domain_model_person.bankname.description">
 				<source>Name of the bank</source>
@@ -549,7 +557,7 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.paypal" resname="tx_leseohren_domain_model_person.paypal">
 				<source>Paypal</source>
-				<target>Paypal</target>
+				<target>Paypal Nummer</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.paypal.description" resname="tx_leseohren_domain_model_person.paypal.description">
 				<source>Paypal number</source>
@@ -598,6 +606,10 @@
 			<trans-unit id="tx_leseohren_domain_model_organization" resname="tx_leseohren_domain_model_organization">
 				<source>Organization</source>
 				<target>Organisation</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organizations" resname="tx_leseohren_domain_model_organization">
+				<source>Organizations</source>
+				<target>Organisationen</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.description" resname="tx_leseohren_domain_model_organization.description">
 				<source>Organisations</source>
@@ -787,9 +799,17 @@
 				<source>Event</source>
 				<target>Veranstaltung</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_events" resname="tx_leseohren_domain_model_events">
+				<source>Events</source>
+				<target>Veranstaltungen</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.description" resname="tx_leseohren_domain_model_event.description">
 				<source>Description</source>
 				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.newEvent" resname="tx_leseohren_domain_model_event.newEvent">
+				<source>New Event</source>
+				<target>Neue Veranstaltung</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.description.description" resname="tx_leseohren_domain_model_event.description.description">
 				<source>Events like birthdays</source>

@@ -2,7 +2,7 @@
 <f:layout name="Default" />
 
 <f:section name="content">
-    <h1>Schwarze Bretter</h1>
+    <h1><f:translate key="tx_leseohren_domain_model_blackboard" /></h1>
 
     <f:flashMessages />
 
@@ -23,28 +23,13 @@
                 </div>
                 <div class="card-body">
                     <f:link.action action="edit" arguments="{blackboard : blackboard}" class="btn btn-primary btn-sm">
-                        <i class="bi bi-gear"></i>&nbsp;Edit
+                        <i class="bi bi-gear"></i>&nbsp;<f:translate key="tx_leseohren.edit" />
                     </f:link.action>
                     <f:link.action action="delete" arguments="{blackboard : blackboard}" class="btn btn-primary btn-sm">
-                        <i class="bi bi-x-square"></i>&nbsp;Delete
+                        <i class="bi bi-x-square"></i>&nbsp;<f:translate key="tx_leseohren.delete" />
                     </f:link.action>
                 </div>
             </div>
         </f:for>
-        <div class="container button-list-bottom">
-            <div class="row">
-                <div class="col-4">
-
-                </div>
-                <div class="col-4 text-center">
-                    <f:link.action action="new" class="btn btn-primary btn-sm">
-                        <i class="bi bi-plus-square"></i>&nbsp;New Blackboard
-                    </f:link.action>
-                </div>
-                <div class="col-4">
-
-                </div>
-            </div>
-        </div>
 </f:section>
 </html>

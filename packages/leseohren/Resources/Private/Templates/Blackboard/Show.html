@@ -6,7 +6,9 @@
 
     <f:flashMessages />
     <f:render partial="Blackboard/Properties" arguments="{blackboard:blackboard}" />
-    <f:link.action action="list">Back to list</f:link.action><br />
+    <f:link.action action="list" class="btn btn-primary btn-sm">
+        <i class="bi bi-card-list"></i>&nbsp;<f:translate key="tx_leseohren.backToList" />
+    </f:link.action>
     <f:link.action action="new">New Blackboard</f:link.action>
 </f:section>
 </html>
