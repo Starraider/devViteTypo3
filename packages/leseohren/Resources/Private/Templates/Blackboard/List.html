@@ -13,9 +13,15 @@
                 </h3>
                 <div class="card-body">
                     <p class="card-text c-blackboard__date">
-                        Datum:
-                        {blackboard.startDate -> f:format.date()}
-                        - {blackboard.endDate -> f:format.date()}
+                        <strong>Datum:</strong>
+                        {blackboard.startDate -> f:format.date(format: 'd.m.Y')}
+                        - {blackboard.endDate -> f:format.date(format: 'd.m.Y')}
+                        &nbsp;&nbsp;&nbsp;
+                        <strong><f:translate key="tx_leseohren_domain_model_blackboard.author" />:</strong>
+                        <f:for each="{blackboard.person}" as="author" iteration="authorIterator">
+                            {author.firstname} {author.lastname},
+                            {author.zip} {author.city}
+                        </f:for>
                     </p>
                     <p class="card-text c-blackboard__description">
                         {blackboard.description -> f:format.html()}

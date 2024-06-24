@@ -6,6 +6,18 @@
     <div class="card-body">
         <div class="row mb-3">
             <div class="col-sm-12">
+                <strong>
+                    <f:translate key="tx_leseohren_domain_model_blackboard.author" />:
+                </strong>
+                <f:for each="{blackboard.person}" as="author" iteration="authorIterator">
+                    {author.firstname} {author.lastname},
+                    {author.zip} {author.city}
+                </f:for>
+
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-12">
                 <label for="title" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_blackboard.title" />:
                 </label>

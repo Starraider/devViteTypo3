@@ -775,6 +775,10 @@
 				<source>Edit Blackboard</source>
 				<target>Schwarzes Brett bearbeiten</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.author" resname="tx_leseohren_domain_model_blackboard.author">
+				<source>Author</source>
+				<target>VerfasserInn</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_blackboard.title" resname="tx_leseohren_domain_model_blackboard.title">
 				<source>Title</source>
 				<target>Titel</target>
