@@ -81,6 +81,16 @@ class EventController extends ActionController
     }
 
     /**
+     * initialize create action
+     *
+     * @param void
+     */
+    public function initializeCreateAction() {
+        $this->arguments->getArgument('newEvent')
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
+    }
+
+    /**
      * action create
      */
     public function createAction(Event $newEvent)

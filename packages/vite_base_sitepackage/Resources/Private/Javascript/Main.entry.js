@@ -151,49 +151,59 @@ let tableEventList = new DataTable('#eventList', {
 })
 
 const birthday = document.querySelector('input[id="birthday"]')
-const datepicker1 = new Datepicker(birthday, {
-  format: 'dd.mm.yyyy',
-  buttonClass: 'btn',
-  autohide: true,
-  todayButton: true,
-  clearButton: true,
-  todayHighlight: true,
-})
-const statusbeginDate = document.querySelector('input[id="statusbeginDate"]')
-const datepicker2 = new Datepicker(statusbeginDate, {
-  format: 'dd.mm.yyyy',
-  buttonClass: 'btn',
-  autohide: true,
-  todayButton: true,
-  clearButton: true,
-  todayHighlight: true,
-})
-const statusendDate = document.querySelector('input[id="statusendDate"]')
-const datepicker3 = new Datepicker(statusendDate, {
-  format: 'dd.mm.yyyy',
-  buttonClass: 'btn',
-  autohide: true,
-  todayButton: true,
-  clearButton: true,
-  todayHighlight: true,
-})
-const startDate = document.querySelector('input[id="startDate"]')
-const datepicker4 = new Datepicker(startDate, {
-  format: 'dd.mm.yyyy',
-  buttonClass: 'btn',
-  autohide: true,
-  todayButton: true,
-  clearButton: true,
-  todayHighlight: true,
-})
-const endDate = document.querySelector('input[id="endDate"]')
-const datepicker5 = new Datepicker(endDate, {
-  format: 'dd.mm.yyyy',
-  buttonClass: 'btn',
-  autohide: true,
-  todayButton: true,
-  clearButton: true,
-  todayHighlight: true,
-})
+if (birthday !== null) {
+  const datepicker1 = new Datepicker(birthday, {
+    format: 'dd.mm.yyyy',
+    buttonClass: 'btn',
+    autohide: true,
+    todayButton: true,
+    clearButton: true,
+    todayHighlight: true,
+  })
+}
 
-console.log('Hello Vite, hello TYPO3!')
+const statusbeginDate = document.querySelector('input[id="statusbeginDate"]')
+if (statusbeginDate !== null) {
+  const datepicker2 = new Datepicker(statusbeginDate, {
+    format: 'dd.mm.yyyy',
+    buttonClass: 'btn',
+    autohide: true,
+    todayButton: true,
+    clearButton: true,
+    todayHighlight: true,
+  })
+}
+const statusendDate = document.querySelector('input[id="statusendDate"]')
+if (statusendDate !== null) {
+  const datepicker3 = new Datepicker(statusendDate, {
+    format: 'dd.mm.yyyy',
+    buttonClass: 'btn',
+    autohide: true,
+    todayButton: true,
+    clearButton: true,
+    todayHighlight: true,
+  })
+}
+const startDate = document.querySelector('input[id="startDate"]')
+if (startDate !== null) {
+  const datepicker4 = new Datepicker(startDate, {
+    format: 'dd.mm.yyyy',
+    buttonClass: 'btn',
+    autohide: true,
+    todayButton: true,
+    clearButton: true,
+    todayHighlight: true,
+  })
+}
+const endDate = document.querySelector('input[id="endDate"]')
+if (endDate !== null) {
+  const datepicker5 = new Datepicker(endDate, {
+    format: 'dd.mm.yyyy',
+    buttonClass: 'btn',
+    autohide: true,
+    todayButton: true,
+    clearButton: true,
+    todayHighlight: true,
+  })
+}
+console.log('Hello Sven, hello TYPO3!')
