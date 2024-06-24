@@ -18,7 +18,7 @@
         </p>
     </div>
     <div class="card-body">
-        <h5 class="card-title">Kontakt</h5>
+        <h5 class="card-title"><f:translate key="tx_leseohren.contact" /></h5>
         <p class="card-text">
             <f:if condition="{person.phoneLandline}">
                 <i class="bi bi-telephone"></i>&nbsp;
@@ -38,18 +38,16 @@
         </p>
     </div>
     <div class="card-body">
-        <h5 class="card-title">Info</h5>
+        <h5 class="card-title"><f:translate key="tx_leseohren.info" /></h5>
         <p class="card-text">
             <div class="c-person__languages">
                 <f:translate key="tx_leseohren_domain_model_person.languages" />: &nbsp;
-                <v:iterator.explode content="{person.languages}" glue="," as="langIDs">
-                    <f:for each="{langIDs}" as="langID" iteration="langIterator">
-                        <f:if condition="{langIterator.isLast}">
-                            <f:then><v:l key="tx_leseohren.languages.{langID}" /></f:then>
-                            <f:else><v:l key="tx_leseohren.languages.{langID}" />,</f:else>
-                        </f:if>
-                    </f:for>
-                </v:iterator.explode>
+                <f:for each="{person.languages}" as="langID" iteration="langIterator">
+                    <f:if condition="{langIterator.isLast}">
+                        <f:then><v:l key="tx_leseohren.languages.{langID}" /></f:then>
+                        <f:else><v:l key="tx_leseohren.languages.{langID}" />,</f:else>
+                    </f:if>
+                </f:for>
             </div>
             <f:if condition="{person.birthday}">
                 <f:translate key="tx_leseohren_domain_model_person.birthday" />:

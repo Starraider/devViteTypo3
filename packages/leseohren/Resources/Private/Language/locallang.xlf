@@ -15,6 +15,12 @@
 			<trans-unit id="tx_leseohren.backToList" resname="tx_leseohren.backToList">
 				<source>Back to list</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.info" resname="tx_leseohren.info">
+				<source>Info</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
+				<source>Contact</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
 				<source>Contact</source>
 			</trans-unit>

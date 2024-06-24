@@ -19,6 +19,14 @@
 				<source>Back to list</source>
 				<target>Zurück zur Liste</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.info" resname="tx_leseohren.info">
+				<source>Info</source>
+				<target>Info</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
+				<source>Contact</source>
+				<target>Kontakt</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
 				<source>Contact</source>
 				<target>Kontakt</target>

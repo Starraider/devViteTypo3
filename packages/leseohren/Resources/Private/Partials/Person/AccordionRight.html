@@ -118,27 +118,23 @@
                     <strong>
                         <v:l key="tx_leseohren.ageGroup" />:
                     </strong> <br />
-                    <v:iterator.explode content="{person.preferenceAgegroup}" glue="," as="ageIDs">
-                        <f:for each="{ageIDs}" as="ageID" iteration="ageIterator">
-                            <f:if condition="{ageIterator.isLast}">
-                                <f:then><v:l key="tx_leseohren.ageGroup.{ageID}" /></f:then>
-                                <f:else><v:l key="tx_leseohren.ageGroup.{ageID}" />,</f:else>
-                            </f:if>
-                        </f:for>
-                    </v:iterator.explode>
+                    <f:for each="{person.preferenceAgegroup}" as="ageID" iteration="ageIterator">
+                        <f:if condition="{ageIterator.isLast}">
+                            <f:then><v:l key="tx_leseohren.ageGroup.{ageID}" /></f:then>
+                            <f:else><v:l key="tx_leseohren.ageGroup.{ageID}" />,</f:else>
+                        </f:if>
+                    </f:for>
                 </div>
                 <div class="c-person__preferenceOrganizationType">
                     <strong>
                         <v:l key="tx_leseohren.orgType" />:
                     </strong> <br />
-                    <v:iterator.explode content="{person.preferenceOrganizationType}" glue="," as="orgTypeIDs">
-                        <f:for each="{orgTypeIDs}" as="orgTypeID" iteration="orgTypeIterator">
-                            <f:if condition="{orgTypeIterator.isLast}">
-                                <f:then><v:l key="tx_leseohren.orgType.{orgTypeID}" /></f:then>
-                                <f:else><v:l key="tx_leseohren.orgType.{orgTypeID}" />,</f:else>
-                            </f:if>
-                        </f:for>
-                    </v:iterator.explode>
+                    <f:for each="{person.preferenceOrganizationType}" as="orgTypeID" iteration="orgTypeIterator">
+                        <f:if condition="{orgTypeIterator.isLast}">
+                            <f:then><v:l key="tx_leseohren.orgType.{orgTypeID}" /></f:then>
+                            <f:else><v:l key="tx_leseohren.orgType.{orgTypeID}" />,</f:else>
+                        </f:if>
+                    </f:for>
                 </div>
             </div>
         </div>
