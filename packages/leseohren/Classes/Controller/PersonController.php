@@ -173,7 +173,7 @@ class PersonController extends ActionController
     public function deleteAction(Person $person)
     {
         $this->personRepository->remove($person);
-        $this->addFlashMessage('Die Person wurde aus der Datenbank entfernt!', '', ContextualFeedbackSeverity::INFO);
+        $this->addFlashMessage('Die Person wurde erfolgreich aus der Datenbank entfernt!', '', ContextualFeedbackSeverity::INFO);
         return $this->redirect('list');
     }
 }

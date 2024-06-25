@@ -98,7 +98,7 @@ class BlackboardController extends ActionController
      */
     public function createAction(Blackboard $newBlackboard)
     {
-        $this->addFlashMessage('The new notice board was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Das neue Schwarze Brett wurde erstellt.', '', ContextualFeedbackSeverity::OK);
         $this->blackboardRepository->add($newBlackboard);
         return $this->redirect('list');
     }
@@ -129,7 +129,7 @@ class BlackboardController extends ActionController
      */
     public function updateAction(Blackboard $blackboard)
     {
-        $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Die Änderungen wurden erfolgreich gespeichert.', '', ContextualFeedbackSeverity::OK);
         $this->blackboardRepository->update($blackboard);
         return $this->redirect('list');
     }
@@ -139,7 +139,7 @@ class BlackboardController extends ActionController
      */
     public function deleteAction(Blackboard $blackboard)
     {
-        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Das Schwarze Brett wurde erfolgreich gelöscht.', '', ContextualFeedbackSeverity::OK);
         $this->blackboardRepository->remove($blackboard);
         return $this->redirect('list');
     }

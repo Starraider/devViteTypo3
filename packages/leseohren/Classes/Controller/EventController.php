@@ -95,7 +95,7 @@ class EventController extends ActionController
      */
     public function createAction(Event $newEvent)
     {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Das neue Event wurde erfolgreich gespeichert.', '', ContextualFeedbackSeverity::OK);
         $this->eventRepository->add($newEvent);
         return $this->redirect('list');
     }
@@ -127,7 +127,7 @@ class EventController extends ActionController
      */
     public function updateAction(Event $event)
     {
-        $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Die Änderungen wurden erfolgreich gespeichert.', '', ContextualFeedbackSeverity::OK);
         $this->eventRepository->update($event);
         return $this->redirect('list');
     }
@@ -137,7 +137,7 @@ class EventController extends ActionController
      */
     public function deleteAction(Event $event)
     {
-        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Das Event wurde erfolgreich gelöscht.', '', ContextualFeedbackSeverity::OK);
         $this->eventRepository->remove($event);
         return $this->redirect('list');
     }

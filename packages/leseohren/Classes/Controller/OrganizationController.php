@@ -100,7 +100,7 @@ class OrganizationController extends ActionController
      */
     public function createAction(Organization $newOrganization)
     {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Die neue Organisation wurde erfolgreich erstellt.', '', ContextualFeedbackSeverity::OK);
         $this->organizationRepository->add($newOrganization);
         return $this->redirect('list');
     }
@@ -125,7 +125,7 @@ class OrganizationController extends ActionController
      */
     public function updateAction(Organization $organization)
     {
-        $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Die Änderungen wurden erfolgreich gespeichert.', '', ContextualFeedbackSeverity::OK);
         $this->organizationRepository->update($organization);
         return $this->redirect('list');
     }
@@ -135,7 +135,7 @@ class OrganizationController extends ActionController
      */
     public function deleteAction(Organization $organization)
     {
-        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Die Organisation wurde erfolgreich gelöscht.', '', ContextualFeedbackSeverity::OK);
         $this->organizationRepository->remove($organization);
         return $this->redirect('list');
     }

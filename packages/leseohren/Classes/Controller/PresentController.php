@@ -72,7 +72,7 @@ class PresentController extends ActionController
      */
     public function createAction(Present $newPresent)
     {
-        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Die neue Schenkung wurde erfolgreich gespeichert.', '', ContextualFeedbackSeverity::OK);
         $this->presentRepository->add($newPresent);
         return $this->redirect('list');
     }
@@ -94,7 +94,7 @@ class PresentController extends ActionController
      */
     public function updateAction(Present $present)
     {
-        $this->addFlashMessage('The object was updated. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Die Änderungen wurden erfolgreich gespeichert.', '', ContextualFeedbackSeverity::OK);
         $this->presentRepository->update($present);
         return $this->redirect('list');
     }
@@ -104,7 +104,7 @@ class PresentController extends ActionController
      */
     public function deleteAction(Present $present)
     {
-        $this->addFlashMessage('The object was deleted. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/p/friendsoftypo3/extension-builder/master/en-us/User/Index.html', '', ContextualFeedbackSeverity::WARNING);
+        $this->addFlashMessage('Die Schenkung wurde erfolgreich gelöscht.', '', ContextualFeedbackSeverity::OK);
         $this->presentRepository->remove($present);
         return $this->redirect('list');
     }
