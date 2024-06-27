@@ -95,7 +95,7 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Add category to a blog
+     * Add category to an event
      */
     public function addCategory(Category $category)
     {
@@ -119,7 +119,7 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Remove category from organisation
+     * Remove category from event
      */
     public function removeCategory(Category $category)
     {

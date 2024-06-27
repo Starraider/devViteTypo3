@@ -7,9 +7,11 @@ namespace SKom\Leseohren\Controller;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use SKom\Leseohren\Domain\Repository\EventRepository;
 use Psr\Http\Message\ResponseInterface;
+use SKom\Leseohren\Domain\Repository\CategoryRepository;
 use SKom\Leseohren\Domain\Model\Event;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -35,6 +37,23 @@ class EventController extends ActionController
     public function injectEventRepository(EventRepository $eventRepository)
     {
         $this->eventRepository = $eventRepository;
+    }
+
+    /**
+     * categoryRepository
+     *
+     * @var CategoryRepository
+     */
+    protected $categoryRepository = null;
+
+    public function injectCategoryRepository(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
+
+    public function __construct(PersistenceManager $persistenceManager)
+    {
+        $this->persistenceManager = $persistenceManager;
     }
 
     /**
@@ -77,6 +96,8 @@ class EventController extends ActionController
      */
     public function newAction(): ResponseInterface
     {
+        $categories = $this->categoryRepository->findByParent('18');
+        $this->view->assign('categories', $categories);
         return $this->htmlResponse();
     }
 
@@ -108,6 +129,9 @@ class EventController extends ActionController
     #[IgnoreValidation(['value' => 'event'])]
     public function editAction(Event $event): ResponseInterface
     {
+        // ToDo: Read Parent-ID from Settings
+        $categories = $this->categoryRepository->findByParent('18');
+        $this->view->assign('categories', $categories);
         $this->view->assign('event', $event);
         return $this->htmlResponse();
     }

@@ -9,8 +9,8 @@
     <f:render partial="FormErrors" />
 
     <f:form action="update" name="event" object="{event}" >
-    <f:render partial="Event/FormFields" arguments="{event:event}" />
-    <f:form.submit value="{f:translate(key: 'tx_leseohren.save')}" class="btn btn-primary" />
+        <f:render partial="Event/FormFields" arguments="{event:event, categories:categories}" />
+        <f:form.submit value="{f:translate(key: 'tx_leseohren.save')}" class="btn btn-primary" />
     </f:form>
 </f:section>
 </html>

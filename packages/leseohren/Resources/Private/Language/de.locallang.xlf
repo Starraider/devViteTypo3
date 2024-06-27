@@ -111,6 +111,10 @@
 				<source>Organization Type</source>
 				<target>Organisationstyp</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType.description" resname="tx_leseohren.orgType.description">
+				<source>Press and hold cmd-key to select multiple.</source>
+				<target>Drücke und halte cmd-Taste um mehrere auszuwählen.</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.orgType.0" resname="tx_leseohren.orgType.0">
 				<source>Kindergarten</source>
 				<target>Kindergarten</target>
@@ -834,6 +838,14 @@
 			<trans-unit id="tx_leseohren_domain_model_event.title.description" resname="tx_leseohren_domain_model_event.title.description">
 				<source>Title of the event</source>
 				<target>Titel der Veranstaltung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.categories" resname="tx_leseohren_domain_model_event.categories">
+				<source>Categories</source>
+				<target>Kategorien</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.categories.description" resname="tx_leseohren_domain_model_event.categories.description">
+				<source>Press and hold cmd-key to select multiple.</source>
+				<target>Drücke und halte cmd-Taste um mehrere auszuwählen.</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.description.description" resname="tx_leseohren_domain_model_event.description.description">
 				<source>Description</source>

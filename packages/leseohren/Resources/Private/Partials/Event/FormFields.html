@@ -6,11 +6,20 @@
     <div class="card-header text-bg-primary">Event-Daten</div>
     <div class="card-body">
         <div class="row mb-3">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="title" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_event.title" />:
                 </label>
                 <f:form.textfield property="title" id="title" class="form-control" />
+            </div>
+            <div class="col-sm-6">
+                <label for="categories" class="form-label">
+                    <f:translate key="tx_leseohren_domain_model_event.categories" />:
+                </label>
+                <f:form.select class="form-select" size="5" property="categories" id="categories" multiple="true" options="{categories}" optionValueField="uid" optionLabelField="title" />
+                <div id="categoriesHelpBlock" class="form-text">
+                    <f:translate key="tx_leseohren_domain_model_event.categories.description" />
+                </div>
             </div>
         </div>
         <div class="row mb-3">
