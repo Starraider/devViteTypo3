@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-            <f:for each="{organizations}" as="organization">
+            <f:for each="{organizations}" as="organization" iteration="orgIterator">
                 <tr>
                     <td><f:link.action action="show" arguments="{organization : organization}">{organization.name}</f:link.action></td>
                     <td>
@@ -34,8 +34,11 @@
                     <td>{organization.zip}</td>
                     <td>{organization.city}</td>
                     <td>
-                        <f:link.action action="edit" arguments="{organization : organization}"><i class="bi bi-pencil"></i></f:link.action>
-                        <f:link.action action="delete" arguments="{organization : organization}"><i class="bi bi-trash3"></i></f:link.action>
+                        <f:link.action action="edit" arguments="{organization:organization}"><i class="bi bi-pencil"></i></f:link.action>
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#deleteOrganizationModal{orgIterator.index}">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                        <f:render partial="Organization/DeleteModal" arguments="{organization:organization, orgnr:orgIterator.index}" />
                     </td>
                 </tr>
             </f:for>

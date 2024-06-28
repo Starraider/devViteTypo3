@@ -6,7 +6,7 @@
 
     <f:flashMessages />
 
-        <f:for each="{blackboards}" as="blackboard">
+        <f:for each="{blackboards}" as="blackboard" iteration="blackboardIterator">
             <div class="card c-blackboard">
                 <h3 class="card-header c-blackboard__title">
                     {blackboard.title}
@@ -31,9 +31,10 @@
                     <f:link.action action="edit" arguments="{blackboard : blackboard}" class="btn btn-primary btn-sm">
                         <i class="bi bi-gear"></i>&nbsp;<f:translate key="tx_leseohren.edit" />
                     </f:link.action>
-                    <f:link.action action="delete" arguments="{blackboard : blackboard}" class="btn btn-primary btn-sm">
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#deleteBlackboardModal{blackboardIterator.index}">
                         <i class="bi bi-x-square"></i>&nbsp;<f:translate key="tx_leseohren.delete" />
-                    </f:link.action>
+                    </button>
+                    <f:render partial="Blackboard/DeleteModal" arguments="{blackboard:blackboard, blackboardnr:blackboardIterator.index}" />
                 </div>
             </div>
         </f:for>

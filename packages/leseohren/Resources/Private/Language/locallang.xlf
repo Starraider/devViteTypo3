@@ -12,6 +12,9 @@
 			<trans-unit id="tx_leseohren.delete" resname="tx_leseohren.delete">
 				<source>Delete</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.cancel" resname="tx_leseohren.cancel">
+				<source>Cancel</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.backToList" resname="tx_leseohren.backToList">
 				<source>Back to list</source>
 			</trans-unit>
@@ -255,6 +258,9 @@
 			<trans-unit id="tx_leseohren_domain_model_person.editPerson" resname="tx_leseohren_domain_model_person.editPerson">
 				<source>Edit Person</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.deleteConfirm" resname="tx_leseohren_domain_model_person.deleteConfirm">
+				<source>Do you really want to delete this person?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.firstname" resname="tx_leseohren_domain_model_person.firstname">
 				<source>Firstname</source>
 			</trans-unit>
@@ -480,6 +486,9 @@
 			<trans-unit id="tx_leseohren_domain_model_organization.editOrganization" resname="tx_leseohren_domain_model_organization.editOrganization">
 				<source>Edit Organization</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.deleteConfirm" resname="tx_leseohren_domain_model_organization.deleteConfirm">
+				<source>Do you really want to delete this organization?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.name" resname="tx_leseohren_domain_model_organization.name">
 				<source>Name</source>
 			</trans-unit>
@@ -546,11 +555,17 @@
 			<trans-unit id="tx_leseohren_domain_model_gift.description.description" resname="tx_leseohren_domain_model_gift.description.description">
 				<source>Description</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_gift.deleteConfirm" resname="tx_leseohren_domain_model_gift.deleteConfirm">
+				<source>Do you really want to delete this gift?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present" resname="tx_leseohren_domain_model_present">
 				<source>Present</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present.description" resname="tx_leseohren_domain_model_present.description">
 				<source>Schenkungen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.deleteConfirm" resname="tx_leseohren_domain_model_present.deleteConfirm">
+				<source>Do you really want to delete this present?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present.gift_date" resname="tx_leseohren_domain_model_present.gift_date">
 				<source>Gift Date</source>
@@ -578,6 +593,9 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_blackboard.edit_blackboard" resname="tx_leseohren_domain_model_blackboard.edit_blackboard">
 				<source>Edit Blackboard</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.deleteConfirm" resname="tx_leseohren_domain_model_blackboard.deleteConfirm">
+				<source>Do you really want to delete the Notice Board?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_blackboard.author" resname="tx_leseohren_domain_model_blackboard.author">
 				<source>Author</source>
@@ -614,6 +632,9 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.newEvent" resname="tx_leseohren_domain_model_event.newEvent">
 				<source>New Event</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.deleteConfirm" resname="tx_leseohren_domain_model_event.deleteConfirm">
+				<source>Do you really want to delete this event?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.title" resname="tx_leseohren_domain_model_event.title">
 				<source>Title</source>

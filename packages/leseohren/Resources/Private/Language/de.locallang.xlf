@@ -15,6 +15,10 @@
 				<source>Delete</source>
 				<target>Löschen</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.cancel" resname="tx_leseohren.cancel">
+				<source>Cancel</source>
+				<target>Abbrechen</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.backToList" resname="tx_leseohren.backToList">
 				<source>Back to list</source>
 				<target>Zurück zur Liste</target>
@@ -335,6 +339,10 @@
 				<source>Edit Person</source>
 				<target>Person bearbeiten</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.deleteConfirm" resname="tx_leseohren_domain_model_person.deleteConfirm">
+				<source>Do you really want to delete this person?</source>
+				<target>Soll diese Person wirklich gelöscht werden?</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.firstname" resname="tx_leseohren_domain_model_person.firstname">
 				<source>Firstname</source>
 				<target>Vorname</target>
@@ -635,6 +643,10 @@
 				<source>Edit Organization</source>
 				<target>Organisation bearbeiten</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_organization.deleteConfirm" resname="tx_leseohren_domain_model_person.deleteConfirm">
+				<source>Do you really want to delete this organization?</source>
+				<target>Soll diese Organisation wirklich gelöscht werden?</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.name" resname="tx_leseohren_domain_model_organization.name">
 				<source>Name</source>
 				<target>Name</target>
@@ -723,6 +735,10 @@
 				<source>What is the gift?</source>
 				<target>Was ist das Geschenk?</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_gift.deleteConfirm" resname="tx_leseohren_domain_model_gift.deleteConfirm">
+				<source>Do you really want to delete this gift?</source>
+				<target>Soll dieses Geschenk wirklich gelöscht werden?</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_gift.title" resname="tx_leseohren_domain_model_gift.title">
 				<source>Title</source>
 				<target>Bezeichnung</target>
@@ -742,6 +758,10 @@
 			<trans-unit id="tx_leseohren_domain_model_present.description" resname="tx_leseohren_domain_model_present.description">
 				<source>Donations to this person</source>
 				<target>Schenkungen an diese Person</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.deleteConfirm" resname="tx_leseohren_domain_model_present.deleteConfirm">
+				<source>Do you really want to delete this present?</source>
+				<target>Soll diese Schenkung wirklich gelöscht werden?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present.gift_date" resname="tx_leseohren_domain_model_present.gift_date">
 				<source>Gift Date</source>
@@ -778,6 +798,10 @@
 			<trans-unit id="tx_leseohren_domain_model_blackboard.edit_blackboard" resname="tx_leseohren_domain_model_blackboard.edit_blackboard">
 				<source>Edit Blackboard</source>
 				<target>Schwarzes Brett bearbeiten</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_blackboard.deleteConfirm" resname="tx_leseohren_domain_model_blackboard.deleteConfirm">
+				<source>Do you really want to delete the Notice Board?</source>
+				<target>Soll dieses Schwarze Brett wirklich gelöscht werden?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_blackboard.author" resname="tx_leseohren_domain_model_blackboard.author">
 				<source>Author</source>
@@ -826,6 +850,10 @@
 			<trans-unit id="tx_leseohren_domain_model_event.newEvent" resname="tx_leseohren_domain_model_event.newEvent">
 				<source>New Event</source>
 				<target>Neue Veranstaltung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.deleteConfirm" resname="tx_leseohren_domain_model_event.deleteConfirm">
+				<source>Do you really want to delete this event?</source>
+				<target>Soll diese Veranstaltung wirklich gelöscht werden?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.description.description" resname="tx_leseohren_domain_model_event.description.description">
 				<source>Events like birthdays</source>

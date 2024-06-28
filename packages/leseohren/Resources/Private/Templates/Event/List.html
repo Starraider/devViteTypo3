@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-            <f:for each="{events}" as="event">
+            <f:for each="{events}" as="event" iteration="eventIterator">
                 <tr>
                     <td>
                         {event.startDate -> f:format.date(format: 'Y/m')}
@@ -36,10 +36,13 @@
                             </f:for>
                         </f:if>
                     </td>
-                    <td><f:link.action action="show" arguments="{event : event}">{event.title}</f:link.action></td>
+                    <td><f:link.action action="show" arguments="{event:event}">{event.title}</f:link.action></td>
                     <td>
-                        <f:link.action action="edit" arguments="{event : event}"><i class="bi bi-pencil"></i></f:link.action>
-                        <f:link.action action="delete" arguments="{event : event}"><i class="bi bi-trash3"></i></f:link.action>
+                        <f:link.action action="edit" arguments="{event:event}"><i class="bi bi-pencil"></i></f:link.action>
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#deleteEventModal{eventIterator.index}">
+                            <i class="bi bi-trash3"></i>
+                        </a>
+                        <f:render partial="Event/DeleteModal" arguments="{event:event, eventnr:eventIterator.index}" />
                     </td>
                 </tr>
             </f:for>
