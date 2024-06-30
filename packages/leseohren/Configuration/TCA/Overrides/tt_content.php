@@ -24,3 +24,9 @@ defined('TYPO3') || die();
     'Blackboards',
     'Blackboards'
 );
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+    'Leseohren',
+    'PersonDashboard',
+    'PersonDashboard'
+);

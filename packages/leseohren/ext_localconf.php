@@ -50,6 +50,17 @@ defined('TYPO3') || die();
             \SKom\Leseohren\Controller\BlackboardController::class => 'new, create, edit, update, delete'
         ]
     );
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Leseohren',
+        'PersonDashboard',
+        [
+            \SKom\Leseohren\Controller\PersonDashboardController::class => 'birthdays'
+        ],
+        // non-cacheable actions
+        [
+            \SKom\Leseohren\Controller\PersonDashboardController::class => ''
+        ]
+    );
 
     // wizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -90,6 +101,15 @@ defined('TYPO3') || die();
                         tt_content_defValues {
                             CType = list
                             list_type = leseohren_blackboards
+                        }
+                    }
+                    persondashboard {
+                        iconIdentifier = leseohren-plugin-events
+                        title = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_persondashboard.name
+                        description = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_persondashboard.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = leseohren_persondashboard
                         }
                     }
                 }

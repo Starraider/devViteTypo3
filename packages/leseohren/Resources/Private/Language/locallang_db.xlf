@@ -480,6 +480,12 @@
 			<trans-unit id="tx_leseohren_domain_model_person.bankaccountPalette.description" resname="tx_leseohren_domain_model_person.bankaccountPalette.description">
 				<source>Bank Account</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.name" resname="tx_leseohren_persondashboard.name">
+				<source>Personen-Dashboard</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.description" resname="tx_leseohren_persondashboard.description">
+				<source>Personen-Dashboard</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

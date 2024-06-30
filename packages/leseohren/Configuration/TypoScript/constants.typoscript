@@ -84,3 +84,13 @@ plugin.tx_leseohren_blackboards {
         storagePid = 13
     }
 }
+plugin.tx_leseohren_persondashboard {
+    view {
+        # cat=plugin.tx_leseohren_persondashboard/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:leseohren/Resources/Private/Templates/
+        # cat=plugin.tx_leseohren_persondashboard/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:leseohren/Resources/Private/Partials/
+        # cat=plugin.tx_leseohren_persondashboard/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:leseohren/Resources/Private/Layouts/
+    }
+}

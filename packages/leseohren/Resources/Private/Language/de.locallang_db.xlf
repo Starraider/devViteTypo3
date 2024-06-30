@@ -534,6 +534,15 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.bankaccountPalette.description" resname="tx_leseohren_domain_model_person.bankaccountPalette.description">
 				<source>Bank Account</source>
+				<target>Bankkonto</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.name" resname="tx_leseohren_persondashboard.name">
+				<source>Personen-Dashboard</source>
+				<target>Personen-Dashboard</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.description" resname="tx_leseohren_persondashboard.description">
+				<source>Personen-Dashboard</source>
+				<target>Personen-Dashboard</target>
 			</trans-unit>
 		</body>
 	</file>
