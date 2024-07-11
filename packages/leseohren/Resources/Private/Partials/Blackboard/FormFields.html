@@ -8,11 +8,18 @@
                 <strong>
                     <f:translate key="tx_leseohren_domain_model_blackboard.author" />:
                 </strong>
-                <f:for each="{blackboard.person}" as="author" iteration="authorIterator">
-                    {author.firstname} {author.lastname},
-                    {author.zip} {author.city}
-                </f:for>
-
+                <f:if condition="{blackboard.person}">
+                    <f:then>
+                        <f:for each="{blackboard.person}" as="author" iteration="authorIterator">
+                            {author.firstname} {author.lastname},
+                            {author.zip} {author.city}
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        {person.firstname} {person.lastname},
+                        {person.zip} {person.city}
+                    </f:else>
+                </f:if>
             </div>
         </div>
         <div class="row mb-3">

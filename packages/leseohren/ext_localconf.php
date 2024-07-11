@@ -43,11 +43,11 @@ defined('TYPO3') || die();
         'Leseohren',
         'Blackboards',
         [
-            \SKom\Leseohren\Controller\BlackboardController::class => 'list, index, show, new, create, edit, update, delete'
+            \SKom\Leseohren\Controller\BlackboardController::class => 'list, index, show, new, create, edit, update, delete, deletegoperson'
         ],
         // non-cacheable actions
         [
-            \SKom\Leseohren\Controller\BlackboardController::class => 'new, create, edit, update, delete'
+            \SKom\Leseohren\Controller\BlackboardController::class => 'new, create, edit, update, delete, deletegoperson'
         ]
     );
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
@@ -116,5 +116,9 @@ defined('TYPO3') || die();
                 show = *
             }
         }'
+    );
+    // Register TypeConverter for file upload
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerTypeConverter(
+        \SKom\Leseohren\Property\TypeConverter\UploadedFileReferenceConverter::class
     );
 })();

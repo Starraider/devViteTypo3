@@ -11,6 +11,8 @@ use SKom\Leseohren\Domain\Model\Blackboard;
 use SKom\Leseohren\Domain\Model\Person;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use TYPO3\CMS\Extbase\Http\ForwardResponse;
+use TYPO3\CMS\Core\Utility\DebugUtility;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -95,9 +97,13 @@ class BlackboardController extends ActionController
 
     /**
      * action create
+     *
+     * @param Blackboard $newBlackboard
+     * @param Person $person
      */
-    public function createAction(Blackboard $newBlackboard)
+    public function createAction(Blackboard $newBlackboard, Person $person)
     {
+        $newBlackboard->addPerson($person);
         $this->addFlashMessage('Das neue Schwarze Brett wurde erstellt.', '', ContextualFeedbackSeverity::OK);
         $this->blackboardRepository->add($newBlackboard);
         return $this->redirect('list');
@@ -106,6 +112,7 @@ class BlackboardController extends ActionController
     /**
      * action edit
      *
+     * @param Blackboard $blackboard
      * @return ResponseInterface
      */
     #[IgnoreValidation(['value' => 'blackboard'])]
@@ -126,6 +133,8 @@ class BlackboardController extends ActionController
 
     /**
      * action update
+     *
+     * @param Blackboard $blackboard
      */
     public function updateAction(Blackboard $blackboard)
     {
@@ -134,13 +143,33 @@ class BlackboardController extends ActionController
         return $this->redirect('list');
     }
 
+
+
     /**
      * action delete
+     *
+     * @param Blackboard $blackboard
      */
     public function deleteAction(Blackboard $blackboard)
     {
         $this->addFlashMessage('Das Schwarze Brett wurde erfolgreich gelöscht.', '', ContextualFeedbackSeverity::OK);
         $this->blackboardRepository->remove($blackboard);
         return $this->redirect('list');
+    }
+
+
+    /**
+     * action delete
+     *
+     * @param Blackboard $blackboard
+     */
+    public function deletegopersonAction(Blackboard $blackboard)
+    {
+        $redirectPerson = $blackboard->getPerson();
+        $redirectPID = intval($this->settings['pageIDs']['personShowPid']);
+        //DebugUtility::debug($redirectPID, 'PID');
+        $this->addFlashMessage('Das Schwarze Brett wurde erfolgreich gelöscht.', '', ContextualFeedbackSeverity::OK);
+        $this->blackboardRepository->remove($blackboard);
+        return $this->redirect('show', 'Person', 'Leseohren', ['person' => $redirectPerson[0]], $redirectPID, null, 303);
     }
 }

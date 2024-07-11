@@ -9,20 +9,25 @@
         <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionBlackboard">
             <div class="accordion-body">
                 <f:if condition="{person.blackboards}">
-                    <f:for each="{person.blackboards}" as="blackboard" iteration="boardIterator">
+                    <f:for each="{person.blackboards}" as="blackboard" iteration="blackboardIterator">
                         <div class="c-person_blackboard">
                             {blackboard.title}
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#boardModal{boardIterator.index}">
+                            <!-- Show Modal - Begin -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#boardModal{blackboardIterator.index}">
                                 <i class="bi bi-eye-fill"></i>
                             </a>
+                            <f:render partial="Person/BlackboardModal" arguments="{blackboard:blackboard, blackboardnr:blackboardIterator.index}" />
+                            <!-- Show Modal - End -->
                             <f:link.action pageUid="{settings.pageIDs.blackboardShowPid}" controller="Blackboard" action="edit" arguments="{blackboard: blackboard}">
                                 <i class="bi bi-pencil-fill"></i>
                             </f:link.action>
-                            <f:link.action pageUid="{settings.pageIDs.blackboardShowPid}" controller="Blackboard" action="delete" arguments="{blackboard: blackboard}">
+                            <!-- Delete Modal - Begin -->
+                            <a type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#deleteBlackboardModal{blackboardIterator.index}">
                                 <i class="bi bi-trash-fill"></i>
-                            </f:link.action>
+                            </a>
+                            <f:render partial="Blackboard/DeleteModal" arguments="{blackboard:blackboard, blackboardnr:blackboardIterator.index, person: person}" />
+                            <!-- Delete Modal - End -->
                         </div>
-                        <f:render partial="Person/BlackboardModal" arguments="{blackboard: blackboard, boardIterator:boardIterator}" />
                     </f:for>
                 </f:if>
                 <f:link.action pageUid="{settings.pageIDs.blackboardShowPid}" controller="Blackboard" action="new" arguments="{person: person}"
