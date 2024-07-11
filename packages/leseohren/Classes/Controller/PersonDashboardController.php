@@ -63,7 +63,7 @@ class PersonDashboardController extends ActionController
     {
         $categories = $this->categoryRepository->findByParent('1');
         $this->view->assign('categories', $categories);
-        $people = $this->personRepository->findAll();
+        $people = $this->personRepository->upcomingBirthdays();
         $this->view->assign('people', $people);
         return $this->htmlResponse();
     }

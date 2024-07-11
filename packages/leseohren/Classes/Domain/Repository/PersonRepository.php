@@ -28,6 +28,21 @@ class PersonRepository extends Repository
         $this->setDefaultQuerySettings($querySettings);
     }
 
+    /**
+     * Find all persons having a birthday today
+     *
+     * @return QueryResultInterface
+     */
+    public function upcomingBirthdays()
+    {
+        $query = $this->createQuery();
+        $query->matching(
+            $query->greaterThanOrEqual('birthday', new \DateTime('today'))
+        );
+        $query->setOrderings(['birthday' => QueryInterface::ORDER_ASCENDING]);
+        return $query->execute();
+    }
+
     protected $defaultOrderings = [
         'lastname' => QueryInterface::ORDER_ASCENDING,
         'firstname' => QueryInterface::ORDER_ASCENDING
