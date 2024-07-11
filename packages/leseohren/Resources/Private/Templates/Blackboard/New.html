@@ -2,15 +2,14 @@
 <f:layout name="Default" />
 
 <f:section name="content">
-    <h1>New Blackboard</h1>
+    <h1><f:translate key="tx_leseohren_domain_model_blackboard.newBlackboard" /></h1>
 
     <f:flashMessages />
 
     <f:render partial="FormErrors" />
-
     <f:form action="create" name="newBlackboard" arguments="{person:person}" object="{newBlackboard}">
-    <f:render partial="Blackboard/FormFields" arguments="{person:person, blackboard:blackboard}" />
-    <f:form.submit value="Create new" />
+        <f:render partial="Blackboard/FormFields" arguments="{person:person, blackboard:blackboard}" />
+        <f:form.submit value="{f:translate(key: 'tx_leseohren.save')}" class="btn btn-primary" />
     </f:form>
 </f:section>
 </html>
