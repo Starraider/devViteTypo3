@@ -34,5 +34,11 @@ $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
             'devIPmask' => '*',
             'displayErrors' => getenv('TYPO3_DISPLAY_ERRORS'),
         ],
+        'FE' => [
+            'debug' => getenv('TYPO3_FE_DEBUG'),
+        ],
+        'BE' => [
+            'debug' => getenv('TYPO3_BE_DEBUG'),
+        ],
     ]
 );
