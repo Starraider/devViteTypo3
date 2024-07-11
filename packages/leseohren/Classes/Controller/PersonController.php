@@ -13,7 +13,10 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 //use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Core\Utility\DebugUtility;
 use SKom\Leseohren\Domain\Repository\CategoryRepository;
+use SKom\Leseohren\Property\TypeConverter\UploadedFileReferenceConverter;
+use TYPO3\CMS\Extbase\Property\PropertyMappingConfiguration;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
+
 
 
 /**
@@ -55,9 +58,41 @@ class PersonController extends ActionController
     }
 
 
-    public function __construct(PersistenceManager $persistenceManager)
+    public function PersistenceManager__construct( $persistenceManager)
     {
         $this->persistenceManager = $persistenceManager;
+    }
+
+    /**
+     * Set TypeConverter configuration for file upload
+     *
+     * @param string
+     */
+    protected function setTypeConverterConfigurationForFileUpload($argumentName): void
+    {
+        $uploadConfiguration = [
+            UploadedFileReferenceConverter::CONFIGURATION_ALLOWED_FILE_EXTENSIONS =>
+                'pdf,doc,docx,xls,xlsx,ppt,pptx,odt,ods,odp,txt,rtf',
+            UploadedFileReferenceConverter::CONFIGURATION_UPLOAD_FOLDER =>
+                '1:/uploadedfiles/',
+        ];
+        /** @var PropertyMappingConfiguration $propertyMappingConfiguration */
+        $propertyMappingConfiguration = $this->arguments[$argumentName]->getPropertyMappingConfiguration();
+        $propertyMappingConfiguration->forProperty('file_fuehrungszeugnis')
+            ->setTypeConverterOptions(
+                UploadedFileReferenceConverter::class,
+                $uploadConfiguration
+            );
+        $propertyMappingConfiguration->forProperty('file_mandat')
+            ->setTypeConverterOptions(
+                UploadedFileReferenceConverter::class,
+                $uploadConfiguration
+            );
+        $propertyMappingConfiguration->forProperty('file_others')
+            ->setTypeConverterOptions(
+                UploadedFileReferenceConverter::class,
+                $uploadConfiguration
+            );
     }
 
     /**
@@ -89,6 +124,7 @@ class PersonController extends ActionController
      */
     public function showAction(Person $person): ResponseInterface
     {
+        //DebugUtility::debug($person, 'Person');
         $this->view->assign('person', $person);
         return $this->htmlResponse();
     }
@@ -116,6 +152,7 @@ class PersonController extends ActionController
         $this->arguments->getArgument('newPerson')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('languages', 'array');
         $this->arguments->getArgument('newPerson')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('preferenceAgegroup', 'array');
         $this->arguments->getArgument('newPerson')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('preferenceOrganizationType', 'array');
+        $this->setTypeConverterConfigurationForFileUpload('newPerson');
     }
 
 
@@ -155,6 +192,7 @@ class PersonController extends ActionController
         $this->arguments->getArgument('person')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('languages', 'array');
         $this->arguments->getArgument('person')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('preferenceAgegroup', 'array');
         $this->arguments->getArgument('person')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('preferenceOrganizationType', 'array');
+        $this->setTypeConverterConfigurationForFileUpload('person');
     }
 
     /**
