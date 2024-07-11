@@ -19,7 +19,9 @@
                         &nbsp;&nbsp;&nbsp;
                         <strong><f:translate key="tx_leseohren_domain_model_blackboard.author" />:</strong>
                         <f:for each="{blackboard.person}" as="author" iteration="authorIterator">
-                            {author.firstname} {author.lastname},
+                            <f:link.action pageUid="{settings.pageIDs.personShowPid}" action="show" controller="Person" arguments="{person : author}" >
+                                {author.firstname} {author.lastname}
+                            </f:link.action>,
                             {author.zip} {author.city}
                         </f:for>
                     </p>
