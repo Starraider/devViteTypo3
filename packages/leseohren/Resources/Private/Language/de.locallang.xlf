@@ -23,6 +23,10 @@
 				<source>Back to list</source>
 				<target>Zurück zur Liste</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.archive" resname="tx_leseohren.archive">
+				<source>Archive</source>
+				<target>Archiv</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.info" resname="tx_leseohren.info">
 				<source>Info</source>
 				<target>Info</target>
@@ -31,9 +35,9 @@
 				<source>Contact</source>
 				<target>Kontakt</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
-				<source>Contact</source>
-				<target>Kontakt</target>
+			<trans-unit id="tx_leseohren.actions" resname="tx_leseohren.actions">
+				<source>Actions</source>
+				<target>Aktionen</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.gender.0" resname="tx_leseohren.gender.0">
 				<source>female</source>
@@ -359,6 +363,22 @@
 				<source>Lastname of the person</source>
 				<target>Nachname der Person</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.title" resname="tx_leseohren_domain_model_person.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.title.description" resname="tx_leseohren_domain_model_person.title.description">
+				<source>f.e. Dr., Prof., M.A., MdL, MdB</source>
+				<target>Wie Dr., Prof., M.A., MdL, MdB</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.job" resname="tx_leseohren_domain_model_person.job">
+				<source>Job</source>
+				<target>Beruf</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.job.description" resname="tx_leseohren_domain_model_person.job.description">
+				<source>What's her/his job?</source>
+				<target>Beruf der Person</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.gender" resname="tx_leseohren_domain_model_person.gender">
 				<source>Gender</source>
 				<target>Geschlecht</target>
@@ -583,13 +603,17 @@
 				<source>Paypal number</source>
 				<target>Paypal-Nummer</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.files" resname="tx_leseohren_domain_model_person.files">
+				<source>Files</source>
+				<target>Dateien</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis">
 				<source>Certificate of good conduct</source>
 				<target>Führungszeugnis</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description">
 				<source>Certificate of good conduct</source>
-				<target>Führungszeugnis der Person</target>
+				<target>Nur pdf,doc,xls Dateien erlaubt</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
 				<source>Mandate</source>

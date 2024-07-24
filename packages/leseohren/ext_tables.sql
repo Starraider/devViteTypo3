@@ -2,6 +2,8 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	gender int(11) DEFAULT '0' NOT NULL,
 	firstname varchar(255) NOT NULL DEFAULT '',
 	lastname varchar(255) NOT NULL DEFAULT '',
+	title varchar(255) NOT NULL DEFAULT '',
+	job varchar(255) NOT NULL DEFAULT '',
 	street1 varchar(255) NOT NULL DEFAULT '',
 	street2 varchar(255) NOT NULL DEFAULT '',
 	zip varchar(255) NOT NULL DEFAULT '',

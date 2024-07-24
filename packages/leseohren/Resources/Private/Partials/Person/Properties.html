@@ -3,7 +3,9 @@
 <div class="container c-person">
     <div class="row">
         <div class="col-9 row-header">
-            <h1 class="c-person__name">{person.lastname}, {person.firstname}
+            <h1 class="c-person__name">
+                <f:if condition="{person.title}">{person.title}&nbsp;</f:if>
+                {person.lastname}, {person.firstname}
                 <small class="c-person__gender-icon">
                     <f:switch expression="{person.gender}">
                         <f:case value="0"><i class="bi bi-gender-female"></i></f:case>

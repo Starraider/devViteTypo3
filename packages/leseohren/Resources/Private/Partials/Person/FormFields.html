@@ -1,5 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 {namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace leseohren=FluidTYPO3\Leseohren\ViewHelpers}
 
 <div class="card">
     <div class="card-header text-bg-primary">Personen-Daten</div>
@@ -20,6 +21,12 @@
         </div>
         <div class="row mb-3">
             <div class="col-sm-6">
+                <label for="title" class="form-label">
+                    <f:translate key="tx_leseohren_domain_model_person.title" />:
+                </label>
+                <f:form.textfield property="title" id="title" class="form-control" />
+            </div>
+            <div class="col-sm-6">
                 <label for="gender" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_person.gender" />:
                 </label>
@@ -30,6 +37,14 @@
                         </f:form.select.option>
                     </v:iterator.loop>
                 </f:form.select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-6">
+                <label for="job" class="form-label">
+                    <f:translate key="tx_leseohren_domain_model_person.job" />:
+                </label>
+                <f:form.textfield property="job" id="job" class="form-control" />
             </div>
             <div class="col-sm-6">
                 <label for="birthday" class="form-label">
@@ -279,6 +294,22 @@
                 </f:form.select>
                 <div id="preferenceOrganizationTypeHelpBlock" class="form-text">
                     <f:translate key="tx_leseohren.orgType.description" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-header text-bg-primary"><f:translate key="tx_leseohren_domain_model_person.files" /></div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-sm-12">
+                    <label for="fileFuehrungszeugnis" class="form-label">
+                        <f:translate key="tx_leseohren_domain_model_person.file_fuehrungszeugnis" />:
+                    </label>
+                    <f:form.upload property="fileFuehrungszeugnis" id="fileFuehrungszeugnis" class="form-control" accept=".pdf,.doc,.docx,.xls,.xlsx" />
+                    <div id="fileFuehrungszeugnisHelpBlock" class="form-text">
+                        <f:translate key="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" />
+                    </div>
                 </div>
             </div>
         </div>

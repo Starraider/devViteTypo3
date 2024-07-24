@@ -18,14 +18,17 @@
 			<trans-unit id="tx_leseohren.backToList" resname="tx_leseohren.backToList">
 				<source>Back to list</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.archive" resname="tx_leseohren.archive">
+				<source>Archive</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.info" resname="tx_leseohren.info">
 				<source>Info</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
 				<source>Contact</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
-				<source>Contact</source>
+			<trans-unit id="tx_leseohren.actions" resname="tx_leseohren.actions">
+				<source>Actions</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.gender.0" resname="tx_leseohren.gender.0">
 				<source>weiblich</source>
@@ -273,6 +276,18 @@
 			<trans-unit id="tx_leseohren_domain_model_person.lastname.description" resname="tx_leseohren_domain_model_person.lastname.description">
 				<source>Lastname</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.title" resname="tx_leseohren_domain_model_person.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.title.description" resname="tx_leseohren_domain_model_person.title.description">
+				<source>f.e. Dr., Prof., M.A., MdL, MdB</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.job" resname="tx_leseohren_domain_model_person.job">
+				<source>Job</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.job.description" resname="tx_leseohren_domain_model_person.job.description">
+				<source>What's her/his job?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.gender" resname="tx_leseohren_domain_model_person.gender">
 				<source>Gender</source>
 			</trans-unit>
@@ -441,11 +456,14 @@
 			<trans-unit id="tx_leseohren_domain_model_person.paypal.description" resname="tx_leseohren_domain_model_person.paypal.description">
 				<source>Paypal</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.files" resname="tx_leseohren_domain_model_person.files">
+				<source>Files</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis">
-				<source>File Fuehrungszeugnis</source>
+				<source>Certificate of good conduct</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description">
-				<source>File Fuehrungszeugnis</source>
+				<source>pdf,doc,xls files are allowed</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
 				<source>File Mandat</source>

@@ -23,7 +23,7 @@ return [
     'types' => [
         '1' => ['showitem' => '
                 --div--;Person,
-                    firstname, lastname, gender, birthday,
+                    firstname, lastname, gender, title, job, birthday,
                     --palette--;;addressPalette,
                     --palette--;;contactPalette,
                     notes,
@@ -163,6 +163,30 @@ return [
                 'eval' => 'trim',
                 'default' => '',
                 'required' => true
+            ],
+        ],
+        'title' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.title',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.title.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+                'default' => '',
+                'required' => false
+            ],
+        ],
+        'job' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.job',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.job.description',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim',
+                'default' => '',
+                'required' => false
             ],
         ],
         'birthday' => [

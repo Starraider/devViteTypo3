@@ -36,6 +36,23 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.lastname.description" resname="tx_leseohren_domain_model_person.lastname.description">
 				<source></source>
+				<target></target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.title" resname="tx_leseohren_domain_model_person.title">
+				<source>Title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.title.description" resname="tx_leseohren_domain_model_person.title.description">
+				<source>f.e. Dr., Prof., M.A., MdL, MdB</source>
+				<source>Wie Dr., Prof., M.A., MdL, MdB</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.job" resname="tx_leseohren_domain_model_person.job">
+				<source>Job</source>
+				<target>Beruf</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.job.description" resname="tx_leseohren_domain_model_person.job.description">
+				<source>What's her/his job?</source>
+				<target>Beruf der Person</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.birthday" resname="tx_leseohren_domain_model_person.birthday">
 				<source>Birthday</source>

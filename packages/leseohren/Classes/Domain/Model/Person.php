@@ -56,6 +56,20 @@ class Person extends AbstractEntity
     protected $lastname = '';
 
     /**
+     * Title
+     *
+     * @var string
+     */
+    protected $title = '';
+
+    /**
+     * Job
+     *
+     * @var string
+     */
+    protected $job = '';
+
+    /**
      * birthday
      *
      * @var \DateTime
@@ -397,6 +411,46 @@ class Person extends AbstractEntity
     public function setLastname(string $lastname)
     {
         $this->lastname = $lastname;
+    }
+
+    /**
+     * Returns the title
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Sets the title
+     *
+     * @return void
+     */
+    public function setTitle(string $title)
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * Returns the job
+     *
+     * @return string
+     */
+    public function getJob()
+    {
+        return $this->job;
+    }
+
+    /**
+     * Sets the job
+     *
+     * @return void
+     */
+    public function setJob(string $job)
+    {
+        $this->job = $job;
     }
 
     /**
