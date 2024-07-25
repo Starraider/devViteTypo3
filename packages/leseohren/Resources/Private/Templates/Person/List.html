@@ -55,7 +55,7 @@
                     </td>
                     <td>
                         <f:link.action action="edit" arguments="{person:person}" class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i></f:link.action>
-                        <a type="button" data-bs-toggle="modal" data-bs-target="#deletePersonModal{personIterator.index}">
+                        <a type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#deletePersonModal{personIterator.index}">
                             <i class="bi bi-trash3"></i>
                         </a>
                         <f:render partial="Person/DeleteModal" arguments="{person:person, personnr:personIterator.index}" />
