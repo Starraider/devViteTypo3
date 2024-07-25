@@ -31,7 +31,7 @@ defined('TYPO3') || die();
         'Leseohren',
         'Events',
         [
-            \SKom\Leseohren\Controller\EventController::class => 'list, index, show, new, create, edit, update, delete'
+            \SKom\Leseohren\Controller\EventController::class => 'list, listPast, index, show, new, create, edit, update, delete'
         ],
         // non-cacheable actions
         [

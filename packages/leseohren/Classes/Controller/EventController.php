@@ -73,7 +73,19 @@ class EventController extends ActionController
      */
     public function listAction(): ResponseInterface
     {
-        $events = $this->eventRepository->findAll();
+        $events = $this->eventRepository->findUpcomingEvents();
+        $this->view->assign('events', $events);
+        return $this->htmlResponse();
+    }
+
+    /**
+     * action listPast
+     *
+     * @return ResponseInterface
+     */
+    public function listPastAction(): ResponseInterface
+    {
+        $events = $this->eventRepository->findPastEvents();
         $this->view->assign('events', $events);
         return $this->htmlResponse();
     }
