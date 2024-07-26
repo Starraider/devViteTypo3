@@ -30,6 +30,7 @@ return [
                 location,
                 categories,
             --div--;Teilnehmer,
+                maxparticipants,
                 participants,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
                 hidden,
@@ -163,6 +164,16 @@ return [
                 'size' => 10,
                 'autoSizeMax' => 20,
             ],
+        ],
+        'maxparticipants' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.maxparticipants',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.maxparticipants.description',
+            'config' => [
+                'type' => 'number',
+                'size' => 4,
+                'default' => 0
+            ]
         ],
     ],
 ];

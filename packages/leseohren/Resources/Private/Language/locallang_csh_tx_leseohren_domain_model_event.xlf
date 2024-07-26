@@ -21,6 +21,9 @@
 			<trans-unit id="participants.description" resname="participants.description">
 				<source>Participants</source>
 			</trans-unit>
+			<trans-unit id="maxparticipants.description" resname="maxparticipants.description">
+				<source>max. Number of Participants</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

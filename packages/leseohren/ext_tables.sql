@@ -76,5 +76,6 @@ CREATE TABLE tx_leseohren_domain_model_event (
 	title varchar(255) NOT NULL DEFAULT '',
 	description text NOT NULL DEFAULT '',
 	location text NOT NULL DEFAULT '',
-	participants int(11) unsigned NOT NULL DEFAULT '0'
+	participants int(11) unsigned NOT NULL DEFAULT '0',
+	maxparticipants int(11) unsigned DEFAULT '0' NOT NULL
 );

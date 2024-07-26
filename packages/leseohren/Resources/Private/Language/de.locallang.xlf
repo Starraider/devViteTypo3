@@ -403,6 +403,14 @@
 				<source>Birthday</source>
 				<target>Geburtstag</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.birthday.description" resname="tx_leseohren_domain_model_person.birthday.description">
+				<source>f.e. 09.11.1970</source>
+				<target>z.B. 09.11.1970</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.age" resname="tx_leseohren_domain_model_person.age">
+				<source>Age</source>
+				<target>Alter</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.categories" resname="tx_leseohren_domain_model_person.categories">
 				<source>Categories</source>
 				<target>Kategorien</target>
@@ -938,6 +946,14 @@
 			<trans-unit id="tx_leseohren_domain_model_event.participants.description" resname="tx_leseohren_domain_model_event.participants.description">
 				<source>Who takes part in this event?</source>
 				<target>Wer nimmt an dieser Veranstaltung teil?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants" resname="tx_leseohren_domain_model_event.maxparticipants">
+				<source>Max. Participants</source>
+				<target>Max. Teilnehmeranzahl</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants.description" resname="tx_leseohren_domain_model_event.maxparticipants.description">
+				<source>How many people can take part?</source>
+				<target>Wieviele können teilnehmen?</target>
 			</trans-unit>
 		</body>
 	</file>

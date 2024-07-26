@@ -453,6 +453,12 @@
 			<trans-unit id="tx_leseohren_domain_model_event.participants.description" resname="tx_leseohren_domain_model_event.participants.description">
 				<source>Participants</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants" resname="tx_leseohren_domain_model_event.maxparticipants">
+				<source>max. Number of Participants</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants.description" resname="tx_leseohren_domain_model_event.maxparticipants.description">
+				<source>How many people can take part?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_personen.name" resname="tx_leseohren_personen.name">
 				<source>Personen</source>
 			</trans-unit>

@@ -73,6 +73,13 @@ class Event extends AbstractEntity
     protected $participants = null;
 
     /**
+     * maxparticipants
+     *
+     * @var int
+     */
+    protected $maxparticipants = 0;
+
+    /**
      * __construct
      */
     public function __construct()
@@ -266,5 +273,25 @@ class Event extends AbstractEntity
     public function setParticipants(ObjectStorage $participants)
     {
         $this->participants = $participants;
+    }
+
+    /**
+     * Returns the maxparticipants
+     *
+     * @return int
+     */
+    public function getMaxparticipants()
+    {
+        return $this->maxparticipants;
+    }
+
+    /**
+     * Sets the maxparticipants
+     *
+     * @return void
+     */
+    public function setMaxparticipants(int $maxparticipants)
+    {
+        $this->maxparticipants = $maxparticipants;
     }
 }

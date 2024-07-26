@@ -35,7 +35,7 @@
             <div class="row">
                 <div class="col-8">
                     {event.description -> f:format.html()}
-                    <h3>Participants</h3>
+                    <h3>Participants <small>(max. {event.maxparticipants})</small></h3>
                     <f:if condition="{event.participants}">
                         <f:then>
                             <f:render partial="Event/ParticipantsList" arguments="{event: event}" />
