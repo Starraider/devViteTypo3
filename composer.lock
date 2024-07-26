@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3189c78dc837a2e835631f4e4281a45",
+    "content-hash": "34e5b4f5e6a5f4da59c159a48d19f762",
     "packages": [
         {
             "name": "b13/container",
@@ -290,6 +290,88 @@
                 "source": "https://github.com/ChristianRiesen/base32/tree/1.6.0"
             },
             "time": "2021-02-26T10:19:33+00:00"
+        },
+        {
+            "name": "codingfreaks/cf-cookiemanager",
+            "version": "v1.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eibiflo/cf_cookiemanager.git",
+                "reference": "13e92b0663aab77d50bb05451aaad540c086e3ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eibiflo/cf_cookiemanager/zipball/13e92b0663aab77d50bb05451aaad540c086e3ca",
+                "reference": "13e92b0663aab77d50bb05451aaad540c086e3ca",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-libxml": "*",
+                "ext-xml": "*",
+                "php": "^8.1 || ^8.2 || ^8.3",
+                "typo3/cms-core": "^12.4 || ^13.0",
+                "typo3/cms-dashboard": "^12.4 || ^13.0"
+            },
+            "replace": {
+                "typo3-ter/cf-cookiemanager": "self.version"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.2 || ^5.0.10",
+                "codeception/lib-asserts": "^1.0.0 || ^2.1.0",
+                "codeception/module-asserts": "^2.0.0 || ^3.0.0",
+                "codeception/module-cli": "^2.0.1",
+                "codeception/module-filesystem": "^2.0.2 || ^3.0.0",
+                "codeception/module-webdriver": "^2.0.4 || ^4.0.0",
+                "phpunit/phpunit": "^9 || ^10.1",
+                "typo3/cms-dashboard": "^12.4 || ^13.0",
+                "typo3/cms-fluid-styled-content": "^12.4 || ^13.0",
+                "typo3/cms-frontend": "^12.4 || ^13.0",
+                "typo3/cms-seo": "^12.4 || ^13.0",
+                "typo3/cms-tstemplate": "^12.4 || ^13.0",
+                "typo3/testing-framework": "^8.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "web-dir": ".Build/public",
+                    "extension-key": "cf_cookiemanager"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CodingFreaks\\CfCookiemanager\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Eibisberger",
+                    "email": "cookiemanager@coding-freaks.com",
+                    "homepage": "https://cookieapi.coding-freaks.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Ensure your website's privacy and compliance with the CodingFreaks Cookie Manager - a robust, GDPR-compliant solution for your Typo3 Website. Manage your Thirdparty-Cookies on a new Level!",
+            "keywords": [
+                "cms",
+                "consent",
+                "cookie",
+                "dsgvo",
+                "gdpr",
+                "manager",
+                "plugin",
+                "scanner",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/eibiflo/cf_cookiemanager/issues",
+                "source": "https://github.com/eibiflo/cf_cookiemanager/tree/v1.6.3"
+            },
+            "time": "2024-06-18T15:12:00+00:00"
         },
         {
             "name": "contentblocks/content-blocks",

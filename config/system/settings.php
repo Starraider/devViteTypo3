@@ -48,6 +48,18 @@ return [
             'disablePageTsTCEFORM' => '0',
             'disablePageTsTCEMAIN' => '0',
         ],
+        'cf_cookiemanager' => [
+            'CF_CONSENTMODAL_TEMPLATE' => 'EXT:cf_cookiemanager/Resources/Static/consentmodal.html',
+            'CF_SCRIPTBLOCKER' => 'EXT:cf_cookiemanager/Resources/Static/scriptblocker.html',
+            'CF_SETTINGSMODAL_CATEGORY_TEMPLATE' => 'EXT:cf_cookiemanager/Resources/Static/settingsmodal_category.html',
+            'CF_SETTINGSMODAL_TEMPLATE' => 'EXT:cf_cookiemanager/Resources/Static/settingsmodal.html',
+            'disablePlugin' => '0',
+            'endPoint' => 'https://cookieapi.coding-freaks.com/api/',
+            'scanApiKey' => 'scantoken',
+            'scriptBlocking' => '0',
+            'trackingEnabled' => '0',
+            'trackingObfuscate' => '0',
+        ],
         'extension_builder' => [
             'backupDir' => 'var/tx_extensionbuilder/backups',
             'backupExtension' => '1',
@@ -57,13 +69,6 @@ return [
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
-        ],
-        'klaro_consent_manager' => [
-            'klaroConfigurationPath' => '',
-            'replaceUrl' => [
-                'reset' => 'https://KLARO_RESET.com',
-                'show' => 'https://KLARO_CONSENT.com',
-            ],
         ],
         'news' => [
             'advancedMediaPreview' => '1',

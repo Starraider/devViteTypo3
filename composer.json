@@ -14,6 +14,7 @@
 	"require": {
 		"b13/container": "^2.2",
 		"bk2k/bootstrap-package": "^14.0",
+		"codingfreaks/cf-cookiemanager": "^1.6",
 		"contentblocks/content-blocks": "^0.4",
 		"fluidtypo3/vhs": "^7.0",
 		"georgringer/news": "^11.2",
