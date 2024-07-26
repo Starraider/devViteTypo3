@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/Starraider/devViteTypo3/compare/1.0.0...v1.0.1) (2024-07-26)
+
+
+### Miscellaneous Chores
+
+* **develop:** release 1.0.0 ([e69f8ae](https://github.com/Starraider/devViteTypo3/commit/e69f8aec1eeff339c4143bef60cb8e01c0ab700b))
+
 ## 1.0.0 (2024-07-26)
 
 
