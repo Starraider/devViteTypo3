@@ -15,7 +15,6 @@
 		"b13/container": "^2.2",
 		"bk2k/bootstrap-package": "^14.0",
 		"contentblocks/content-blocks": "^0.4",
-		"erhaweb/klaro-consent-manager": "^1.2",
 		"fluidtypo3/vhs": "^7.0",
 		"georgringer/news": "^11.2",
 		"helhum/dotenv-connector": "^3.0",

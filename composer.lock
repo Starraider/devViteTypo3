@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5645ae9e60ca6a22f03fd7545203e84c",
+    "content-hash": "b3189c78dc837a2e835631f4e4281a45",
     "packages": [
         {
             "name": "b13/container",
@@ -1102,78 +1102,6 @@
                 "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.18.0"
             },
             "time": "2024-02-22T17:51:05+00:00"
-        },
-        {
-            "name": "erhaweb/klaro-consent-manager",
-            "version": "1.8.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ErHaWeb/klaro_consent_manager.git",
-                "reference": "86a13e38b0a48f7fdf6784e78f0fba7fb5144105"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ErHaWeb/klaro_consent_manager/zipball/86a13e38b0a48f7fdf6784e78f0fba7fb5144105",
-                "reference": "86a13e38b0a48f7fdf6784e78f0fba7fb5144105",
-                "shasum": ""
-            },
-            "require": {
-                "ext-pdo": "*",
-                "php": "^7.4 || ^8.0 || ^8.1 || ^8.2 || ^8.3",
-                "typo3/cms-core": "^10.4 || ^11.5 || ^12.4"
-            },
-            "replace": {
-                "typo3-ter/klaro-consent-manager": "self.version"
-            },
-            "require-dev": {
-                "roave/security-advisories": "dev-latest",
-                "typo3/testing-framework": "^6.9.0"
-            },
-            "type": "typo3-cms-extension",
-            "extra": {
-                "typo3/cms": {
-                    "web-dir": ".Build/public",
-                    "extension-key": "klaro_consent_manager"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "ErHaWeb\\KlaroConsentManager\\": "Classes"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Eric Harrer",
-                    "email": "info@eric-harrer.de",
-                    "homepage": "https://www.eric-harrer.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Functionally complete, flexible TYPO3 integration of Klaro! Consent Management by KIProtect. Klaro! is a powerful tool that protects your visitors' privacy and data and helps you run a GDPR compliant website.",
-            "homepage": "https://extensions.typo3.org/extension/klaro_consent_manager",
-            "keywords": [
-                "Consent Manager",
-                "Klaro",
-                "extension",
-                "gdpr",
-                "typo3"
-            ],
-            "support": {
-                "docs": "https://github.com/ErHaWeb/klaro_consent_manager#readme",
-                "issues": "https://github.com/ErHaWeb/klaro_consent_manager/issues",
-                "source": "https://github.com/ErHaWeb/klaro_consent_manager"
-            },
-            "funding": [
-                {
-                    "type": "other",
-                    "url:": "https://www.paypal.com/paypalme/ebode"
-                }
-            ],
-            "time": "2024-06-07T22:15:32+00:00"
         },
         {
             "name": "firebase/php-jwt",
