@@ -1,8 +1,0 @@
-#############
-#### RTE ####
-#############
-RTE {
-    default {
-        preset = skom_addresses
-    }
-}

@@ -56,7 +56,7 @@
 		"mittwald/deployer-recipes": "@dev",
 		"seld/jsonlint": "^1.10",
 		"squizlabs/php_codesniffer": "^3.9",
-		"ssch/typo3-rector": "^2.0",
+		"ssch/typo3-rector": "^2.6",
 		"typo3/cms-styleguide": "^12.0",
 		"typo3/testing-framework": "^8.0"
 	},

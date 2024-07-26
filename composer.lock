@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9fccd85bb15b1276142c62b92d919afb",
+    "content-hash": "5645ae9e60ca6a22f03fd7545203e84c",
     "packages": [
         {
             "name": "b13/container",
