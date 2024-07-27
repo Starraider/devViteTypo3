@@ -1,4 +1,5 @@
 <?php
+
 /**
  * FileReference Domain Model
  *
@@ -9,7 +10,7 @@
 
 namespace ExtbaseBook\Simpleblog\Domain\Model;
 
-use \TYPO3\CMS\Core\Resource\ResourceInterface;
+use TYPO3\CMS\Core\Resource\ResourceInterface;
 
 /**
  * Domain Model: FileReference

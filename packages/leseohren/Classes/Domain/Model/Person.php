@@ -11,7 +11,7 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Domain\Model\Category;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Annotation\Validate;
-use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -27,7 +27,6 @@ use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
  */
 class Person extends AbstractEntity
 {
-
     /**
      * @var ObjectStorage<Category>
      */
@@ -1097,7 +1096,7 @@ class Person extends AbstractEntity
      */
     public function removeEvent(Event $eventToRemove): void
     {
-        $this->events>detach($eventToRemove);
+        $this->events->detach($eventToRemove);
     }
 
     /**
@@ -1138,7 +1137,7 @@ class Person extends AbstractEntity
      */
     public function removeOrganization(Organization $organizationToRemove): void
     {
-        $this->organizations>detach($organizationToRemove);
+        $this->organizations->detach($organizationToRemove);
     }
 
     /**

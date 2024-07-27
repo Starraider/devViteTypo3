@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace SKom\Leseohren\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use SKom\Leseohren\Domain\Repository\GiftRepository;
 use Psr\Http\Message\ResponseInterface;
-use SKom\Leseohren\Domain\Model\Gift;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use SKom\Leseohren\Domain\Model\Gift;
+use SKom\Leseohren\Domain\Repository\GiftRepository;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -32,7 +32,7 @@ class GiftController extends ActionController
      */
     protected $giftRepository = null;
 
-    public function __construct(\SKom\Leseohren\Domain\Repository\GiftRepository $giftRepository)
+    public function __construct(GiftRepository $giftRepository)
     {
         $this->giftRepository = $giftRepository;
     }

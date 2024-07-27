@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace SKom\Leseohren\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use SKom\Leseohren\Domain\Repository\EventRepository;
 use Psr\Http\Message\ResponseInterface;
-use SKom\Leseohren\Domain\Repository\CategoryRepository;
-use SKom\Leseohren\Domain\Model\Event;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
+use SKom\Leseohren\Domain\Repository\EventRepository;
+use SKom\Leseohren\Domain\Repository\CategoryRepository;
+use SKom\Leseohren\Domain\Model\Event;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -28,6 +28,13 @@ use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 class EventController extends ActionController
 {
     /**
+     * persistenceManager
+     *
+     * @var PersistenceManager
+     */
+    protected $persistenceManager = null;
+
+    /**
      * eventRepository
      *
      * @var EventRepository
@@ -41,7 +48,7 @@ class EventController extends ActionController
      */
     protected $categoryRepository = null;
 
-    public function __construct(PersistenceManager $persistenceManager, \SKom\Leseohren\Domain\Repository\EventRepository $eventRepository, \SKom\Leseohren\Domain\Repository\CategoryRepository $categoryRepository)
+    public function __construct(PersistenceManager $persistenceManager, EventRepository $eventRepository, CategoryRepository $categoryRepository)
     {
         $this->persistenceManager = $persistenceManager;
         $this->eventRepository = $eventRepository;
@@ -110,9 +117,10 @@ class EventController extends ActionController
      *
      * @param void
      */
-    public function initializeCreateAction(): void {
+    public function initializeCreateAction(): void
+    {
         $this->arguments->getArgument('newEvent')
-            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd.m.Y');
     }
 
     /**
@@ -145,9 +153,10 @@ class EventController extends ActionController
      *
      * @param void
      */
-    public function initializeUpdateAction(): void {
+    public function initializeUpdateAction(): void
+    {
         $this->arguments->getArgument('event')
-            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd.m.Y');
     }
 
     /**

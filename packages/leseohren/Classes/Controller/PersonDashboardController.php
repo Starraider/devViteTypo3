@@ -5,16 +5,15 @@ declare(strict_types=1);
 namespace SKom\Leseohren\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use SKom\Leseohren\Domain\Repository\PersonRepository;
 use Psr\Http\Message\ResponseInterface;
-use SKom\Leseohren\Domain\Model\Person;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 //use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Core\Utility\DebugUtility;
-use SKom\Leseohren\Domain\Repository\CategoryRepository;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
-
+use SKom\Leseohren\Domain\Repository\PersonRepository;
+use SKom\Leseohren\Domain\Repository\CategoryRepository;
+use SKom\Leseohren\Domain\Model\Person;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -37,18 +36,18 @@ class PersonDashboardController extends ActionController
      */
     protected $personRepository = null;
 
-    public function __construct(\SKom\Leseohren\Domain\Repository\PersonRepository $personRepository, \SKom\Leseohren\Domain\Repository\CategoryRepository $categoryRepository)
-    {
-        $this->personRepository = $personRepository;
-        $this->categoryRepository = $categoryRepository;
-    }
-
     /**
      * categoryRepository
      *
      * @var CategoryRepository
      */
     protected $categoryRepository = null;
+
+    public function __construct(PersonRepository $personRepository, CategoryRepository $categoryRepository)
+    {
+        $this->personRepository = $personRepository;
+        $this->categoryRepository = $categoryRepository;
+    }
 
     /**
      * action birthdays
@@ -63,5 +62,4 @@ class PersonDashboardController extends ActionController
         $this->view->assign('people', $people);
         return $this->htmlResponse();
     }
-
 }

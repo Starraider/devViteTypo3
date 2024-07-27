@@ -24,7 +24,6 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  */
 class Organization extends AbstractEntity
 {
-
     /**
      * @var ObjectStorage<Category>
      */
@@ -230,7 +229,7 @@ class Organization extends AbstractEntity
         $this->name = $name;
     }
 
-/**
+    /**
      * Returns the street1
      *
      * @return string

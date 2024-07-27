@@ -7,6 +7,7 @@ namespace SKom\Leseohren\Domain\Model;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Annotation\Validate;
+
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -20,7 +21,6 @@ use TYPO3\CMS\Extbase\Annotation\Validate;
  */
 class Blackboard extends AbstractEntity
 {
-
     /**
      * @var ObjectStorage<Person>
      */

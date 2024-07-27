@@ -24,7 +24,6 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
  */
 class EventRepository extends Repository
 {
-
     protected $defaultOrderings = [
         'start_date' => QueryInterface::ORDER_DESCENDING
     ];

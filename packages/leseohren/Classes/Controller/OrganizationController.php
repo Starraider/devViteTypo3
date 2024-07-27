@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace SKom\Leseohren\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use SKom\Leseohren\Domain\Repository\OrganizationRepository;
 use Psr\Http\Message\ResponseInterface;
-use SKom\Leseohren\Domain\Model\Organization;
-use SKom\Leseohren\Domain\Repository\CategoryRepository;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use SKom\Leseohren\Domain\Repository\OrganizationRepository;
+use SKom\Leseohren\Domain\Repository\CategoryRepository;
+use SKom\Leseohren\Domain\Model\Organization;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -27,24 +27,24 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 class OrganizationController extends ActionController
 {
     /**
+     * categoryRepository
+     *
+     * @var CategoryRepository
+     */
+    protected $categoryRepository = null;
+
+    /**
      * organizationRepository
      *
      * @var OrganizationRepository
      */
     protected $organizationRepository = null;
 
-    public function __construct(\SKom\Leseohren\Domain\Repository\OrganizationRepository $organizationRepository, \SKom\Leseohren\Domain\Repository\CategoryRepository $categoryRepository)
+    public function __construct(OrganizationRepository $organizationRepository, CategoryRepository $categoryRepository)
     {
         $this->organizationRepository = $organizationRepository;
         $this->categoryRepository = $categoryRepository;
     }
-
-    /**
-     * categoryRepository
-     *
-     * @var CategoryRepository
-     */
-    protected $categoryRepository = null;
 
     /**
      * action index

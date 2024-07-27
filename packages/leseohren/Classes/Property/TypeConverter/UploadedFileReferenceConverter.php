@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Uploaded File Reference Converter
  *
@@ -34,19 +35,19 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
     /**
      * Folder where the file upload should go to (including storage).
      */
-    const CONFIGURATION_UPLOAD_FOLDER = 1;
+    protected const CONFIGURATION_UPLOAD_FOLDER = 1;
 
     /**
      * How to handle a upload when the name of the uploaded file conflicts.
      */
-    const CONFIGURATION_UPLOAD_CONFLICT_MODE = 2;
+    protected const CONFIGURATION_UPLOAD_CONFLICT_MODE = 2;
 
     /**
      * Whether to replace an already present resource.
      * Useful for "maxitems = 1" fields and properties
      * with no ObjectStorage annotation.
      */
-    const CONFIGURATION_ALLOWED_FILE_EXTENSIONS = 4;
+    protected const CONFIGURATION_ALLOWED_FILE_EXTENSIONS = 4;
 
     /**
      * If not specified otherwise, files are stored in the default upload folder
@@ -214,11 +215,10 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
         ) ?: DuplicationBehavior::RENAME;
 
         $uploadFolder = $this->resourceFactory->retrieveFileOrFolderObject($uploadFolderId);
-        $uploadedFile =  $uploadFolder->addUploadedFile($uploadInfo, $conflictMode);
-
-        $resourcePointer = null; // init
-        if (isset($uploadInfo['submittedFile']['resourcePointer'])
-        && strpos($uploadInfo['submittedFile']['resourcePointer'], 'file:') === false) {
+        $uploadedFile = $uploadFolder->addUploadedFile($uploadInfo, $conflictMode);
+        // init
+        $resourcePointer = null;
+        if (isset($uploadInfo['submittedFile']['resourcePointer']) && strpos($uploadInfo['submittedFile']['resourcePointer'], 'file:') === false) {
             $resourcePointer = $uploadInfo['submittedFile']['resourcePointer'];
             $resourcePointer = $this->hashService->validateAndStripHmac($resourcePointer);
         }
