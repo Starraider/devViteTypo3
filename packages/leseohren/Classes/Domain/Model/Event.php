@@ -96,7 +96,7 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function initializeObject()
+    public function initializeObject(): void
     {
         $this->participants = $this->participants ?: new ObjectStorage();
     }
@@ -104,7 +104,7 @@ class Event extends AbstractEntity
     /**
      * Add category to an event
      */
-    public function addCategory(Category $category)
+    public function addCategory(Category $category): void
     {
         $this->categories->attach($category);
     }
@@ -112,7 +112,7 @@ class Event extends AbstractEntity
     /**
      * Set categories
      */
-    public function setCategories(ObjectStorage $categories)
+    public function setCategories(ObjectStorage $categories): void
     {
         $this->categories = $categories;
     }
@@ -128,7 +128,7 @@ class Event extends AbstractEntity
     /**
      * Remove category from event
      */
-    public function removeCategory(Category $category)
+    public function removeCategory(Category $category): void
     {
         $this->categories->detach($category);
     }
@@ -148,7 +148,7 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function setTitle(string $title)
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -168,7 +168,7 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description): void
     {
         $this->description = $description;
     }
@@ -188,7 +188,7 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function setStartDate(\DateTime $startDate)
+    public function setStartDate(\DateTime $startDate): void
     {
         $this->startDate = $startDate;
     }
@@ -208,7 +208,7 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function setEndDate(\DateTime $endDate)
+    public function setEndDate(\DateTime $endDate): void
     {
         $this->endDate = $endDate;
     }
@@ -228,7 +228,7 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function setLocation(string $location)
+    public function setLocation(string $location): void
     {
         $this->location = $location;
     }
@@ -238,7 +238,7 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function addParticipant(Person $participant)
+    public function addParticipant(Person $participant): void
     {
         $this->participants->attach($participant);
     }
@@ -249,7 +249,7 @@ class Event extends AbstractEntity
      * @param Person $participantToRemove The Person to be removed
      * @return void
      */
-    public function removeParticipant(Person $participantToRemove)
+    public function removeParticipant(Person $participantToRemove): void
     {
         $this->participants->detach($participantToRemove);
     }
@@ -270,7 +270,7 @@ class Event extends AbstractEntity
      * @param ObjectStorage<Person> $participants
      * @return void
      */
-    public function setParticipants(ObjectStorage $participants)
+    public function setParticipants(ObjectStorage $participants): void
     {
         $this->participants = $participants;
     }
@@ -290,7 +290,7 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function setMaxparticipants(int $maxparticipants)
+    public function setMaxparticipants(int $maxparticipants): void
     {
         $this->maxparticipants = $maxparticipants;
     }

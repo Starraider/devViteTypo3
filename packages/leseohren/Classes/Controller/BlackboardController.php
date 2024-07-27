@@ -35,7 +35,7 @@ class BlackboardController extends ActionController
      */
     protected $blackboardRepository = null;
 
-    public function injectBlackboardRepository(BlackboardRepository $blackboardRepository)
+    public function __construct(\SKom\Leseohren\Domain\Repository\BlackboardRepository $blackboardRepository)
     {
         $this->blackboardRepository = $blackboardRepository;
     }
@@ -90,7 +90,7 @@ class BlackboardController extends ActionController
      *
      * @param void
      */
-    public function initializeCreateAction() {
+    public function initializeCreateAction(): void {
         $this->arguments->getArgument('newBlackboard')
             ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
     }
@@ -127,7 +127,7 @@ class BlackboardController extends ActionController
      *
      * @param void
      */
-    public function initializeUpdateAction() {
+    public function initializeUpdateAction(): void {
         $this->arguments->getArgument('blackboard')
             ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');    }
 

@@ -96,34 +96,10 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
      * @var PersistenceManager
      */
     protected $persistenceManager;
-
-    /**
-     * Import resource factory class by dependency injection
-     *
-     * @param ResourceFactory $resourceFactory
-     */
-    public function injectResourceFactory(ResourceFactory $resourceFactory): void
+    public function __construct(\TYPO3\CMS\Core\Resource\ResourceFactory $resourceFactory, \TYPO3\CMS\Extbase\Security\Cryptography\HashService $hashService, \TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager $persistenceManager)
     {
         $this->resourceFactory = $resourceFactory;
-    }
-
-    /**
-     * Import hash service class by dependency injection
-     *
-     * @param HashService $hashService
-     */
-    public function injectHashService(HashService $hashService): void
-    {
         $this->hashService = $hashService;
-    }
-
-    /**
-     * Import Persistence Manager class by dependency injection
-     *
-     * @param PersistenceManager $persistenceManager
-     */
-    public function injectPersistenceManager(PersistenceManager $persistenceManager): void
-    {
         $this->persistenceManager = $persistenceManager;
     }
 
@@ -211,7 +187,7 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter
      */
     protected function importUploadedResource(array $uploadInfo, PropertyMappingConfigurationInterface $configuration)
     {
-        if (!GeneralUtility::verifyFilenameAgainstDenyPattern($uploadInfo['name'])) {
+        if (!\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Resource\Security\FileNameValidator::class)->isValid($uploadInfo['name'])) {
             throw new TypeConverterException('Uploading files with PHP file extensions is not allowed!', 1399312430);
         }
 

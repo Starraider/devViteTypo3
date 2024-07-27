@@ -33,9 +33,10 @@ class OrganizationController extends ActionController
      */
     protected $organizationRepository = null;
 
-    public function injectOrganizationRepository(OrganizationRepository $organizationRepository)
+    public function __construct(\SKom\Leseohren\Domain\Repository\OrganizationRepository $organizationRepository, \SKom\Leseohren\Domain\Repository\CategoryRepository $categoryRepository)
     {
         $this->organizationRepository = $organizationRepository;
+        $this->categoryRepository = $categoryRepository;
     }
 
     /**
@@ -44,11 +45,6 @@ class OrganizationController extends ActionController
      * @var CategoryRepository
      */
     protected $categoryRepository = null;
-
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
-    {
-        $this->categoryRepository = $categoryRepository;
-    }
 
     /**
      * action index
@@ -90,7 +86,7 @@ class OrganizationController extends ActionController
      */
     public function newAction(): ResponseInterface
     {
-        $categories = $this->categoryRepository->findByParent('10');
+        $categories = $this->categoryRepository->findBy(['parent' => '10']);
         $this->view->assign('categories', $categories);
         return $this->htmlResponse();
     }
@@ -114,7 +110,7 @@ class OrganizationController extends ActionController
     public function editAction(Organization $organization): ResponseInterface
     {
         // ToDo: Read Parent-ID from Settings
-        $categories = $this->categoryRepository->findByParent('10');
+        $categories = $this->categoryRepository->findBy(['parent' => '10']);
         $this->view->assign('categories', $categories);
         $this->view->assign('organization', $organization);
         return $this->htmlResponse();

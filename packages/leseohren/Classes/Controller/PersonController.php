@@ -40,9 +40,10 @@ class PersonController extends ActionController
      */
     protected $personRepository = null;
 
-    public function injectPersonRepository(PersonRepository $personRepository)
+    public function __construct(\SKom\Leseohren\Domain\Repository\PersonRepository $personRepository, \SKom\Leseohren\Domain\Repository\CategoryRepository $categoryRepository)
     {
         $this->personRepository = $personRepository;
+        $this->categoryRepository = $categoryRepository;
     }
 
     /**
@@ -52,13 +53,8 @@ class PersonController extends ActionController
      */
     protected $categoryRepository = null;
 
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
-    {
-        $this->categoryRepository = $categoryRepository;
-    }
 
-
-    public function PersistenceManager__construct( $persistenceManager)
+    public function PersistenceManager__construct( $persistenceManager): void
     {
         $this->persistenceManager = $persistenceManager;
     }
@@ -136,7 +132,7 @@ class PersonController extends ActionController
      */
     public function newAction(): ResponseInterface
     {
-        $categories = $this->categoryRepository->findByParent('1');
+        $categories = $this->categoryRepository->findBy(['parent' => '1']);
         $this->view->assign('categories', $categories);
         return $this->htmlResponse();
     }
@@ -146,7 +142,7 @@ class PersonController extends ActionController
      *
      * @param void
      */
-    public function initializeCreateAction() {
+    public function initializeCreateAction(): void {
         $this->arguments->getArgument('newPerson')
             ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
         $this->arguments->getArgument('newPerson')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('languages', 'array');
@@ -175,7 +171,7 @@ class PersonController extends ActionController
     public function editAction(Person $person): ResponseInterface
     {
         // ToDo: Read Parent-ID from Settings
-        $categories = $this->categoryRepository->findByParent('1');
+        $categories = $this->categoryRepository->findBy(['parent' => '1']);
         $this->view->assign('categories', $categories);
         $this->view->assign('person', $person);
         return $this->htmlResponse();
@@ -186,7 +182,7 @@ class PersonController extends ActionController
      *
      * @param void
      */
-    public function initializeUpdateAction() {
+    public function initializeUpdateAction(): void {
         $this->arguments->getArgument('person')
             ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
         $this->arguments->getArgument('person')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('languages', 'array');

@@ -50,7 +50,7 @@ class Gift extends AbstractEntity
      *
      * @return void
      */
-    public function setTitle(string $title)
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -70,7 +70,7 @@ class Gift extends AbstractEntity
      *
      * @return void
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description): void
     {
         $this->description = $description;
     }

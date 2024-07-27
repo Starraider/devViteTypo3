@@ -32,7 +32,7 @@ class GiftController extends ActionController
      */
     protected $giftRepository = null;
 
-    public function injectGiftRepository(GiftRepository $giftRepository)
+    public function __construct(\SKom\Leseohren\Domain\Repository\GiftRepository $giftRepository)
     {
         $this->giftRepository = $giftRepository;
     }

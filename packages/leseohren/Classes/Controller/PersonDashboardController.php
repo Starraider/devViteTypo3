@@ -37,9 +37,10 @@ class PersonDashboardController extends ActionController
      */
     protected $personRepository = null;
 
-    public function injectPersonRepository(PersonRepository $personRepository)
+    public function __construct(\SKom\Leseohren\Domain\Repository\PersonRepository $personRepository, \SKom\Leseohren\Domain\Repository\CategoryRepository $categoryRepository)
     {
         $this->personRepository = $personRepository;
+        $this->categoryRepository = $categoryRepository;
     }
 
     /**
@@ -49,11 +50,6 @@ class PersonDashboardController extends ActionController
      */
     protected $categoryRepository = null;
 
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
-    {
-        $this->categoryRepository = $categoryRepository;
-    }
-
     /**
      * action birthdays
      *
@@ -61,7 +57,7 @@ class PersonDashboardController extends ActionController
      */
     public function birthdaysAction(): ResponseInterface
     {
-        $categories = $this->categoryRepository->findByParent('1');
+        $categories = $this->categoryRepository->findBy(['parent' => '1']);
         $this->view->assign('categories', $categories);
         $people = $this->personRepository->upcomingBirthdays();
         $this->view->assign('people', $people);

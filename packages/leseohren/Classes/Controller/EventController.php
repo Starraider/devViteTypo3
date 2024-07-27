@@ -34,11 +34,6 @@ class EventController extends ActionController
      */
     protected $eventRepository = null;
 
-    public function injectEventRepository(EventRepository $eventRepository)
-    {
-        $this->eventRepository = $eventRepository;
-    }
-
     /**
      * categoryRepository
      *
@@ -46,14 +41,11 @@ class EventController extends ActionController
      */
     protected $categoryRepository = null;
 
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
-    {
-        $this->categoryRepository = $categoryRepository;
-    }
-
-    public function __construct(PersistenceManager $persistenceManager)
+    public function __construct(PersistenceManager $persistenceManager, \SKom\Leseohren\Domain\Repository\EventRepository $eventRepository, \SKom\Leseohren\Domain\Repository\CategoryRepository $categoryRepository)
     {
         $this->persistenceManager = $persistenceManager;
+        $this->eventRepository = $eventRepository;
+        $this->categoryRepository = $categoryRepository;
     }
 
     /**
@@ -108,7 +100,7 @@ class EventController extends ActionController
      */
     public function newAction(): ResponseInterface
     {
-        $categories = $this->categoryRepository->findByParent('18');
+        $categories = $this->categoryRepository->findBy(['parent' => '18']);
         $this->view->assign('categories', $categories);
         return $this->htmlResponse();
     }
@@ -118,7 +110,7 @@ class EventController extends ActionController
      *
      * @param void
      */
-    public function initializeCreateAction() {
+    public function initializeCreateAction(): void {
         $this->arguments->getArgument('newEvent')
             ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
     }
@@ -142,7 +134,7 @@ class EventController extends ActionController
     public function editAction(Event $event): ResponseInterface
     {
         // ToDo: Read Parent-ID from Settings
-        $categories = $this->categoryRepository->findByParent('18');
+        $categories = $this->categoryRepository->findBy(['parent' => '18']);
         $this->view->assign('categories', $categories);
         $this->view->assign('event', $event);
         return $this->htmlResponse();
@@ -153,7 +145,7 @@ class EventController extends ActionController
      *
      * @param void
      */
-    public function initializeUpdateAction() {
+    public function initializeUpdateAction(): void {
         $this->arguments->getArgument('event')
             ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
     }

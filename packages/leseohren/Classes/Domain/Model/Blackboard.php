@@ -68,7 +68,7 @@ class Blackboard extends AbstractEntity
      *
      * @return void
      */
-    public function initializeObject()
+    public function initializeObject(): void
     {
         $this->person = $this->person ?: new ObjectStorage();
     }
@@ -79,7 +79,7 @@ class Blackboard extends AbstractEntity
      * @param Person $person The Person to be added
      * @return void
      */
-    public function addPerson(Person $person)
+    public function addPerson(Person $person): void
     {
         $this->person->attach($person);
     }
@@ -90,7 +90,7 @@ class Blackboard extends AbstractEntity
      * @param Person $personToRemove The Person to be removed
      * @return void
      */
-    public function removePerson(Person $personToRemove)
+    public function removePerson(Person $personToRemove): void
     {
         $this->person->detach($personToRemove);
     }
@@ -110,7 +110,7 @@ class Blackboard extends AbstractEntity
      * @param ObjectStorage<Person> $person
      * @return void
      */
-    public function setPerson(ObjectStorage $person)
+    public function setPerson(ObjectStorage $person): void
     {
         $this->person = $person;
     }
@@ -130,7 +130,7 @@ class Blackboard extends AbstractEntity
      *
      * @return void
      */
-    public function setTitle(string $title)
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -150,7 +150,7 @@ class Blackboard extends AbstractEntity
      *
      * @return void
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description): void
     {
         $this->description = $description;
     }
@@ -170,7 +170,7 @@ class Blackboard extends AbstractEntity
      *
      * @return void
      */
-    public function setStartDate(\DateTime $startDate)
+    public function setStartDate(\DateTime $startDate): void
     {
         $this->startDate = $startDate;
     }
@@ -190,7 +190,7 @@ class Blackboard extends AbstractEntity
      *
      * @return void
      */
-    public function setEndDate(\DateTime $endDate)
+    public function setEndDate(\DateTime $endDate): void
     {
         $this->endDate = $endDate;
     }

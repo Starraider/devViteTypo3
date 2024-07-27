@@ -59,7 +59,7 @@ class Present extends AbstractEntity
      *
      * @return void
      */
-    public function setGiftDate(\DateTime $giftDate)
+    public function setGiftDate(\DateTime $giftDate): void
     {
         $this->giftDate = $giftDate;
     }
@@ -79,7 +79,7 @@ class Present extends AbstractEntity
      *
      * @return void
      */
-    public function setGiven(bool $given)
+    public function setGiven(bool $given): void
     {
         $this->given = $given;
     }
@@ -109,7 +109,7 @@ class Present extends AbstractEntity
      *
      * @return void
      */
-    public function setGift(Gift $gift)
+    public function setGift(Gift $gift): void
     {
         $this->gift = $gift;
     }
