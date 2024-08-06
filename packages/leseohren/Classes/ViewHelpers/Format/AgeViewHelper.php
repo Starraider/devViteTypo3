@@ -75,7 +75,7 @@ class AgeViewHelper extends AbstractViewHelper
             $endDate = new \DateTime();
         }
         $dateInterval = $endDate->diff($startDate, true);
-        $doPlural = function ($nb, $str){ return $nb > 1 ? $str.'s' : $str;};
+        //$doPlural = function ($nb, $str){ return $nb > 1 ? $str.'s' : $str;};
         // adds plurals
         $format = '';
         foreach ($this->labels as $formatKey => $label)
@@ -85,10 +85,16 @@ class AgeViewHelper extends AbstractViewHelper
             }
             $format .= '%' . $formatKey . ' ';
             $format .= $dateInterval->$formatKey > 1 ? $label[1] : $label[0];
-            $format .= ' ';
+            $format .= ' ' . $endTag;
             break;
         }
         $format = '%r' . rtrim($format);
-        return $dateInterval->format($format);
+        // is special birthday?
+        if($dateInterval->y % 10 == 0) {
+            return '<span class="c-person__birthday is-special">' . $dateInterval->format($format) . '</span>';
+        } else {
+            return $dateInterval->format($format);
+        }
+
     }
 }

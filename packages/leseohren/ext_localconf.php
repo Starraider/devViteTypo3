@@ -54,7 +54,7 @@ defined('TYPO3') || die();
         'Leseohren',
         'PersonDashboard',
         [
-            \SKom\Leseohren\Controller\PersonDashboardController::class => 'birthdays'
+            \SKom\Leseohren\Controller\PersonDashboardController::class => 'statuschange, birthdays'
         ],
         // non-cacheable actions
         [

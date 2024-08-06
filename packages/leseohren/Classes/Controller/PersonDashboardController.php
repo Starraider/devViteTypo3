@@ -62,4 +62,20 @@ class PersonDashboardController extends ActionController
         $this->view->assign('people', $people);
         return $this->htmlResponse();
     }
+
+    /**
+     * action statuschange
+     *
+     * @return ResponseInterface
+     */
+    public function statuschangeAction(): ResponseInterface
+    {
+        $categories = $this->categoryRepository->findBy(['parent' => '1']);
+        $this->view->assign('categories', $categories);
+        $statuspeople = $this->personRepository->upcomingStatusChange();
+        $this->view->assign('statuspeople', $statuspeople);
+        $birthdaypeople = $this->personRepository->upcomingBirthdays();
+        $this->view->assign('birthdaypeople', $birthdaypeople);
+        return $this->htmlResponse();
+    }
 }
