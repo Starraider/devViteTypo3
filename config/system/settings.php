@@ -64,7 +64,6 @@ return [
             'backupDir' => 'var/tx_extensionbuilder/backups',
             'backupExtension' => '1',
             'enableRoundtrip' => '1',
-            'outputDir' => 'var/tx_extensionbuilder/test',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
@@ -212,7 +211,8 @@ return [
         'encryptionKey' => 'f4750c05b53d96e9f8b81cb8e7a3bde7642b122e9d8c83a55d2bd7a48c879a50652d2ad8b01892d75b551962430afe48',
         'exceptionalErrors' => 4096,
         'features' => [
-            'security.backend.enforceContentSecurityPolicy' => true,
+            'security.backend.enforceContentSecurityPolicy' => false,
+            'security.backend.enforceReferrer' => false,
             'security.usePasswordPolicyForFrontendUsers' => true,
         ],
         'sitename' => 'devViteTypo3',
