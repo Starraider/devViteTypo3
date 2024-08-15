@@ -15,7 +15,7 @@ use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use SKom\Leseohren\Domain\Repository\PersonRepository;
 use SKom\Leseohren\Domain\Repository\CategoryRepository;
 use SKom\Leseohren\Domain\Model\Person;
-use SKom\Leseohren\Property\TypeConverter\UploadedFileReferenceConverter;
+//use SKom\Leseohren\Property\TypeConverter\UploadedFileReferenceConverter;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -68,32 +68,32 @@ class PersonController extends ActionController
      *
      * @param string
      */
-    protected function setTypeConverterConfigurationForFileUpload($argumentName): void
-    {
-        $uploadConfiguration = [
-            UploadedFileReferenceConverter::CONFIGURATION_ALLOWED_FILE_EXTENSIONS =>
-                'pdf,doc,docx,xls,xlsx,ppt,pptx,odt,ods,odp,txt,rtf',
-            UploadedFileReferenceConverter::CONFIGURATION_UPLOAD_FOLDER =>
-                '1:/uploadedfiles/',
-        ];
-        /** @var PropertyMappingConfiguration $propertyMappingConfiguration */
-        $propertyMappingConfiguration = $this->arguments[$argumentName]->getPropertyMappingConfiguration();
-        $propertyMappingConfiguration->forProperty('file_fuehrungszeugnis')
-            ->setTypeConverterOptions(
-                UploadedFileReferenceConverter::class,
-                $uploadConfiguration
-            );
-        $propertyMappingConfiguration->forProperty('file_mandat')
-            ->setTypeConverterOptions(
-                UploadedFileReferenceConverter::class,
-                $uploadConfiguration
-            );
-        $propertyMappingConfiguration->forProperty('file_others')
-            ->setTypeConverterOptions(
-                UploadedFileReferenceConverter::class,
-                $uploadConfiguration
-            );
-    }
+    // protected function setTypeConverterConfigurationForFileUpload($argumentName): void
+    // {
+    //     $uploadConfiguration = [
+    //         UploadedFileReferenceConverter::CONFIGURATION_ALLOWED_FILE_EXTENSIONS =>
+    //             'pdf,doc,docx,xls,xlsx,ppt,pptx,odt,ods,odp,txt,rtf',
+    //         UploadedFileReferenceConverter::CONFIGURATION_UPLOAD_FOLDER =>
+    //             '1:/uploadedfiles/',
+    //     ];
+    //     /** @var PropertyMappingConfiguration $propertyMappingConfiguration */
+    //     $propertyMappingConfiguration = $this->arguments[$argumentName]->getPropertyMappingConfiguration();
+    //     $propertyMappingConfiguration->forProperty('file_fuehrungszeugnis')
+    //         ->setTypeConverterOptions(
+    //             UploadedFileReferenceConverter::class,
+    //             $uploadConfiguration
+    //         );
+    //     $propertyMappingConfiguration->forProperty('file_mandat')
+    //         ->setTypeConverterOptions(
+    //             UploadedFileReferenceConverter::class,
+    //             $uploadConfiguration
+    //         );
+    //     $propertyMappingConfiguration->forProperty('file_others')
+    //         ->setTypeConverterOptions(
+    //             UploadedFileReferenceConverter::class,
+    //             $uploadConfiguration
+    //         );
+    // }
 
     /**
      * action index

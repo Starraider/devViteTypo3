@@ -140,20 +140,20 @@ plugin.tx_leseohren_blackboards {
     }
 }
 
-config.tx_extbase {
-  persistence {
-    classes {
-      \SKom\Leseohren\Domain\Model\FileReference {
-        mapping {
-          tableName = sys_file_reference
-          columns {
-            uid_local.mapOnProperty = originalFileIdentifier
-          }
-        }
-      }
-    }
-  }
-  objects {
-    TYPO3\CMS\Extbase\Domain\Model\FileReference.className = \SKom\Leseohren\Domain\Model\FileReference
-  }
-}
+// config.tx_extbase {
+//   persistence {
+//     classes {
+//       \SKom\Leseohren\Domain\Model\FileReference {
+//         mapping {
+//           tableName = sys_file_reference
+//           columns {
+//             uid_local.mapOnProperty = originalFileIdentifier
+//           }
+//         }
+//       }
+//     }
+//   }
+//   objects {
+//     TYPO3\CMS\Extbase\Domain\Model\FileReference.className = \SKom\Leseohren\Domain\Model\FileReference
+//   }
+// }
