@@ -34,19 +34,71 @@ Above the list of files, in the yellow banner, click "Compare & pull request" or
 
 The "Release Please" GitHub Action will create a new release with the next version number and update the CHANGELOG.md.
 
-## Rector
+## Rector/Fractor
 
 ### Vorschau anzeigen
 
 ```bash
 vendor/bin/rector process --dry-run
+vendor/bin/fractor process --dry-run
+
+vendor/bin/rector process packages/holidayreminder --dry-run
 ```
 
 ### Änderungen durchführen lassen
 
 ```bash
 vendor/bin/rector process
+vendor/bin/fractor process
 ```
+
+## CLI
+
+### Cache leeren
+
+```bash
+ddev typo3 cache:flush
+```
+
+### reference-index aktualisieren
+
+```bash
+ddev typo3 referenceindex:update
+```
+
+### language files aktualisieren
+
+```bash
+ddev typo3 language:update
+```
+
+### DB-Updates
+
+```bash
+ddev typo3 database:updateschema
+```
+
+### DB-Health
+
+```bash
+ddev typo3 dbdoctor:health
+```
+
+Wenn ein Fehler gefunden wird, gibt es folgende Optionen:
+
+e - EXECUTE suggested changes!
+
+s - SIMULATE suggested changes, no execution
+
+a - ABORT now
+
+r - RELOAD this check
+
+p - SHOW records by page
+
+d - SHOW record details
+
+? - HELP
 
 ## License
 
