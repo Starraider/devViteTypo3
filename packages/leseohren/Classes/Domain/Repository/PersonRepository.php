@@ -37,12 +37,13 @@ class PersonRepository extends Repository
     /**
      * Find all persons having a birthday today
      *
+     * @param string $interval Number of days to look ahead
      * @return QueryResultInterface
      */
-    public function upcomingBirthdays()
+    public function upcomingBirthdays($interval = '7')
     {
         $query = $this->createQuery();
-        $sql = 'SELECT uid, pid, firstname, lastname, title, birthday, gender, email FROM tx_leseohren_domain_model_person WHERE DATE_ADD(FROM_UNIXTIME(birthday), INTERVAL YEAR(CURDATE())-YEAR(FROM_UNIXTIME(birthday)) + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(FROM_UNIXTIME(birthday)),1,0)YEAR) BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)';
+        $sql = 'SELECT uid, pid, firstname, lastname, title, birthday, gender, email FROM tx_leseohren_domain_model_person WHERE DATE_ADD(FROM_UNIXTIME(birthday), INTERVAL YEAR(CURDATE())-YEAR(FROM_UNIXTIME(birthday)) + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(FROM_UNIXTIME(birthday)),1,0)YEAR) BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL '.$interval.' DAY)';
         $query->statement($sql);
         //$query->setOrderings(['birthday' => QueryInterface::ORDER_ASCENDING]);
         /*
@@ -55,13 +56,14 @@ class PersonRepository extends Repository
     /**
      * Find all persons whose status will change the next 7 days
      *
+     * @param string $interval Number of days to look ahead
      * @return QueryResultInterface
      */
-    public function upcomingStatusChange()
+    public function upcomingStatusChange($interval = '7')
     {
         $today = new \DateTime('today');
         $thisweek = new \DateTime('today');
-        $thisweek = $thisweek->modify('+7 days');
+        $thisweek = $thisweek->modify('+'.$interval.' days');
         $query = $this->createQuery();
         $query->matching(
             $query->between('statusend_date', $today, $thisweek)

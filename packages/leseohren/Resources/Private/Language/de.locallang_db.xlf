@@ -569,6 +569,18 @@
 				<source>Personen-Dashboard</source>
 				<target>Personen-Dashboard</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.pluginOptions" resname="tx_leseohren_persondashboard.flexform.pluginOptions">
+				<source>Plugin Options</source>
+				<target>Plugin Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.birthday_warningperiod" resname="tx_leseohren_persondashboard.flexform.birthday_warningperiod">
+				<source>How many days before the birthday should the warnings begin?</source>
+				<target>Wieviele Tage vor dem Geburtstag sollen die Warnungen beginnen?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.status_warningperiod" resname="tx_leseohren_persondashboard.flexform.status_warningperiod">
+				<source>How many days before the status change should the warnings begin?</source>
+				<target>Wieviele Tage vor der Status-Änderung sollen die Warnungen beginnen?</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_holidays.name" resname="tx_leseohren_holidays.name">
 				<source>Holidays</source>
 				<target>Feiertage</target>

@@ -29,10 +29,15 @@ ExtensionUtility::registerPlugin(
     'Blackboards'
 );
 
-ExtensionUtility::registerPlugin(
+$personDashboardPluginSignature = ExtensionUtility::registerPlugin(
     'Leseohren',
     'PersonDashboard',
     'PersonDashboard'
+);
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$personDashboardPluginSignature] = 'pi_flexform';
+ExtensionManagementUtility::addPiFlexFormValue(
+    $personDashboardPluginSignature,
+    'FILE:EXT:leseohren/Configuration/FlexForms/Leseohren_PersonDashboard.xml'
 );
 
 $holidayPluginSignature = ExtensionUtility::registerPlugin(
