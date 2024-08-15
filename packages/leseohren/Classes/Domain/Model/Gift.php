@@ -6,6 +6,7 @@ namespace SKom\Leseohren\Domain\Model;
 
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Annotation\Validate;
+
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -19,7 +20,6 @@ use TYPO3\CMS\Extbase\Annotation\Validate;
  */
 class Gift extends AbstractEntity
 {
-
     /**
      * title
      *
@@ -50,7 +50,7 @@ class Gift extends AbstractEntity
      *
      * @return void
      */
-    public function setTitle(string $title)
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -70,7 +70,7 @@ class Gift extends AbstractEntity
      *
      * @return void
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description): void
     {
         $this->description = $description;
     }

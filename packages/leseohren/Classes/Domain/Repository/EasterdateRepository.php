@@ -15,12 +15,13 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
  *
  * (c) 2024 Sven Kalbhenn <sven@skom.de>, SKom
  */
+
 /**
- * The repository for Organizations
+ * The repository for Easterdates
  */
-class OrganizationRepository extends Repository
+class EasterdateRepository extends Repository
 {
     protected $defaultOrderings = [
-        'name' => QueryInterface::ORDER_ASCENDING
+        'easterdate' => QueryInterface::ORDER_DESCENDING
     ];
 }

@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace SKom\Leseohren\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use SKom\Leseohren\Domain\Repository\EventRepository;
 use Psr\Http\Message\ResponseInterface;
-use SKom\Leseohren\Domain\Repository\CategoryRepository;
-use SKom\Leseohren\Domain\Model\Event;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
+use SKom\Leseohren\Domain\Repository\EventRepository;
+use SKom\Leseohren\Domain\Repository\CategoryRepository;
+use SKom\Leseohren\Domain\Model\Event;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -28,16 +28,18 @@ use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 class EventController extends ActionController
 {
     /**
+     * persistenceManager
+     *
+     * @var PersistenceManager
+     */
+    protected $persistenceManager = null;
+
+    /**
      * eventRepository
      *
      * @var EventRepository
      */
     protected $eventRepository = null;
-
-    public function injectEventRepository(EventRepository $eventRepository)
-    {
-        $this->eventRepository = $eventRepository;
-    }
 
     /**
      * categoryRepository
@@ -46,14 +48,11 @@ class EventController extends ActionController
      */
     protected $categoryRepository = null;
 
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
-    {
-        $this->categoryRepository = $categoryRepository;
-    }
-
-    public function __construct(PersistenceManager $persistenceManager)
+    public function __construct(PersistenceManager $persistenceManager, EventRepository $eventRepository, CategoryRepository $categoryRepository)
     {
         $this->persistenceManager = $persistenceManager;
+        $this->eventRepository = $eventRepository;
+        $this->categoryRepository = $categoryRepository;
     }
 
     /**
@@ -108,7 +107,7 @@ class EventController extends ActionController
      */
     public function newAction(): ResponseInterface
     {
-        $categories = $this->categoryRepository->findByParent('18');
+        $categories = $this->categoryRepository->findBy(['parent' => '18']);
         $this->view->assign('categories', $categories);
         return $this->htmlResponse();
     }
@@ -118,9 +117,10 @@ class EventController extends ActionController
      *
      * @param void
      */
-    public function initializeCreateAction() {
+    public function initializeCreateAction(): void
+    {
         $this->arguments->getArgument('newEvent')
-            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd.m.Y');
     }
 
     /**
@@ -142,7 +142,7 @@ class EventController extends ActionController
     public function editAction(Event $event): ResponseInterface
     {
         // ToDo: Read Parent-ID from Settings
-        $categories = $this->categoryRepository->findByParent('18');
+        $categories = $this->categoryRepository->findBy(['parent' => '18']);
         $this->view->assign('categories', $categories);
         $this->view->assign('event', $event);
         return $this->htmlResponse();
@@ -153,9 +153,10 @@ class EventController extends ActionController
      *
      * @param void
      */
-    public function initializeUpdateAction() {
+    public function initializeUpdateAction(): void
+    {
         $this->arguments->getArgument('event')
-            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd.m.Y');
     }
 
     /**

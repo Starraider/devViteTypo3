@@ -5,16 +5,15 @@ declare(strict_types=1);
 namespace SKom\Leseohren\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use SKom\Leseohren\Domain\Repository\PersonRepository;
 use Psr\Http\Message\ResponseInterface;
-use SKom\Leseohren\Domain\Model\Person;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 //use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Core\Utility\DebugUtility;
-use SKom\Leseohren\Domain\Repository\CategoryRepository;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
-
+use SKom\Leseohren\Domain\Repository\PersonRepository;
+use SKom\Leseohren\Domain\Repository\CategoryRepository;
+use SKom\Leseohren\Domain\Model\Person;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -37,11 +36,6 @@ class PersonDashboardController extends ActionController
      */
     protected $personRepository = null;
 
-    public function injectPersonRepository(PersonRepository $personRepository)
-    {
-        $this->personRepository = $personRepository;
-    }
-
     /**
      * categoryRepository
      *
@@ -49,8 +43,9 @@ class PersonDashboardController extends ActionController
      */
     protected $categoryRepository = null;
 
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
+    public function __construct(PersonRepository $personRepository, CategoryRepository $categoryRepository)
     {
+        $this->personRepository = $personRepository;
         $this->categoryRepository = $categoryRepository;
     }
 
@@ -61,11 +56,26 @@ class PersonDashboardController extends ActionController
      */
     public function birthdaysAction(): ResponseInterface
     {
-        $categories = $this->categoryRepository->findByParent('1');
+        $categories = $this->categoryRepository->findBy(['parent' => '1']);
         $this->view->assign('categories', $categories);
         $people = $this->personRepository->upcomingBirthdays();
         $this->view->assign('people', $people);
         return $this->htmlResponse();
     }
 
+    /**
+     * action statuschange
+     *
+     * @return ResponseInterface
+     */
+    public function statuschangeAction(): ResponseInterface
+    {
+        $categories = $this->categoryRepository->findBy(['parent' => '1']);
+        $this->view->assign('categories', $categories);
+        $statuspeople = $this->personRepository->upcomingStatusChange();
+        $this->view->assign('statuspeople', $statuspeople);
+        $birthdaypeople = $this->personRepository->upcomingBirthdays();
+        $this->view->assign('birthdaypeople', $birthdaypeople);
+        return $this->htmlResponse();
+    }
 }

@@ -6,9 +6,10 @@ namespace SKom\Leseohren\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use Psr\Http\Message\ResponseInterface;
-use SKom\Leseohren\Domain\Model\Present;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use SKom\Leseohren\Domain\Repository\PresentRepository;
+use SKom\Leseohren\Domain\Model\Present;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -24,6 +25,18 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
  */
 class PresentController extends ActionController
 {
+    /**
+     * presentRepository
+     *
+     * @var PresentRepository
+     */
+    protected $presentRepository = null;
+
+    public function __construct(PresentRepository $presentRepository)
+    {
+        $this->presentRepository = $presentRepository;
+    }
+
     /**
      * action index
      *

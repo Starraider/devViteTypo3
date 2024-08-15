@@ -11,7 +11,7 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Domain\Model\Category;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Annotation\Validate;
-use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -27,7 +27,6 @@ use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
  */
 class Person extends AbstractEntity
 {
-
     /**
      * @var ObjectStorage<Category>
      */
@@ -313,7 +312,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function initializeObject()
+    public function initializeObject(): void
     {
         $this->donations = $this->donations ?: new ObjectStorage();
         $this->blackboards = $this->blackboards ?: new ObjectStorage();
@@ -324,7 +323,7 @@ class Person extends AbstractEntity
     /**
      * Add category to a person
      */
-    public function addCategory(Category $category)
+    public function addCategory(Category $category): void
     {
         $this->categories->attach($category);
     }
@@ -332,7 +331,7 @@ class Person extends AbstractEntity
     /**
      * Set categories
      */
-    public function setCategories(ObjectStorage $categories)
+    public function setCategories(ObjectStorage $categories): void
     {
         $this->categories = $categories;
     }
@@ -348,7 +347,7 @@ class Person extends AbstractEntity
     /**
      * Remove category from person
      */
-    public function removeCategory(Category $category)
+    public function removeCategory(Category $category): void
     {
         $this->categories->detach($category);
     }
@@ -368,7 +367,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setGender(int $gender)
+    public function setGender(int $gender): void
     {
         $this->gender = $gender;
     }
@@ -388,7 +387,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setFirstname(string $firstname)
+    public function setFirstname(string $firstname): void
     {
         $this->firstname = $firstname;
     }
@@ -408,7 +407,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setLastname(string $lastname)
+    public function setLastname(string $lastname): void
     {
         $this->lastname = $lastname;
     }
@@ -428,7 +427,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setTitle(string $title)
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -448,7 +447,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setJob(string $job)
+    public function setJob(string $job): void
     {
         $this->job = $job;
     }
@@ -468,7 +467,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setBirthday(\DateTime $birthday)
+    public function setBirthday(\DateTime $birthday): void
     {
         $this->birthday = $birthday;
     }
@@ -488,7 +487,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setStreet1(string $street1)
+    public function setStreet1(string $street1): void
     {
         $this->street1 = $street1;
     }
@@ -508,7 +507,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setStreet2(string $street2)
+    public function setStreet2(string $street2): void
     {
         $this->street2 = $street2;
     }
@@ -528,7 +527,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setZip(string $zip)
+    public function setZip(string $zip): void
     {
         $this->zip = $zip;
     }
@@ -548,7 +547,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setCity(string $city)
+    public function setCity(string $city): void
     {
         $this->city = $city;
     }
@@ -568,7 +567,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setDistrict(string $district)
+    public function setDistrict(string $district): void
     {
         $this->district = $district;
     }
@@ -588,7 +587,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setPhoneLandline(string $phoneLandline)
+    public function setPhoneLandline(string $phoneLandline): void
     {
         $this->phoneLandline = $phoneLandline;
     }
@@ -608,7 +607,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setPhoneMobile(string $phoneMobile)
+    public function setPhoneMobile(string $phoneMobile): void
     {
         $this->phoneMobile = $phoneMobile;
     }
@@ -628,7 +627,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setEmail(string $email)
+    public function setEmail(string $email): void
     {
         $this->email = $email;
     }
@@ -648,7 +647,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setWhatsapp(string $whatsapp)
+    public function setWhatsapp(string $whatsapp): void
     {
         $this->whatsapp = $whatsapp;
     }
@@ -668,7 +667,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setNotes(string $notes)
+    public function setNotes(string $notes): void
     {
         $this->notes = $notes;
     }
@@ -688,7 +687,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setStatus(int $status)
+    public function setStatus(int $status): void
     {
         $this->status = $status;
     }
@@ -708,7 +707,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setStatusbeginDate(\DateTime $statusbeginDate)
+    public function setStatusbeginDate(\DateTime $statusbeginDate): void
     {
         $this->statusbeginDate = $statusbeginDate;
     }
@@ -728,7 +727,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setStatusendDate(\DateTime $statusendDate)
+    public function setStatusendDate(\DateTime $statusendDate): void
     {
         $this->statusendDate = $statusendDate;
     }
@@ -748,7 +747,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setTravelOptions(int $travelOptions)
+    public function setTravelOptions(int $travelOptions): void
     {
         $this->travelOptions = $travelOptions;
     }
@@ -769,7 +768,7 @@ class Person extends AbstractEntity
      * @param array $languages
      * @return void
      */
-    public function setLanguages(array $languages)
+    public function setLanguages(array $languages): void
     {
         $this->languages = implode(',', $languages);
     }
@@ -790,7 +789,7 @@ class Person extends AbstractEntity
      * @param array $preferenceAgegroup
      * @return void
      */
-    public function setPreferenceAgegroup(array $preferenceAgegroup)
+    public function setPreferenceAgegroup(array $preferenceAgegroup): void
     {
         $this->preferenceAgegroup = implode(',', $preferenceAgegroup);
     }
@@ -811,7 +810,7 @@ class Person extends AbstractEntity
      * @param array $preferenceOrganizationType
      * @return void
      */
-    public function setPreferenceOrganizationType(array $preferenceOrganizationType)
+    public function setPreferenceOrganizationType(array $preferenceOrganizationType): void
     {
         $this->preferenceOrganizationType = implode(',', $preferenceOrganizationType);
     }
@@ -831,7 +830,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setPaymentMethod(int $paymentMethod)
+    public function setPaymentMethod(int $paymentMethod): void
     {
         $this->paymentMethod = $paymentMethod;
     }
@@ -851,7 +850,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setIban(string $iban)
+    public function setIban(string $iban): void
     {
         $this->iban = $iban;
     }
@@ -871,7 +870,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setSwift(string $swift)
+    public function setSwift(string $swift): void
     {
         $this->swift = $swift;
     }
@@ -891,7 +890,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setAccountOwner(string $accountOwner)
+    public function setAccountOwner(string $accountOwner): void
     {
         $this->accountOwner = $accountOwner;
     }
@@ -911,7 +910,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setBankname(string $bankname)
+    public function setBankname(string $bankname): void
     {
         $this->bankname = $bankname;
     }
@@ -931,7 +930,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setPaypal(string $paypal)
+    public function setPaypal(string $paypal): void
     {
         $this->paypal = $paypal;
     }
@@ -951,7 +950,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setFileFuehrungszeugnis(FileReference $fileFuehrungszeugnis)
+    public function setFileFuehrungszeugnis(FileReference $fileFuehrungszeugnis): void
     {
         $this->fileFuehrungszeugnis = $fileFuehrungszeugnis;
     }
@@ -971,7 +970,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setFileMandat(FileReference $fileMandat)
+    public function setFileMandat(FileReference $fileMandat): void
     {
         $this->fileMandat = $fileMandat;
     }
@@ -991,7 +990,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setFileOthers(FileReference $fileOthers)
+    public function setFileOthers(FileReference $fileOthers): void
     {
         $this->fileOthers = $fileOthers;
     }
@@ -1001,7 +1000,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function addDonation(Present $donation)
+    public function addDonation(Present $donation): void
     {
         $this->donations->attach($donation);
     }
@@ -1012,7 +1011,7 @@ class Person extends AbstractEntity
      * @param Present $donationToRemove The Present to be removed
      * @return void
      */
-    public function removeDonation(Present $donationToRemove)
+    public function removeDonation(Present $donationToRemove): void
     {
         $this->donations->detach($donationToRemove);
     }
@@ -1033,7 +1032,7 @@ class Person extends AbstractEntity
      * @param ObjectStorage<Present> $donations
      * @return void
      */
-    public function setDonations(ObjectStorage $donations)
+    public function setDonations(ObjectStorage $donations): void
     {
         $this->donations = $donations;
     }
@@ -1043,7 +1042,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function addBlackboard(Blackboard $blackboard)
+    public function addBlackboard(Blackboard $blackboard): void
     {
         $this->blackboards->attach($blackboard);
     }
@@ -1054,7 +1053,7 @@ class Person extends AbstractEntity
      * @param Blackboard $blackboardToRemove The Blackboard to be removed
      * @return void
      */
-    public function removeBlackboard(Blackboard $blackboardToRemove)
+    public function removeBlackboard(Blackboard $blackboardToRemove): void
     {
         $this->blackboards->detach($blackboardToRemove);
     }
@@ -1074,7 +1073,7 @@ class Person extends AbstractEntity
      * @param ObjectStorage<Blackboard> $blackboards
      * @return void
      */
-    public function setBlackboards(ObjectStorage $blackboards)
+    public function setBlackboards(ObjectStorage $blackboards): void
     {
         $this->blackboards = $blackboards;
     }
@@ -1084,7 +1083,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function addEvent(Event $event)
+    public function addEvent(Event $event): void
     {
         $this->events->attach($event);
     }
@@ -1095,9 +1094,9 @@ class Person extends AbstractEntity
      * @param Event $eventToRemove The Event to be removed
      * @return void
      */
-    public function removeEvent(Event $eventToRemove)
+    public function removeEvent(Event $eventToRemove): void
     {
-        $this->events>detach($eventToRemove);
+        $this->events->detach($eventToRemove);
     }
 
     /**
@@ -1115,7 +1114,7 @@ class Person extends AbstractEntity
      * @param ObjectStorage<Event> $events
      * @return void
      */
-    public function setEvents(ObjectStorage $events)
+    public function setEvents(ObjectStorage $events): void
     {
         $this->events = $events;
     }
@@ -1125,7 +1124,7 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function addOrganization(Organization $organization)
+    public function addOrganization(Organization $organization): void
     {
         $this->organizations->attach($organization);
     }
@@ -1136,9 +1135,9 @@ class Person extends AbstractEntity
      * @param Organization $organizationToRemove The Organization to be removed
      * @return void
      */
-    public function removeOrganization(Organization $organizationToRemove)
+    public function removeOrganization(Organization $organizationToRemove): void
     {
-        $this->organizations>detach($organizationToRemove);
+        $this->organizations->detach($organizationToRemove);
     }
 
     /**
@@ -1156,7 +1155,7 @@ class Person extends AbstractEntity
      * @param ObjectStorage<Organization> $organizations
      * @return void
      */
-    public function setOrganizations(ObjectStorage $organizations)
+    public function setOrganizations(ObjectStorage $organizations): void
     {
         $this->organizations = $organizations;
     }

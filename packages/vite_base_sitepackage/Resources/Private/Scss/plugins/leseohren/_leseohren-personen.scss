@@ -9,4 +9,10 @@
     @include has(categories) {
         margin-bottom: 1rem;
     };
+    @include has(birthday) {
+        @include if(special) {
+            font-weight: bold;
+            color: red;
+        };
+    };
 }

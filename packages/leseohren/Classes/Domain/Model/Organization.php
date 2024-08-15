@@ -24,7 +24,6 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  */
 class Organization extends AbstractEntity
 {
-
     /**
      * @var ObjectStorage<Category>
      */
@@ -173,7 +172,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function initializeObject()
+    public function initializeObject(): void
     {
         $this->vlpaten = $this->vlpaten ?: new ObjectStorage();
     }
@@ -181,7 +180,7 @@ class Organization extends AbstractEntity
     /**
      * Add category to a blog
      */
-    public function addCategory(Category $category)
+    public function addCategory(Category $category): void
     {
         $this->categories->attach($category);
     }
@@ -189,7 +188,7 @@ class Organization extends AbstractEntity
     /**
      * Set categories
      */
-    public function setCategories(ObjectStorage $categories)
+    public function setCategories(ObjectStorage $categories): void
     {
         $this->categories = $categories;
     }
@@ -205,7 +204,7 @@ class Organization extends AbstractEntity
     /**
      * Remove category from organisation
      */
-    public function removeCategory(Category $category)
+    public function removeCategory(Category $category): void
     {
         $this->categories->detach($category);
     }
@@ -225,12 +224,12 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setName(string $name)
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-/**
+    /**
      * Returns the street1
      *
      * @return string
@@ -245,7 +244,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setStreet1(string $street1)
+    public function setStreet1(string $street1): void
     {
         $this->street1 = $street1;
     }
@@ -265,7 +264,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setStreet2(string $street2)
+    public function setStreet2(string $street2): void
     {
         $this->street2 = $street2;
     }
@@ -285,7 +284,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setZip(string $zip)
+    public function setZip(string $zip): void
     {
         $this->zip = $zip;
     }
@@ -305,7 +304,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setCity(string $city)
+    public function setCity(string $city): void
     {
         $this->city = $city;
     }
@@ -325,7 +324,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setDistrict(string $district)
+    public function setDistrict(string $district): void
     {
         $this->district = $district;
     }
@@ -345,7 +344,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setPhone1(string $phone1)
+    public function setPhone1(string $phone1): void
     {
         $this->phone1 = $phone1;
     }
@@ -365,7 +364,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setPhone2(string $phone2)
+    public function setPhone2(string $phone2): void
     {
         $this->phone2 = $phone2;
     }
@@ -385,7 +384,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setEmail(string $email)
+    public function setEmail(string $email): void
     {
         $this->email = $email;
     }
@@ -405,7 +404,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setUrl(string $url)
+    public function setUrl(string $url): void
     {
         $this->url = $url;
     }
@@ -425,7 +424,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setWhatsapp(string $whatsapp)
+    public function setWhatsapp(string $whatsapp): void
     {
         $this->whatsapp = $whatsapp;
     }
@@ -445,7 +444,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setOpeningHours(string $openingHours)
+    public function setOpeningHours(string $openingHours): void
     {
         $this->openingHours = $openingHours;
     }
@@ -465,7 +464,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setNotes(string $notes)
+    public function setNotes(string $notes): void
     {
         $this->notes = $notes;
     }
@@ -485,7 +484,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setReadingTimes(string $readingTimes)
+    public function setReadingTimes(string $readingTimes): void
     {
         $this->readingTimes = $readingTimes;
     }
@@ -505,7 +504,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setVpLanguages(string $vpLanguages)
+    public function setVpLanguages(string $vpLanguages): void
     {
         $this->vpLanguages = $vpLanguages;
     }
@@ -525,7 +524,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setVpNumber(int $vpNumber)
+    public function setVpNumber(int $vpNumber): void
     {
         $this->vpNumber = $vpNumber;
     }
@@ -545,7 +544,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function setContactPerson(Person $contactPerson)
+    public function setContactPerson(Person $contactPerson): void
     {
         $this->contactPerson = $contactPerson;
     }
@@ -555,7 +554,7 @@ class Organization extends AbstractEntity
      *
      * @return void
      */
-    public function addVlpaten(Person $vlpaten)
+    public function addVlpaten(Person $vlpaten): void
     {
         $this->vlpaten->attach($vlpaten);
     }
@@ -566,7 +565,7 @@ class Organization extends AbstractEntity
      * @param Person $vlpatenToRemove The vlpaten to be removed
      * @return void
      */
-    public function removeVlpaten(Person $vlpatenToRemove)
+    public function removeVlpaten(Person $vlpatenToRemove): void
     {
         $this->vlpaten->detach($vlpatenToRemove);
     }
@@ -587,7 +586,7 @@ class Organization extends AbstractEntity
      * @param ObjectStorage<Person> $vlpaten
      * @return void
      */
-    public function setVlpaten(ObjectStorage $vlpaten)
+    public function setVlpaten(ObjectStorage $vlpaten): void
     {
         $this->vlpaten = $vlpaten;
     }

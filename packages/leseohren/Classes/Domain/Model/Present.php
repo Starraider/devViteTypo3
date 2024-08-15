@@ -7,6 +7,7 @@ namespace SKom\Leseohren\Domain\Model;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -20,7 +21,6 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
  */
 class Present extends AbstractEntity
 {
-
     /**
      * gift_date
      *
@@ -59,7 +59,7 @@ class Present extends AbstractEntity
      *
      * @return void
      */
-    public function setGiftDate(\DateTime $giftDate)
+    public function setGiftDate(\DateTime $giftDate): void
     {
         $this->giftDate = $giftDate;
     }
@@ -79,7 +79,7 @@ class Present extends AbstractEntity
      *
      * @return void
      */
-    public function setGiven(bool $given)
+    public function setGiven(bool $given): void
     {
         $this->given = $given;
     }
@@ -109,7 +109,7 @@ class Present extends AbstractEntity
      *
      * @return void
      */
-    public function setGift(Gift $gift)
+    public function setGift(Gift $gift): void
     {
         $this->gift = $gift;
     }

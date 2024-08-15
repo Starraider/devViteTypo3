@@ -702,6 +702,12 @@
 			<trans-unit id="tx_leseohren_domain_model_event.participants.description" resname="tx_leseohren_domain_model_event.participants.description">
 				<source>Participants</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.daystochristmas" resname="tx_leseohren_holidays.daystochristmas">
+				<source>days until Christmas</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.daystoeaster" resname="tx_leseohren_holidays.daystoeaster">
+				<source>days until Easter</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

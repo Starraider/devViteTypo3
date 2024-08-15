@@ -504,6 +504,27 @@
 			<trans-unit id="tx_leseohren_persondashboard.description" resname="tx_leseohren_persondashboard.description">
 				<source>Personen-Dashboard</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.name" resname="tx_leseohren_holidays.name">
+				<source>Holidays</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.description" resname="tx_leseohren_holidays.description">
+				<source>Shows number of days until easter/christmas</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.flexform.pluginOptions" resname="tx_leseohren_holidays.flexform.pluginOptions">
+				<source>Plugin Options</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.flexform.warningdays" resname="tx_leseohren_holidays.flexform.warningdays">
+				<source>How many days before the holiday should the warnings begin?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_easterdate" resname="tx_leseohren_domain_model_easterdate">
+				<source>Easter dates</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_easterdate.easterdate" resname="tx_leseohren_domain_model_easterdate.easterdate">
+				<source>Date of easter</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_easterdate.easterdate.description" resname="tx_leseohren_domain_model_easterdate.easterdate.description">
+				<source>Date of easter sunday</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -79,3 +79,7 @@ CREATE TABLE tx_leseohren_domain_model_event (
 	participants int(11) unsigned NOT NULL DEFAULT '0',
 	maxparticipants int(11) unsigned DEFAULT '0' NOT NULL
 );
+
+CREATE TABLE tx_leseohren_domain_model_easterdate (
+	easterdate int(11) NOT NULL DEFAULT '0'
+);

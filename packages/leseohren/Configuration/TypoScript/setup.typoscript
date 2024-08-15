@@ -39,6 +39,16 @@ plugin.tx_leseohren_personen {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
+plugin.tx_leseohren_persondashboard {
+  settings {
+    pageIDs {
+      personShowPid = {$pageIDs.personShowPid}
+      organizationShowPid = {$pageIDs.organizationShowPid}
+      eventShowPid = {$pageIDs.eventShowPid}
+      blackboardShowPid = {$pageIDs.blackboardShowPid}
+    }
+  }
+}
 plugin.tx_leseohren_organizations {
     settings {
       pageIDs {
@@ -130,20 +140,20 @@ plugin.tx_leseohren_blackboards {
     }
 }
 
-config.tx_extbase {
-  persistence {
-    classes {
-      \SKom\Leseohren\Domain\Model\FileReference {
-        mapping {
-          tableName = sys_file_reference
-          columns {
-            uid_local.mapOnProperty = originalFileIdentifier
-          }
-        }
-      }
-    }
-  }
-  objects {
-    TYPO3\CMS\Extbase\Domain\Model\FileReference.className = \SKom\Leseohren\Domain\Model\FileReference
-  }
-}
+// config.tx_extbase {
+//   persistence {
+//     classes {
+//       \SKom\Leseohren\Domain\Model\FileReference {
+//         mapping {
+//           tableName = sys_file_reference
+//           columns {
+//             uid_local.mapOnProperty = originalFileIdentifier
+//           }
+//         }
+//       }
+//     }
+//   }
+//   objects {
+//     TYPO3\CMS\Extbase\Domain\Model\FileReference.className = \SKom\Leseohren\Domain\Model\FileReference
+//   }
+// }

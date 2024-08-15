@@ -1,0 +1,68 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+{namespace f=SKom\Leseohren\ViewHelpers}
+<f:if condition="{birthdaypeople}">
+    <f:then>
+        <div class="accordion mt-3" id="accordionBirthdayPersons">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseBirthdayPersons" aria-expanded="true" aria-controls="collapseBirthdayPersons">
+                        <strong>Geburtstage&nbsp</strong>in den nächsten 7 Tagen
+                    </button>
+                </h2>
+                <div id="collapseBirthdayPersons" class="accordion-collapse collapse show" data-bs-parent="#accordionBirthdayPersons">
+                    <div class="accordion-body">
+                        <table id="birthdayPersonsTable" class="table table-striped display">
+                            <thead>
+                                <tr>
+                                    <th><f:translate key="tx_leseohren_domain_model_person.lastname" />, <f:translate key="tx_leseohren_domain_model_person.firstname" /></th>
+                                    <th><f:translate key="tx_leseohren_domain_model_person.birthday" /></th>
+                                    <th><f:translate key="tx_leseohren_domain_model_person.age" /></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <f:for each="{birthdaypeople}" as="person">
+                                    <tr>
+                                        <td>
+                                            <f:link.action pageUid="{settings.pageIDs.personShowPid}" action="show" controller="Person" arguments="{person: person}">
+                                                {person.title} {person.lastname}, {person.firstname}
+                                            </f:link.action>
+                                            <small>
+                                                <f:switch expression="{person.gender}">
+                                                    <f:case value="0"><i class="bi bi-gender-female"></i></f:case>
+                                                    <f:case value="1"><i class="bi bi-gender-male"></i></f:case>
+                                                    <f:case value="2"><i class="bi bi-gender-ambiguous"></i></f:case>
+                                                    <f:defaultCase></f:defaultCase>
+                                                </f:switch>
+                                            </small>
+                                        </td>
+                                        <td>
+                                            {person.birthday -> f:format.date(format: 'd.m.Y')}
+                                        </td>
+                                        <td>
+                                            <f:format.raw>
+                                                <f:format.age>{person.birthday}</f:format.age>
+                                            </f:format.raw>
+                                        </td>
+                                    </tr>
+                                </f:for>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="accordion disabled mt-3" id="accordionBirthdayPersons">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <div class="accordion-button collapsed">
+                        <strong>Keine Geburtstage&nbsp</strong> in den nächsten 7 Tagen
+                    </div>
+                </h2>
+            </div>
+        </div>
+    </f:else>
+</f:if>

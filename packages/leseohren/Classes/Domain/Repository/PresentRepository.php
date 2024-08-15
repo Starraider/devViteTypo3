@@ -15,12 +15,11 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
  *
  * (c) 2024 Sven Kalbhenn <sven@skom.de>, SKom
  */
+
 /**
- * The repository for Organizations
+ * The repository for Gifts
  */
-class OrganizationRepository extends Repository
+class PresentRepository extends Repository
 {
-    protected $defaultOrderings = [
-        'name' => QueryInterface::ORDER_ASCENDING
-    ];
+
 }

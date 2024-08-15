@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace SKom\Leseohren\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use SKom\Leseohren\Domain\Repository\OrganizationRepository;
 use Psr\Http\Message\ResponseInterface;
-use SKom\Leseohren\Domain\Model\Organization;
-use SKom\Leseohren\Domain\Repository\CategoryRepository;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
+use SKom\Leseohren\Domain\Repository\OrganizationRepository;
+use SKom\Leseohren\Domain\Repository\CategoryRepository;
+use SKom\Leseohren\Domain\Model\Organization;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -27,26 +27,22 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 class OrganizationController extends ActionController
 {
     /**
-     * organizationRepository
-     *
-     * @var OrganizationRepository
-     */
-    protected $organizationRepository = null;
-
-    public function injectOrganizationRepository(OrganizationRepository $organizationRepository)
-    {
-        $this->organizationRepository = $organizationRepository;
-    }
-
-    /**
      * categoryRepository
      *
      * @var CategoryRepository
      */
     protected $categoryRepository = null;
 
-    public function injectCategoryRepository(CategoryRepository $categoryRepository)
+    /**
+     * organizationRepository
+     *
+     * @var OrganizationRepository
+     */
+    protected $organizationRepository = null;
+
+    public function __construct(OrganizationRepository $organizationRepository, CategoryRepository $categoryRepository)
     {
+        $this->organizationRepository = $organizationRepository;
         $this->categoryRepository = $categoryRepository;
     }
 
@@ -90,7 +86,7 @@ class OrganizationController extends ActionController
      */
     public function newAction(): ResponseInterface
     {
-        $categories = $this->categoryRepository->findByParent('10');
+        $categories = $this->categoryRepository->findBy(['parent' => '10']);
         $this->view->assign('categories', $categories);
         return $this->htmlResponse();
     }
@@ -114,7 +110,7 @@ class OrganizationController extends ActionController
     public function editAction(Organization $organization): ResponseInterface
     {
         // ToDo: Read Parent-ID from Settings
-        $categories = $this->categoryRepository->findByParent('10');
+        $categories = $this->categoryRepository->findBy(['parent' => '10']);
         $this->view->assign('categories', $categories);
         $this->view->assign('organization', $organization);
         return $this->htmlResponse();

@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace SKom\Leseohren\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use SKom\Leseohren\Domain\Repository\BlackboardRepository;
 use Psr\Http\Message\ResponseInterface;
-use SKom\Leseohren\Domain\Model\Blackboard;
-use SKom\Leseohren\Domain\Model\Person;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 use TYPO3\CMS\Extbase\Http\ForwardResponse;
 use TYPO3\CMS\Core\Utility\DebugUtility;
+use SKom\Leseohren\Domain\Repository\BlackboardRepository;
+use SKom\Leseohren\Domain\Model\Blackboard;
+use SKom\Leseohren\Domain\Model\Person;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -35,7 +35,7 @@ class BlackboardController extends ActionController
      */
     protected $blackboardRepository = null;
 
-    public function injectBlackboardRepository(BlackboardRepository $blackboardRepository)
+    public function __construct(BlackboardRepository $blackboardRepository)
     {
         $this->blackboardRepository = $blackboardRepository;
     }
@@ -90,9 +90,10 @@ class BlackboardController extends ActionController
      *
      * @param void
      */
-    public function initializeCreateAction() {
+    public function initializeCreateAction(): void
+    {
         $this->arguments->getArgument('newBlackboard')
-            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd.m.Y');
     }
 
     /**
@@ -127,9 +128,11 @@ class BlackboardController extends ActionController
      *
      * @param void
      */
-    public function initializeUpdateAction() {
+    public function initializeUpdateAction(): void
+    {
         $this->arguments->getArgument('blackboard')
-            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter',\TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT,'d.m.Y');    }
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd.m.Y');
+    }
 
     /**
      * action update
