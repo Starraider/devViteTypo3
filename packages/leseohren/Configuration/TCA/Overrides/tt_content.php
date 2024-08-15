@@ -2,32 +2,46 @@
 
 defined('TYPO3') || die();
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
+ExtensionUtility::registerPlugin(
     'Leseohren',
     'Personen',
     'Personen'
 );
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+ExtensionUtility::registerPlugin(
     'Leseohren',
     'Organizations',
     'Organizations'
 );
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+ExtensionUtility::registerPlugin(
     'Leseohren',
     'Events',
     'Events'
 );
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+ExtensionUtility::registerPlugin(
     'Leseohren',
     'Blackboards',
     'Blackboards'
 );
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+ExtensionUtility::registerPlugin(
     'Leseohren',
     'PersonDashboard',
     'PersonDashboard'
+);
+
+$holidayPluginSignature = ExtensionUtility::registerPlugin(
+    'Leseohren',
+    'Holidays',
+    'Holidays',
+);
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$holidayPluginSignature] = 'pi_flexform';
+ExtensionManagementUtility::addPiFlexFormValue(
+    $holidayPluginSignature,
+    'FILE:EXT:leseohren/Configuration/FlexForms/Leseohren_Holidays.xml'
 );

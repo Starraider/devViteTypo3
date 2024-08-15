@@ -955,6 +955,14 @@
 				<source>How many people can take part?</source>
 				<target>Wieviele können teilnehmen?</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.daystochristmas" resname="tx_leseohren_holidays.daystochristmas">
+				<source>days until Christmas</source>
+				<target>Tage bis Weihnachten</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.daystoeaster" resname="tx_leseohren_holidays.daystoeaster">
+				<source>days until Easter</source>
+				<target>Tage bis Ostern</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

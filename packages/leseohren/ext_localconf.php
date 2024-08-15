@@ -61,6 +61,17 @@ defined('TYPO3') || die();
             \SKom\Leseohren\Controller\PersonDashboardController::class => ''
         ]
     );
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Leseohren',
+        'Holidays',
+        [
+            \SKom\Leseohren\Controller\HolidayController::class => 'index'
+        ],
+        // non-cacheable actions
+        [
+            \SKom\Leseohren\Controller\HolidayController::class => ''
+        ]
+    );
 
     // wizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -112,13 +123,22 @@ defined('TYPO3') || die();
                             list_type = leseohren_persondashboard
                         }
                     }
+                    holidays {
+                        iconIdentifier = leseohren-plugin-holidays
+                        title = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_holidays.name
+                        description = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_holidays.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = leseohren_holidays
+                        }
+                    }
                 }
                 show = *
             }
         }'
     );
     // Register TypeConverter for file upload
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerTypeConverter(
-        \SKom\Leseohren\Property\TypeConverter\UploadedFileReferenceConverter::class
-    );
+    //\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerTypeConverter(
+    //    \SKom\Leseohren\Property\TypeConverter\UploadedFileReferenceConverter::class
+    //);
 })();

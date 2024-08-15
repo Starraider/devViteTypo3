@@ -569,6 +569,34 @@
 				<source>Personen-Dashboard</source>
 				<target>Personen-Dashboard</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.name" resname="tx_leseohren_holidays.name">
+				<source>Holidays</source>
+				<target>Feiertage</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.description" resname="tx_leseohren_holidays.description">
+				<source>Shows number of days until easter/christmas</source>
+				<target>Zeigt die Anzahl der Tage bis Ostern/Weihnachten</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.flexform.pluginOptions" resname="tx_leseohren_holidays.flexform.pluginOptions">
+				<source>Plugin Options</source>
+				<target>Plugin Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_holidays.flexform.warningdays" resname="tx_leseohren_holidays.flexform.warningdays">
+				<source>How many days before the holiday should the warnings begin?</source>
+				<target>Wieviele Tage vor dem Feiertag sollen die Warnungen beginnen?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_easterdate" resname="tx_leseohren_domain_model_easterdate">
+				<source>Easter dates</source>
+				<target>Oster-Daten</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_easterdate.easterdate" resname="tx_leseohren_domain_model_easterdate.easterdate">
+				<source>Date of easter</source>
+				<target>Oster-Datum</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_easterdate.easterdate.description" resname="tx_leseohren_domain_model_easterdate.easterdate.description">
+				<source>Date of easter sunday</source>
+				<target>Datum von Ostersonntag</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
