@@ -154,6 +154,13 @@ class Person extends AbstractEntity
     protected $status = 0;
 
     /**
+     * statuschangeDate
+     *
+     * @var \DateTime
+     */
+    protected $statuschangeDate = null;
+
+    /**
      * statusbeginDate
      *
      * @var \DateTime
@@ -690,6 +697,25 @@ class Person extends AbstractEntity
     public function setStatus(int $status): void
     {
         $this->status = $status;
+    }
+    /**
+     * Returns the statuschangeDate
+     *
+     * @return \DateTime
+     */
+    public function getStatuschangeDate()
+    {
+        return $this->statuschangeDate;
+    }
+
+    /**
+     * Sets the statuschangeDate
+     *
+     * @return void
+     */
+    public function setStatuschangeDate(\DateTime $statuschangeDate): void
+    {
+        $this->statuschangeDate = $statuschangeDate;
     }
 
     /**

@@ -34,17 +34,17 @@
                 <f:switch expression="{person.status}">
                     <f:case value="0">
                         <span class="c-person__status--active text-success">
-                            <v:l key="tx_leseohren.status.{person.status}" /><i class="bi bi-check-lg"></i>
+                            <i class="bi bi-check-lg"></i><v:l key="tx_leseohren.status.{person.status}" />
                         </span>
                     </f:case>
                     <f:case value="1">
                         <span class="c-person__status--paused text-warning">
-                            <v:l key="tx_leseohren.status.{person.status}" /><i class="bi bi-exclamation-diamond"></i>
+                            <i class="bi bi-exclamation-diamond"></i><v:l key="tx_leseohren.status.{person.status}" />
                         </span>
                     </f:case>
                     <f:case value="2">
                         <span class="c-person__status--ended text-danger">
-                            <v:l key="tx_leseohren.status.{person.status}" /><i class="bi bi-exclamation-triangle"></i>
+                            <i class="bi bi-exclamation-triangle"></i><v:l key="tx_leseohren.status.{person.status}" />
                         </span>
                     </f:case>
                     <f:defaultCase>
@@ -52,10 +52,12 @@
                     </f:defaultCase>
                 </f:switch>
 
-                (<f:format.date pattern="dd.MM.Y">{person.statusbeginDate}</f:format.date>
+                (<small><i class="bi bi-pencil"></i><f:format.date pattern="dd.MM.Y">{person.statuschangeDate}</f:format.date></small>)
+                <br />
+                <f:format.date pattern="dd.MM.Y">{person.statusbeginDate}</f:format.date>
                 <f:if condition="{person.statusendDate}">
                     - <f:format.date pattern="dd.MM.Y">{person.statusendDate}</f:format.date>
-                </f:if>)
+                </f:if>
             </div>
         </div>
     </div>

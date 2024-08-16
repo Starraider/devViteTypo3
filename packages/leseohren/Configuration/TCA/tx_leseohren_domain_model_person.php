@@ -63,7 +63,7 @@ return [
         ],
         'statusPalette' => [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.statusPalette.description',
-            'showitem' => 'status, statusbegin_date, statusend_date',
+            'showitem' => 'status, statuschange_date, --linebreak--, statusbegin_date, statusend_date',
         ],
         'preferencePalette' => [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.preferencePalette.description',
@@ -353,6 +353,18 @@ return [
                 'size' => 1,
                 'maxitems' => 1,
                 'eval' => ''
+            ],
+        ],
+        'statuschange_date' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.statuschange_date',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.statuschange_date.description',
+            'config' => [
+                'type' => 'datetime',
+                'format' => 'date',
+                'required' => true,
+                'size' => 20,
+                'default' => 0,
             ],
         ],
         'statusbegin_date' => [

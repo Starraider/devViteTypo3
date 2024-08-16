@@ -384,6 +384,12 @@
 			<trans-unit id="tx_leseohren_domain_model_person.status.description" resname="tx_leseohren_domain_model_person.status.description">
 				<source>Status</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.statuschangeDate" resname="tx_leseohren_domain_model_person.statuschangeDate">
+				<source>Status change date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.statuschangeDate.description" resname="tx_leseohren_domain_model_person.statuschangeDate.description">
+				<source>When was this status changed?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.statusbeginDate" resname="tx_leseohren_domain_model_person.statusbeginDate">
 				<source>Statusbegin Date</source>
 			</trans-unit>

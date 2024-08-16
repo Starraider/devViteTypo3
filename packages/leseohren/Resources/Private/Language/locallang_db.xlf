@@ -117,6 +117,12 @@
 			<trans-unit id="tx_leseohren_domain_model_person.status.description" resname="tx_leseohren_domain_model_person.status.description">
 				<source>Current status of this person</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.statuschange_date" resname="tx_leseohren_domain_model_person.statuschange_date">
+				<source>Status change</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.statuschange_date.description" resname="tx_leseohren_domain_model_person.statuschange_date.description">
+				<source>When was the status changed?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.statusbegin_date" resname="tx_leseohren_domain_model_person.statusbegin_date">
 				<source>Status Begin</source>
 			</trans-unit>

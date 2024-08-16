@@ -150,7 +150,7 @@
     <div class="card-header text-bg-primary"><f:translate key="tx_leseohren.status" /></div>
     <div class="card-body">
         <div class="row mb-3">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <label for="status" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_person.status" />:
                 </label>
@@ -162,14 +162,21 @@
                     </v:iterator.loop>
                 </f:form.select>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
+                <label for="statuschangeDate" class="form-label">
+                    <f:translate key="tx_leseohren_domain_model_person.statuschangeDate" />:
+                </label>
+                <f:form.textfield property="statuschangeDate" id="statuschangeDate" class="form-control"
+                    value="{person.statuschangeDate -> f:format.date(format: 'd.m.Y')}" />
+            </div>
+            <div class="col-sm-3">
                 <label for="statusbeginDate" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_person.statusbeginDate" />:
                 </label>
                 <f:form.textfield property="statusbeginDate" id="statusbeginDate" class="form-control"
                     value="{person.statusbeginDate -> f:format.date(format: 'd.m.Y')}" />
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <label for="statusendDate" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_person.statusendDate" />:
                 </label>
@@ -294,22 +301,6 @@
                 </f:form.select>
                 <div id="preferenceOrganizationTypeHelpBlock" class="form-text">
                     <f:translate key="tx_leseohren.orgType.description" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-header text-bg-primary"><f:translate key="tx_leseohren_domain_model_person.files" /></div>
-        <div class="card-body">
-            <div class="row mb-3">
-                <div class="col-sm-12">
-                    <label for="fileFuehrungszeugnis" class="form-label">
-                        <f:translate key="tx_leseohren_domain_model_person.file_fuehrungszeugnis" />:
-                    </label>
-                    <f:form.upload property="fileFuehrungszeugnis" id="fileFuehrungszeugnis" class="form-control" accept=".pdf,.doc,.docx,.xls,.xlsx" />
-                    <div id="fileFuehrungszeugnisHelpBlock" class="form-text">
-                        <f:translate key="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" />
-                    </div>
                 </div>
             </div>
         </div>
