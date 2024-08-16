@@ -8,8 +8,8 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
-//use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
-use TYPO3\CMS\Core\Utility\DebugUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+//use TYPO3\CMS\Core\Utility\DebugUtility;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use SKom\Leseohren\Domain\Repository\EasterdateRepository;
 use SKom\Leseohren\Domain\Model\Easterdate;
@@ -57,16 +57,18 @@ class HolidayController extends ActionController
 
         // Fetch all Easter dates from the repository
         $easterdates = $this->easterdateRepository->findAll();
+        $days = 366;
+        $easterDate = '';
         foreach ($easterdates as $easterdate) {
             $easterDateTime = $easterdate->getEasterdate();
-            if($easterDateTime->format('Y') == $thisYear) {
-                $this->view->assign('easterDate', $easterDateTime->format('d.m.Y'));
-                $interval = $today->diff($easterDateTime);
-                $daysUntilEaster = $interval->days;
+            $interval = $today->diff($easterDateTime, false);
+            if(($interval->invert == 0) AND ($interval->days < $days)) {
+                $days = $interval->days;
+                $easterDate = $easterDateTime->format('d.m.Y');
             }
         }
-        $this->view->assign('daysUntilEaster', $daysUntilEaster);
+        $this->view->assign('easterDate', $easterDate);
+        $this->view->assign('daysUntilEaster', $days);
         return $this->htmlResponse();
     }
-
 }
