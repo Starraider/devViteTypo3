@@ -260,6 +260,13 @@ class Person extends AbstractEntity
     protected $fuehrungszeugnisChecked = false;
 
     /**
+     * fuehrungszeugnisDate
+     *
+     * @var \DateTime
+     */
+    protected $fuehrungszeugnisDate = null;
+
+    /**
      * fileMandat
      *
      * @var FileReference
@@ -705,6 +712,7 @@ class Person extends AbstractEntity
     {
         $this->status = $status;
     }
+
     /**
      * Returns the statuschangeDate
      *
@@ -1006,6 +1014,26 @@ class Person extends AbstractEntity
     public function setFuehrungszeugnischecked(bool $fuehrungszeugnisChecked): void
     {
         $this->fuehrungszeugnisChecked = $fuehrungszeugnisChecked;
+    }
+
+    /**
+     * Returns the fuehrungszeugnisDate
+     *
+     * @return \DateTime
+     */
+    public function getFuehrungszeugnisDate()
+    {
+        return $this->fuehrungszeugnisDate;
+    }
+
+    /**
+     * Sets the fuehrungszeugnisDate
+     *
+     * @return void
+     */
+    public function setFuehrungszeugnisDate(\DateTime $fuehrungszeugnisDate): void
+    {
+        $this->fuehrungszeugnisDate = $fuehrungszeugnisDate;
     }
 
     /**

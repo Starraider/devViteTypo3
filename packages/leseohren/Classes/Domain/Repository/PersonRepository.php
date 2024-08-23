@@ -13,6 +13,7 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+//use TYPO3\CMS\Core\Utility\DebugUtility;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -69,6 +70,37 @@ class PersonRepository extends Repository
             $query->between('statusend_date', $today, $thisweek)
         );
         $query->setOrderings(['statusend_date' => QueryInterface::ORDER_ASCENDING]);
+
+        // $typo3DbQueryParser = GeneralUtility::makeInstance(Typo3DbQueryParser::class);
+        // $queryBuilder = $typo3DbQueryParser->convertQueryToDoctrineQueryBuilder($query);
+        // DebuggerUtility::var_dump($queryBuilder->getSQL());
+        // DebuggerUtility::var_dump($queryBuilder->getParameters());
+
+        return $query->execute();
+    }
+
+    /**
+     * Find all persons whose fuehrungszeugnis will expire the next 14 days
+     *
+     * @param string $interval Number of days to look ahead
+     * @return QueryResultInterface
+     */
+    public function expiredFuehrungszeugnis($interval = '14')
+    {
+        $fiveYearsAgo = new \DateTime('today');
+        $fiveYearsAgo = $fiveYearsAgo->modify('-5 years');
+        $fiveYearsAgo = $fiveYearsAgo->modify('+'.$interval.' days');
+        //DebugUtility::debug($fiveYearsAgo, 'vorJahren');
+        $query = $this->createQuery();
+        $query->matching(
+            $query->logicalAnd(
+                $query->logicalNot(
+                    $query->equals('fuehrungszeugnis_date', 0)
+                ),
+                $query->lessThanOrEqual('fuehrungszeugnis_date', $fiveYearsAgo)
+            )
+        );
+        $query->setOrderings(['fuehrungszeugnis_date' => QueryInterface::ORDER_ASCENDING]);
 
         // $typo3DbQueryParser = GeneralUtility::makeInstance(Typo3DbQueryParser::class);
         // $queryBuilder = $typo3DbQueryParser->convertQueryToDoctrineQueryBuilder($query);

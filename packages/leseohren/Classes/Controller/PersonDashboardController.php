@@ -81,6 +81,10 @@ class PersonDashboardController extends ActionController
         $birthdayInterval = $this->settings['leseohren_persondashboard']['birthday_warningperiod'] ?? '7';
         $birthdaypeople = $this->personRepository->upcomingBirthdays($birthdayInterval);
         $this->view->assign('birthdaypeople', $birthdaypeople);
+        // expired fuehrungszeugnis
+        $fuehrungszeugnisInterval = $this->settings['leseohren_persondashboard']['fuehrungszeugnis_expired_warningperiod'] ?? '14';
+        $expiredFuehrungszeugnisPeople = $this->personRepository->expiredFuehrungszeugnis($fuehrungszeugnisInterval);
+        $this->view->assign('expiredfuehrungszeugnispeople', $expiredFuehrungszeugnisPeople);
         return $this->htmlResponse();
     }
 }

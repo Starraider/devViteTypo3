@@ -631,6 +631,10 @@
 				<source>Certificate of good conduct</source>
 				<target>Nur pdf,doc,xls Dateien erlaubt</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_date">
+				<source>Führungszeugnis date</source>
+				<target>Führungszeugnis-Datum</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
 				<source>Mandate</source>
 				<target>Mandat</target>

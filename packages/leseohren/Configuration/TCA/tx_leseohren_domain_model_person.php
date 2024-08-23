@@ -6,6 +6,7 @@ return [
         'label' => 'lastname',
         'label_alt' => 'firstname',
         'label_alt_force' => true,
+        'default_sortby' => 'lastname ASC',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'versioningWS' => true,
@@ -40,7 +41,8 @@ return [
                     --palette--;;bankaccountPalette,
                     paypal,
                 --div--;Files,
-                    file_fuehrungszeugnis, fuehrungszeugnis_checked, file_mandat, file_others,
+                    --palette--;;fuehrungszeugnisPalette,
+                    file_mandat, file_others,
                 --div--;Events,
                     events,
                 --div--;Gifts,
@@ -72,6 +74,10 @@ return [
         'bankaccountPalette' => [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.bankaccountPalette.description',
             'showitem' => 'iban, swift, --linebreak--, account_owner, bankname',
+        ],
+        'fuehrungszeugnisPalette' => [
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.file_fuehrungszeugnis',
+            'showitem' => 'file_fuehrungszeugnis, --linebreak--, fuehrungszeugnis_checked, fuehrungszeugnis_date',
         ],
     ],
     'columns' => [
@@ -567,6 +573,18 @@ return [
                         'geprüft',
                     ],
                 ],
+            ],
+        ],
+        'fuehrungszeugnis_date' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.fuehrungszeugnis_date',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.fuehrungszeugnis_date.description',
+            'config' => [
+                'type' => 'datetime',
+                'format' => 'date',
+                'required' => false,
+                'size' => 20,
+                'default' => 0,
             ],
         ],
         'file_mandat' => [

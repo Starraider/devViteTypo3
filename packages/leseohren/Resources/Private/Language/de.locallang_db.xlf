@@ -269,6 +269,14 @@
 				<source>Was the Führungszeugnis checked?</source>
 				<source>Wurde das Führungszeugnis geprüft?</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_date">
+				<source>Date of the Führungszeugnis</source>
+				<target>Datum des Führungszeugnis</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date.description" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_date.description">
+				<source>When was the Führungszeugnis issued?</source>
+				<source>Wann wurde das Führungszeugnis ausgestellt?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
 				<source>File Mandat</source>
 				<target>Mandat</target>
@@ -625,6 +633,10 @@
 			<trans-unit id="tx_leseohren_persondashboard.flexform.status_warningperiod" resname="tx_leseohren_persondashboard.flexform.status_warningperiod">
 				<source>How many days before the status change should the warnings begin?</source>
 				<target>Wieviele Tage vor der Status-Änderung sollen die Warnungen beginnen?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.fuehrungszeugnis_expired_warningperiod" resname="tx_leseohren_persondashboard.flexform.fuehrungszeugnis_expired_warningperiod">
+				<source>How many days before the Führungszeugnis expires, should the warning begin?</source>
+				<target>Wieviele Tage vor dem Ablauf des Führungszeugnis, soll die Warnung beginnen?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_holidays.name" resname="tx_leseohren_holidays.name">
 				<source>Holidays</source>

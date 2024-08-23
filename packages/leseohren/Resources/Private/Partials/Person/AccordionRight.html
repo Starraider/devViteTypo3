@@ -69,6 +69,9 @@
                         <f:if condition="{person.fuehrungszeugnisChecked}">
                             <i class="bi bi-patch-check"></i>
                         </f:if>
+                        <f:if condition="{person.fuehrungszeugnisDate}">
+                            <small>({person.fuehrungszeugnisDate -> f:format.date(format: 'd.m.Y')})</small>
+                        </f:if>
                     </div>
                 </f:if>
                 <f:if condition="{person.file_mandat}">

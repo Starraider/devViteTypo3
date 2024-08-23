@@ -474,6 +474,9 @@
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description">
 				<source>pdf,doc,xls files are allowed</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_date">
+				<source>Führungszeugnis date</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
 				<source>File Mandat</source>
 			</trans-unit>

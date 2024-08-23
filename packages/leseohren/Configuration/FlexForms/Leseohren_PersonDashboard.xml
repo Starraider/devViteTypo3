@@ -36,6 +36,19 @@
                             </config>
                         </TCEforms>
                     </settings.leseohren_persondashboard.status_warningperiod>
+                    <settings.leseohren_persondashboard.fuehrungszeugnis_expired_warningperiod>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_persondashboard.flexform.fuehrungszeugnis_expired_warningperiod
+                            </label>
+                            <config>
+                                <type>input</type>
+                                <size>3</size>
+                                <eval>int</eval>
+                                <default>30</default>
+                            </config>
+                        </TCEforms>
+                    </settings.leseohren_persondashboard.fuehrungszeugnis_expired_warningperiod>
                 </el>
             </ROOT>
         </sDEF>
