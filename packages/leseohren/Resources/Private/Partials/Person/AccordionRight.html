@@ -66,6 +66,9 @@
                         <a href="{person.fileFuehrungszeugnis.originalResource.publicUrl}">
                             {person.fileFuehrungszeugnis.originalResource.name}
                         </a>
+                        <f:if condition="{person.fuehrungszeugnisChecked}">
+                            <i class="bi bi-patch-check"></i>
+                        </f:if>
                     </div>
                 </f:if>
                 <f:if condition="{person.file_mandat}">

@@ -16,6 +16,8 @@
                 <th><f:translate key="tx_leseohren_domain_model_person.city" /></th>
                 <th><f:translate key="tx_leseohren_domain_model_person.email" /></th>
                 <th>Telefon</th>
+                <th>Liest in</th>
+                <th>FZ</th>
                 <th>Aktionen</th>
             </tr>
         </thead>
@@ -51,6 +53,18 @@
                         <f:if condition="{person.phoneMobile}">
                             <i class="bi bi-phone-vibrate"></i>&nbsp;
                             {person.phoneMobile}
+                        </f:if>
+                    </td>
+                    <td>
+                        <f:for each="{person.organizations}" as="organization" iteration="orgIterator">
+                            <f:link.action pageUid="19" action="show" controller="Organization" arguments="{organization: organization}">
+                                {organization.name},<br />
+                            </f:link.action>
+                        </f:for>
+                    </td>
+                    <td>
+                        <f:if condition="{person.fuehrungszeugnisChecked}">
+                            <strong><i class="bi bi-patch-check"></i></strong>
                         </f:if>
                     </td>
                     <td>

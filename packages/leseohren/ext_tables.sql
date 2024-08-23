@@ -26,6 +26,7 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	bankname varchar(255) NOT NULL DEFAULT '',
 	paypal varchar(255) NOT NULL DEFAULT '',
 	file_fuehrungszeugnis int(11) unsigned NOT NULL DEFAULT '0',
+	fuehrungszeugnis_checked int(11) DEFAULT '0' NOT NULL,
 	file_mandat int(11) unsigned NOT NULL DEFAULT '0',
 	file_others int(11) unsigned NOT NULL DEFAULT '0',
 	donations int(11) unsigned NOT NULL DEFAULT '0',

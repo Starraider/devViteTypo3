@@ -253,6 +253,13 @@ class Person extends AbstractEntity
     protected $fileFuehrungszeugnis = null;
 
     /**
+     * fuehrungszeugnisChecked
+     *
+     * @var bool
+     */
+    protected $fuehrungszeugnisChecked = false;
+
+    /**
      * fileMandat
      *
      * @var FileReference
@@ -979,6 +986,26 @@ class Person extends AbstractEntity
     public function setFileFuehrungszeugnis(FileReference $fileFuehrungszeugnis): void
     {
         $this->fileFuehrungszeugnis = $fileFuehrungszeugnis;
+    }
+
+    /**
+     * Returns the fuehrungszeugnisChecked
+     *
+     * @return bool
+     */
+    public function getFuehrungszeugnisChecked()
+    {
+        return $this->fuehrungszeugnisChecked;
+    }
+
+    /**
+     * Sets the fuehrungszeugnisChecked
+     *
+     * @return void
+     */
+    public function setFuehrungszeugnischecked(bool $fuehrungszeugnisChecked): void
+    {
+        $this->fuehrungszeugnisChecked = $fuehrungszeugnisChecked;
     }
 
     /**

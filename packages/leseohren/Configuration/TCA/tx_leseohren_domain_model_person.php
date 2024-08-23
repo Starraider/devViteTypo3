@@ -40,7 +40,7 @@ return [
                     --palette--;;bankaccountPalette,
                     paypal,
                 --div--;Files,
-                    file_fuehrungszeugnis, file_mandat, file_others,
+                    file_fuehrungszeugnis, fuehrungszeugnis_checked, file_mandat, file_others,
                 --div--;Events,
                     events,
                 --div--;Gifts,
@@ -552,8 +552,21 @@ return [
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.file_fuehrungszeugnis.description',
             'config' => [
                 'type' => 'file',
-                'maxitems' => 20,
+                'maxitems' => 1,
                 'allowed' => 'pdf,doc,docx,xls,xlsx,txt,md,zip,tar,gz'
+            ],
+        ],
+        'fuehrungszeugnis_checked' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.fuehrungszeugnis_checked',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.fuehrungszeugnis_checked.description',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    [
+                        'geprüft',
+                    ],
+                ],
             ],
         ],
         'file_mandat' => [
@@ -562,7 +575,7 @@ return [
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.file_mandat.description',
             'config' => [
                 'type' => 'file',
-                'maxitems' => 20,
+                'maxitems' => 1,
                 'allowed' => 'pdf,doc,docx,xls,xlsx,txt,md,zip,tar,gz'
             ],
         ],

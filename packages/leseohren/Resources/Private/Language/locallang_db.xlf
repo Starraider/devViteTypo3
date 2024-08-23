@@ -202,10 +202,16 @@
 				<source>Paypal</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis">
-				<source>File Fuehrungszeugnis</source>
+				<source>Führungszeugnis</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description">
-				<source>File Fuehrungszeugnis</source>
+				<source>Uploaded Führungszeugnis file</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_checked" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_checked">
+				<source>Führungszeugnis checked</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_checked.description" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_checked.description">
+				<source>Was the Führungszeugnis checked?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
 				<source>File Mandat</source>

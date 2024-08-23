@@ -254,11 +254,20 @@
 				<target>Paypal</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis">
-				<source>File Fuehrungszeugnis</source>
+				<source>Führungszeugnis</source>
 				<target>Führungszeugnis</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description">
-				<source></source>
+				<source>Uploaded Führungszeugnis file</source>
+				<source>Dateiupload des Führungszeugnis</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_checked" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_checked">
+				<source>Führungszeugnis checked</source>
+				<target>Führungszeugnis geprüft</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_checked.description" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_checked.description">
+				<source>Was the Führungszeugnis checked?</source>
+				<source>Wurde das Führungszeugnis geprüft?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
 				<source>File Mandat</source>
