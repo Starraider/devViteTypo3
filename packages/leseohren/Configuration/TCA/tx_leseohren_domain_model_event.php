@@ -31,7 +31,7 @@ return [
                 location,
                 categories,
             --div--;Teilnehmer,
-                maxparticipants,
+                --palette--;;participantsPalette,
                 participants,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
                 hidden,
@@ -42,6 +42,10 @@ return [
         'datePalette' => [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.datePalette.description',
             'showitem' => 'start_date, end_date',
+        ],
+        'participantsPalette' => [
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.participantsPalette.description',
+            'showitem' => 'maxparticipants, reminder_sent',
         ],
     ],
     'columns' => [
@@ -175,6 +179,19 @@ return [
                 'size' => 4,
                 'default' => 0
             ]
+        ],
+        'reminder_sent' => [
+            'exclude' => 1,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.reminder_sent',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.reminder_sent.description',
+            'config' => [
+                'type' => 'check',
+                'items' => [
+                    [
+                        'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.reminder_sent.sent',
+                    ],
+                ],
+            ],
         ],
     ],
 ];

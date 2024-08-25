@@ -80,6 +80,13 @@ class Event extends AbstractEntity
     protected $maxparticipants = 0;
 
     /**
+     * reminderSent
+     *
+     * @var bool
+     */
+    protected $reminderSent = false;
+
+    /**
      * __construct
      */
     public function __construct()
@@ -293,5 +300,25 @@ class Event extends AbstractEntity
     public function setMaxparticipants(int $maxparticipants): void
     {
         $this->maxparticipants = $maxparticipants;
+    }
+
+    /**
+     * Returns the reminderSent
+     *
+     * @return bool
+     */
+    public function getReminderSent()
+    {
+        return $this->reminderSent;
+    }
+
+    /**
+     * Sets the reminderSent
+     *
+     * @return void
+     */
+    public function setReminderSent(bool $reminderSent): void
+    {
+        $this->reminderSent = $reminderSent;
     }
 }

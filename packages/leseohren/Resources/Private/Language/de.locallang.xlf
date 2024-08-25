@@ -967,6 +967,22 @@
 				<source>How many people can take part?</source>
 				<target>Wieviele können teilnehmen?</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.title" resname="tx_leseohren_domain_model_event.reminder_sent.title">
+				<source>Reminder</source>
+				<target>Erinnerung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent" resname="tx_leseohren_domain_model_event.reminder_sent">
+				<source>Reminder mail</source>
+				<target>Erinnerungs-Mail</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.description" resname="tx_leseohren_domain_model_event.reminder_sent.description">
+				<source>Has the reminder e-mail been sent?</source>
+				<target>Wurde die Erinnerungs-Mail verschickt?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.sent" resname="tx_leseohren_domain_model_event.reminder_sent.sent">
+				<source>sent</source>
+				<target>verschickt</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_holidays.daystochristmas" resname="tx_leseohren_holidays.daystochristmas">
 				<source>days until Christmas</source>
 				<target>Tage bis Weihnachten</target>

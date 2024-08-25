@@ -711,6 +711,18 @@
 			<trans-unit id="tx_leseohren_domain_model_event.participants.description" resname="tx_leseohren_domain_model_event.participants.description">
 				<source>Participants</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.title" resname="tx_leseohren_domain_model_event.reminder_sent.title">
+				<source>Reminder</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent" resname="tx_leseohren_domain_model_event.reminder_sent">
+				<source>Reminder mail</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.description" resname="tx_leseohren_domain_model_event.reminder_sent.description">
+				<source>Has the reminder e-mail been sent?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.sent" resname="tx_leseohren_domain_model_event.reminder_sent.sent">
+				<source>sent</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_holidays.daystochristmas" resname="tx_leseohren_holidays.daystochristmas">
 				<source>days until Christmas</source>
 			</trans-unit>

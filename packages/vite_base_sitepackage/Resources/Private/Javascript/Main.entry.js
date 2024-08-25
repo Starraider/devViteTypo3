@@ -49,6 +49,18 @@ let tablePersonList = new DataTable('#personList', {
   columnDefs: [
     {
       searchPanes: {
+        show: false,
+      },
+      targets: [0],
+    },
+    {
+      searchPanes: {
+        show: true,
+      },
+      targets: [1],
+    },
+    {
+      searchPanes: {
         show: true,
       },
       targets: [2],
@@ -58,6 +70,43 @@ let tablePersonList = new DataTable('#personList', {
         show: true,
       },
       targets: [3],
+    },
+    {
+      searchPanes: {
+        show: true,
+      },
+      targets: [4],
+    },
+    {
+      searchPanes: {
+        show: false,
+      },
+      targets: [5],
+    },
+    {
+      searchPanes: {
+        show: false,
+      },
+      targets: [6],
+    },
+    {
+      searchPanes: {
+        show: true,
+      },
+      targets: [7],
+    },
+    {
+      searchPanes: {
+        show: false,
+      },
+      targets: [8],
+    },
+    {
+      orderable: false,
+      searchPanes: {
+        show: false,
+      },
+      targets: [9],
     },
   ],
 })
@@ -80,6 +129,12 @@ let tableOrganizationList = new DataTable('#organizationList', {
   columnDefs: [
     {
       searchPanes: {
+        show: false,
+      },
+      targets: [0],
+    },
+    {
+      searchPanes: {
         show: true,
       },
       targets: [1],
@@ -95,6 +150,13 @@ let tableOrganizationList = new DataTable('#organizationList', {
         show: true,
       },
       targets: [3],
+    },
+    {
+      orderable: false,
+      searchPanes: {
+        show: false,
+      },
+      targets: [4],
     },
   ],
 })
@@ -126,12 +188,6 @@ let tableEventList = new DataTable('#eventList', {
       searchPanes: {
         show: true,
       },
-      targets: [0],
-    },
-    {
-      searchPanes: {
-        show: true,
-      },
       targets: [1],
     },
     {
@@ -141,11 +197,23 @@ let tableEventList = new DataTable('#eventList', {
       targets: [2],
     },
     {
+      searchPanes: {
+        show: true,
+      },
+      targets: [3],
+    },
+    {
+      searchPanes: {
+        show: false,
+      },
+      targets: [4],
+    },
+    {
       orderable: false,
       searchPanes: {
         show: false,
       },
-      targets: [3],
+      targets: [5],
     },
   ],
 })

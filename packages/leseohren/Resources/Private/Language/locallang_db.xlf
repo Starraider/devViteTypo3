@@ -447,6 +447,9 @@
 			<trans-unit id="tx_leseohren_domain_model_event.datePalette.description" resname="tx_leseohren_domain_model_event.datePalette.description">
 				<source>Date of the event</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.participantsPalette.description" resname="tx_leseohren_domain_model_event.datePalette.description">
+				<source>Participants</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.start_date" resname="tx_leseohren_domain_model_event.start_date">
 				<source>Start Date</source>
 			</trans-unit>
@@ -476,6 +479,15 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants.description" resname="tx_leseohren_domain_model_event.maxparticipants.description">
 				<source>How many people can take part?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent" resname="tx_leseohren_domain_model_event.reminder_sent">
+				<source>Reminder mail</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.description" resname="tx_leseohren_domain_model_event.reminder_sent.description">
+				<source>Has the reminder e-mail been sent?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.sent" resname="tx_leseohren_domain_model_event.reminder_sent.sent">
+				<source>sent</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_personen.name" resname="tx_leseohren_personen.name">
 				<source>Personen</source>

@@ -78,7 +78,8 @@ CREATE TABLE tx_leseohren_domain_model_event (
 	description text NOT NULL DEFAULT '',
 	location text NOT NULL DEFAULT '',
 	participants int(11) unsigned NOT NULL DEFAULT '0',
-	maxparticipants int(11) unsigned DEFAULT '0' NOT NULL
+	maxparticipants int(11) unsigned DEFAULT '0' NOT NULL,
+	reminder_sent int(11) DEFAULT '0' NOT NULL
 );
 
 CREATE TABLE tx_leseohren_domain_model_easterdate (

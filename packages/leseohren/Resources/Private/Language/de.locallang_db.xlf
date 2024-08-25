@@ -535,6 +535,10 @@
 				<source>Date of the event</source>
 				<target>Veranstaltungsdatum</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.participantsPalette.description" resname="tx_leseohren_domain_model_event.datePalette.description">
+				<source>Participants</source>
+				<target>Teilnehmer</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.start_date" resname="tx_leseohren_domain_model_event.start_date">
 				<source></source>
 			</trans-unit>
@@ -560,6 +564,7 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.participants.description" resname="tx_leseohren_domain_model_event.participants.description">
 				<source>Participants</source>
+				<target>Teilnehmer der Veranstaltung</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants" resname="tx_leseohren_domain_model_event.maxparticipants">
 				<source>max. Number of Participants</source>
@@ -568,6 +573,18 @@
 			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants.description" resname="tx_leseohren_domain_model_event.maxparticipants.description">
 				<source>How many people can take part?</source>
 				<target>Wieviele Leute können max. teilnehmen?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent" resname="tx_leseohren_domain_model_event.reminder_sent">
+				<source>Reminder mail</source>
+				<target>Erinnerungs-Mail</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.description" resname="tx_leseohren_domain_model_event.reminder_sent.description">
+				<source>Has the reminder e-mail been sent?</source>
+				<target>Wurde die Erinnerungs-Mail verschickt?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.sent" resname="tx_leseohren_domain_model_event.reminder_sent.sent">
+				<source>sent</source>
+				<target>verschickt</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_personen.name" resname="tx_leseohren_personen.name">
 				<source>Personen</source>

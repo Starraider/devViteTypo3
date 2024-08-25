@@ -13,7 +13,8 @@
                 <th><f:translate key="tx_leseohren_domain_model_event.start_date" /></th>
                 <th><f:translate key="tx_leseohren_domain_model_event.categories" /></th>
                 <th><f:translate key="tx_leseohren_domain_model_event.title" /></th>
-                <th>Action</th>
+                <th class="dt-head-center"><f:translate key="tx_leseohren_domain_model_event.reminder_sent.title" /></th>
+                <th class="dt-head-center">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -36,8 +37,15 @@
                             </f:for>
                         </f:if>
                     </td>
-                    <td><f:link.action action="show" arguments="{event:event}">{event.title}</f:link.action></td>
                     <td>
+                        <f:link.action action="show" arguments="{event:event}">{event.title}</f:link.action>
+                    </td>
+                    <td class="dt-body-center">
+                        <f:if condition="{event.reminderSent}">
+                            <strong><i class="bi bi-send-check"></i></strong>
+                        </f:if>
+                    </td>
+                    <td class="dt-body-center">
                         <f:link.action action="edit" arguments="{event:event}"><i class="bi bi-pencil"></i></f:link.action>
                         <a type="button" data-bs-toggle="modal" data-bs-target="#deleteEventModal{eventIterator.index}">
                             <i class="bi bi-trash3"></i>
