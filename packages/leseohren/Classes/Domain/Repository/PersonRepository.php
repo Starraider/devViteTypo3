@@ -110,6 +110,30 @@ class PersonRepository extends Repository
         return $query->execute();
     }
 
+    /**
+     * Find all persons by category
+     *
+     * @param string $category
+     * @param bool $invert Should the result be inverted
+     * @return QueryResultInterface
+     */
+    public function searchCategory($category, $invert = false)
+    {
+        $query = $this->createQuery();
+        if($invert == false){
+            $query->matching(
+                $query->in('categories', $category)
+            );
+        }else {
+            $query->matching(
+                $query->logicalNot(
+                    $query->in('categories', $category)
+                )
+            );
+        }
+        return $query->execute();
+    }
+
     protected $defaultOrderings = [
         'lastname' => QueryInterface::ORDER_ASCENDING,
         'firstname' => QueryInterface::ORDER_ASCENDING

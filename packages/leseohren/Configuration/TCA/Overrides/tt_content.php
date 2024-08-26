@@ -5,10 +5,16 @@ defined('TYPO3') || die();
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-ExtensionUtility::registerPlugin(
+
+$personenPluginSignature = ExtensionUtility::registerPlugin(
     'Leseohren',
     'Personen',
     'Personen'
+);
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$personenPluginSignature] = 'pi_flexform';
+ExtensionManagementUtility::addPiFlexFormValue(
+    $personenPluginSignature,
+    'FILE:EXT:leseohren/Configuration/FlexForms/Leseohren_Personen.xml'
 );
 
 ExtensionUtility::registerPlugin(
@@ -17,10 +23,15 @@ ExtensionUtility::registerPlugin(
     'Organizations'
 );
 
-ExtensionUtility::registerPlugin(
+$eventsPluginSignature = ExtensionUtility::registerPlugin(
     'Leseohren',
     'Events',
     'Events'
+);
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$eventsPluginSignature] = 'pi_flexform';
+ExtensionManagementUtility::addPiFlexFormValue(
+    $eventsPluginSignature,
+    'FILE:EXT:leseohren/Configuration/FlexForms/Leseohren_Events.xml'
 );
 
 ExtensionUtility::registerPlugin(

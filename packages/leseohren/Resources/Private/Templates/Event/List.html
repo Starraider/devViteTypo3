@@ -3,9 +3,19 @@
 
 <f:section name="content">
     <h1><f:translate key="tx_leseohren_domain_model_events" /></h1>
+    <f:if condition="{selectedCategories}">
+        <p><strong>Filter:</strong>
+            <f:for each="{selectedCategories}" as="selectedCategory">
+                <category class="c-event__categories">
+                    <span class="badge bg-secondary">
+                        {selectedCategory}
+                    </span>
+                </category>
+            </f:for>
+        </p>
+    </f:if>
 
     <f:flashMessages />
-
     <table id="eventList" class="table table-striped display">
         <thead>
             <tr>

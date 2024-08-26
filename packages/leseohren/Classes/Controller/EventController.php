@@ -12,6 +12,7 @@ use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use SKom\Leseohren\Domain\Repository\EventRepository;
 use SKom\Leseohren\Domain\Repository\CategoryRepository;
 use SKom\Leseohren\Domain\Model\Event;
+use TYPO3\CMS\Core\Utility\DebugUtility;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -72,7 +73,26 @@ class EventController extends ActionController
      */
     public function listAction(): ResponseInterface
     {
-        $events = $this->eventRepository->findUpcomingEvents();
+        $selectedCategories = [];
+        if($this->settings['leseohren_events']['categories'] != '0'){
+            $selectedCategories = explode(',', $this->settings['leseohren_events']['categories']);
+        }
+        if($this->settings['leseohren_events']['filtercategory'] == 'onlySelectedCategories'){
+            $categoryNames = [];
+            foreach ($selectedCategories as $categoryID) {
+                $cat = $this->categoryRepository->findOneBy(['uid' => $categoryID]);
+                $categoryNames [] = $cat->getTitle();
+            }
+            $this->view->assign('selectedCategories', $categoryNames);
+        }
+
+        if((count($selectedCategories) > 0) AND $this->settings['leseohren_events']['filtercategory'] == 'onlySelectedCategories'){
+            $events = $this->eventRepository->searchCategory($selectedCategories,false);
+        }elseif((count($selectedCategories) > 0) AND $this->settings['leseohren_events']['filtercategory'] == 'onlyNotSelectedCategories'){
+            $events = $this->eventRepository->searchCategory($selectedCategories,true);
+        }else{
+            $events = $this->eventRepository->findUpcomingEvents();
+        }
         $this->view->assign('events', $events);
         return $this->htmlResponse();
     }
