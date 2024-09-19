@@ -594,8 +594,14 @@
 			<trans-unit id="tx_leseohren_domain_model_present.description" resname="tx_leseohren_domain_model_present.description">
 				<source>Schenkungen</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.newPresent" resname="tx_leseohren_domain_model_present.newPresent">
+				<source>New donation</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present.deleteConfirm" resname="tx_leseohren_domain_model_present.deleteConfirm">
 				<source>Do you really want to delete this present?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.present_to" resname="tx_leseohren_domain_model_present.present_to">
+				<source>Donation to</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present.gift_date" resname="tx_leseohren_domain_model_present.gift_date">
 				<source>Gift Date</source>

@@ -61,3 +61,9 @@ ExtensionManagementUtility::addPiFlexFormValue(
     $holidayPluginSignature,
     'FILE:EXT:leseohren/Configuration/FlexForms/Leseohren_Holidays.xml'
 );
+
+ExtensionUtility::registerPlugin(
+    'Leseohren',
+    'Presents',
+    'Presents'
+);

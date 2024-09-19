@@ -69,7 +69,7 @@ return [
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_gift.title.description',
             'config' => [
                 'type' => 'input',
-                'size' => 0,
+                'size' => 30,
                 'eval' => 'trim',
                 'required' => true,
                 'default' => ''

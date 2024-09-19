@@ -72,6 +72,17 @@ defined('TYPO3') || die();
             \SKom\Leseohren\Controller\HolidayController::class => ''
         ]
     );
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Leseohren',
+        'Presents',
+        [
+            \SKom\Leseohren\Controller\PresentController::class => 'list, show, new, create, edit, update, delete'
+        ],
+        // non-cacheable actions
+        [
+            \SKom\Leseohren\Controller\PresentController::class => 'new, create, edit, update, delete'
+        ]
+    );
 
     // wizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -130,6 +141,15 @@ defined('TYPO3') || die();
                         tt_content_defValues {
                             CType = list
                             list_type = leseohren_holidays
+                        }
+                    }
+                    presents {
+                        iconIdentifier = leseohren-plugin-presents
+                        title = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_presents.name
+                        description = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_presents.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = leseohren_presents
                         }
                     }
                 }

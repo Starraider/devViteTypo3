@@ -57,6 +57,7 @@ return [
             'endPoint' => 'https://cookieapi.coding-freaks.com/api/',
             'scanApiKey' => 'scantoken',
             'scriptBlocking' => '0',
+            'thumbnailApiEnabled' => '1',
             'trackingEnabled' => '0',
             'trackingObfuscate' => '0',
         ],

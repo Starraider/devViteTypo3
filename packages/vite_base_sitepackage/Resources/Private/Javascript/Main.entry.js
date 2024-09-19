@@ -2,6 +2,13 @@ import 'bootstrap-icons/font/bootstrap-icons.scss'
 import '../Scss/main.scss'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
+// Enable popovers
+// const popoverTriggerList = document.querySelectorAll(
+//   '[data-bs-toggle="popover"]'
+// )
+// const popoverList = [...popoverTriggerList].map(
+//   popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl)
+// )
 
 // Import vanillajs-datepicker
 // See https://mymth.github.io/vanillajs-datepicker/#/

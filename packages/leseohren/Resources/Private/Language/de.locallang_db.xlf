@@ -451,6 +451,14 @@
 			<trans-unit id="tx_leseohren_domain_model_gift.description.description" resname="tx_leseohren_domain_model_gift.description.description">
 				<source>Description</source>
 			</trans-unit>
+			<trans-unit id="x_leseohren_presents.name" resname="x_leseohren_presents.name">
+				<source>Presents</source>
+				<target>Schenkungen</target>
+			</trans-unit>
+			<trans-unit id="x_leseohren_presents.description" resname="x_leseohren_presents.description">
+				<source>Presents to our members</source>
+				<target>Schenkungen an Mitglieder</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present" resname="tx_leseohren_domain_model_present">
 				<source>Present</source>
 				<target>Schenkungen</target>

@@ -24,6 +24,7 @@ pageIDs {
   organizationShowPid = 19
   eventShowPid = 225
   blackboardShowPid = 228
+  presentShowPid = 232
 }
 
 plugin.tx_leseohren_personen {
@@ -92,5 +93,19 @@ plugin.tx_leseohren_persondashboard {
         partialRootPath = EXT:leseohren/Resources/Private/Partials/
         # cat=plugin.tx_leseohren_persondashboard/file; type=string; label=Path to template layouts (FE)
         layoutRootPath = EXT:leseohren/Resources/Private/Layouts/
+    }
+}
+plugin.tx_leseohren_presents {
+    view {
+        # cat=plugin.tx_leseohren_presents/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:leseohren/Resources/Private/Templates/
+        # cat=plugin.tx_leseohren_presents/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:leseohren/Resources/Private/Partials/
+        # cat=plugin.tx_leseohren_presents/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:leseohren/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_leseohren_organizations//a; type=string; label=Default storage PID
+        storagePid = 13
     }
 }

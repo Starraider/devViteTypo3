@@ -22,6 +22,11 @@ use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 class Present extends AbstractEntity
 {
     /**
+     * @var ObjectStorage<Person>
+     */
+    public $person;
+
+    /**
      * gift_date
      *
      * @var \DateTime
@@ -41,7 +46,6 @@ class Present extends AbstractEntity
      *
      * @var Gift
      */
-    #[Lazy]
     protected $gift = null;
 
     /**
