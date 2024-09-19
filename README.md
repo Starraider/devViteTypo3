@@ -100,6 +100,14 @@ d - SHOW record details
 
 ? - HELP
 
+## Migration
+
+```bash
+ddev typo3 migration:migrate --configuration EXT:migration_extend/Configuration/Migration.php --dryrun 1
+
+php vendor/bin/typo3 migration:migrate --configuration EXT:migration_extend/Configuration/Migration.php --dryrun 1
+```
+
 ## License
 
 GPL-2.0 or later
