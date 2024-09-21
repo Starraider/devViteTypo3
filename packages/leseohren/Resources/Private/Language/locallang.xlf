@@ -142,31 +142,58 @@
 				<source>Languages</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.1" resname="tx_leseohren.languages.1">
-				<source>Englisch</source>
+				<source>German</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.2" resname="tx_leseohren.languages.2">
-				<source>Französisch</source>
+				<source>English</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.3" resname="tx_leseohren.languages.3">
-				<source>Italienisch</source>
+				<source>Turkish</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.4" resname="tx_leseohren.languages.4">
-				<source>Spanisch</source>
+				<source>Italien</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.5" resname="tx_leseohren.languages.5">
-				<source>Türkisch</source>
+				<source>Albanian</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.6" resname="tx_leseohren.languages.6">
-				<source>Russisch</source>
+				<source>Chinese</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.7" resname="tx_leseohren.languages.7">
-				<source>Arabisch</source>
+				<source>Russian</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.8" resname="tx_leseohren.languages.8">
-				<source>Farsi/Persisch</source>
+				<source>Arabic</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.9" resname="tx_leseohren.languages.9">
-				<source>Sonstige</source>
+				<source>Greek</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.10" resname="tx_leseohren.languages.10">
+				<source>Romanian</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.11" resname="tx_leseohren.languages.11">
+				<source>Kurdish</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.12" resname="tx_leseohren.languages.12">
+				<source>Portuguese</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.13" resname="tx_leseohren.languages.13">
+				<source>French</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.14" resname="tx_leseohren.languages.14">
+				<source>Indian</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.15" resname="tx_leseohren.languages.15">
+				<source>Polish</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.16" resname="tx_leseohren.languages.16">
+				<source>Hungarian</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.17" resname="tx_leseohren.languages.17">
+				<source>Spanish</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.18" resname="tx_leseohren.languages.18">
+				<source>Other</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district" resname="tx_leseohren.district">
 				<source>District</source>

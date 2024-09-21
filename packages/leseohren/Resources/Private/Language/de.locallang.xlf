@@ -179,43 +179,75 @@
 				<source>Press cmd to select multiple.</source>
 				<target>Drücken und halten Sie cmd, um mehrere auszuwählen.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.0" resname="tx_leseohren.languages.0">
+			<trans-unit id="tx_leseohren.languages.1" resname="tx_leseohren.languages.1">
 				<source>German</source>
 				<target>Deutsch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.1" resname="tx_leseohren.languages.1">
+			<trans-unit id="tx_leseohren.languages.2" resname="tx_leseohren.languages.2">
 				<source>English</source>
 				<target>Englisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.2" resname="tx_leseohren.languages.2">
-				<source>French</source>
-				<target>Französisch</target>
-			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.3" resname="tx_leseohren.languages.3">
-				<source>Italien</source>
-				<target>Italienisch</target>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.4" resname="tx_leseohren.languages.4">
-				<source>Spanish</source>
-				<target>Spanisch</target>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.5" resname="tx_leseohren.languages.5">
 				<source>Turkish</source>
 				<target>Türkisch</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.4" resname="tx_leseohren.languages.4">
+				<source>Italien</source>
+				<target>Italienisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.5" resname="tx_leseohren.languages.5">
+				<source>Albanian</source>
+				<target>Albanisch</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.6" resname="tx_leseohren.languages.6">
-				<source>Ukrainian</source>
-				<target>Ukrainisch</target>
+				<source>Chinese</source>
+				<target>Chinesisch</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.7" resname="tx_leseohren.languages.7">
+				<source>Russian</source>
+				<target>Russisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.8" resname="tx_leseohren.languages.8">
 				<source>Arabic</source>
 				<target>Arabisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.8" resname="tx_leseohren.languages.8">
-				<source>Farsi/Persian</source>
-				<target>Farsi/Persisch</target>
-			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.9" resname="tx_leseohren.languages.9">
+				<source>Greek</source>
+				<target>Griechisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.10" resname="tx_leseohren.languages.10">
+				<source>Romanian</source>
+				<target>Rumänisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.11" resname="tx_leseohren.languages.11">
+				<source>Kurdish</source>
+				<target>Kurdisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.12" resname="tx_leseohren.languages.12">
+				<source>Portuguese</source>
+				<target>Portugiesisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.13" resname="tx_leseohren.languages.13">
+				<source>French</source>
+				<target>Französisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.14" resname="tx_leseohren.languages.14">
+				<source>Indian</source>
+				<target>Indisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.15" resname="tx_leseohren.languages.15">
+				<source>Polish</source>
+				<target>Polnisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.16" resname="tx_leseohren.languages.16">
+				<source>Hungarian</source>
+				<target>Ungarisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.17" resname="tx_leseohren.languages.17">
+				<source>Spanish</source>
+				<target>Spanisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.18" resname="tx_leseohren.languages.18">
 				<source>Other</source>
 				<target>Sonstige</target>
 			</trans-unit>
