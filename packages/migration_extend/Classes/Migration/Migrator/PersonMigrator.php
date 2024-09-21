@@ -92,6 +92,14 @@ class PersonMigrator extends AbstractMigrator implements MigratorInterface
                 ]
             ]
         ],
+        'payment_method' => [
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetPaymentMethodPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ]
+        ],
 
     ];
 }

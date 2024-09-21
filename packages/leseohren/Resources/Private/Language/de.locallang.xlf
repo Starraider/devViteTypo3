@@ -76,14 +76,18 @@
 				<target>Zahlungsmethode</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.paymentMethod.0" resname="tx_leseohren.paymentMethod.0">
-				<source>Bank transfer</source>
-				<target>Überweisung</target>
+				<source>k.A.</source>
+				<target>k.A.</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.paymentMethod.1" resname="tx_leseohren.paymentMethod.1">
 				<source>Direct debit</source>
 				<target>Lastschrift</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.paymentMethod.2" resname="tx_leseohren.paymentMethod.2">
+				<source>Bank transfer</source>
+				<target>Überweisung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.paymentMethod.3" resname="tx_leseohren.paymentMethod.3">
 				<source>Paypal</source>
 				<target>Paypal</target>
 			</trans-unit>

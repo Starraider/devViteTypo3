@@ -490,6 +490,7 @@ return [
                     ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.paymentMethod.0', 'value' => 0],
                     ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.paymentMethod.1', 'value' => 1],
                     ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.paymentMethod.2', 'value' => 2],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.paymentMethod.3', 'value' => 3],
                 ],
                 'size' => 1,
                 'maxitems' => 1,
