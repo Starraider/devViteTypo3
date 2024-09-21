@@ -64,6 +64,7 @@ class PersonenImporter extends AbstractImporter implements ImporterInterface
     protected array $mapping = [
         'ID' => 'uid',
         'Vorname' => 'firstname',
+        'Nachname' => 'lastname',
         'Nachname' => 'lastname'
     ];
 
@@ -110,6 +111,14 @@ class PersonenImporter extends AbstractImporter implements ImporterInterface
 
                 ]
             ]
-        ]
+        ],
+        // 'languages' => [
+        //     [
+        //         'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetLanguagesPropertyHelper::class,
+        //         'configuration' => [
+
+        //         ]
+        //     ]
+        // ]
     ];
 }
