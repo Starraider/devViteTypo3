@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Starraider/devViteTypo3/compare/v1.2.0...v1.3.0) (2024-10-21)
+
+
+### Features
+
+* **Design:** Crop organisation name in list view ([bb975fd](https://github.com/Starraider/devViteTypo3/commit/bb975fdeb500e9982b4deb8c43773729b822cb0c))
+
 ## [1.2.0](https://github.com/Starraider/devViteTypo3/compare/v1.1.0...v1.2.0) (2024-10-21)
 
 
