@@ -2,6 +2,13 @@ import 'bootstrap-icons/font/bootstrap-icons.scss'
 import '../Scss/main.scss'
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap'
+// Enable popovers
+// const popoverTriggerList = document.querySelectorAll(
+//   '[data-bs-toggle="popover"]'
+// )
+// const popoverList = [...popoverTriggerList].map(
+//   popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl)
+// )
 
 // Import vanillajs-datepicker
 // See https://mymth.github.io/vanillajs-datepicker/#/
@@ -49,6 +56,18 @@ let tablePersonList = new DataTable('#personList', {
   columnDefs: [
     {
       searchPanes: {
+        show: false,
+      },
+      targets: [0],
+    },
+    {
+      searchPanes: {
+        show: true,
+      },
+      targets: [1],
+    },
+    {
+      searchPanes: {
         show: true,
       },
       targets: [2],
@@ -58,6 +77,43 @@ let tablePersonList = new DataTable('#personList', {
         show: true,
       },
       targets: [3],
+    },
+    {
+      searchPanes: {
+        show: true,
+      },
+      targets: [4],
+    },
+    {
+      searchPanes: {
+        show: false,
+      },
+      targets: [5],
+    },
+    {
+      searchPanes: {
+        show: false,
+      },
+      targets: [6],
+    },
+    {
+      searchPanes: {
+        show: true,
+      },
+      targets: [7],
+    },
+    {
+      searchPanes: {
+        show: false,
+      },
+      targets: [8],
+    },
+    {
+      orderable: false,
+      searchPanes: {
+        show: false,
+      },
+      targets: [9],
     },
   ],
 })
@@ -80,6 +136,12 @@ let tableOrganizationList = new DataTable('#organizationList', {
   columnDefs: [
     {
       searchPanes: {
+        show: false,
+      },
+      targets: [0],
+    },
+    {
+      searchPanes: {
         show: true,
       },
       targets: [1],
@@ -95,6 +157,13 @@ let tableOrganizationList = new DataTable('#organizationList', {
         show: true,
       },
       targets: [3],
+    },
+    {
+      orderable: false,
+      searchPanes: {
+        show: false,
+      },
+      targets: [4],
     },
   ],
 })
@@ -126,12 +195,6 @@ let tableEventList = new DataTable('#eventList', {
       searchPanes: {
         show: true,
       },
-      targets: [0],
-    },
-    {
-      searchPanes: {
-        show: true,
-      },
       targets: [1],
     },
     {
@@ -141,11 +204,23 @@ let tableEventList = new DataTable('#eventList', {
       targets: [2],
     },
     {
+      searchPanes: {
+        show: true,
+      },
+      targets: [3],
+    },
+    {
+      searchPanes: {
+        show: false,
+      },
+      targets: [4],
+    },
+    {
       orderable: false,
       searchPanes: {
         show: false,
       },
-      targets: [3],
+      targets: [5],
     },
   ],
 })
@@ -162,9 +237,21 @@ if (birthday !== null) {
   })
 }
 
+const statuschangeDate = document.querySelector('input[id="statuschangeDate"]')
+if (statuschangeDate !== null) {
+  const datepicker2 = new Datepicker(statuschangeDate, {
+    format: 'dd.mm.yyyy',
+    buttonClass: 'btn',
+    autohide: true,
+    todayButton: true,
+    clearButton: true,
+    todayHighlight: true,
+  })
+}
+
 const statusbeginDate = document.querySelector('input[id="statusbeginDate"]')
 if (statusbeginDate !== null) {
-  const datepicker2 = new Datepicker(statusbeginDate, {
+  const datepicker3 = new Datepicker(statusbeginDate, {
     format: 'dd.mm.yyyy',
     buttonClass: 'btn',
     autohide: true,
@@ -175,7 +262,7 @@ if (statusbeginDate !== null) {
 }
 const statusendDate = document.querySelector('input[id="statusendDate"]')
 if (statusendDate !== null) {
-  const datepicker3 = new Datepicker(statusendDate, {
+  const datepicker4 = new Datepicker(statusendDate, {
     format: 'dd.mm.yyyy',
     buttonClass: 'btn',
     autohide: true,
@@ -186,7 +273,7 @@ if (statusendDate !== null) {
 }
 const startDate = document.querySelector('input[id="startDate"]')
 if (startDate !== null) {
-  const datepicker4 = new Datepicker(startDate, {
+  const datepicker5 = new Datepicker(startDate, {
     format: 'dd.mm.yyyy',
     buttonClass: 'btn',
     autohide: true,
@@ -197,7 +284,7 @@ if (startDate !== null) {
 }
 const endDate = document.querySelector('input[id="endDate"]')
 if (endDate !== null) {
-  const datepicker5 = new Datepicker(endDate, {
+  const datepicker6 = new Datepicker(endDate, {
     format: 'dd.mm.yyyy',
     buttonClass: 'btn',
     autohide: true,

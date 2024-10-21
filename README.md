@@ -16,7 +16,7 @@ npm run build
 
 ## Deployment
 
-ACHTUNG: Vorher ein Build durchführen!
+ACHTUNG: Vorher ein Build durchführen und new Release erstellen!
 
 ```bash
 vendor/bin/dep deploy beta -vvv
@@ -99,6 +99,14 @@ p - SHOW records by page
 d - SHOW record details
 
 ? - HELP
+
+## Migration
+
+```bash
+ddev typo3 migration:migrate --configuration EXT:migration_extend/Configuration/Migration.php --dryrun 1
+
+php vendor/bin/typo3 migration:migrate --configuration EXT:migration_extend/Configuration/Migration.php --dryrun 1
+```
 
 ## License
 

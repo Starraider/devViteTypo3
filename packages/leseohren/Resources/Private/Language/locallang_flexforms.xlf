@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang.xlf" date="2024-02-13T18:30:06Z" product-name="leseohren">
+		<header/>
+		<body>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.pluginOptions" resname="tx_leseohren_persondashboard.flexform.pluginOptions">
+				<source>Plugin Options</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_personen.flexform.pluginOptions" resname="tx_leseohren_personen.flexform.pluginOptions">
+				<source>Plugin Options</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_personen.flexform.filtercategory" resname="tx_leseohren_personen.flexform.filtercategory">
+				<source>Which persons should be shown?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_personen.flexform.filtercategory.allPersons" resname="tx_leseohren_personen.flexform.filtercategory.allPersons">
+				<source>All persons</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_personen.flexform.filtercategory.onlyMembers" resname="tx_leseohren_personen.flexform.filtercategory.onlyMembers">
+				<source>Only members</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_personen.flexform.filtercategory.onlyVorlesepaten" resname="tx_leseohren_personen.flexform.filtercategory.onlyVorlesepaten">
+				<source>Only Vorlesepaten</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_events.flexform.pluginOptions" resname="tx_leseohren_events.flexform.pluginOptions">
+				<source>Plugin Options</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_events.flexform.categories" resname="tx_leseohren_events.flexform.categories">
+				<source>Shown categories</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_events.flexform.filtercategory" resname="tx_leseohren_events.flexform.filtercategory">
+				<source>Which events should be shown?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_events.flexform.filtercategory.allEvents" resname="tx_leseohren_events.flexform.filtercategory.allEvents">
+				<source>All events</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_events.flexform.filtercategory.onlySelectedCategories" resname="tx_leseohren_events.flexform.filtercategory.onlySelectedCategories">
+				<source>Only selected categories</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_events.flexform.filtercategory.onlyNotSelectedCategories" resname="tx_leseohren_events.flexform.filtercategory.onlyNotSelectedCategories">
+				<source>Only NOT selected categories</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

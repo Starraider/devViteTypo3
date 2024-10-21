@@ -16,7 +16,9 @@
                 <th><f:translate key="tx_leseohren_domain_model_person.city" /></th>
                 <th><f:translate key="tx_leseohren_domain_model_person.email" /></th>
                 <th>Telefon</th>
-                <th>Aktionen</th>
+                <th>Liest in</th>
+                <th class="dt-head-center">FZ</th>
+                <th class="dt-head-center">Aktionen</th>
             </tr>
         </thead>
         <tbody>
@@ -31,7 +33,7 @@
                                     <span class="badge bg-secondary">
                                         {personCategory.title -> f:format.htmlspecialchars()}
                                     </span>
-                                </category>
+                                </category><br />
                             </f:for>
                         </f:if>
                     </td>
@@ -54,6 +56,18 @@
                         </f:if>
                     </td>
                     <td>
+                        <f:for each="{person.organizations}" as="organization" iteration="orgIterator">
+                            <f:link.action pageUid="19" action="show" controller="Organization" arguments="{organization: organization}">
+                                {organization.name},<br />
+                            </f:link.action>
+                        </f:for>
+                    </td>
+                    <td class="dt-body-center">
+                        <f:if condition="{person.fuehrungszeugnisChecked}">
+                            <strong><i class="bi bi-patch-check"></i></strong>
+                        </f:if>
+                    </td>
+                    <td class="dt-body-center">
                         <f:link.action action="edit" arguments="{person:person}" class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i></f:link.action>
                         <a type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#deletePersonModal{personIterator.index}">
                             <i class="bi bi-trash3"></i>

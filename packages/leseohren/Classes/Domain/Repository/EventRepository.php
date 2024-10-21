@@ -63,7 +63,42 @@ class EventRepository extends Repository
         //$queryBuilder = $typo3DbQueryParser->convertQueryToDoctrineQueryBuilder($query);
         //DebugUtility::debug($queryBuilder->getSQL());
         //DebugUtility::debug($queryBuilder->getParameters());
-
         return $result;
+    }
+
+    /**
+     * Find all events by category
+     *
+     * @param array $categories
+     * @param bool $invert Should the result be inverted
+     * @return QueryResultInterface
+     */
+    public function searchCategory($categories = [], $invert = false)
+    {
+        $constraints = [];
+        $query = $this->createQuery();
+        foreach ($categories as $category) {
+            $constraints[] = $query->contains('categories', \intval($category));
+        }
+        if (!empty($constraints)) {
+            if($invert == false){
+                $query->matching(
+                    $query->logicalAnd(
+                        $query->logicalOr(...array_values($constraints)),
+                        $query->greaterThanOrEqual('end_date', new \DateTime())
+                    )
+                );
+            }else {
+                $query->matching(
+                    $query->logicalAnd(
+                        $query->logicalNot(
+                            $query->logicalOr(...array_values($constraints))
+                        ),
+                        $query->greaterThanOrEqual('end_date', new \DateTime())
+                    )
+                );
+            }
+        }
+        return $query->execute();
     }
 }

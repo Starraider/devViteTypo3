@@ -76,14 +76,18 @@
 				<target>Zahlungsmethode</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.paymentMethod.0" resname="tx_leseohren.paymentMethod.0">
-				<source>Bank transfer</source>
-				<target>Überweisung</target>
+				<source>k.A.</source>
+				<target>k.A.</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.paymentMethod.1" resname="tx_leseohren.paymentMethod.1">
 				<source>Direct debit</source>
 				<target>Lastschrift</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.paymentMethod.2" resname="tx_leseohren.paymentMethod.2">
+				<source>Bank transfer</source>
+				<target>Überweisung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.paymentMethod.3" resname="tx_leseohren.paymentMethod.3">
 				<source>Paypal</source>
 				<target>Paypal</target>
 			</trans-unit>
@@ -123,25 +127,29 @@
 				<source>Press and hold cmd-key to select multiple.</source>
 				<target>Drücke und halte cmd-Taste um mehrere auszuwählen.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.0" resname="tx_leseohren.orgType.0">
-				<source>Kindergarten</source>
-				<target>Kindergarten</target>
-			</trans-unit>
 			<trans-unit id="tx_leseohren.orgType.1" resname="tx_leseohren.orgType.1">
+				<source>Daycare center</source>
+				<target>Sonderveranstaltungen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType.2" resname="tx_leseohren.orgType.2">
+				<source>Daycare center</source>
+				<target>Kita</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType.3" resname="tx_leseohren.orgType.3">
 				<source>School</source>
 				<target>Schule</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.2" resname="tx_leseohren.orgType.2">
-				<source>Bibliothek</source>
+			<trans-unit id="tx_leseohren.orgType.4" resname="tx_leseohren.orgType.4">
+				<source>Library</source>
 				<target>Bibliothek</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.3" resname="tx_leseohren.orgType.3">
-				<source>Bookstore</source>
-				<target>Buchhandlung</target>
+			<trans-unit id="tx_leseohren.orgType.5" resname="tx_leseohren.orgType.5">
+				<source>Refugees</source>
+				<target>Flüchtlinge</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.4" resname="tx_leseohren.orgType.4">
-				<source>Leseheimat</source>
-				<target>Leseheimat</target>
+			<trans-unit id="tx_leseohren.orgType.6" resname="tx_leseohren.orgType.6">
+				<source>Training courses</source>
+				<target>Fortbildungen</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.travelOptions" resname="tx_leseohren.travelOptions">
 				<source>Travel Options</source>
@@ -179,43 +187,75 @@
 				<source>Press cmd to select multiple.</source>
 				<target>Drücken und halten Sie cmd, um mehrere auszuwählen.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.0" resname="tx_leseohren.languages.0">
+			<trans-unit id="tx_leseohren.languages.1" resname="tx_leseohren.languages.1">
 				<source>German</source>
 				<target>Deutsch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.1" resname="tx_leseohren.languages.1">
+			<trans-unit id="tx_leseohren.languages.2" resname="tx_leseohren.languages.2">
 				<source>English</source>
 				<target>Englisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.2" resname="tx_leseohren.languages.2">
-				<source>French</source>
-				<target>Französisch</target>
-			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.3" resname="tx_leseohren.languages.3">
-				<source>Italien</source>
-				<target>Italienisch</target>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.4" resname="tx_leseohren.languages.4">
-				<source>Spanish</source>
-				<target>Spanisch</target>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.5" resname="tx_leseohren.languages.5">
 				<source>Turkish</source>
 				<target>Türkisch</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.4" resname="tx_leseohren.languages.4">
+				<source>Italien</source>
+				<target>Italienisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.5" resname="tx_leseohren.languages.5">
+				<source>Albanian</source>
+				<target>Albanisch</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.6" resname="tx_leseohren.languages.6">
-				<source>Ukrainian</source>
-				<target>Ukrainisch</target>
+				<source>Chinese</source>
+				<target>Chinesisch</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.7" resname="tx_leseohren.languages.7">
+				<source>Russian</source>
+				<target>Russisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.8" resname="tx_leseohren.languages.8">
 				<source>Arabic</source>
 				<target>Arabisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.8" resname="tx_leseohren.languages.8">
-				<source>Farsi/Persian</source>
-				<target>Farsi/Persisch</target>
-			</trans-unit>
 			<trans-unit id="tx_leseohren.languages.9" resname="tx_leseohren.languages.9">
+				<source>Greek</source>
+				<target>Griechisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.10" resname="tx_leseohren.languages.10">
+				<source>Romanian</source>
+				<target>Rumänisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.11" resname="tx_leseohren.languages.11">
+				<source>Kurdish</source>
+				<target>Kurdisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.12" resname="tx_leseohren.languages.12">
+				<source>Portuguese</source>
+				<target>Portugiesisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.13" resname="tx_leseohren.languages.13">
+				<source>French</source>
+				<target>Französisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.14" resname="tx_leseohren.languages.14">
+				<source>Indian</source>
+				<target>Indisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.15" resname="tx_leseohren.languages.15">
+				<source>Polish</source>
+				<target>Polnisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.16" resname="tx_leseohren.languages.16">
+				<source>Hungarian</source>
+				<target>Ungarisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.17" resname="tx_leseohren.languages.17">
+				<source>Spanish</source>
+				<target>Spanisch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.languages.18" resname="tx_leseohren.languages.18">
 				<source>Other</source>
 				<target>Sonstige</target>
 			</trans-unit>
@@ -227,101 +267,109 @@
 				<source>District</source>
 				<target>Stadtbezirk in Stuttgart</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.0" resname="tx_leseohren.district.0">
-				<source>Sonstige</source>
-				<target>Sonstige</target>
-			</trans-unit>
 			<trans-unit id="tx_leseohren.district.1" resname="tx_leseohren.district.1">
+				<source>Stuttgart-Ost</source>
+				<target>Stuttgart-Ost</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.2" resname="tx_leseohren.district.2">
+				<source>Stuttgart-West</source>
+				<target>Stuttgart-West</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.3" resname="tx_leseohren.district.3">
+				<source>Weilimdorf</source>
+				<target>Weilimdorf</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.4" resname="tx_leseohren.district.4">
+				<source>Zuffenhausen</source>
+				<target>Zuffenhausen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.5" resname="tx_leseohren.district.5">
 				<source>Bad Cannstatt</source>
 				<target>Bad Cannstatt</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.2" resname="tx_leseohren.district.2">
-				<source>Birkach</source>
-				<target>Birkach</target>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.district.3" resname="tx_leseohren.district.3">
-				<source>Botnang</source>
-				<target>Botnang</target>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.district.4" resname="tx_leseohren.district.4">
-				<source>Degerloch</source>
-				<target>Degerloch</target>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.district.5" resname="tx_leseohren.district.5">
+			<trans-unit id="tx_leseohren.district.7" resname="tx_leseohren.district.7">
 				<source>Feuerbach</source>
 				<target>Feuerbach</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.6" resname="tx_leseohren.district.6">
-				<source>Hedelfingen</source>
-				<target>Hedelfingen</target>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.district.7" resname="tx_leseohren.district.7">
-				<source>Möhringen</source>
-				<target>Möhringen</target>
-			</trans-unit>
 			<trans-unit id="tx_leseohren.district.8" resname="tx_leseohren.district.8">
-				<source>Mühlhausen</source>
-				<target>Mühlhausen</target>
+				<source>Stammheim</source>
+				<target>Stammheim</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.9" resname="tx_leseohren.district.9">
-				<source>Münster</source>
-				<target>Münster</target>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.district.10" resname="tx_leseohren.district.10">
-				<source>Obertürkheim</source>
-				<target>Obertürkheim</target>
+				<source>Degerloch</source>
+				<target>Degerloch</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.11" resname="tx_leseohren.district.11">
 				<source>Plieningen</source>
 				<target>Plieningen</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.12" resname="tx_leseohren.district.12">
-				<source>Sillenbuch</source>
-				<target>Sillenbuch</target>
+				<source>Münster</source>
+				<target>Münster</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.13" resname="tx_leseohren.district.13">
-				<source>Stammheim</source>
-				<target>Stammheim</target>
+				<source>Botnang</source>
+				<target>Botnang</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.14" resname="tx_leseohren.district.14">
-				<source>Stuttgart‐Mitte</source>
-				<target>Stuttgart‐Mitte</target>
+				<source>Möhringen</source>
+				<target>Möhringen</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.15" resname="tx_leseohren.district.15">
-				<source>Stuttgart‐Nord</source>
-				<target>Stuttgart‐Nord</target>
+				<source>Vaihingen</source>
+				<target>Vaihingen</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.16" resname="tx_leseohren.district.16">
-				<source>Stuttgart‐Ost</source>
-				<target>Stuttgart‐Ost</target>
+				<source>Untertürkheim</source>
+				<target>Untertürkheim</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.17" resname="tx_leseohren.district.17">
 				<source>Stuttgart‐Süd</source>
 				<target>Stuttgart‐Süd</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.18" resname="tx_leseohren.district.18">
-				<source>Stuttgart‐West</source>
-				<target>Stuttgart‐West</target>
+				<source>Stuttgart‐Mitte</source>
+				<target>Stuttgart‐Mitte</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.19" resname="tx_leseohren.district.19">
-				<source>Untertürkheim</source>
-				<target>Untertürkheim</target>
+				<source>andere Orte</source>
+				<target>andere Orte</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.20" resname="tx_leseohren.district.20">
-				<source>Vaihingen</source>
-				<target>Vaihingen</target>
+				<source>Stuttgart</source>
+				<target>Stuttgart</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.21" resname="tx_leseohren.district.21">
+				<source>Stuttgart-Nord</source>
+				<target>Stuttgart-Nord</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.22" resname="tx_leseohren.district.22">
+				<source>Sillenbuch</source>
+				<target>Sillenbuch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.25" resname="tx_leseohren.district.25">
+				<source>Hedelfingen</source>
+				<target>Hedelfingen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.26" resname="tx_leseohren.district.26">
 				<source>Wangen</source>
 				<target>Wangen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.22" resname="tx_leseohren.district.22">
-				<source>Weilimdorf</source>
-				<target>Weilimdorf</target>
+			<trans-unit id="tx_leseohren.district.32" resname="tx_leseohren.district.32">
+				<source>Birkach</source>
+				<target>Birkach</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.23" resname="tx_leseohren.district.23">
-				<source>Zuffenhausen</source>
-				<target>Zuffenhausen</target>
+			<trans-unit id="tx_leseohren.district.33" resname="tx_leseohren.district.33">
+				<source>Obertürkheim</source>
+				<target>Obertürkheim</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.34" resname="tx_leseohren.district.34">
+				<source>Mühlhausen</source>
+				<target>Mühlhausen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.35" resname="tx_leseohren.district.35">
+				<source>Neugereut</source>
+				<target>Neugereut</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person" resname="tx_leseohren_domain_model_person">
 				<source>Person</source>
@@ -511,6 +559,14 @@
 				<source>Current status of this person</source>
 				<target>Aktueller Status dieser Person</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.statuschangeDate" resname="tx_leseohren_domain_model_person.statuschangeDate">
+				<source>Status change date</source>
+				<target>Status wurde geändert am</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.statuschangeDate.description" resname="tx_leseohren_domain_model_person.statuschangeDate.description">
+				<source>When was this status changed?</source>
+				<target>Wann wurde der Status geändert?</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.statusbeginDate" resname="tx_leseohren_domain_model_person.statusbeginDate">
 				<source>Statusbegin Date</source>
 				<target>Statusbeginn</target>
@@ -622,6 +678,10 @@
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description">
 				<source>Certificate of good conduct</source>
 				<target>Nur pdf,doc,xls Dateien erlaubt</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_date">
+				<source>Führungszeugnis date</source>
+				<target>Führungszeugnis-Datum</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
 				<source>Mandate</source>
@@ -791,9 +851,17 @@
 				<source>Donations to this person</source>
 				<target>Schenkungen an diese Person</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.newPresent" resname="tx_leseohren_domain_model_present.newPresent">
+				<source>New donation</source>
+				<target>Neue Schenkung</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present.deleteConfirm" resname="tx_leseohren_domain_model_present.deleteConfirm">
 				<source>Do you really want to delete this present?</source>
 				<target>Soll diese Schenkung wirklich gelöscht werden?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_present.present_to" resname="tx_leseohren_domain_model_present.present_to">
+				<source>Donation to</source>
+				<target>Schenkung an</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present.gift_date" resname="tx_leseohren_domain_model_present.gift_date">
 				<source>Gift Date</source>
@@ -954,6 +1022,22 @@
 			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants.description" resname="tx_leseohren_domain_model_event.maxparticipants.description">
 				<source>How many people can take part?</source>
 				<target>Wieviele können teilnehmen?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.title" resname="tx_leseohren_domain_model_event.reminder_sent.title">
+				<source>Reminder</source>
+				<target>Erinnerung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent" resname="tx_leseohren_domain_model_event.reminder_sent">
+				<source>Reminder mail</source>
+				<target>Erinnerungs-Mail</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.description" resname="tx_leseohren_domain_model_event.reminder_sent.description">
+				<source>Has the reminder e-mail been sent?</source>
+				<target>Wurde die Erinnerungs-Mail verschickt?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.sent" resname="tx_leseohren_domain_model_event.reminder_sent.sent">
+				<source>sent</source>
+				<target>verschickt</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_holidays.daystochristmas" resname="tx_leseohren_holidays.daystochristmas">
 				<source>days until Christmas</source>

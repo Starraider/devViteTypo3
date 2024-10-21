@@ -7,7 +7,7 @@
                 <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseBirthdayPersons" aria-expanded="true" aria-controls="collapseBirthdayPersons">
-                        <strong>Geburtstage&nbsp</strong>in den nächsten 7 Tagen
+                        <strong>Geburtstage&nbsp</strong>in den nächsten {settings.leseohren_persondashboard.birthday_warningperiod} Tagen
                     </button>
                 </h2>
                 <div id="collapseBirthdayPersons" class="accordion-collapse collapse show" data-bs-parent="#accordionBirthdayPersons">
@@ -40,9 +40,19 @@
                                             {person.birthday -> f:format.date(format: 'd.m.Y')}
                                         </td>
                                         <td>
-                                            <f:format.raw>
-                                                <f:format.age>{person.birthday}</f:format.age>
-                                            </f:format.raw>
+                                            <f:variable name="nextBirthday">
+                                                <f:format.raw>
+                                                    <f:format.age>{person.birthday}</f:format.age>
+                                                </f:format.raw>
+                                            </f:variable>
+                                            <f:if condition="{nextBirthday +1} % 10 == 0">
+                                                <f:then>
+                                                    <span class="c-person__birthday is-special">{nextBirthday +1} <i class="bi bi-cake2"></i></span>
+                                                </f:then>
+                                                <f:else>
+                                                    {nextBirthday +1}
+                                                </f:else>
+                                            </f:if>
                                         </td>
                                     </tr>
                                 </f:for>
@@ -59,7 +69,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header">
                     <div class="accordion-button collapsed">
-                        <strong>Keine Geburtstage&nbsp</strong> in den nächsten 7 Tagen
+                        <strong>Keine Geburtstage&nbsp</strong> in den nächsten {settings.leseohren_persondashboard.birthday_warningperiod} Tagen
                     </div>
                 </h2>
             </div>

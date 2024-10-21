@@ -1,28 +1,19 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 
-This template displays a NEW form for the current domain object.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Present:
-          New.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
 <f:section name="content">
-    <h1>New Present</h1>
+    <h1><f:translate key="tx_leseohren_domain_model_present.newPresent" /></h1>
 
     <f:flashMessages />
 
     <f:render partial="FormErrors" />
 
-    <f:form action="create" name="newPresent" object="{newPresent}">
-    <f:render partial="Present/FormFields" />
-    <f:form.submit value="Create new" />
+    <f:debug inline="true">{_all}</f:debug>
+
+    <f:form action="create" name="newPresent" arguments="{person:person}" object="{newPresent}">
+        <f:render partial="Present/FormFields" arguments="{_all}" />
+        <f:form.submit value="{f:translate(key: 'tx_leseohren.save')}" class="btn btn-primary" />
     </f:form>
+
 </f:section>
 </html>

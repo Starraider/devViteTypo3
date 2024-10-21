@@ -153,7 +153,7 @@ class PersonController extends ActionController
         $this->arguments->getArgument('newPerson')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('languages', 'array');
         $this->arguments->getArgument('newPerson')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('preferenceAgegroup', 'array');
         $this->arguments->getArgument('newPerson')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('preferenceOrganizationType', 'array');
-        $this->setTypeConverterConfigurationForFileUpload('newPerson');
+        //$this->setTypeConverterConfigurationForFileUpload('newPerson');
     }
 
 
@@ -194,7 +194,7 @@ class PersonController extends ActionController
         $this->arguments->getArgument('person')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('languages', 'array');
         $this->arguments->getArgument('person')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('preferenceAgegroup', 'array');
         $this->arguments->getArgument('person')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('preferenceOrganizationType', 'array');
-        $this->setTypeConverterConfigurationForFileUpload('person');
+        //$this->setTypeConverterConfigurationForFileUpload('person');
     }
 
     /**

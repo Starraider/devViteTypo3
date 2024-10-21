@@ -20,5 +20,9 @@ return [
     'leseohren-plugin-holidays' => [
         'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
         'source' => 'EXT:leseohren/Resources/Public/Icons/user_plugin_holidays.svg'
+    ],
+    'leseohren-plugin-presents' => [
+        'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+        'source' => 'EXT:leseohren/Resources/Public/Icons/user_plugin_presents.svg'
     ]
 ];

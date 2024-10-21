@@ -154,6 +154,13 @@ class Person extends AbstractEntity
     protected $status = 0;
 
     /**
+     * statuschangeDate
+     *
+     * @var \DateTime
+     */
+    protected $statuschangeDate = null;
+
+    /**
      * statusbeginDate
      *
      * @var \DateTime
@@ -244,6 +251,20 @@ class Person extends AbstractEntity
      */
     #[Cascade(['value' => 'remove'])]
     protected $fileFuehrungszeugnis = null;
+
+    /**
+     * fuehrungszeugnisChecked
+     *
+     * @var bool
+     */
+    protected $fuehrungszeugnisChecked = false;
+
+    /**
+     * fuehrungszeugnisDate
+     *
+     * @var \DateTime
+     */
+    protected $fuehrungszeugnisDate = null;
 
     /**
      * fileMandat
@@ -693,6 +714,26 @@ class Person extends AbstractEntity
     }
 
     /**
+     * Returns the statuschangeDate
+     *
+     * @return \DateTime
+     */
+    public function getStatuschangeDate()
+    {
+        return $this->statuschangeDate;
+    }
+
+    /**
+     * Sets the statuschangeDate
+     *
+     * @return void
+     */
+    public function setStatuschangeDate(\DateTime $statuschangeDate): void
+    {
+        $this->statuschangeDate = $statuschangeDate;
+    }
+
+    /**
      * Returns the statusbeginDate
      *
      * @return \DateTime
@@ -953,6 +994,46 @@ class Person extends AbstractEntity
     public function setFileFuehrungszeugnis(FileReference $fileFuehrungszeugnis): void
     {
         $this->fileFuehrungszeugnis = $fileFuehrungszeugnis;
+    }
+
+    /**
+     * Returns the fuehrungszeugnisChecked
+     *
+     * @return bool
+     */
+    public function getFuehrungszeugnisChecked()
+    {
+        return $this->fuehrungszeugnisChecked;
+    }
+
+    /**
+     * Sets the fuehrungszeugnisChecked
+     *
+     * @return void
+     */
+    public function setFuehrungszeugnischecked(bool $fuehrungszeugnisChecked): void
+    {
+        $this->fuehrungszeugnisChecked = $fuehrungszeugnisChecked;
+    }
+
+    /**
+     * Returns the fuehrungszeugnisDate
+     *
+     * @return \DateTime
+     */
+    public function getFuehrungszeugnisDate()
+    {
+        return $this->fuehrungszeugnisDate;
+    }
+
+    /**
+     * Sets the fuehrungszeugnisDate
+     *
+     * @return void
+     */
+    public function setFuehrungszeugnisDate(\DateTime $fuehrungszeugnisDate): void
+    {
+        $this->fuehrungszeugnisDate = $fuehrungszeugnisDate;
     }
 
     /**

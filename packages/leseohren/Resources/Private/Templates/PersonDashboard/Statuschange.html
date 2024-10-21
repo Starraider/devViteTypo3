@@ -3,7 +3,8 @@
 
     <f:section name="content">
         <h2>Personen</h2>
-        <f:render partial="PersonDashboard/StatusChangeList" arguments="{_all}" />
-        <f:render partial="PersonDashboard/BirthdayList" arguments="{_all}" />
+        <f:render partial="PersonDashboard/StatusChangeList" arguments="{statuspeople:statuspeople, settings:settings}" />
+        <f:render partial="PersonDashboard/BirthdayList" arguments="{birthdaypeople:birthdaypeople, settings:settings}" />
+        <f:render partial="PersonDashboard/FuehrungszeugnisList" arguments="{expiredfuehrungszeugnispeople:expiredfuehrungszeugnispeople, settings:settings}" />
     </f:section>
 </html>

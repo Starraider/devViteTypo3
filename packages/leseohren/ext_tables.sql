@@ -4,6 +4,7 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	lastname varchar(255) NOT NULL DEFAULT '',
 	title varchar(255) NOT NULL DEFAULT '',
 	job varchar(255) NOT NULL DEFAULT '',
+	birthday bigint(11) DEFAULT '0' NOT NULL,
 	street1 varchar(255) NOT NULL DEFAULT '',
 	street2 varchar(255) NOT NULL DEFAULT '',
 	zip varchar(255) NOT NULL DEFAULT '',
@@ -26,6 +27,7 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	bankname varchar(255) NOT NULL DEFAULT '',
 	paypal varchar(255) NOT NULL DEFAULT '',
 	file_fuehrungszeugnis int(11) unsigned NOT NULL DEFAULT '0',
+	fuehrungszeugnis_checked int(11) DEFAULT '0' NOT NULL,
 	file_mandat int(11) unsigned NOT NULL DEFAULT '0',
 	file_others int(11) unsigned NOT NULL DEFAULT '0',
 	donations int(11) unsigned NOT NULL DEFAULT '0',
@@ -63,6 +65,7 @@ CREATE TABLE tx_leseohren_domain_model_gift (
 CREATE TABLE tx_leseohren_domain_model_present (
 	person int(11) unsigned DEFAULT '0' NOT NULL,
 	given smallint(1) unsigned NOT NULL DEFAULT '0',
+	gift_date bigint(11) DEFAULT '0' NOT NULL,
 	gift int(11) unsigned DEFAULT '0'
 );
 
@@ -76,8 +79,11 @@ CREATE TABLE tx_leseohren_domain_model_event (
 	title varchar(255) NOT NULL DEFAULT '',
 	description text NOT NULL DEFAULT '',
 	location text NOT NULL DEFAULT '',
+	start_date bigint(11) DEFAULT '0' NOT NULL,
+	end_date bigint(11) DEFAULT '0' NOT NULL,
 	participants int(11) unsigned NOT NULL DEFAULT '0',
-	maxparticipants int(11) unsigned DEFAULT '0' NOT NULL
+	maxparticipants int(11) unsigned DEFAULT '0' NOT NULL,
+	reminder_sent int(11) DEFAULT '0' NOT NULL
 );
 
 CREATE TABLE tx_leseohren_domain_model_easterdate (

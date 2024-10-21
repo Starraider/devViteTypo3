@@ -70,12 +70,21 @@ class PersonDashboardController extends ActionController
      */
     public function statuschangeAction(): ResponseInterface
     {
+        // categories
         $categories = $this->categoryRepository->findBy(['parent' => '1']);
         $this->view->assign('categories', $categories);
-        $statuspeople = $this->personRepository->upcomingStatusChange();
+        // upcoming status changes
+        $statusInterval = $this->settings['leseohren_persondashboard']['status_warningperiod'] ?? '7';
+        $statuspeople = $this->personRepository->upcomingStatusChange($statusInterval);
         $this->view->assign('statuspeople', $statuspeople);
-        $birthdaypeople = $this->personRepository->upcomingBirthdays();
+        // upcoming birthdays
+        $birthdayInterval = $this->settings['leseohren_persondashboard']['birthday_warningperiod'] ?? '7';
+        $birthdaypeople = $this->personRepository->upcomingBirthdays($birthdayInterval);
         $this->view->assign('birthdaypeople', $birthdaypeople);
+        // expired fuehrungszeugnis
+        $fuehrungszeugnisInterval = $this->settings['leseohren_persondashboard']['fuehrungszeugnis_expired_warningperiod'] ?? '14';
+        $expiredFuehrungszeugnisPeople = $this->personRepository->expiredFuehrungszeugnis($fuehrungszeugnisInterval);
+        $this->view->assign('expiredfuehrungszeugnispeople', $expiredFuehrungszeugnisPeople);
         return $this->htmlResponse();
     }
 }

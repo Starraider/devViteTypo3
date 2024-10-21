@@ -15,9 +15,10 @@
                     <v:l key="tx_leseohren.paymentMethod" />:
                 </strong><br />
                 <f:switch expression="{person.paymentMethod}">
-                    <f:case value="0"><i class="bi bi-bank"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.0" /></f:case>
-                    <f:case value="1"><i class="bi bi-currency-euro"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.1" /></f:case>
-                    <f:case value="2"><i class="bi bi-paypal"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.2" /></f:case>
+                    <f:case value="0"><v:l key="tx_leseohren.paymentMethod.0" /></f:case>
+                    <f:case value="1"><i class="bi bi-bank"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.1" /></f:case>
+                    <f:case value="2"><i class="bi bi-currency-euro"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.2" /></f:case>
+                    <f:case value="3"><i class="bi bi-paypal"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.3" /></f:case>
                     <f:defaultCase></f:defaultCase>
                 </f:switch>
                 </br>
@@ -66,6 +67,12 @@
                         <a href="{person.fileFuehrungszeugnis.originalResource.publicUrl}">
                             {person.fileFuehrungszeugnis.originalResource.name}
                         </a>
+                        <f:if condition="{person.fuehrungszeugnisChecked}">
+                            <i class="bi bi-patch-check"></i>
+                        </f:if>
+                        <f:if condition="{person.fuehrungszeugnisDate}">
+                            <small>({person.fuehrungszeugnisDate -> f:format.date(format: 'd.m.Y')})</small>
+                        </f:if>
                     </div>
                 </f:if>
                 <f:if condition="{person.file_mandat}">
@@ -139,32 +146,4 @@
             </div>
         </div>
     </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Geschenke
-            </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
-            <div class="accordion-body">
-                <f:if condition="{person.donations}">
-                    <f:for each="{person.donations}" as="donation">
-                        <div class="c-person__donation">
-                            <f:format.date pattern="dd.MM.Y">{donation.giftDate}</f:format.date>:
-                            <strong>{donation.gift.title -> f:format.htmlspecialchars()}</strong>
-                            <f:if condition="{donation.given}">
-                                <i class="bi bi-check-lg"></i>
-                            </f:if>
-                        </div>
-                    </f:for>
-                </f:if>
-                <f:link.action controller="Present" action="new" arguments="{person: person}"
-                    class="btn btn-primary btn-sm">
-                    <i class="bi bi-plus-square"></i>
-                </f:link.action>
-            </div>
-        </div>
-    </div>
-
 </div>

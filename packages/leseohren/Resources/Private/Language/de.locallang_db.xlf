@@ -115,13 +115,16 @@
 				<target>E-Mail</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.email.description" resname="tx_leseohren_domain_model_person.email.description">
-				<source>E-Mail Adresse</source>
+				<source>E-Mail address</source>
+				<target>E-Mail Adresse</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.whatsapp" resname="tx_leseohren_domain_model_person.whatsapp">
 				<source>WhatsApp</source>
+				<target>WhatsApp</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.whatsapp.description" resname="tx_leseohren_domain_model_person.whatsapp.description">
 				<source>WhatsApp number</source>
+				<target>WhatsApp-Nummer</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.notes" resname="tx_leseohren_domain_model_person.notes">
 				<source>Notes</source>
@@ -129,24 +132,39 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.notes.description" resname="tx_leseohren_domain_model_person.notes.description">
 				<source>Notes</source>
+				<target>Notizen</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.status" resname="tx_leseohren_domain_model_person.status">
 				<source>Status</source>
+				<target>Status</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.status.description" resname="tx_leseohren_domain_model_person.status.description">
 				<source>Current status of this person</source>
+				<target>Aktueller Status dieser Person</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.statuschange_date" resname="tx_leseohren_domain_model_person.statuschange_date">
+				<source>Status change</source>
+				<target>Status-Änderung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.statuschange_date.description" resname="tx_leseohren_domain_model_person.statuschange_date.description">
+				<source>When was the status changed?</source>
+				<target>Wann wurde der Status geändert?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.statusbegin_date" resname="tx_leseohren_domain_model_person.statusbegin_date">
-				<source>Status Begin</source>
+				<source>Status begin</source>
+				<target>Status-Beginn</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.statusbegin_date.description" resname="tx_leseohren_domain_model_person.statusbegin_date.description">
 				<source>When does this status begin?</source>
+				<target>Wann beginnt dieser Status?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.statusend_date" resname="tx_leseohren_domain_model_person.statusend_date">
-				<source>Status End</source>
+				<source>Status end</source>
+				<target>Status-Ende</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.statusend_date.description" resname="tx_leseohren_domain_model_person.statusend_date.description">
 				<source>When does this status end?</source>
+				<target>Wann endet dieser Status?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.travel_options" resname="tx_leseohren_domain_model_person.travel_options">
 				<source>Travel Options</source>
@@ -154,6 +172,7 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.travel_options.description" resname="tx_leseohren_domain_model_person.travel_options.description">
 				<source>Which options are available to reach the location?</source>
+				<target>Welche Optionen gibt es, den Veranstaltungsort zu erreichen?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.languages" resname="tx_leseohren_domain_model_person.languages">
 				<source>Languages</source>
@@ -161,13 +180,15 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.languages.description" resname="tx_leseohren_domain_model_person.languages.description">
 				<source>Which languages is this person fluent in?</source>
+				<target>Welche Sprachen beherrscht diese Person?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.preference_agegroup" resname="tx_leseohren_domain_model_person.preference_agegroup">
 				<source>Preference Agegroup</source>
 				<target>Altersgruppe</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.preference_agegroup.description" resname="tx_leseohren_domain_model_person.preference_agegroup.description">
-				<source>Which age group does this person prefer?</source>
+				<source>Which age group(s) does this person prefer?</source>
+				<target>Welche Altersgruppe(n) bevorzugt diese Person?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.preference_organization_type" resname="tx_leseohren_domain_model_person.preference_organization_type">
 				<source>Preference Organization Type</source>
@@ -177,10 +198,12 @@
 				<source>Wich organization types does this person prefer?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.organizations" resname="tx_leseohren_domain_model_person.organizations">
-				<source>Vorlesepate-Organisationen</source>
+				<source>Vorlesepate-Organisations</source>
+				<target>Vorlesepate-Organisationen</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.organizations.description" resname="tx_leseohren_domain_model_person.organizations.description">
-				<source>In welchen Organisationen liest diese Person?</source>
+				<source>In which organisations does this person read?</source>
+				<target>In welchen Organisationen liest diese Person?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.payment_method" resname="tx_leseohren_domain_model_person.payment_method">
 				<source>Payment Method</source>
@@ -188,44 +211,71 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.payment_method.description" resname="tx_leseohren_domain_model_person.payment_method.description">
 				<source>Payment Method</source>
+				<target>Welche Zahlungsmethode?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.iban" resname="tx_leseohren_domain_model_person.iban">
 				<source>IBAN</source>
+				<target>IBAN</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.iban.description" resname="tx_leseohren_domain_model_person.iban.description">
 				<source>IBAN</source>
+				<target>IBAN</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.swift" resname="tx_leseohren_domain_model_person.swift">
 				<source>SWIFT/BIC</source>
+				<target>SWIFT/BIC</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.swift.description" resname="tx_leseohren_domain_model_person.swift.description">
 				<source>SWIFT/BIC</source>
+				<target>SWIFT/BIC</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.account_owner" resname="tx_leseohren_domain_model_person.account_owner">
 				<source>Account Owner</source>
 				<target>Kontoinhaber</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.account_owner.description" resname="tx_leseohren_domain_model_person.account_owner.description">
-				<source>Account Owner</source>
+				<source>Who is the owner of the bank account?</source>
+				<target>Wer ist der Konto-Inhaber?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.bankname" resname="tx_leseohren_domain_model_person.bankname">
-				<source>Bankname</source>
+				<source>Bank name</source>
+				<target>Bankname</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.bankname.description" resname="tx_leseohren_domain_model_person.bankname.description">
-				<source>Bankname</source>
+				<source>Name of the bank</source>
+				<target>Name der Bank</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.paypal" resname="tx_leseohren_domain_model_person.paypal">
 				<source>Paypal</source>
+				<target>Paypal</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.paypal.description" resname="tx_leseohren_domain_model_person.paypal.description">
 				<source>Paypal</source>
+				<target>Paypal</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis">
-				<source>File Fuehrungszeugnis</source>
+				<source>Führungszeugnis</source>
 				<target>Führungszeugnis</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description">
-				<source></source>
+				<source>Uploaded Führungszeugnis file</source>
+				<source>Dateiupload des Führungszeugnis</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_checked" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_checked">
+				<source>Führungszeugnis checked</source>
+				<target>Führungszeugnis geprüft</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_checked.description" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_checked.description">
+				<source>Was the Führungszeugnis checked?</source>
+				<source>Wurde das Führungszeugnis geprüft?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_date">
+				<source>Date of the Führungszeugnis</source>
+				<target>Datum des Führungszeugnis</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date.description" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_date.description">
+				<source>When was the Führungszeugnis issued?</source>
+				<source>Wann wurde das Führungszeugnis ausgestellt?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
 				<source>File Mandat</source>
@@ -239,7 +289,8 @@
 				<target>Sonstige Dateien</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_others.description" resname="tx_leseohren_domain_model_person.file_others.description">
-				<source>File Others</source>
+				<source>Any other files for this person</source>
+				<target>Beliebig andere Dateien zu dieser Person</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.donations" resname="tx_leseohren_domain_model_person.donations">
 				<source>Donations</source>
@@ -264,9 +315,11 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.name" resname="tx_leseohren_domain_model_organization.name">
 				<source>Name</source>
+				<target>Name</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.name.description" resname="tx_leseohren_domain_model_organization.name.description">
-				<source>Name Der Organisation</source>
+				<source>Name of the organization</source>
+				<target>Name Der Organisation</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.street1" resname="tx_leseohren_domain_model_organization.street1">
 				<source>Street1</source>
@@ -398,6 +451,14 @@
 			<trans-unit id="tx_leseohren_domain_model_gift.description.description" resname="tx_leseohren_domain_model_gift.description.description">
 				<source>Description</source>
 			</trans-unit>
+			<trans-unit id="x_leseohren_presents.name" resname="x_leseohren_presents.name">
+				<source>Presents</source>
+				<target>Schenkungen</target>
+			</trans-unit>
+			<trans-unit id="x_leseohren_presents.description" resname="x_leseohren_presents.description">
+				<source>Presents to our members</source>
+				<target>Schenkungen an Mitglieder</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present" resname="tx_leseohren_domain_model_present">
 				<source>Present</source>
 				<target>Schenkungen</target>
@@ -482,6 +543,10 @@
 				<source>Date of the event</source>
 				<target>Veranstaltungsdatum</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.participantsPalette.description" resname="tx_leseohren_domain_model_event.datePalette.description">
+				<source>Participants</source>
+				<target>Teilnehmer</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.start_date" resname="tx_leseohren_domain_model_event.start_date">
 				<source></source>
 			</trans-unit>
@@ -507,6 +572,7 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.participants.description" resname="tx_leseohren_domain_model_event.participants.description">
 				<source>Participants</source>
+				<target>Teilnehmer der Veranstaltung</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants" resname="tx_leseohren_domain_model_event.maxparticipants">
 				<source>max. Number of Participants</source>
@@ -515,6 +581,18 @@
 			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants.description" resname="tx_leseohren_domain_model_event.maxparticipants.description">
 				<source>How many people can take part?</source>
 				<target>Wieviele Leute können max. teilnehmen?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent" resname="tx_leseohren_domain_model_event.reminder_sent">
+				<source>Reminder mail</source>
+				<target>Erinnerungs-Mail</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.description" resname="tx_leseohren_domain_model_event.reminder_sent.description">
+				<source>Has the reminder e-mail been sent?</source>
+				<target>Wurde die Erinnerungs-Mail verschickt?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.sent" resname="tx_leseohren_domain_model_event.reminder_sent.sent">
+				<source>sent</source>
+				<target>verschickt</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_personen.name" resname="tx_leseohren_personen.name">
 				<source>Personen</source>
@@ -568,6 +646,22 @@
 			<trans-unit id="tx_leseohren_persondashboard.description" resname="tx_leseohren_persondashboard.description">
 				<source>Personen-Dashboard</source>
 				<target>Personen-Dashboard</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.pluginOptions" resname="tx_leseohren_persondashboard.flexform.pluginOptions">
+				<source>Plugin Options</source>
+				<target>Plugin Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.birthday_warningperiod" resname="tx_leseohren_persondashboard.flexform.birthday_warningperiod">
+				<source>How many days before the birthday should the warnings begin?</source>
+				<target>Wieviele Tage vor dem Geburtstag sollen die Warnungen beginnen?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.status_warningperiod" resname="tx_leseohren_persondashboard.flexform.status_warningperiod">
+				<source>How many days before the status change should the warnings begin?</source>
+				<target>Wieviele Tage vor der Status-Änderung sollen die Warnungen beginnen?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.fuehrungszeugnis_expired_warningperiod" resname="tx_leseohren_persondashboard.flexform.fuehrungszeugnis_expired_warningperiod">
+				<source>How many days before the Führungszeugnis expires, should the warning begin?</source>
+				<target>Wieviele Tage vor dem Ablauf des Führungszeugnis, soll die Warnung beginnen?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_holidays.name" resname="tx_leseohren_holidays.name">
 				<source>Holidays</source>

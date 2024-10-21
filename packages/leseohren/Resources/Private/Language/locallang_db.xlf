@@ -117,6 +117,12 @@
 			<trans-unit id="tx_leseohren_domain_model_person.status.description" resname="tx_leseohren_domain_model_person.status.description">
 				<source>Current status of this person</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.statuschange_date" resname="tx_leseohren_domain_model_person.statuschange_date">
+				<source>Status change</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.statuschange_date.description" resname="tx_leseohren_domain_model_person.statuschange_date.description">
+				<source>When was the status changed?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.statusbegin_date" resname="tx_leseohren_domain_model_person.statusbegin_date">
 				<source>Status Begin</source>
 			</trans-unit>
@@ -196,10 +202,22 @@
 				<source>Paypal</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis">
-				<source>File Fuehrungszeugnis</source>
+				<source>Führungszeugnis</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description">
-				<source>File Fuehrungszeugnis</source>
+				<source>Uploaded Führungszeugnis file</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_checked" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_checked">
+				<source>Führungszeugnis checked</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_checked.description" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_checked.description">
+				<source>Was the Führungszeugnis checked?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_date">
+				<source>Date of the Führungszeugnis</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date.description" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_date.description">
+				<source>When was the Führungszeugnis issued?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
 				<source>File Mandat</source>
@@ -354,6 +372,12 @@
 			<trans-unit id="tx_leseohren_domain_model_gift.description.description" resname="tx_leseohren_domain_model_gift.description.description">
 				<source>Description</source>
 			</trans-unit>
+			<trans-unit id="x_leseohren_presents.name" resname="x_leseohren_presents.name">
+				<source>Presents</source>
+			</trans-unit>
+			<trans-unit id="x_leseohren_presents.description" resname="x_leseohren_presents.description">
+				<source>Presents to our members</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_present" resname="tx_leseohren_domain_model_present">
 				<source>Present</source>
 			</trans-unit>
@@ -429,6 +453,9 @@
 			<trans-unit id="tx_leseohren_domain_model_event.datePalette.description" resname="tx_leseohren_domain_model_event.datePalette.description">
 				<source>Date of the event</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.participantsPalette.description" resname="tx_leseohren_domain_model_event.datePalette.description">
+				<source>Participants</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.start_date" resname="tx_leseohren_domain_model_event.start_date">
 				<source>Start Date</source>
 			</trans-unit>
@@ -458,6 +485,15 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants.description" resname="tx_leseohren_domain_model_event.maxparticipants.description">
 				<source>How many people can take part?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent" resname="tx_leseohren_domain_model_event.reminder_sent">
+				<source>Reminder mail</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.description" resname="tx_leseohren_domain_model_event.reminder_sent.description">
+				<source>Has the reminder e-mail been sent?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.sent" resname="tx_leseohren_domain_model_event.reminder_sent.sent">
+				<source>sent</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_personen.name" resname="tx_leseohren_personen.name">
 				<source>Personen</source>
@@ -503,6 +539,18 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_persondashboard.description" resname="tx_leseohren_persondashboard.description">
 				<source>Personen-Dashboard</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.pluginOptions" resname="tx_leseohren_persondashboard.flexform.pluginOptions">
+				<source>Plugin Options</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.birthday_warningperiod" resname="tx_leseohren_persondashboard.flexform.birthday_warningperiod">
+				<source>How many days before the birthday should the warnings begin?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.status_warningperiod" resname="tx_leseohren_persondashboard.flexform.status_warningperiod">
+				<source>How many days before the status change should the warnings begin?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_persondashboard.flexform.fuehrungszeugnis_expired_warningperiod" resname="tx_leseohren_persondashboard.flexform.fuehrungszeugnis_expired_warningperiod">
+				<source>How many days before the Führungszeugnis expires, should the warning begin?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_holidays.name" resname="tx_leseohren_holidays.name">
 				<source>Holidays</source>

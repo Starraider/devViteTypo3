@@ -3,9 +3,19 @@
 
 <f:section name="content">
     <h1><f:translate key="tx_leseohren_domain_model_events" /></h1>
+    <f:if condition="{selectedCategories}">
+        <p><strong>Filter:</strong>
+            <f:for each="{selectedCategories}" as="selectedCategory">
+                <category class="c-event__categories">
+                    <span class="badge bg-secondary">
+                        {selectedCategory}
+                    </span>
+                </category>
+            </f:for>
+        </p>
+    </f:if>
 
     <f:flashMessages />
-
     <table id="eventList" class="table table-striped display">
         <thead>
             <tr>
@@ -13,7 +23,8 @@
                 <th><f:translate key="tx_leseohren_domain_model_event.start_date" /></th>
                 <th><f:translate key="tx_leseohren_domain_model_event.categories" /></th>
                 <th><f:translate key="tx_leseohren_domain_model_event.title" /></th>
-                <th>Action</th>
+                <th class="dt-head-center"><f:translate key="tx_leseohren_domain_model_event.reminder_sent.title" /></th>
+                <th class="dt-head-center">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -36,8 +47,15 @@
                             </f:for>
                         </f:if>
                     </td>
-                    <td><f:link.action action="show" arguments="{event:event}">{event.title}</f:link.action></td>
                     <td>
+                        <f:link.action action="show" arguments="{event:event}">{event.title}</f:link.action>
+                    </td>
+                    <td class="dt-body-center">
+                        <f:if condition="{event.reminderSent}">
+                            <strong><i class="bi bi-send-check"></i></strong>
+                        </f:if>
+                    </td>
+                    <td class="dt-body-center">
                         <f:link.action action="edit" arguments="{event:event}"><i class="bi bi-pencil"></i></f:link.action>
                         <a type="button" data-bs-toggle="modal" data-bs-target="#deleteEventModal{eventIterator.index}">
                             <i class="bi bi-trash3"></i>

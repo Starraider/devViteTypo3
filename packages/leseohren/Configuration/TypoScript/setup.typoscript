@@ -5,6 +5,7 @@ plugin.tx_leseohren_personen {
         organizationShowPid = {$pageIDs.organizationShowPid}
         eventShowPid = {$pageIDs.eventShowPid}
         blackboardShowPid = {$pageIDs.blackboardShowPid}
+        presentShowPid = {$pageIDs.presentShowPid}
       }
     }
     view {
@@ -46,6 +47,7 @@ plugin.tx_leseohren_persondashboard {
       organizationShowPid = {$pageIDs.organizationShowPid}
       eventShowPid = {$pageIDs.eventShowPid}
       blackboardShowPid = {$pageIDs.blackboardShowPid}
+      presentShowPid = {$pageIDs.presentShowPid}
     }
   }
 }
@@ -56,6 +58,7 @@ plugin.tx_leseohren_organizations {
         organizationShowPid = {$pageIDs.organizationShowPid}
         eventShowPid = {$pageIDs.eventShowPid}
         blackboardShowPid = {$pageIDs.blackboardShowPid}
+        presentShowPid = {$pageIDs.presentShowPid}
       }
     }
     view {
@@ -86,6 +89,7 @@ plugin.tx_leseohren_events {
         organizationShowPid = {$pageIDs.organizationShowPid}
         eventShowPid = {$pageIDs.eventShowPid}
         blackboardShowPid = {$pageIDs.blackboardShowPid}
+        presentShowPid = {$pageIDs.presentShowPid}
       }
     }
     view {
@@ -116,6 +120,7 @@ plugin.tx_leseohren_blackboards {
         organizationShowPid = {$pageIDs.organizationShowPid}
         eventShowPid = {$pageIDs.eventShowPid}
         blackboardShowPid = {$pageIDs.blackboardShowPid}
+        presentShowPid = {$pageIDs.presentShowPid}
       }
     }
     view {
@@ -139,7 +144,37 @@ plugin.tx_leseohren_blackboards {
         #callDefaultActionIfActionCantBeResolved = 1
     }
 }
-
+plugin.tx_leseohren_presents {
+    settings {
+      pageIDs {
+        personShowPid = {$pageIDs.personShowPid}
+        organizationShowPid = {$pageIDs.organizationShowPid}
+        eventShowPid = {$pageIDs.eventShowPid}
+        blackboardShowPid = {$pageIDs.blackboardShowPid}
+        presentShowPid = {$pageIDs.presentShowPid}
+      }
+    }
+    view {
+        templateRootPaths.0 = EXT:leseohren/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_leseohren_presents.view.templateRootPath}
+        partialRootPaths.0 = EXT:leseohren/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_leseohren_presents.view.partialRootPath}
+        layoutRootPaths.0 = EXT:leseohren/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_leseohren_presents.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_leseohren_presents.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
 // config.tx_extbase {
 //   persistence {
 //     classes {

@@ -54,4 +54,4 @@ mittwald_app('2e9967b6-8ff0-4e0d-ac55-866fe5b357a9', hostname: 'beta')
 //mittwald_app('9bcae0f5-bf78-4d2e-adf1-5ee5c18ccc1d', hostname: 'live')
 //    ->set('branch', 'main');
 
-after('deploy:failed', 'deploy:unlock');
+// after('deploy:failed', 'deploy:unlock');

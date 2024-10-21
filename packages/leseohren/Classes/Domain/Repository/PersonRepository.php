@@ -13,6 +13,7 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+//use TYPO3\CMS\Core\Utility\DebugUtility;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -37,12 +38,13 @@ class PersonRepository extends Repository
     /**
      * Find all persons having a birthday today
      *
+     * @param string $interval Number of days to look ahead
      * @return QueryResultInterface
      */
-    public function upcomingBirthdays()
+    public function upcomingBirthdays($interval = '7')
     {
         $query = $this->createQuery();
-        $sql = 'SELECT uid, pid, firstname, lastname, title, birthday, gender, email FROM tx_leseohren_domain_model_person WHERE DATE_ADD(FROM_UNIXTIME(birthday), INTERVAL YEAR(CURDATE())-YEAR(FROM_UNIXTIME(birthday)) + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(FROM_UNIXTIME(birthday)),1,0)YEAR) BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 7 DAY)';
+        $sql = 'SELECT uid, pid, firstname, lastname, title, birthday, gender, email FROM tx_leseohren_domain_model_person WHERE DATE_ADD(FROM_UNIXTIME(birthday), INTERVAL YEAR(CURDATE())-YEAR(FROM_UNIXTIME(birthday)) + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(FROM_UNIXTIME(birthday)),1,0)YEAR) BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL '.$interval.' DAY)';
         $query->statement($sql);
         //$query->setOrderings(['birthday' => QueryInterface::ORDER_ASCENDING]);
         /*
@@ -55,13 +57,14 @@ class PersonRepository extends Repository
     /**
      * Find all persons whose status will change the next 7 days
      *
+     * @param string $interval Number of days to look ahead
      * @return QueryResultInterface
      */
-    public function upcomingStatusChange()
+    public function upcomingStatusChange($interval = '7')
     {
         $today = new \DateTime('today');
         $thisweek = new \DateTime('today');
-        $thisweek = $thisweek->modify('+7 days');
+        $thisweek = $thisweek->modify('+'.$interval.' days');
         $query = $this->createQuery();
         $query->matching(
             $query->between('statusend_date', $today, $thisweek)
@@ -73,6 +76,61 @@ class PersonRepository extends Repository
         // DebuggerUtility::var_dump($queryBuilder->getSQL());
         // DebuggerUtility::var_dump($queryBuilder->getParameters());
 
+        return $query->execute();
+    }
+
+    /**
+     * Find all persons whose fuehrungszeugnis will expire the next 14 days
+     *
+     * @param string $interval Number of days to look ahead
+     * @return QueryResultInterface
+     */
+    public function expiredFuehrungszeugnis($interval = '14')
+    {
+        $fiveYearsAgo = new \DateTime('today');
+        $fiveYearsAgo = $fiveYearsAgo->modify('-5 years');
+        $fiveYearsAgo = $fiveYearsAgo->modify('+'.$interval.' days');
+        //DebugUtility::debug($fiveYearsAgo, 'vorJahren');
+        $query = $this->createQuery();
+        $query->matching(
+            $query->logicalAnd(
+                $query->logicalNot(
+                    $query->equals('fuehrungszeugnis_date', 0)
+                ),
+                $query->lessThanOrEqual('fuehrungszeugnis_date', $fiveYearsAgo)
+            )
+        );
+        $query->setOrderings(['fuehrungszeugnis_date' => QueryInterface::ORDER_ASCENDING]);
+
+        // $typo3DbQueryParser = GeneralUtility::makeInstance(Typo3DbQueryParser::class);
+        // $queryBuilder = $typo3DbQueryParser->convertQueryToDoctrineQueryBuilder($query);
+        // DebuggerUtility::var_dump($queryBuilder->getSQL());
+        // DebuggerUtility::var_dump($queryBuilder->getParameters());
+
+        return $query->execute();
+    }
+
+    /**
+     * Find all persons by category
+     *
+     * @param string $category
+     * @param bool $invert Should the result be inverted
+     * @return QueryResultInterface
+     */
+    public function searchCategory($category, $invert = false)
+    {
+        $query = $this->createQuery();
+        if($invert == false){
+            $query->matching(
+                $query->in('categories', $category)
+            );
+        }else {
+            $query->matching(
+                $query->logicalNot(
+                    $query->in('categories', $category)
+                )
+            );
+        }
         return $query->execute();
     }
 

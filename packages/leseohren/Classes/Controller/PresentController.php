@@ -9,7 +9,10 @@ use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Type\ContextualFeedbackSeverity;
 use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 use SKom\Leseohren\Domain\Repository\PresentRepository;
+use SKom\Leseohren\Domain\Repository\GiftRepository;
 use SKom\Leseohren\Domain\Model\Present;
+use SKom\Leseohren\Domain\Model\Person;
+use TYPO3\CMS\Core\Utility\DebugUtility;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -32,9 +35,17 @@ class PresentController extends ActionController
      */
     protected $presentRepository = null;
 
-    public function __construct(PresentRepository $presentRepository)
+    /**
+     * giftRepository
+     *
+     * @var GiftRepository
+     */
+    protected $giftRepository = null;
+
+    public function __construct(PresentRepository $presentRepository, GiftRepository $giftRepository)
     {
         $this->presentRepository = $presentRepository;
+        $this->giftRepository = $giftRepository;
     }
 
     /**
@@ -55,6 +66,7 @@ class PresentController extends ActionController
     public function listAction(): ResponseInterface
     {
         $presents = $this->presentRepository->findAll();
+        //DebugUtility::debug($presents, 'meineVariable');
         $this->view->assign('presents', $presents);
         return $this->htmlResponse();
     }
@@ -75,16 +87,32 @@ class PresentController extends ActionController
      *
      * @return ResponseInterface
      */
-    public function newAction(): ResponseInterface
+    public function newAction(Person $person): ResponseInterface
     {
+        $this->view->assign('person', $person);
+        $gifts = $this->giftRepository->findAll();
+        $this->view->assign('gifts', $gifts);
         return $this->htmlResponse();
     }
 
     /**
+     * initialize create action
+     *
+     * @param void
+     */
+    public function initializeCreateAction(): void
+    {
+        $this->arguments->getArgument('newPresent')
+            ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd.m.Y');
+    }
+
+
+    /**
      * action create
      */
-    public function createAction(Present $newPresent)
+    public function createAction(Present $newPresent, Person $person)
     {
+        $newPresent->addPerson($person);
         $this->addFlashMessage('Die neue Schenkung wurde erfolgreich gespeichert.', '', ContextualFeedbackSeverity::OK);
         $this->presentRepository->add($newPresent);
         return $this->redirect('list');
@@ -104,6 +132,7 @@ class PresentController extends ActionController
 
     /**
      * action update
+     *
      */
     public function updateAction(Present $present)
     {
@@ -114,11 +143,31 @@ class PresentController extends ActionController
 
     /**
      * action delete
+     *
      */
-    public function deleteAction(Present $present)
+    // public function deleteAction(Present $present)
+    // {
+    //     $this->addFlashMessage('Die Schenkung wurde erfolgreich gelöscht.', '', ContextualFeedbackSeverity::OK);
+    //     $this->presentRepository->remove($present);
+    //     return $this->redirect('list');
+    // }
+
+    /**
+     * action delete
+     *
+     * @param Present $present
+     * @param Person $person
+     */
+    public function deleteAction(Present $present, Person $person = null)
     {
+        $redirectPID = intval($this->settings['pageIDs']['personShowPid']);
+
         $this->addFlashMessage('Die Schenkung wurde erfolgreich gelöscht.', '', ContextualFeedbackSeverity::OK);
         $this->presentRepository->remove($present);
-        return $this->redirect('list');
+        if($person) {
+            return $this->redirect('show', 'Person', 'Leseohren', ['person' => $person], $redirectPID, null, 303);
+        }else{
+            return $this->redirect('list');
+        }
     }
 }
