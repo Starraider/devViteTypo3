@@ -6,9 +6,9 @@ use In2code\Migration\Migration\Importer\AbstractImporter;
 use In2code\Migration\Migration\Importer\ImporterInterface;
 
 /**
- * Class OrganisationImporter
+ * Class PersonCategoryImporter
  */
-class OrganisationImporter extends AbstractImporter implements ImporterInterface
+class PersonCategoryImporter extends AbstractImporter implements ImporterInterface
 {
 
     /**
@@ -23,21 +23,21 @@ class OrganisationImporter extends AbstractImporter implements ImporterInterface
      *
      * @var bool
      */
-    protected bool $keepIdentifiers = true;
+    protected bool $keepIdentifiers = false;
 
     /**
      * Table where to run the migration
      *
      * @var string
      */
-    protected string $tableName = 'tx_leseohren_domain_model_organization';
+    protected string $tableName = 'sys_category_record_mm';
 
     /**
      * Table to import from
      *
      * @var string
      */
-    protected string $tableNameOld = '00_Einrichtungen';
+    protected string $tableNameOld = '09_Personen_Rollen';
 
     /**
      * Default fields
@@ -45,7 +45,7 @@ class OrganisationImporter extends AbstractImporter implements ImporterInterface
      * @var array
      */
     protected array $mappingDefault = [
-        'ID' => 'uid',
+
     ];
 
     /**
@@ -61,8 +61,7 @@ class OrganisationImporter extends AbstractImporter implements ImporterInterface
      * @var array
      */
     protected array $mapping = [
-        'ID' => 'uid',
-        'Einrichtungen' => 'name',
+        'Personen' => 'uid_foreign',
     ];
 
     /**
@@ -71,14 +70,13 @@ class OrganisationImporter extends AbstractImporter implements ImporterInterface
      * @var array
      */
     protected array $values = [
-        'vp_number' => '<f:if condition="{propertiesOld.anzahl_paten}"><f:then>{propertiesOld.anzahl_paten}</f:then><f:else>0</f:else></f:if>',
-        'email' => '<f:if condition="{propertiesOld.email}"><f:then>{propertiesOld.email}</f:then></f:if>',
-        'phone1' => '<f:if condition="{propertiesOld.Telefon}"><f:then>{propertiesOld.Telefon}</f:then></f:if>',
-        'district' => '<f:if condition="{propertiesOld.Stadtteile}"><f:then>{propertiesOld.Stadtteile}</f:then></f:if>',
-        'reading_times' => '<f:if condition="{propertiesOld.lesezeit}"><f:then>{propertiesOld.lesezeit}</f:then></f:if>',
-        'notes' => '<f:if condition="{propertiesOld.Bemerkung}"><f:then>{propertiesOld.Bemerkung}</f:then></f:if>',
-        'pid' => '20' // store events into this page
+        'uid_local' => '<f:switch expression="{propertiesOld.Rollen}"><f:case value="1">3</f:case><f:case value="2">2</f:case><f:case value="3">7</f:case><f:case value="4">4</f:case><f:case value="5">5</f:case><f:case value="6">8</f:case><f:case value="7">9</f:case></f:switch>',
+        'tablenames' => 'tx_leseohren_domain_model_person',
+        'fieldname' => 'categories',
+        'sorting_foreign' => '1',
     ];
+    //'uid_local' => '<f:if condition="{propertiesOld.Rollen} == 1"><f:then>3</f:then><f:else if="{propertiesOld.Rollen} == 2"><f:then>2</f:then></f:else></f:if>',
+
 
     /**
      * PropertyHelpers are called after initial build via mapping

@@ -74,7 +74,8 @@ class EventImporter extends AbstractImporter implements ImporterInterface
     protected array $values = [
         'description' => '<f:if condition="{propertiesOld.Beschreibung}"><f:then>{propertiesOld.Beschreibung}</f:then></f:if>',
         'end_date' => '<f:if condition="{propertiesOld.Datum}"><f:then>{propertiesOld.Datum}</f:then></f:if>',
-        'pid' => '21' // store events into this page
+        'pid' => '21', // store events into this page
+        'categories' => '1'
     ];
 
     /**

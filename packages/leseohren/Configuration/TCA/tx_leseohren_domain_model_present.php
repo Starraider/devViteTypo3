@@ -6,6 +6,7 @@ return [
         'label' => 'gift_date',
         'label_alt' => 'gift',
         'label_alt_force' => true,
+        'default_sortby' => 'gift_date DESC',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'versioningWS' => true,

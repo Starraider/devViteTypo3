@@ -31,7 +31,7 @@ class GetLanguagesPropertyHelper extends AbstractPropertyHelper implements Prope
         if ($value == '') {
             $value = '1';
         }
-        $this->log->addMessage('Replace ' . $this->getProperty() . ' with ' . $value . ' in ' . __CLASS__);
+        //$this->log->addMessage('Replace ' . $this->getProperty() . ' with ' . $value . ' in ' . __CLASS__);
         $this->setProperty($value);
     }
 

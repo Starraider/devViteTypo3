@@ -29,7 +29,7 @@ class GetSwiftPropertyHelper extends AbstractPropertyHelper implements PropertyH
         $sql = 'SELECT BIC FROM 01_Mitglieder WHERE Personen=' . (int)$this->getPropertyFromRecord('_migrated_uid');
         $value = (string)$queryBuilder->executeQuery($sql)->fetchOne();
         if ($value != '') {
-            $this->log->addMessage('Replace ' . $this->getProperty() . ' with ' . $value . ' in ' . __CLASS__);
+            //$this->log->addMessage('Replace ' . $this->getProperty() . ' with ' . $value . ' in ' . __CLASS__);
             $this->setProperty($value);
         }
     }

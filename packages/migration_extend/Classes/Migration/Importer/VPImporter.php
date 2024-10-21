@@ -6,9 +6,9 @@ use In2code\Migration\Migration\Importer\AbstractImporter;
 use In2code\Migration\Migration\Importer\ImporterInterface;
 
 /**
- * Class OrganisationImporter
+ * Class VPImporter
  */
-class OrganisationImporter extends AbstractImporter implements ImporterInterface
+class VPImporter extends AbstractImporter implements ImporterInterface
 {
 
     /**
@@ -30,14 +30,14 @@ class OrganisationImporter extends AbstractImporter implements ImporterInterface
      *
      * @var string
      */
-    protected string $tableName = 'tx_leseohren_domain_model_organization';
+    protected string $tableName = 'tx_leseohren_organization_person_mm';
 
     /**
      * Table to import from
      *
      * @var string
      */
-    protected string $tableNameOld = '00_Einrichtungen';
+    protected string $tableNameOld = '09_Vorlesepaten_Einrichtungen';
 
     /**
      * Default fields
@@ -45,7 +45,7 @@ class OrganisationImporter extends AbstractImporter implements ImporterInterface
      * @var array
      */
     protected array $mappingDefault = [
-        'ID' => 'uid',
+
     ];
 
     /**
@@ -61,8 +61,8 @@ class OrganisationImporter extends AbstractImporter implements ImporterInterface
      * @var array
      */
     protected array $mapping = [
-        'ID' => 'uid',
-        'Einrichtungen' => 'name',
+        'Personen' => 'uid_foreign',
+        'Einrichtungen' => 'uid_local',
     ];
 
     /**
@@ -71,13 +71,7 @@ class OrganisationImporter extends AbstractImporter implements ImporterInterface
      * @var array
      */
     protected array $values = [
-        'vp_number' => '<f:if condition="{propertiesOld.anzahl_paten}"><f:then>{propertiesOld.anzahl_paten}</f:then><f:else>0</f:else></f:if>',
-        'email' => '<f:if condition="{propertiesOld.email}"><f:then>{propertiesOld.email}</f:then></f:if>',
-        'phone1' => '<f:if condition="{propertiesOld.Telefon}"><f:then>{propertiesOld.Telefon}</f:then></f:if>',
-        'district' => '<f:if condition="{propertiesOld.Stadtteile}"><f:then>{propertiesOld.Stadtteile}</f:then></f:if>',
-        'reading_times' => '<f:if condition="{propertiesOld.lesezeit}"><f:then>{propertiesOld.lesezeit}</f:then></f:if>',
-        'notes' => '<f:if condition="{propertiesOld.Bemerkung}"><f:then>{propertiesOld.Bemerkung}</f:then></f:if>',
-        'pid' => '20' // store events into this page
+
     ];
 
     /**

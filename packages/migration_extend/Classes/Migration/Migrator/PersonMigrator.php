@@ -38,7 +38,7 @@ class PersonMigrator extends AbstractMigrator implements MigratorInterface
      *
      * @var string
      */
-    protected string $additionalWhere = 'and _migrated=1 and _migrated_table="00_Personen" and _migrated_twice=0';
+    protected string $additionalWhere = 'and _migrated=1 and _migrated_table="00_Personen"';
 
     /**
      * @var array
@@ -95,6 +95,84 @@ class PersonMigrator extends AbstractMigrator implements MigratorInterface
         'payment_method' => [
             [
                 'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetPaymentMethodPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ]
+        ],
+        'status' => [
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetStatusMemberPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ],
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetStatusVPPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ]
+        ],
+        'statusbegin_date' => [
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetStatusDateMemberPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ],
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetStatusDateVPPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ],
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\SetStatusDatePropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ]
+        ],
+        'statuschange_date' => [
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetStatusDateMemberPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ],
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetStatusDateVPPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ],
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\SetStatusDatePropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ]
+        ],
+        'statusend_date' => [
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetStatusEndDateVPPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ]
+        ],
+        'fuehrungszeugnis_checked' => [
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetFuehrungszeugnisVPPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ]
+        ],
+        'preference_organization_type' => [
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetInteressenPropertyHelper::class,
                 'configuration' => [
 
                 ]

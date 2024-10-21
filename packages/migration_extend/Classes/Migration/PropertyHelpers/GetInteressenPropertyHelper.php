@@ -15,9 +15,9 @@ use In2code\Migration\Migration\PropertyHelpers\PropertyHelperInterface;
 use In2code\Migration\Utility\DatabaseUtility;
 
 /**
- * Class GetPaymentMethodPropertyHelper
+ * Class GetInteressenPropertyHelper
  */
-class GetPaymentMethodPropertyHelper extends AbstractPropertyHelper implements PropertyHelperInterface
+class GetInteressenPropertyHelper extends AbstractPropertyHelper implements PropertyHelperInterface
 {
     /**
      * @throws DBALException
@@ -26,14 +26,10 @@ class GetPaymentMethodPropertyHelper extends AbstractPropertyHelper implements P
     {
         //$this->log->addMessage('Table:'.$this->table.' Property:'.(int)$this->getPropertyFromRecord('_migrated_uid'));
         $queryBuilder = DatabaseUtility::getConnectionForTable($this->table);
-        $sql = 'SELECT Zahlungsmethode FROM 01_Mitglieder WHERE Personen=' . (int)$this->getPropertyFromRecord('_migrated_uid');
+        $sql = 'SELECT GROUP_CONCAT(DISTINCT Interessen) FROM 09_Vorlesepaten_Interessen WHERE Personen=' . (int)$this->getPropertyFromRecord('_migrated_uid');
         $value = (string)$queryBuilder->executeQuery($sql)->fetchOne();
         if ($value != '') {
-            //$this->log->addMessage('Replace ' . $this->getProperty() . ' with ' . $value . ' in ' . __CLASS__);
-            $this->setProperty($value);
-        }else{
-            $value = '0';
-            //$this->log->addMessage('Replace ' . $this->getProperty() . ' with ' . $value . ' in ' . __CLASS__);
+            //$this->log->addMessage('Interessen: ' . $value . ' von ' . $this->getPropertyFromRecord('_migrated_uid'));
             $this->setProperty($value);
         }
     }

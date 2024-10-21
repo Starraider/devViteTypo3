@@ -10,8 +10,8 @@
             <f:if condition="{organization.street2}">
                 {organization.street2}</br>
             </f:if>
-            <f:if condition="{organization.district} AND {organization.district} != 'Sonstige'">
-                <f:translate key="tx_leseohren_domain_model_organization.district" />: {organization.district}</br>
+            <f:if condition="{organization.district} AND {organization.district} != '19' AND {organization.district} != '20'">
+                <f:translate key="tx_leseohren_domain_model_organization.district" />: <f:translate key="tx_leseohren.district.{organization.district}" /></br>
             </f:if>
             {organization.zip} {organization.city}
         </p>

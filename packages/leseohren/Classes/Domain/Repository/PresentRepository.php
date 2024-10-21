@@ -21,5 +21,7 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
  */
 class PresentRepository extends Repository
 {
-
+    protected $defaultOrderings = [
+        'gift_date' => QueryInterface::ORDER_DESCENDING
+    ];
 }

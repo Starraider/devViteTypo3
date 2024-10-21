@@ -7,6 +7,7 @@ namespace SKom\Leseohren\Domain\Model;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
@@ -47,6 +48,14 @@ class Present extends AbstractEntity
      * @var Gift
      */
     protected $gift = null;
+
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+        $this->initializeObject();
+    }
 
     /**
      * Returns the gift_date

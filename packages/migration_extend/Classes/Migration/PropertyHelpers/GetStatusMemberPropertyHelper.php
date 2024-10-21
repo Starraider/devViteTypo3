@@ -15,26 +15,25 @@ use In2code\Migration\Migration\PropertyHelpers\PropertyHelperInterface;
 use In2code\Migration\Utility\DatabaseUtility;
 
 /**
- * Class GetPaymentMethodPropertyHelper
+ * Class GetStatusMemberPropertyHelper
  */
-class GetPaymentMethodPropertyHelper extends AbstractPropertyHelper implements PropertyHelperInterface
+class GetStatusMemberPropertyHelper extends AbstractPropertyHelper implements PropertyHelperInterface
 {
     /**
+     * Membership has ended -> status = 2 (ausgeschieden)
+     * checked
      * @throws DBALException
      */
     public function manipulate(): void
     {
-        //$this->log->addMessage('Table:'.$this->table.' Property:'.(int)$this->getPropertyFromRecord('_migrated_uid'));
+        //$this->log->addMessage('Start Migration of ' . $this->getProperty() . ' in ' . __CLASS__);
         $queryBuilder = DatabaseUtility::getConnectionForTable($this->table);
-        $sql = 'SELECT Zahlungsmethode FROM 01_Mitglieder WHERE Personen=' . (int)$this->getPropertyFromRecord('_migrated_uid');
+        $sql = 'SELECT austrittsdatum FROM 01_Mitglieder WHERE Personen=' . (int)$this->getPropertyFromRecord('_migrated_uid');
         $value = (string)$queryBuilder->executeQuery($sql)->fetchOne();
         if ($value != '') {
-            //$this->log->addMessage('Replace ' . $this->getProperty() . ' with ' . $value . ' in ' . __CLASS__);
-            $this->setProperty($value);
-        }else{
-            $value = '0';
-            //$this->log->addMessage('Replace ' . $this->getProperty() . ' with ' . $value . ' in ' . __CLASS__);
-            $this->setProperty($value);
+            //$this->log->addMessage('Membership has ended for: ' . $this->getPropertyFromRecord('_migrated_uid'));
+            //$this->log->addMessage('Replace ' . $this->getProperty() . ' with 2 in ' . __CLASS__);
+            $this->setProperty('2');
         }
     }
 

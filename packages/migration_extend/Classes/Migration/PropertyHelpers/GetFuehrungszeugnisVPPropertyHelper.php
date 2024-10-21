@@ -15,25 +15,23 @@ use In2code\Migration\Migration\PropertyHelpers\PropertyHelperInterface;
 use In2code\Migration\Utility\DatabaseUtility;
 
 /**
- * Class GetPaymentMethodPropertyHelper
+ * Class GetFuehrungszeugnisVPPropertyHelper
  */
-class GetPaymentMethodPropertyHelper extends AbstractPropertyHelper implements PropertyHelperInterface
+class GetFuehrungszeugnisVPPropertyHelper extends AbstractPropertyHelper implements PropertyHelperInterface
 {
     /**
+     * Fuehrungszeugnis -> fuehrungszeugnis_checked = 1
+     * checked
      * @throws DBALException
      */
     public function manipulate(): void
     {
-        //$this->log->addMessage('Table:'.$this->table.' Property:'.(int)$this->getPropertyFromRecord('_migrated_uid'));
+        //$this->log->addMessage('Start Migration of ' . $this->getProperty() . ' in ' . __CLASS__);
         $queryBuilder = DatabaseUtility::getConnectionForTable($this->table);
-        $sql = 'SELECT Zahlungsmethode FROM 01_Mitglieder WHERE Personen=' . (int)$this->getPropertyFromRecord('_migrated_uid');
+        $sql = 'SELECT Fuehrungszeugnis FROM 01_Vorlesepaten WHERE Personen=' . (int)$this->getPropertyFromRecord('_migrated_uid');
         $value = (string)$queryBuilder->executeQuery($sql)->fetchOne();
-        if ($value != '') {
-            //$this->log->addMessage('Replace ' . $this->getProperty() . ' with ' . $value . ' in ' . __CLASS__);
-            $this->setProperty($value);
-        }else{
-            $value = '0';
-            //$this->log->addMessage('Replace ' . $this->getProperty() . ' with ' . $value . ' in ' . __CLASS__);
+        if ($value == '1') {
+            //$this->log->addMessage('Fuehrungszeugnis checked: '. $value .' fuer ' . $this->getPropertyFromRecord('_migrated_uid'));
             $this->setProperty($value);
         }
     }

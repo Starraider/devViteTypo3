@@ -102,20 +102,23 @@
 			<trans-unit id="tx_leseohren.orgType.description" resname="tx_leseohren.orgType.description">
 				<source>Press and hold cmd-key to select multiple.</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.0" resname="tx_leseohren.orgType.0">
-				<source>Kindergarten</source>
-			</trans-unit>
 			<trans-unit id="tx_leseohren.orgType.1" resname="tx_leseohren.orgType.1">
-				<source>Schule</source>
+				<source>Special events</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.orgType.2" resname="tx_leseohren.orgType.2">
-				<source>Bibliothek</source>
+				<source>Daycare center</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.orgType.3" resname="tx_leseohren.orgType.3">
-				<source>Buchhandlung</source>
+				<source>School</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.orgType.4" resname="tx_leseohren.orgType.4">
-				<source>Leseheimat</source>
+				<source>Library</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType.5" resname="tx_leseohren.orgType.5">
+				<source>Refugees</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.orgType.6" resname="tx_leseohren.orgType.6">
+				<source>Training courses</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.travelOptions" resname="tx_leseohren.travelOptions">
 				<source>Travel Options</source>
@@ -204,77 +207,83 @@
 			<trans-unit id="tx_leseohren.district.description" resname="tx_leseohren.district.description">
 				<source>District</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.0" resname="tx_leseohren.district.0">
-				<source>Sonstige</source>
-			</trans-unit>
 			<trans-unit id="tx_leseohren.district.1" resname="tx_leseohren.district.1">
-				<source>Bad Cannstatt</source>
+				<source>Stuttgart-Ost</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.2" resname="tx_leseohren.district.2">
-				<source>Birkach</source>
+				<source>Stuttgart-West</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.3" resname="tx_leseohren.district.3">
-				<source>Botnang</source>
+				<source>Weilimdorf</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.4" resname="tx_leseohren.district.4">
-				<source>Degerloch</source>
+				<source>Zuffenhausen</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.5" resname="tx_leseohren.district.5">
-				<source>Feuerbach</source>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.district.6" resname="tx_leseohren.district.6">
-				<source>Hedelfingen</source>
+				<source>Bad Cannstatt</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.7" resname="tx_leseohren.district.7">
-				<source>Möhringen</source>
+				<source>Feuerbach</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.8" resname="tx_leseohren.district.8">
-				<source>Mühlhausen</source>
+				<source>Stammheim</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.9" resname="tx_leseohren.district.9">
-				<source>Münster</source>
-			</trans-unit>
-			<trans-unit id="tx_leseohren.district.10" resname="tx_leseohren.district.10">
-				<source>Obertürkheim</source>
+				<source>Degerloch</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.11" resname="tx_leseohren.district.11">
 				<source>Plieningen</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.12" resname="tx_leseohren.district.12">
-				<source>Sillenbuch</source>
+				<source>Münster</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.13" resname="tx_leseohren.district.13">
-				<source>Stammheim</source>
+				<source>Botnang</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.14" resname="tx_leseohren.district.14">
-				<source>Stuttgart‐Mitte</source>
+				<source>Möhringen</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.15" resname="tx_leseohren.district.15">
-				<source>Stuttgart‐Nord</source>
+				<source>Vaihingen</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.16" resname="tx_leseohren.district.16">
-				<source>Stuttgart‐Ost</source>
+				<source>Untertürkheim</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.17" resname="tx_leseohren.district.17">
 				<source>Stuttgart‐Süd</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.18" resname="tx_leseohren.district.18">
-				<source>Stuttgart‐West</source>
+				<source>Stuttgart‐Mitte</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.19" resname="tx_leseohren.district.19">
-				<source>Untertürkheim</source>
+				<source>andere Orte</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.20" resname="tx_leseohren.district.20">
-				<source>Vaihingen</source>
+				<source>Stuttgart</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.21" resname="tx_leseohren.district.21">
-				<source>Wangen</source>
+				<source>Stuttgart-Nord</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren.district.22" resname="tx_leseohren.district.22">
-				<source>Weilimdorf</source>
+				<source>Sillenbuch</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.23" resname="tx_leseohren.district.23">
-				<source>Zuffenhausen</source>
+			<trans-unit id="tx_leseohren.district.25" resname="tx_leseohren.district.25">
+				<source>Hedelfingen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.26" resname="tx_leseohren.district.26">
+				<source>Wangen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.32" resname="tx_leseohren.district.32">
+				<source>Birkach</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.33" resname="tx_leseohren.district.33">
+				<source>Obertürkheim</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.34" resname="tx_leseohren.district.34">
+				<source>Mühlhausen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.district.35" resname="tx_leseohren.district.35">
+				<source>Neugereut</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person" resname="tx_leseohren_domain_model_person">
 				<source>Person</source>
