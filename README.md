@@ -16,7 +16,7 @@ npm run build
 
 ## Deployment
 
-ACHTUNG: Vorher ein Build durchführen!
+ACHTUNG: Vorher ein Build durchführen und new Release erstellen!
 
 ```bash
 vendor/bin/dep deploy beta -vvv
