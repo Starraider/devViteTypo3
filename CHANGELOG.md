@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.2.0](https://github.com/Starraider/devViteTypo3/compare/v1.1.0...v1.2.0) (2024-10-21)
+
+
+### Features
+
+* Add filter for event list ([41fbe05](https://github.com/Starraider/devViteTypo3/commit/41fbe0580899b9b83f6125a9b941c23301bfbe3b))
+* Add fuehrungszeugnis checked button ([ebd5392](https://github.com/Starraider/devViteTypo3/commit/ebd5392fed843e158121e630da7983a93be8de1f))
+* Add fuehrungszeugnis date and reminder ([4652680](https://github.com/Starraider/devViteTypo3/commit/465268083c7be9a422264bf474dedd4cbd46df02))
+* Add migration automation ([c889d11](https://github.com/Starraider/devViteTypo3/commit/c889d11b535958c560722b58f05d2a03dd5e94cb))
+* Add migration extension ([89d1ca3](https://github.com/Starraider/devViteTypo3/commit/89d1ca3035eda0f990b5f6c81f527fccdd412057))
+* Add migration payment_method ([4844348](https://github.com/Starraider/devViteTypo3/commit/4844348f51c50cdfb50a496af7983dc8caa3cd72))
+* Add reminder sent field to events ([dbe1ffe](https://github.com/Starraider/devViteTypo3/commit/dbe1ffe875fb25dd8a47b6e63d401f48a5aeb1f0))
+* Add statuschange field ([f844dfb](https://github.com/Starraider/devViteTypo3/commit/f844dfbe60e381f19356eaa48eb3211ec4414325))
+* Change languages ([b610083](https://github.com/Starraider/devViteTypo3/commit/b6100833f8fb265b8561b04398836dcf1c4505df))
+* **Design:** Optimize Table-View ([be1ca11](https://github.com/Starraider/devViteTypo3/commit/be1ca11c31a559db518e711367f9494c8d4fba56))
+* Import bank data ([aa1c791](https://github.com/Starraider/devViteTypo3/commit/aa1c79162e74b7e3b3afa8a2733a06f0bb10c67a))
+* Make gifts editable and deleteable ([03a7d25](https://github.com/Starraider/devViteTypo3/commit/03a7d258c113e5ded47abd475995c7fb80092dc4))
+* Make warning period of birthday und status change list editable ([6ab1e1f](https://github.com/Starraider/devViteTypo3/commit/6ab1e1f3d0aff484b5e5c3966172a7f8185b43b2))
+* New build ([3373604](https://github.com/Starraider/devViteTypo3/commit/3373604fb4bfa6c7f7d502ce61211892cfbe2ef4))
+
+
+### Bug Fixes
+
+* **CD:** Remove deploy:unlock after failed deployment ([e6084e8](https://github.com/Starraider/devViteTypo3/commit/e6084e88111b301f46d8bc8fdbb1b42d1fa2aaea))
+* Fix easter date if date is next year ([9a98ad9](https://github.com/Starraider/devViteTypo3/commit/9a98ad9d7024f5bf0fba3ae77e4604cff192189e))
+* Show upcoming age in birthday list ([7b74292](https://github.com/Starraider/devViteTypo3/commit/7b74292c2850bd0b5c2af93e75ef3744f5602432))
+
 ## [1.1.0](https://github.com/Starraider/devViteTypo3/compare/v1.0.1...v1.1.0) (2024-08-15)
 
 
