@@ -8,6 +8,7 @@
 /*
  * Project-ID: p-pey4f8
  * mw context set --project-id=p-pey4f8
+ * mw context set --app-id=2e9967b6-8ff0-4e0d-ac55-866fe5b357a9
  * dep deploy -vvv
  */
 
@@ -21,7 +22,7 @@ set('repository', 'git@github.com:Starraider/devViteTypo3.git');
 set('git_recursive', true);
 set('mittwald_app_dependencies', [
     'php' => '~8.2',
-    'gm' => '*',
+    'im' => '*',
     'webp' => '*',
     'nano' => '*',
     'pdftools' => '*',
