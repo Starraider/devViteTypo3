@@ -8973,20 +8973,24 @@
         },
         {
             "name": "deployer/deployer",
-            "version": "v7.4.1",
+            "version": "v7.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/deployer.git",
-                "reference": "9d6397f25d8185622717e6e66d3eed737fd9d99b"
+                "reference": "12e99f965ade27bc00c54541096715e1904acd3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/deployer/zipball/9d6397f25d8185622717e6e66d3eed737fd9d99b",
-                "reference": "9d6397f25d8185622717e6e66d3eed737fd9d99b",
+                "url": "https://api.github.com/repos/deployphp/deployer/zipball/12e99f965ade27bc00c54541096715e1904acd3f",
+                "reference": "12e99f965ade27bc00c54541096715e1904acd3f",
                 "shasum": ""
             },
+            "require": {
+                "ext-json": "*",
+                "php": "^8.0|^7.3"
+            },
             "bin": [
-                "dep"
+                "bin/dep"
             ],
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -9012,7 +9016,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-12T20:42:52+00:00"
+            "time": "2024-10-22T12:37:24+00:00"
         },
         {
             "name": "ergebnis/composer-normalize",
@@ -10017,12 +10021,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mittwald/deployer-recipes.git",
-                "reference": "67e6e9a763c6d70a4973ec77826b97a3a175f713"
+                "reference": "32b626ab565696c5e8b4786fb769f03fd4bd8e58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mittwald/deployer-recipes/zipball/67e6e9a763c6d70a4973ec77826b97a3a175f713",
-                "reference": "67e6e9a763c6d70a4973ec77826b97a3a175f713",
+                "url": "https://api.github.com/repos/mittwald/deployer-recipes/zipball/32b626ab565696c5e8b4786fb769f03fd4bd8e58",
+                "reference": "32b626ab565696c5e8b4786fb769f03fd4bd8e58",
                 "shasum": ""
             },
             "require": {
@@ -10062,7 +10066,7 @@
                 "issues": "https://github.com/mittwald/deployer-recipes/issues",
                 "source": "https://github.com/mittwald/deployer-recipes/tree/master"
             },
-            "time": "2024-10-18T19:02:27+00:00"
+            "time": "2024-10-21T18:59:11+00:00"
         },
         {
             "name": "myclabs/deep-copy",
