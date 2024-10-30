@@ -627,6 +627,7 @@ return [
                 'type' => 'inline',
                 'foreign_table' => 'tx_leseohren_domain_model_present',
                 'foreign_field' => 'person',
+                'foreign_default_sortby' => 'ORDER BY gift_date DESC',
                 'maxitems' => 9999,
                 'appearance' => [
                     'collapseAll' => 1,
