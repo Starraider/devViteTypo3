@@ -411,6 +411,36 @@
 			<trans-unit id="tx_leseohren_domain_model_person.whatsapp.description" resname="tx_leseohren_domain_model_person.whatsapp.description">
 				<source>Whatsapp</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.awareness" resname="tx_leseohren_domain_model_person.awareness">
+				<source>Awareness</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.0" resname="tx_leseohren.awareness.0">
+				<source>k.A.</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.1" resname="tx_leseohren.awareness.1">
+				<source>Homepage</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.2" resname="tx_leseohren.awareness.2">
+				<source>Betterplace</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.3" resname="tx_leseohren.awareness.3">
+				<source>Press</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.4" resname="tx_leseohren.awareness.4">
+				<source>Flyer</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.5" resname="tx_leseohren.awareness.5">
+				<source>Reading campaign</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.6" resname="tx_leseohren.awareness.6">
+				<source>District office</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.7" resname="tx_leseohren.awareness.7">
+				<source>Volunteer agency</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.8" resname="tx_leseohren.awareness.8">
+				<source>Word of mouth</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.notes" resname="tx_leseohren_domain_model_person.notes">
 				<source>Notes</source>
 			</trans-unit>

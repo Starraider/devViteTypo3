@@ -105,6 +105,12 @@
 			<trans-unit id="tx_leseohren_domain_model_person.whatsapp.description" resname="tx_leseohren_domain_model_person.whatsapp.description">
 				<source>WhatsApp number</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.awareness" resname="tx_leseohren_domain_model_person.awareness">
+				<source>Awareness</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.awareness.description" resname="tx_leseohren_domain_model_person.awareness.description">
+				<source>How did this person get aware of Leseohren?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.notes" resname="tx_leseohren_domain_model_person.notes">
 				<source>Notes</source>
 			</trans-unit>

@@ -140,6 +140,13 @@ class Person extends AbstractEntity
     protected $whatsapp = '';
 
     /**
+     * awareness
+     *
+     * @var int
+     */
+    protected $awareness = 0;
+
+    /**
      * notes
      *
      * @var string
@@ -170,7 +177,7 @@ class Person extends AbstractEntity
     /**
      * statusendDate
      *
-     * @var \DateTime
+     * @var \DateTime|null
      */
     protected $statusendDate = null;
 
@@ -674,6 +681,26 @@ class Person extends AbstractEntity
     }
 
     /**
+     * Returns the awareness
+     *
+     * @return int
+     */
+    public function getAwareness()
+    {
+        return $this->awareness;
+    }
+
+    /**
+     * Sets the awareness
+     *
+     * @return void
+     */
+    public function setAwareness(int $awareness): void
+    {
+        $this->awareness = $awareness;
+    }
+
+    /**
      * Returns the notes
      *
      * @return string
@@ -768,9 +795,11 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setStatusendDate(\DateTime $statusendDate): void
+    public function setStatusendDate(\DateTime|null $statusendDate): void
     {
-        $this->statusendDate = $statusendDate;
+        if ($statusendDate != null){
+            $this->statusendDate = $statusendDate;
+        }
     }
 
     /**

@@ -80,6 +80,7 @@ class PersonenImporter extends AbstractImporter implements ImporterInterface
         'city' => '<f:if condition="{propertiesOld.Stadt}"><f:then>{propertiesOld.Stadt}</f:then></f:if>',
         'zip' => '<f:if condition="{propertiesOld.PLZ}"><f:then>{propertiesOld.PLZ}</f:then></f:if>',
         'email' => '<f:if condition="{propertiesOld.email}"><f:then>{propertiesOld.email}</f:then></f:if>',
+        'awareness' => '<f:if condition="{propertiesOld.Entdeckungen}"><f:then>{propertiesOld.Entdeckungen}</f:then></f:if>',
         'notes' => '<f:if condition="{propertiesOld.Bemerkung}"><f:then>{propertiesOld.Bemerkung}</f:then></f:if>',
         'phone_mobile' => '<f:if condition="{propertiesOld.Tel_mobil}"><f:then>{propertiesOld.Tel_mobil}</f:then><f:else>{propertiesOld.Tel_geschaeftlich}</f:else></f:if>',
         'phone_landline' => '<f:if condition="{propertiesOld.Tel_privat}"><f:then>{propertiesOld.Tel_privat}</f:then><f:else>{propertiesOld.Tel_geschaeftlich}</f:else></f:if>',

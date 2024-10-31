@@ -58,6 +58,58 @@ class Present extends AbstractEntity
     }
 
     /**
+     * Initializes all ObjectStorage properties when model is reconstructed from DB (where __construct is not called)
+     *
+     * @return void
+     */
+    public function initializeObject(): void
+    {
+        $this->person = $this->person ?: new ObjectStorage();
+    }
+
+    /**
+     * Adds a Person
+     *
+     * @param Person $person The Person to be added
+     * @return void
+     */
+    public function addPerson(Person $person): void
+    {
+        $this->person->attach($person);
+    }
+
+    /**
+     * Removes a Person
+     *
+     * @param Person $personToRemove The Person to be removed
+     * @return void
+     */
+    public function removePerson(Person $personToRemove): void
+    {
+        $this->person->detach($personToRemove);
+    }
+
+    /**
+     * Returns the person
+     *
+     * @return ObjectStorage<Person>
+     */
+    public function getPerson()
+    {
+        return $this->person;
+    }
+
+    /**
+     * Set person
+     * @param ObjectStorage<Person> $person
+     * @return void
+     */
+    public function setPerson(ObjectStorage $person): void
+    {
+        $this->person = $person;
+    }
+
+    /**
      * Returns the gift_date
      *
      * @return \DateTime

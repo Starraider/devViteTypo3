@@ -28,6 +28,7 @@ return [
                     firstname, lastname, gender, title, job, birthday,
                     --palette--;;addressPalette,
                     --palette--;;contactPalette,
+                    awareness,
                     notes,
                 --div--;Categories,
                     categories,
@@ -332,6 +333,30 @@ return [
                 'size' => 30,
                 'eval' => 'trim',
                 'default' => ''
+            ],
+        ],
+        'awareness' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.awareness',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.awareness.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.0', 'value' => 0],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.1', 'value' => 1],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.2', 'value' => 2],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.3', 'value' => 3],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.4', 'value' => 4],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.5', 'value' => 5],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.6', 'value' => 6],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.7', 'value' => 7],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.8', 'value' => 8],
+                ],
+                'size' => 1,
+                'maxitems' => 1,
+                'required' => true,
+                'eval' => ''
             ],
         ],
         'notes' => [
