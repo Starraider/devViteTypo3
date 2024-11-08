@@ -651,7 +651,7 @@ return [
                 'type' => 'check',
                 'items' => [
                     [
-                        'geprüft',
+                        'label' => 'geprüft',
                     ],
                 ],
             ],

@@ -189,7 +189,7 @@ return [
                 'type' => 'check',
                 'items' => [
                     [
-                        'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.reminder_sent.sent',
+                        'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.reminder_sent.sent',
                     ],
                 ],
             ],

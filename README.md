@@ -42,7 +42,7 @@ The "Release Please" GitHub Action will create a new release with the next versi
 vendor/bin/rector process --dry-run
 vendor/bin/fractor process --dry-run
 
-vendor/bin/rector process packages/holidayreminder --dry-run
+vendor/bin/rector process packages/leseohren --dry-run
 ```
 
 ### Änderungen durchführen lassen
