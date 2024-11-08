@@ -65,6 +65,14 @@ class Event extends AbstractEntity
     protected $location = '';
 
     /**
+     * Speaker
+     *
+     * @var ObjectStorage<Person>
+     */
+    #[Lazy]
+    protected $speaker = null;
+
+    /**
      * Participants
      *
      * @var ObjectStorage<Person>
@@ -82,9 +90,10 @@ class Event extends AbstractEntity
     /**
      * reminderSent
      *
-     * @var bool
+     * @var string
      */
-    protected $reminderSent = false;
+    #[Validate(['validator' => 'NotEmpty'])]
+    protected $reminderSent = '';
 
     /**
      * __construct
@@ -106,6 +115,7 @@ class Event extends AbstractEntity
     public function initializeObject(): void
     {
         $this->participants = $this->participants ?: new ObjectStorage();
+        $this->speaker = $this->speaker ?: new ObjectStorage();
     }
 
     /**
@@ -241,6 +251,48 @@ class Event extends AbstractEntity
     }
 
     /**
+     * Adds a Speaker
+     *
+     * @return void
+     */
+    public function addSpeaker(Person $speaker): void
+    {
+        $this->speaker->attach($speaker);
+    }
+
+    /**
+     * Removes a Speaker
+     *
+     * @param Person $speakerToRemove The Speaker to be removed
+     * @return void
+     */
+    public function removeSpeaker(Person $speakerToRemove): void
+    {
+        $this->speaker->detach($speakerToRemove);
+    }
+
+    /**
+     * Returns the Speaker
+     *
+     * @return ObjectStorage<Person>
+     */
+    public function getSpeaker()
+    {
+        return $this->speaker;
+    }
+
+    /**
+     * Sets the Speaker
+     *
+     * @param ObjectStorage<Person> $speaker
+     * @return void
+     */
+    public function setSpeaker(ObjectStorage $speaker): void
+    {
+        $this->speaker = $speaker;
+    }
+
+    /**
      * Adds a Person
      *
      * @return void
@@ -305,7 +357,7 @@ class Event extends AbstractEntity
     /**
      * Returns the reminderSent
      *
-     * @return bool
+     * @return string
      */
     public function getReminderSent()
     {
@@ -317,7 +369,7 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function setReminderSent(bool $reminderSent): void
+    public function setReminderSent(string $reminderSent): void
     {
         $this->reminderSent = $reminderSent;
     }

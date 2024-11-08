@@ -22,6 +22,8 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	languages varchar(255) NOT NULL DEFAULT '',
 	preference_agegroup text NOT NULL DEFAULT '',
 	preference_organization_type text NOT NULL DEFAULT '',
+	membership_type int(11) DEFAULT '0' NOT NULL,
+	membership_fee varchar(255) NOT NULL DEFAULT '',
 	payment_method int(11) DEFAULT '0' NOT NULL,
 	iban varchar(255) NOT NULL DEFAULT '',
 	swift varchar(255) NOT NULL DEFAULT '',
@@ -36,6 +38,7 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	blackboards int(11) unsigned NOT NULL DEFAULT '0',
 	events int(11) unsigned NOT NULL DEFAULT '0',
 	organizations int(11) unsigned NOT NULL DEFAULT '0',
+	speakerevent int(11) unsigned NOT NULL DEFAULT '0'
 );
 
 CREATE TABLE tx_leseohren_domain_model_organization (
@@ -84,6 +87,7 @@ CREATE TABLE tx_leseohren_domain_model_event (
 	start_date bigint(11) DEFAULT '0' NOT NULL,
 	end_date bigint(11) DEFAULT '0' NOT NULL,
 	participants int(11) unsigned NOT NULL DEFAULT '0',
+	speaker int(11) unsigned NOT NULL DEFAULT '0',
 	maxparticipants int(11) unsigned DEFAULT '0' NOT NULL,
 	reminder_sent int(11) DEFAULT '0' NOT NULL
 );

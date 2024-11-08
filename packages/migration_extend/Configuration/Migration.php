@@ -75,6 +75,13 @@ return [
             ]
         ],
         [
+            'className' => \Skom\MigrationExtend\Migration\Importer\EventSpeakerImporter::class,
+            'keys' => [
+                'event',
+                'person'
+            ]
+        ],
+        [
             'className' => \Skom\MigrationExtend\Migration\Migrator\PersonMigrator::class,
             'keys' => [
                 'person'

@@ -171,6 +171,21 @@
 			<trans-unit id="tx_leseohren_domain_model_person.organizations.description" resname="tx_leseohren_domain_model_person.organizations.description">
 				<source>In welchen Organisationen liest diese Person?</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membershipPalette.description" resname="tx_leseohren_domain_model_person.membershipPalette.description">
+				<source>Membership</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_type" resname="tx_leseohren_domain_model_person.membership_type">
+				<source>Membership Type</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_type.description" resname="tx_leseohren_domain_model_person.membership_type.description">
+				<source>What type of membership does this person have?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_fee" resname="tx_leseohren_domain_model_person.membership_fee">
+				<source>Membership Fee</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_fee.description" resname="tx_leseohren_domain_model_person.membership_fee.description">
+				<source>What's the annual membership fee?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.payment_method" resname="tx_leseohren_domain_model_person.payment_method">
 				<source>Payment Method</source>
 			</trans-unit>
@@ -478,7 +493,7 @@
 				<source>Location</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.location.description" resname="tx_leseohren_domain_model_event.location.description">
-				<source>Location</source>
+				<source>Where does the event take place?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.participants" resname="tx_leseohren_domain_model_event.participants">
 				<source>Participants</source>
@@ -578,6 +593,12 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_easterdate.easterdate.description" resname="tx_leseohren_domain_model_easterdate.easterdate.description">
 				<source>Date of easter sunday</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.speaker" resname="tx_leseohren.speaker">
+				<source>Speaker</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.speaker.description" resname="tx_leseohren.speaker.description">
+				<source>Who is the speaker of the course?</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -210,6 +210,20 @@ class Person extends AbstractEntity
     protected $preferenceOrganizationType = '';
 
     /**
+     * membership_type
+     *
+     * @var int
+     */
+    protected $membershipType = 0;
+
+    /**
+     * membership_fee
+     *
+     * @var string
+     */
+    protected $membershipFee = '';
+
+    /**
      * paymentMethod
      *
      * @var int
@@ -883,6 +897,46 @@ class Person extends AbstractEntity
     public function setPreferenceOrganizationType(array $preferenceOrganizationType): void
     {
         $this->preferenceOrganizationType = implode(',', $preferenceOrganizationType);
+    }
+
+    /**
+     * Returns the membershipType
+     *
+     * @return int
+     */
+    public function getMembershipType()
+    {
+        return $this->membershipType;
+    }
+
+    /**
+     * Sets the membershipType
+     *
+     * @return void
+     */
+    public function setMembershipType(int $membershipType): void
+    {
+        $this->membershipType = $membershipType;
+    }
+
+    /**
+     * Returns the membershipFee
+     *
+     * @return string
+     */
+    public function getMembershipFee()
+    {
+        return $this->membershipFee;
+    }
+
+    /**
+     * Sets the membershipFee
+     *
+     * @return void
+     */
+    public function setMembershipFee(string $membershipFee): void
+    {
+        $this->membershipFee = $membershipFee;
     }
 
     /**

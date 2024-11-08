@@ -68,6 +68,22 @@ class PersonMigrator extends AbstractMigrator implements MigratorInterface
                 ]
             ]
         ],
+        'membership_type' => [
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetMembershipTypePropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ]
+        ],
+        'membership_fee' => [
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetMembershipFeePropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ]
+        ],
         'bankname' => [
             [
                 'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetBanknamePropertyHelper::class,

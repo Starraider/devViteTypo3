@@ -177,6 +177,7 @@ class EventController extends ActionController
     {
         $this->arguments->getArgument('event')
             ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd.m.Y');
+        //$this->arguments->getArgument('event')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('reminderSent', 'boolean');
     }
 
     /**

@@ -498,6 +498,33 @@
 			<trans-unit id="tx_leseohren_domain_model_person.preference_organization_type.description" resname="tx_leseohren_domain_model_person.preference_organization_type.description">
 				<source>Preference Organization Type</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.membership" resname="tx_leseohren.membership">
+				<source>Membership</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_type" resname="tx_leseohren_domain_model_person.membership_type">
+				<source>Membership Type</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.0" resname="tx_leseohren.membershipType.0">
+				<source>k.A.</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.1" resname="tx_leseohren.membershipType.1">
+				<source>private Person</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.2" resname="tx_leseohren.membershipType.2">
+				<source>Pupil/Student</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.3" resname="tx_leseohren.membershipType.3">
+				<source>Institution</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.4" resname="tx_leseohren.membershipType.4">
+				<source>Unternehmen</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.5" resname="tx_leseohren.membershipType.5">
+				<source>Investor</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_fee" resname="tx_leseohren_domain_model_person.membership_fee">
+				<source>Membership Fee</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.payment_method" resname="tx_leseohren_domain_model_person.payment_method">
 				<source>Payment Method</source>
 			</trans-unit>
