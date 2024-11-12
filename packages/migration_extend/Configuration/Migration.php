@@ -36,6 +36,12 @@ return [
             ]
         ],
         [
+            'className' => \Skom\MigrationExtend\Migration\Importer\RegistrationImporter::class,
+            'keys' => [
+                'event'
+            ]
+        ],
+        [
             'className' => \Skom\MigrationExtend\Migration\Importer\GiftImporter::class,
             'keys' => [
                 'gift'
