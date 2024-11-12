@@ -38,7 +38,8 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	blackboards int(11) unsigned NOT NULL DEFAULT '0',
 	events int(11) unsigned NOT NULL DEFAULT '0',
 	organizations int(11) unsigned NOT NULL DEFAULT '0',
-	speakerevent int(11) unsigned NOT NULL DEFAULT '0'
+	speakerevent int(11) unsigned NOT NULL DEFAULT '0',
+	registrations int(11) unsigned NOT NULL DEFAULT '0'
 );
 
 CREATE TABLE tx_leseohren_domain_model_organization (
@@ -72,6 +73,13 @@ CREATE TABLE tx_leseohren_domain_model_present (
 	given smallint(1) unsigned NOT NULL DEFAULT '0',
 	gift_date bigint(11) DEFAULT '0' NOT NULL,
 	gift int(11) unsigned DEFAULT '0'
+);
+
+CREATE TABLE tx_leseohren_domain_model_registration (
+	person int(11) unsigned DEFAULT '0' NOT NULL,
+	onwaitlist smallint(1) unsigned NOT NULL DEFAULT '0',
+	registration_date bigint(11) DEFAULT '0' NOT NULL,
+	event int(11) unsigned DEFAULT '0'
 );
 
 CREATE TABLE tx_leseohren_domain_model_blackboard (

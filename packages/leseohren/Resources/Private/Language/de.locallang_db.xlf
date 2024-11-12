@@ -728,6 +728,42 @@
 				<source>Who is the speaker of the course?</source>
 				<target>Wer ist der Referent des Kurses?</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.registrations" resname="tx_leseohren_domain_model_person.registrations">
+				<source>Registrations</source>
+				<target>Anmeldungen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.registrations.description" resname="tx_leseohren_domain_model_person.registrations.description">
+				<source>Which events has this person registered for?</source>
+				<target>Zu welchen Veranstaltungen hat sich diese Person angemeldet?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration" resname="tx_leseohren_domain_model_registration">
+				<source>Registration</source>
+				<target>Anmeldung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.registration_date" resname="tx_leseohren_domain_model_registration.registration_date">
+				<source>Registration Date</source>
+				<target>Anmeldedatum</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.registration_date.description" resname="tx_leseohren_domain_model_registration.registration_date.description">
+				<source>When did this person register for this event?</source>
+				<target>Wann hat sich diese Person angemeldet?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.onwaitlist" resname="tx_leseohren_domain_model_registration.onwaitlist">
+				<source>On the waiting list</source>
+				<target>Auf der Warteliste</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.onwaitlist.description" resname="tx_leseohren_domain_model_registration.onwaitlist.description">
+				<source>Is this person on the waiting list?</source>
+				<target>Ist diese Person auf der Warteliste?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.event" resname="tx_leseohren_domain_model_registration.event">
+				<source>Event</source>
+				<target>Veranstaltung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.event.description" resname="tx_leseohren_domain_model_registration.event.description">
+				<source>Which event?</source>
+				<target>Welche Veranstaltung?</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
