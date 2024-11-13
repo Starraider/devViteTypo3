@@ -19,16 +19,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <f:for each="{person.events}" as="event">
+                        <f:for each="{person.registrations}" as="registration">
                             <tr>
-                                <td data-search="{event.startDate -> f:format.date(format: 'Y/m/d')}">
-                                    <f:link.action pageUid="{settings.pageIDs.eventShowPid}" action="show" controller="Event" arguments="{event: event}">
-                                        {event.startDate -> f:format.date(format: 'Y/m/d')}
+                                <td data-search="{registration.event.startDate -> f:format.date(format: 'Y/m/d')}">
+                                    <f:link.action pageUid="{settings.pageIDs.eventShowPid}" action="show" controller="Event" arguments="{event: registration.event}">
+                                        {registration.event.startDate -> f:format.date(format: 'Y/m/d')}
                                     </f:link.action>
                                 </td>
                                 <td>
-                                    <f:if condition="{event.categories}">
-                                        <f:for each="{event.categories}" as="eventCategory">
+                                    <f:if condition="{registration.event.categories}">
+                                        <f:for each="{registration.event.categories}" as="eventCategory">
                                             <category class="c-event__categories">
                                                 <span class="badge bg-secondary">
                                                     {eventCategory.title -> f:format.htmlspecialchars()}
@@ -38,8 +38,8 @@
                                     </f:if>
                                 </td>
                                 <td>
-                                    <f:link.action pageUid="225" action="show" controller="Event" arguments="{event: event}">
-                                        {event.title}
+                                    <f:link.action pageUid="225" action="show" controller="Event" arguments="{event: registration.event}">
+                                        {registration.event.title}
                                     </f:link.action>
                                 </td>
                             </tr>

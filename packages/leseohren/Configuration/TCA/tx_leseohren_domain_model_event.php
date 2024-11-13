@@ -33,6 +33,7 @@ return [
                 speaker,
             --div--;Teilnehmer,
                 --palette--;;participantsPalette,
+                registrations,
                 participants,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
                 hidden,
@@ -165,11 +166,31 @@ return [
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_leseohren_domain_model_person',
+                'foreign_table' => 'tx_leseohren_domain_model_registration',
                 'MM' => 'tx_leseohren_event_person_mm',
                 'size' => 10,
                 'autoSizeMax' => 20,
             ],
+        ],
+        'registrations' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.registrations',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.registrations.description',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_leseohren_domain_model_registration',
+                'foreign_field' => 'event',
+                'foreign_default_sortby' => 'ORDER BY registration_date DESC',
+                'maxitems' => 9999,
+                'appearance' => [
+                    'collapseAll' => 1,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
+
         ],
         'maxparticipants' => [
             'exclude' => true,

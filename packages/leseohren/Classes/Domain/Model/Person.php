@@ -313,6 +313,15 @@ class Person extends AbstractEntity
     protected $donations = null;
 
     /**
+     * registrations
+     *
+     * @var ObjectStorage<Registration>
+     */
+    #[Cascade(['value' => 'remove'])]
+    #[Lazy]
+    protected $registrations = null;
+
+    /**
      * blackboards
      *
      * @var ObjectStorage<Blackboard>
@@ -357,6 +366,7 @@ class Person extends AbstractEntity
     public function initializeObject(): void
     {
         $this->donations = $this->donations ?: new ObjectStorage();
+        $this->registrations = $this->registrations ?: new ObjectStorage();
         $this->blackboards = $this->blackboards ?: new ObjectStorage();
         $this->events = $this->events ?: new ObjectStorage();
         $this->organizations = $this->organizations ?: new ObjectStorage();
@@ -1199,6 +1209,48 @@ class Person extends AbstractEntity
     public function setDonations(ObjectStorage $donations): void
     {
         $this->donations = $donations;
+    }
+
+    /**
+     * Adds a registration
+     *
+     * @return void
+     */
+    public function addRegistration(Present $registration): void
+    {
+        $this->registrations->attach($registration);
+    }
+
+    /**
+     * Removes a registrations
+     *
+     * @param Registration $registrationToRemove The Registration to be removed
+     * @return void
+     */
+    public function removeRegistration(Registration $registrationToRemove): void
+    {
+        $this->registrations->detach($registrationToRemove);
+    }
+
+    /**
+     * Returns the registrations
+     *
+     * @return ObjectStorage<Registration>
+     */
+    public function getRegistrations()
+    {
+        return $this->registrations;
+    }
+
+    /**
+     * Sets the registrations
+     *
+     * @param ObjectStorage<Registration> $registrations
+     * @return void
+     */
+    public function setRegistrations(ObjectStorage $registrations): void
+    {
+        $this->registrations = $registrations;
     }
 
     /**
