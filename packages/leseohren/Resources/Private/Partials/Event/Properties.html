@@ -40,9 +40,9 @@
                 <div class="col-8">
                     {event.description -> f:format.html()}
                     <h3>Participants <small>(max. {event.maxparticipants})</small></h3>
-                    <f:if condition="{event.participants}">
+                    <f:if condition="{registrations}">
                         <f:then>
-                            <f:render partial="Event/ParticipantsList" arguments="{event: event}" />
+                            <f:render partial="Event/ParticipantsList" arguments="{registrations: registrations}" />
                         </f:then>
                         <f:else>
                             <p>Noch keine Teilnehmer.</p>

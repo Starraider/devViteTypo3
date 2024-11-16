@@ -11,6 +11,7 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use SKom\Leseohren\Domain\Repository\EventRepository;
 use SKom\Leseohren\Domain\Repository\CategoryRepository;
+use SKom\Leseohren\Domain\Repository\RegistrationRepository;
 use SKom\Leseohren\Domain\Model\Event;
 use TYPO3\CMS\Core\Utility\DebugUtility;
 
@@ -49,11 +50,19 @@ class EventController extends ActionController
      */
     protected $categoryRepository = null;
 
-    public function __construct(PersistenceManager $persistenceManager, EventRepository $eventRepository, CategoryRepository $categoryRepository)
+    /**
+     * registrationRepository
+     *
+     * @var RegistrationRepository
+     */
+    protected $registrationRepository = null;
+
+    public function __construct(PersistenceManager $persistenceManager, EventRepository $eventRepository, CategoryRepository $categoryRepository, RegistrationRepository $registrationRepository)
     {
         $this->persistenceManager = $persistenceManager;
         $this->eventRepository = $eventRepository;
         $this->categoryRepository = $categoryRepository;
+        $this->registrationRepository = $registrationRepository;
     }
 
     /**
@@ -116,6 +125,11 @@ class EventController extends ActionController
      */
     public function showAction(Event $event): ResponseInterface
     {
+        $registrations = $this->registrationRepository->findByEvent($event);
+        $this->view->assign('registrations', $registrations);
+        //DebugUtility::debug($registrations, 'meineVariable');
+        //DebugUtility::debug($event, 'meineVariable');
+        $this->view->assign('test', 'test');
         $this->view->assign('event', $event);
         return $this->htmlResponse();
     }

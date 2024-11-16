@@ -46,7 +46,7 @@ return [
                     --palette--;;fuehrungszeugnisPalette,
                     file_mandat, file_others,
                 --div--;Events,
-                    registrations, events, speakerevent,
+                    registrations, speakerevent,
                 --div--;Gifts,
                     donations,
                 --div--;Blackboards,
@@ -726,20 +726,6 @@ return [
                 ],
             ],
 
-        ],
-        'events' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.participants',
-            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.participants.description',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_leseohren_domain_model_event',
-                'MM' => 'tx_leseohren_event_person_mm',
-                'MM_opposite_field' => 'participants',
-                'size' => 10,
-                'autoSizeMax' => 20,
-            ],
         ],
         'organizations' => [
             'exclude' => false,

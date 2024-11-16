@@ -73,14 +73,6 @@ class Event extends AbstractEntity
     protected $speaker = null;
 
     /**
-     * Participants
-     *
-     * @var ObjectStorage<Person>
-     */
-    #[Lazy]
-    protected $participants = null;
-
-    /**
      * maxparticipants
      *
      * @var int
@@ -114,7 +106,6 @@ class Event extends AbstractEntity
      */
     public function initializeObject(): void
     {
-        $this->participants = $this->participants ?: new ObjectStorage();
         $this->speaker = $this->speaker ?: new ObjectStorage();
     }
 
@@ -293,48 +284,6 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Adds a Person
-     *
-     * @return void
-     */
-    public function addParticipant(Person $participant): void
-    {
-        $this->participants->attach($participant);
-    }
-
-    /**
-     * Removes a Person
-     *
-     * @param Person $participantToRemove The Person to be removed
-     * @return void
-     */
-    public function removeParticipant(Person $participantToRemove): void
-    {
-        $this->participants->detach($participantToRemove);
-    }
-
-    /**
-     * Returns the Participants
-     *
-     * @return ObjectStorage<Person>
-     */
-    public function getParticipants()
-    {
-        return $this->participants;
-    }
-
-    /**
-     * Sets the Participants
-     *
-     * @param ObjectStorage<Person> $participants
-     * @return void
-     */
-    public function setParticipants(ObjectStorage $participants): void
-    {
-        $this->participants = $participants;
-    }
-
-    /**
      * Returns the maxparticipants
      *
      * @return int
@@ -373,4 +322,5 @@ class Event extends AbstractEntity
     {
         $this->reminderSent = $reminderSent;
     }
+
 }

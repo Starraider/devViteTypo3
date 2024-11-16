@@ -331,14 +331,6 @@ class Person extends AbstractEntity
     public $blackboards = null;
 
     /**
-     * Events
-     *
-     * @var ObjectStorage<Event>
-     */
-    #[Lazy]
-    public $events = null;
-
-    /**
      * Organizations
      *
      * @var ObjectStorage<Organization>
@@ -368,7 +360,6 @@ class Person extends AbstractEntity
         $this->donations = $this->donations ?: new ObjectStorage();
         $this->registrations = $this->registrations ?: new ObjectStorage();
         $this->blackboards = $this->blackboards ?: new ObjectStorage();
-        $this->events = $this->events ?: new ObjectStorage();
         $this->organizations = $this->organizations ?: new ObjectStorage();
     }
 
@@ -1292,47 +1283,6 @@ class Person extends AbstractEntity
     public function setBlackboards(ObjectStorage $blackboards): void
     {
         $this->blackboards = $blackboards;
-    }
-
-    /**
-     * Adds an event
-     *
-     * @return void
-     */
-    public function addEvent(Event $event): void
-    {
-        $this->events->attach($event);
-    }
-
-    /**
-     * Removes an event
-     *
-     * @param Event $eventToRemove The Event to be removed
-     * @return void
-     */
-    public function removeEvent(Event $eventToRemove): void
-    {
-        $this->events->detach($eventToRemove);
-    }
-
-    /**
-     * Returns the events
-     *
-     */
-    public function getEvents(): ObjectStorage
-    {
-        return $this->events;
-    }
-
-    /**
-     * Sets the events
-     *
-     * @param ObjectStorage<Event> $events
-     * @return void
-     */
-    public function setEvents(ObjectStorage $events): void
-    {
-        $this->events = $events;
     }
 
     /**

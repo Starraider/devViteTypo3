@@ -28,6 +28,13 @@ class Registration extends AbstractEntity
     public $person;
 
     /**
+     * event
+     *
+     * @var Event
+     */
+    public $event;
+
+    /**
      * registration_date
      *
      * @var \DateTime
@@ -42,12 +49,7 @@ class Registration extends AbstractEntity
      */
     protected $onwaitlist = false;
 
-    /**
-     * event
-     *
-     * @var Event
-     */
-    protected $event = null;
+
 
     /**
      * __construct

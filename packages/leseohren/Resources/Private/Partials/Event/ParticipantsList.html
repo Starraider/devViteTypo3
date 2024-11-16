@@ -9,30 +9,33 @@
         </tr>
     </thead>
     <tbody>
-        <f:for each="{event.participants}" as="participant">
-            <tr>
-                <td>
-                    <f:link.action pageUid="12" action="show" controller="Person" arguments="{person: participant}">
-                        {participant.lastName}, {participant.firstName}
-                    </f:link.action>
-                </td>
-                <td>
-                    <f:if condition="{participant.phoneLandline}">
-                        <i class="bi bi-telephone"></i>&nbsp;
-                        {participant.phoneLandline}</br>
-                    </f:if>
-                    <f:if condition="{participant.phoneMobile}">
-                        <i class="bi bi-phone-vibrate"></i>&nbsp;
-                        {participant.phoneMobile}</br>
-                    </f:if>
-                </td>
-                <td>
-                    <f:if condition="{participant.email}">
-                        <i class="bi bi-envelope-at"></i>&nbsp;
-                        <f:link.email email="{participant.email}" /></br>
-                    </f:if>
-                </td>
-            </tr>
+        <f:for each="{registrations}" as="registration">
+            <f:for each="{registration.person}" as="person">
+
+                <tr>
+                    <td>
+                        <f:link.action pageUid="12" action="show" controller="Person" arguments="{person: person}">
+                            {person.lastName}, {person.firstName}
+                        </f:link.action>
+                    </td>
+                    <td>
+                        <f:if condition="{person.phoneLandline}">
+                            <i class="bi bi-telephone"></i>&nbsp;
+                            {person.phoneLandline}</br>
+                        </f:if>
+                        <f:if condition="{person.phoneMobile}">
+                            <i class="bi bi-phone-vibrate"></i>&nbsp;
+                            {person.phoneMobile}</br>
+                        </f:if>
+                    </td>
+                    <td>
+                        <f:if condition="{person.email}">
+                            <i class="bi bi-envelope-at"></i>&nbsp;
+                            <f:link.email email="{person.email}" /></br>
+                        </f:if>
+                    </td>
+                </tr>
+            </f:for>
         </f:for>
     </tbody>
 </table>
