@@ -105,6 +105,12 @@
 			<trans-unit id="tx_leseohren_domain_model_person.whatsapp.description" resname="tx_leseohren_domain_model_person.whatsapp.description">
 				<source>WhatsApp number</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.awareness" resname="tx_leseohren_domain_model_person.awareness">
+				<source>Awareness</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.awareness.description" resname="tx_leseohren_domain_model_person.awareness.description">
+				<source>How did this person get aware of Leseohren?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.notes" resname="tx_leseohren_domain_model_person.notes">
 				<source>Notes</source>
 			</trans-unit>
@@ -164,6 +170,21 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.organizations.description" resname="tx_leseohren_domain_model_person.organizations.description">
 				<source>In welchen Organisationen liest diese Person?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membershipPalette.description" resname="tx_leseohren_domain_model_person.membershipPalette.description">
+				<source>Membership</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_type" resname="tx_leseohren_domain_model_person.membership_type">
+				<source>Membership Type</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_type.description" resname="tx_leseohren_domain_model_person.membership_type.description">
+				<source>What type of membership does this person have?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_fee" resname="tx_leseohren_domain_model_person.membership_fee">
+				<source>Membership Fee</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_fee.description" resname="tx_leseohren_domain_model_person.membership_fee.description">
+				<source>What's the annual membership fee?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.payment_method" resname="tx_leseohren_domain_model_person.payment_method">
 				<source>Payment Method</source>
@@ -472,7 +493,7 @@
 				<source>Location</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.location.description" resname="tx_leseohren_domain_model_event.location.description">
-				<source>Location</source>
+				<source>Where does the event take place?</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.participants" resname="tx_leseohren_domain_model_event.participants">
 				<source>Participants</source>
@@ -572,6 +593,39 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_easterdate.easterdate.description" resname="tx_leseohren_domain_model_easterdate.easterdate.description">
 				<source>Date of easter sunday</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.speaker" resname="tx_leseohren.speaker">
+				<source>Speaker</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.speaker.description" resname="tx_leseohren.speaker.description">
+				<source>Who is the speaker of the course?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.registrations" resname="tx_leseohren_domain_model_person.registrations">
+				<source>Registrations</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.registrations.description" resname="tx_leseohren_domain_model_person.registrations.description">
+				<source>Which events has this person registered for?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration" resname="tx_leseohren_domain_model_registration">
+				<source>Registration</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.registration_date" resname="tx_leseohren_domain_model_registration.registration_date">
+				<source>Registration Date</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.registration_date.description" resname="tx_leseohren_domain_model_registration.registration_date.description">
+				<source>When did this person register for this event?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.onwaitlist" resname="tx_leseohren_domain_model_registration.onwaitlist">
+				<source>On the waiting list</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.onwaitlist.description" resname="tx_leseohren_domain_model_registration.onwaitlist.description">
+				<source>Is this person on the waiting list?</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.event" resname="tx_leseohren_domain_model_registration.event">
+				<source>Event</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.event.description" resname="tx_leseohren_domain_model_registration.event.description">
+				<source>Which event?</source>
 			</trans-unit>
 		</body>
 	</file>

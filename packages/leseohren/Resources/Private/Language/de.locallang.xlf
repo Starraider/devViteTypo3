@@ -67,6 +67,22 @@
 				<source>retired</source>
 				<target>ausgeschieden</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren.participants" resname="tx_leseohren.participants">
+				<source>Participants</source>
+				<target>Teilnehmer</target>
+			</trans-unit>
+            <trans-unit id="tx_leseohren.registrations" resname="tx_leseohren.registrations">
+				<source>Registrations</source>
+				<target>Anmeldungen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.noParticipants" resname="tx_leseohren.noParticipants">
+				<source>No participants</source>
+				<target>Noch keine Teilnehmer</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.waitList" resname="tx_leseohren.waitList">
+				<source>Wait list</source>
+				<target>Warteliste</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.bankData" resname="tx_leseohren.bankData">
 				<source>Bank data</source>
 				<target>Bankdaten</target>
@@ -543,6 +559,46 @@
 				<source>Whatsapp number</source>
 				<target>Whatsapp-Nummer</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.awareness" resname="tx_leseohren_domain_model_person.awareness">
+				<source>Awareness</source>
+				<target>Aufmerksam durch</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.0" resname="tx_leseohren.awareness.0">
+				<source>k.A.</source>
+				<target>k.A.</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.1" resname="tx_leseohren.awareness.1">
+				<source>Homepage</source>
+				<target>Homepage</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.2" resname="tx_leseohren.awareness.2">
+				<source>Betterplace</source>
+				<target>Betterplace</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.3" resname="tx_leseohren.awareness.3">
+				<source>Press</source>
+				<target>Presse</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.4" resname="tx_leseohren.awareness.4">
+				<source>Flyer</source>
+				<target>Flyer</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.5" resname="tx_leseohren.awareness.5">
+				<source>Reading campaign</source>
+				<target>Vorleseaktion</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.6" resname="tx_leseohren.awareness.6">
+				<source>District office</source>
+				<target>Bezirksamt</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.7" resname="tx_leseohren.awareness.7">
+				<source>Volunteer agency</source>
+				<target>Freiwilligenagentur</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.awareness.8" resname="tx_leseohren.awareness.8">
+				<source>Word of mouth</source>
+				<target>Mundpropaganda</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.notes" resname="tx_leseohren_domain_model_person.notes">
 				<source>Notes</source>
 				<target>Anmerkungen</target>
@@ -618,6 +674,42 @@
 			<trans-unit id="tx_leseohren_domain_model_person.preference_organization_type.description" resname="tx_leseohren_domain_model_person.preference_organization_type.description">
 				<source>Preference Organization Type</source>
 				<target>In welchen Organisationstypen möchte diese Person vorlesen?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membership" resname="tx_leseohren.membership">
+				<source>Membership</source>
+				<target>Mitgliedschaft</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_type" resname="tx_leseohren_domain_model_person.membership_type">
+				<source>Membership Type</source>
+				<target>Art der Mitgliedschaft</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.0" resname="tx_leseohren.membershipType.0">
+				<source>k.A.</source>
+				<target>k.A.</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.1" resname="tx_leseohren.membershipType.1">
+				<source>private Person</source>
+				<target>Privatperson</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.2" resname="tx_leseohren.membershipType.2">
+				<source>Pupil/Student</source>
+				<target>Schüler/Student</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.3" resname="tx_leseohren.membershipType.3">
+				<source>Institution</source>
+				<target>Institution</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.4" resname="tx_leseohren.membershipType.4">
+				<source>Unternehmen</source>
+				<target>Unternehmen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.membershipType.5" resname="tx_leseohren.membershipType.5">
+				<source>Investor</source>
+				<target>Investor</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_fee" resname="tx_leseohren_domain_model_person.membership_fee">
+				<source>Membership Fee</source>
+				<target>Mitgliedschaftsbeitrag</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.payment_method" resname="tx_leseohren_domain_model_person.payment_method">
 				<source>Payment Method</source>
@@ -1046,6 +1138,10 @@
 			<trans-unit id="tx_leseohren_holidays.daystoeaster" resname="tx_leseohren_holidays.daystoeaster">
 				<source>days until Easter</source>
 				<target>Tage bis Ostern</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.speaker" resname="tx_leseohren.speaker">
+				<source>Speaker</source>
+				<target>Referent</target>
 			</trans-unit>
 		</body>
 	</file>

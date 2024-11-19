@@ -61,11 +61,6 @@ return [
             'trackingEnabled' => '0',
             'trackingObfuscate' => '0',
         ],
-        'extension_builder' => [
-            'backupDir' => 'var/tx_extensionbuilder/backups',
-            'backupExtension' => '1',
-            'enableRoundtrip' => '1',
-        ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
@@ -79,6 +74,7 @@ return [
             'dateTimeNotRequired' => '0',
             'hidePageTreeForAdministrationModule' => '0',
             'manualSorting' => '0',
+            'pageTreePluginPreview' => '1',
             'prependAtCopy' => '1',
             'resourceFolderImporter' => '/news_import',
             'rteForTeaser' => '0',

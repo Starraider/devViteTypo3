@@ -44,9 +44,8 @@ class PersonRepository extends Repository
     public function upcomingBirthdays($interval = '7')
     {
         $query = $this->createQuery();
-        $sql = 'SELECT uid, pid, firstname, lastname, title, birthday, gender, email FROM tx_leseohren_domain_model_person WHERE DATE_ADD(FROM_UNIXTIME(birthday), INTERVAL YEAR(CURDATE())-YEAR(FROM_UNIXTIME(birthday)) + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(FROM_UNIXTIME(birthday)),1,0)YEAR) BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL '.$interval.' DAY)';
+        $sql = 'SELECT uid, pid, firstname, lastname, title, birthday, gender, email FROM tx_leseohren_domain_model_person WHERE DATE_ADD(FROM_UNIXTIME(birthday), INTERVAL YEAR(CURDATE())-YEAR(FROM_UNIXTIME(birthday)) + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(FROM_UNIXTIME(birthday)),1,0)YEAR) BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL '.$interval.' DAY) ORDER BY DATE_FORMAT(FROM_UNIXTIME(birthday), "%m-%d") ASC';
         $query->statement($sql);
-        //$query->setOrderings(['birthday' => QueryInterface::ORDER_ASCENDING]);
         /*
         SELECT * FROM `tx_leseohren_domain_model_person` WHERE DATE_ADD(FROM_UNIXTIME(birthday), INTERVAL YEAR(CURDATE())-YEAR(FROM_UNIXTIME(birthday)) + IF(DAYOFYEAR(CURDATE()) > DAYOFYEAR(FROM_UNIXTIME(birthday)),1,0)YEAR) BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 7 DAY);
         $query->statement($statement, array $parameters = [])

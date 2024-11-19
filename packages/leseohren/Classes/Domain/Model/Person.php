@@ -140,6 +140,13 @@ class Person extends AbstractEntity
     protected $whatsapp = '';
 
     /**
+     * awareness
+     *
+     * @var int
+     */
+    protected $awareness = 0;
+
+    /**
      * notes
      *
      * @var string
@@ -170,7 +177,7 @@ class Person extends AbstractEntity
     /**
      * statusendDate
      *
-     * @var \DateTime
+     * @var \DateTime|null
      */
     protected $statusendDate = null;
 
@@ -201,6 +208,20 @@ class Person extends AbstractEntity
      * @var string
      */
     protected $preferenceOrganizationType = '';
+
+    /**
+     * membership_type
+     *
+     * @var int
+     */
+    protected $membershipType = 0;
+
+    /**
+     * membership_fee
+     *
+     * @var string
+     */
+    protected $membershipFee = '';
 
     /**
      * paymentMethod
@@ -292,6 +313,15 @@ class Person extends AbstractEntity
     protected $donations = null;
 
     /**
+     * registrations
+     *
+     * @var ObjectStorage<Registration>
+     */
+    #[Cascade(['value' => 'remove'])]
+    #[Lazy]
+    protected $registrations = null;
+
+    /**
      * blackboards
      *
      * @var ObjectStorage<Blackboard>
@@ -299,14 +329,6 @@ class Person extends AbstractEntity
     #[cascade(['value' => 'remove'])]
     #[Lazy]
     public $blackboards = null;
-
-    /**
-     * Events
-     *
-     * @var ObjectStorage<Event>
-     */
-    #[Lazy]
-    public $events = null;
 
     /**
      * Organizations
@@ -336,8 +358,8 @@ class Person extends AbstractEntity
     public function initializeObject(): void
     {
         $this->donations = $this->donations ?: new ObjectStorage();
+        $this->registrations = $this->registrations ?: new ObjectStorage();
         $this->blackboards = $this->blackboards ?: new ObjectStorage();
-        $this->events = $this->events ?: new ObjectStorage();
         $this->organizations = $this->organizations ?: new ObjectStorage();
     }
 
@@ -674,6 +696,26 @@ class Person extends AbstractEntity
     }
 
     /**
+     * Returns the awareness
+     *
+     * @return int
+     */
+    public function getAwareness()
+    {
+        return $this->awareness;
+    }
+
+    /**
+     * Sets the awareness
+     *
+     * @return void
+     */
+    public function setAwareness(int $awareness): void
+    {
+        $this->awareness = $awareness;
+    }
+
+    /**
      * Returns the notes
      *
      * @return string
@@ -768,9 +810,11 @@ class Person extends AbstractEntity
      *
      * @return void
      */
-    public function setStatusendDate(\DateTime $statusendDate): void
+    public function setStatusendDate(\DateTime|null $statusendDate): void
     {
-        $this->statusendDate = $statusendDate;
+        if ($statusendDate != null){
+            $this->statusendDate = $statusendDate;
+        }
     }
 
     /**
@@ -854,6 +898,46 @@ class Person extends AbstractEntity
     public function setPreferenceOrganizationType(array $preferenceOrganizationType): void
     {
         $this->preferenceOrganizationType = implode(',', $preferenceOrganizationType);
+    }
+
+    /**
+     * Returns the membershipType
+     *
+     * @return int
+     */
+    public function getMembershipType()
+    {
+        return $this->membershipType;
+    }
+
+    /**
+     * Sets the membershipType
+     *
+     * @return void
+     */
+    public function setMembershipType(int $membershipType): void
+    {
+        $this->membershipType = $membershipType;
+    }
+
+    /**
+     * Returns the membershipFee
+     *
+     * @return string
+     */
+    public function getMembershipFee()
+    {
+        return $this->membershipFee;
+    }
+
+    /**
+     * Sets the membershipFee
+     *
+     * @return void
+     */
+    public function setMembershipFee(string $membershipFee): void
+    {
+        $this->membershipFee = $membershipFee;
     }
 
     /**
@@ -1119,6 +1203,48 @@ class Person extends AbstractEntity
     }
 
     /**
+     * Adds a registration
+     *
+     * @return void
+     */
+    public function addRegistration(Present $registration): void
+    {
+        $this->registrations->attach($registration);
+    }
+
+    /**
+     * Removes a registrations
+     *
+     * @param Registration $registrationToRemove The Registration to be removed
+     * @return void
+     */
+    public function removeRegistration(Registration $registrationToRemove): void
+    {
+        $this->registrations->detach($registrationToRemove);
+    }
+
+    /**
+     * Returns the registrations
+     *
+     * @return ObjectStorage<Registration>
+     */
+    public function getRegistrations()
+    {
+        return $this->registrations;
+    }
+
+    /**
+     * Sets the registrations
+     *
+     * @param ObjectStorage<Registration> $registrations
+     * @return void
+     */
+    public function setRegistrations(ObjectStorage $registrations): void
+    {
+        $this->registrations = $registrations;
+    }
+
+    /**
      * Adds a blackboard
      *
      * @return void
@@ -1157,47 +1283,6 @@ class Person extends AbstractEntity
     public function setBlackboards(ObjectStorage $blackboards): void
     {
         $this->blackboards = $blackboards;
-    }
-
-    /**
-     * Adds an event
-     *
-     * @return void
-     */
-    public function addEvent(Event $event): void
-    {
-        $this->events->attach($event);
-    }
-
-    /**
-     * Removes an event
-     *
-     * @param Event $eventToRemove The Event to be removed
-     * @return void
-     */
-    public function removeEvent(Event $eventToRemove): void
-    {
-        $this->events->detach($eventToRemove);
-    }
-
-    /**
-     * Returns the events
-     *
-     */
-    public function getEvents(): ObjectStorage
-    {
-        return $this->events;
-    }
-
-    /**
-     * Sets the events
-     *
-     * @param ObjectStorage<Event> $events
-     * @return void
-     */
-    public function setEvents(ObjectStorage $events): void
-    {
-        $this->events = $events;
     }
 
     /**

@@ -11,6 +11,7 @@ use TYPO3\CMS\Extbase\Annotation\IgnoreValidation;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;
 use SKom\Leseohren\Domain\Repository\EventRepository;
 use SKom\Leseohren\Domain\Repository\CategoryRepository;
+use SKom\Leseohren\Domain\Repository\RegistrationRepository;
 use SKom\Leseohren\Domain\Model\Event;
 use TYPO3\CMS\Core\Utility\DebugUtility;
 
@@ -49,11 +50,19 @@ class EventController extends ActionController
      */
     protected $categoryRepository = null;
 
-    public function __construct(PersistenceManager $persistenceManager, EventRepository $eventRepository, CategoryRepository $categoryRepository)
+    /**
+     * registrationRepository
+     *
+     * @var RegistrationRepository
+     */
+    protected $registrationRepository = null;
+
+    public function __construct(PersistenceManager $persistenceManager, EventRepository $eventRepository, CategoryRepository $categoryRepository, RegistrationRepository $registrationRepository)
     {
         $this->persistenceManager = $persistenceManager;
         $this->eventRepository = $eventRepository;
         $this->categoryRepository = $categoryRepository;
+        $this->registrationRepository = $registrationRepository;
     }
 
     /**
@@ -116,6 +125,12 @@ class EventController extends ActionController
      */
     public function showAction(Event $event): ResponseInterface
     {
+        $registrations = $this->registrationRepository->findRegistrationsByEvent($event);
+        $this->view->assign('registrations', $registrations);
+        $waitlist = $this->registrationRepository->findWaitlistByEvent($event);
+        $this->view->assign('waitlist', $waitlist);
+        // DebugUtility::debug($registrations, 'meineVariable');
+        // DebugUtility::debug($waitlist, 'meineVariable');
         $this->view->assign('event', $event);
         return $this->htmlResponse();
     }
@@ -177,6 +192,7 @@ class EventController extends ActionController
     {
         $this->arguments->getArgument('event')
             ->getPropertyMappingConfiguration()->forProperty('*')->setTypeConverterOption('TYPO3\\CMS\\Extbase\\Property\\TypeConverter\\DateTimeConverter', \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'd.m.Y');
+        //$this->arguments->getArgument('event')->getPropertyMappingConfiguration()->setTargetTypeForSubProperty('reminderSent', 'boolean');
     }
 
     /**

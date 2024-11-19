@@ -126,9 +126,17 @@
 				<source>WhatsApp number</source>
 				<target>WhatsApp-Nummer</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.awareness" resname="tx_leseohren_domain_model_person.awareness">
+				<source>Awareness</source>
+				<target>Aufmerksamkeit</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.awareness.description" resname="tx_leseohren_domain_model_person.awareness.description">
+				<source>How did this person get aware of Leseohren?</source>
+				<target>Wie wurde die Person auf die Leseohren aufmerksam?</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.notes" resname="tx_leseohren_domain_model_person.notes">
 				<source>Notes</source>
-				<source>Anmerkungen</source>
+				<target>Anmerkungen</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.notes.description" resname="tx_leseohren_domain_model_person.notes.description">
 				<source>Notes</source>
@@ -204,6 +212,26 @@
 			<trans-unit id="tx_leseohren_domain_model_person.organizations.description" resname="tx_leseohren_domain_model_person.organizations.description">
 				<source>In which organisations does this person read?</source>
 				<target>In welchen Organisationen liest diese Person?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membershipPalette.description" resname="tx_leseohren_domain_model_person.membershipPalette.description">
+				<source>Membership</source>
+				<target>Mitgliedschaft</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_type" resname="tx_leseohren_domain_model_person.membership_type">
+				<source>Membership Type</source>
+				<target>Art der Mitgliedschaft</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_type.description" resname="tx_leseohren_domain_model_person.membership_type.description">
+				<source>What type of membership does this person have?</source>
+				<target>Welche Mitgliedschaftsart hat diese Person?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_fee" resname="tx_leseohren_domain_model_person.membership_fee">
+				<source>Membership Fee</source>
+				<target>Mitgliedschaftsbeitrag</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.membership_fee.description" resname="tx_leseohren_domain_model_person.membership_fee.description">
+				<source>What's the annual membership fee?</source>
+				<target>Wie hoch ist der jährliche Mitgliedschaftsbeitrag?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.payment_method" resname="tx_leseohren_domain_model_person.payment_method">
 				<source>Payment Method</source>
@@ -564,7 +592,8 @@
 				<target>Veranstaltungsort</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.location.description" resname="tx_leseohren_domain_model_event.location.description">
-				<source>Location</source>
+				<source>Where does the event take place?</source>
+				<target>Wo findet die Veranstaltung statt?</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_event.participants" resname="tx_leseohren_domain_model_event.participants">
 				<source>Participants</source>
@@ -690,6 +719,50 @@
 			<trans-unit id="tx_leseohren_domain_model_easterdate.easterdate.description" resname="tx_leseohren_domain_model_easterdate.easterdate.description">
 				<source>Date of easter sunday</source>
 				<target>Datum von Ostersonntag</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.speaker" resname="tx_leseohren.speaker">
+				<source>Speaker</source>
+				<target>Sprecher</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.speaker.description" resname="tx_leseohren.speaker.description">
+				<source>Who is the speaker of the course?</source>
+				<target>Wer ist der Referent des Kurses?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.registrations" resname="tx_leseohren_domain_model_person.registrations">
+				<source>Registrations</source>
+				<target>Anmeldungen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.registrations.description" resname="tx_leseohren_domain_model_person.registrations.description">
+				<source>Which events has this person registered for?</source>
+				<target>Zu welchen Veranstaltungen hat sich diese Person angemeldet?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration" resname="tx_leseohren_domain_model_registration">
+				<source>Registration</source>
+				<target>Anmeldung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.registration_date" resname="tx_leseohren_domain_model_registration.registration_date">
+				<source>Registration Date</source>
+				<target>Anmeldedatum</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.registration_date.description" resname="tx_leseohren_domain_model_registration.registration_date.description">
+				<source>When did this person register for this event?</source>
+				<target>Wann hat sich diese Person angemeldet?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.onwaitlist" resname="tx_leseohren_domain_model_registration.onwaitlist">
+				<source>On the waiting list</source>
+				<target>Auf der Warteliste</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.onwaitlist.description" resname="tx_leseohren_domain_model_registration.onwaitlist.description">
+				<source>Is this person on the waiting list?</source>
+				<target>Ist diese Person auf der Warteliste?</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.event" resname="tx_leseohren_domain_model_registration.event">
+				<source>Event</source>
+				<target>Veranstaltung</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_registration.event.description" resname="tx_leseohren_domain_model_registration.event.description">
+				<source>Which event?</source>
+				<target>Welche Veranstaltung?</target>
 			</trans-unit>
 		</body>
 	</file>

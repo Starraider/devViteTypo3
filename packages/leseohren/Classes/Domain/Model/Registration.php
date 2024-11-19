@@ -18,9 +18,9 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  * (c) 2024 Sven Kalbhenn <sven@skom.de>, SKom
  */
 /**
- * Schenkungen
+ * Registration
  */
-class Present extends AbstractEntity
+class Registration extends AbstractEntity
 {
     /**
      * @var ObjectStorage<Person>
@@ -28,26 +28,28 @@ class Present extends AbstractEntity
     public $person;
 
     /**
-     * gift_date
+     * event
+     *
+     * @var Event
+     */
+    public $event;
+
+    /**
+     * registration_date
      *
      * @var \DateTime
      */
     #[Validate(['validator' => 'NotEmpty'])]
-    protected $giftDate = null;
+    protected $registrationDate = null;
 
     /**
-     * given
+     * onwaitlist
      *
      * @var bool
      */
-    protected $given = false;
+    protected $onwaitlist = false;
 
-    /**
-     * gift
-     *
-     * @var Gift
-     */
-    protected $gift = null;
+
 
     /**
      * __construct
@@ -110,72 +112,72 @@ class Present extends AbstractEntity
     }
 
     /**
-     * Returns the gift_date
+     * Returns the registration_date
      *
      * @return \DateTime
      */
-    public function getGiftDate()
+    public function getRegistrationDate()
     {
-        return $this->giftDate;
+        return $this->registrationDate;
     }
 
     /**
-     * Sets the gift_date
+     * Sets the registration_date
      *
      * @return void
      */
-    public function setGiftDate(\DateTime $giftDate): void
+    public function setRegistrationDate(\DateTime $registrationDate): void
     {
-        $this->giftDate = $giftDate;
+        $this->registrationDate = $registrationDate;
     }
 
     /**
-     * Returns the given
+     * Returns the onwaitlist
      *
      * @return bool
      */
-    public function getGiven()
+    public function getOnwaitlist()
     {
-        return $this->given;
+        return $this->onwaitlist;
     }
 
     /**
-     * Sets the given
+     * Sets the onwaitlist
      *
      * @return void
      */
-    public function setGiven(bool $given): void
+    public function setOnwaitlist(bool $onwaitlist): void
     {
-        $this->given = $given;
+        $this->onwaitlist = $onwaitlist;
     }
 
     /**
-     * Returns the boolean state of given
+     * Returns the boolean state of onwaitlist
      *
      * @return bool
      */
-    public function isGiven()
+    public function isOnwaitlist()
     {
-        return $this->given;
+        return $this->onwaitlist;
     }
 
     /**
-     * Returns the gift
+     * Returns the event
      *
-     * @return Gift
+     * @return Event
      */
-    public function getGift()
+    public function getEvent()
     {
-        return $this->gift;
+        return $this->event;
     }
 
     /**
-     * Sets the gift
+     * Sets the event
      *
      * @return void
      */
-    public function setGift(Gift $gift): void
+    public function setEvent(Event $event): void
     {
-        $this->gift = $gift;
+        $this->event = $event;
     }
 }

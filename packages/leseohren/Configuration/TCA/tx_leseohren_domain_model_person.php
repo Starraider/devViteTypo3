@@ -28,6 +28,7 @@ return [
                     firstname, lastname, gender, title, job, birthday,
                     --palette--;;addressPalette,
                     --palette--;;contactPalette,
+                    awareness,
                     notes,
                 --div--;Categories,
                     categories,
@@ -36,7 +37,8 @@ return [
                     travel_options, languages,
                     --palette--;;preferencePalette,
                     organizations,
-                --div--;Payment,
+                --div--;Mitgliedschaft,
+                    --palette--;;membershipPalette,
                     payment_method,
                     --palette--;;bankaccountPalette,
                     paypal,
@@ -44,7 +46,7 @@ return [
                     --palette--;;fuehrungszeugnisPalette,
                     file_mandat, file_others,
                 --div--;Events,
-                    events,
+                    registrations, speakerevent,
                 --div--;Gifts,
                     donations,
                 --div--;Blackboards,
@@ -70,6 +72,10 @@ return [
         'preferencePalette' => [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.preferencePalette.description',
             'showitem' => 'preference_agegroup, preference_organization_type',
+        ],
+        'membershipPalette' => [
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.membershipPalette.description',
+            'showitem' => 'membership_type, membership_fee',
         ],
         'bankaccountPalette' => [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.bankaccountPalette.description',
@@ -334,6 +340,30 @@ return [
                 'default' => ''
             ],
         ],
+        'awareness' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.awareness',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.awareness.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.0', 'value' => 0],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.1', 'value' => 1],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.2', 'value' => 2],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.3', 'value' => 3],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.4', 'value' => 4],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.5', 'value' => 5],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.6', 'value' => 6],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.7', 'value' => 7],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.awareness.8', 'value' => 8],
+                ],
+                'size' => 1,
+                'maxitems' => 1,
+                'required' => true,
+                'eval' => ''
+            ],
+        ],
         'notes' => [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.notes',
@@ -481,6 +511,45 @@ return [
                 ],
             ],
         ],
+        'membership_type' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.membership_type',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.membership_type.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.membershipType.0', 'value' => 0],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.membershipType.1', 'value' => 1],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.membershipType.2', 'value' => 2],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.membershipType.3', 'value' => 3],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.membershipType.4', 'value' => 4],
+                    ['label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang.xlf:tx_leseohren.membershipType.5', 'value' => 5],
+                ],
+                'size' => 1,
+                'maxitems' => 1,
+                'eval' => ''
+            ],
+        ],
+        'membership_fee' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.membership_fee',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.membership_fee.description',
+            'config' => [
+                'type' => 'number',
+                'default' => 0,
+                'format' => 'decimal',
+                'range' => [
+                    'lower' => 0,
+                    'upper' => 999
+                ],
+                'size' => 3,
+                'slider' => [
+                    'step' => 0.5,
+                    'width' => 100,
+                ],
+            ],
+        ],
         'payment_method' => [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.payment_method',
@@ -582,7 +651,7 @@ return [
                 'type' => 'check',
                 'items' => [
                     [
-                        'geprüft',
+                        'label' => 'geprüft',
                     ],
                 ],
             ],
@@ -627,6 +696,7 @@ return [
                 'type' => 'inline',
                 'foreign_table' => 'tx_leseohren_domain_model_present',
                 'foreign_field' => 'person',
+                'foreign_default_sortby' => 'ORDER BY gift_date DESC',
                 'maxitems' => 9999,
                 'appearance' => [
                     'collapseAll' => 1,
@@ -657,20 +727,6 @@ return [
             ],
 
         ],
-        'events' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.participants',
-            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.participants.description',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_leseohren_domain_model_event',
-                'MM' => 'tx_leseohren_event_person_mm',
-                'MM_opposite_field' => 'participants',
-                'size' => 10,
-                'autoSizeMax' => 20,
-            ],
-        ],
         'organizations' => [
             'exclude' => false,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.organizations',
@@ -684,6 +740,40 @@ return [
                 'size' => 10,
                 'autoSizeMax' => 20,
             ],
+        ],
+        'speakerevent' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren.speaker',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren.speaker.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_leseohren_domain_model_event',
+                'MM' => 'tx_leseohren_speakerevent_person_mm',
+                'MM_opposite_field' => 'speakerevent',
+                'size' => 10,
+                'autoSizeMax' => 20,
+            ],
+        ],
+        'registrations' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.registrations',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.registrations.description',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_leseohren_domain_model_registration',
+                'foreign_field' => 'person',
+                'foreign_default_sortby' => 'ORDER BY registration_date DESC',
+                'maxitems' => 9999,
+                'appearance' => [
+                    'collapseAll' => 1,
+                    'levelLinksPosition' => 'top',
+                    'showSynchronizationLink' => 1,
+                    'showPossibleLocalizationRecords' => 1,
+                    'showAllLocalizationLink' => 1
+                ],
+            ],
+
         ],
 
     ],

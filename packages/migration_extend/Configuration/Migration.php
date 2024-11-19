@@ -36,6 +36,12 @@ return [
             ]
         ],
         [
+            'className' => \Skom\MigrationExtend\Migration\Importer\RegistrationImporter::class,
+            'keys' => [
+                'event'
+            ]
+        ],
+        [
             'className' => \Skom\MigrationExtend\Migration\Importer\GiftImporter::class,
             'keys' => [
                 'gift'
@@ -69,6 +75,13 @@ return [
         ],
         [
             'className' => \Skom\MigrationExtend\Migration\Importer\PersonEventImporter::class,
+            'keys' => [
+                'event',
+                'person'
+            ]
+        ],
+        [
+            'className' => \Skom\MigrationExtend\Migration\Importer\EventSpeakerImporter::class,
             'keys' => [
                 'event',
                 'person'

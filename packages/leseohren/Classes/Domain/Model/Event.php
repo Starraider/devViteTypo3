@@ -65,12 +65,12 @@ class Event extends AbstractEntity
     protected $location = '';
 
     /**
-     * Participants
+     * Speaker
      *
      * @var ObjectStorage<Person>
      */
     #[Lazy]
-    protected $participants = null;
+    protected $speaker = null;
 
     /**
      * maxparticipants
@@ -82,9 +82,10 @@ class Event extends AbstractEntity
     /**
      * reminderSent
      *
-     * @var bool
+     * @var string
      */
-    protected $reminderSent = false;
+    #[Validate(['validator' => 'NotEmpty'])]
+    protected $reminderSent = '';
 
     /**
      * __construct
@@ -105,7 +106,7 @@ class Event extends AbstractEntity
      */
     public function initializeObject(): void
     {
-        $this->participants = $this->participants ?: new ObjectStorage();
+        $this->speaker = $this->speaker ?: new ObjectStorage();
     }
 
     /**
@@ -241,45 +242,45 @@ class Event extends AbstractEntity
     }
 
     /**
-     * Adds a Person
+     * Adds a Speaker
      *
      * @return void
      */
-    public function addParticipant(Person $participant): void
+    public function addSpeaker(Person $speaker): void
     {
-        $this->participants->attach($participant);
+        $this->speaker->attach($speaker);
     }
 
     /**
-     * Removes a Person
+     * Removes a Speaker
      *
-     * @param Person $participantToRemove The Person to be removed
+     * @param Person $speakerToRemove The Speaker to be removed
      * @return void
      */
-    public function removeParticipant(Person $participantToRemove): void
+    public function removeSpeaker(Person $speakerToRemove): void
     {
-        $this->participants->detach($participantToRemove);
+        $this->speaker->detach($speakerToRemove);
     }
 
     /**
-     * Returns the Participants
+     * Returns the Speaker
      *
      * @return ObjectStorage<Person>
      */
-    public function getParticipants()
+    public function getSpeaker()
     {
-        return $this->participants;
+        return $this->speaker;
     }
 
     /**
-     * Sets the Participants
+     * Sets the Speaker
      *
-     * @param ObjectStorage<Person> $participants
+     * @param ObjectStorage<Person> $speaker
      * @return void
      */
-    public function setParticipants(ObjectStorage $participants): void
+    public function setSpeaker(ObjectStorage $speaker): void
     {
-        $this->participants = $participants;
+        $this->speaker = $speaker;
     }
 
     /**
@@ -305,7 +306,7 @@ class Event extends AbstractEntity
     /**
      * Returns the reminderSent
      *
-     * @return bool
+     * @return string
      */
     public function getReminderSent()
     {
@@ -317,8 +318,9 @@ class Event extends AbstractEntity
      *
      * @return void
      */
-    public function setReminderSent(bool $reminderSent): void
+    public function setReminderSent(string $reminderSent): void
     {
         $this->reminderSent = $reminderSent;
     }
+
 }

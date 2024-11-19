@@ -6,11 +6,22 @@
         <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                Bankdaten
+                <v:l key="tx_leseohren.membership" />
             </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionInfo">
             <div class="accordion-body">
+                <f:if condition="{person.membershipType}">
+                    <strong>
+                        <v:l key="tx_leseohren_domain_model_person.membership_type" />:
+                    </strong><br />
+                    <v:l key="tx_leseohren.membershipType.{person.membershipType}" /><br />
+                    <strong>
+                        <v:l key="tx_leseohren_domain_model_person.membership_fee" />:
+                    </strong><br />
+                    {person.membershipFee} &euro;/Jahr<br />
+                </f:if>
+
                 <strong>
                     <v:l key="tx_leseohren.paymentMethod" />:
                 </strong><br />
@@ -22,7 +33,7 @@
                     <f:defaultCase></f:defaultCase>
                 </f:switch>
                 </br>
-                <f:if condition="{person.paymentMethod} < 2">
+                <f:if condition="{person.paymentMethod} == 1">
                     <f:then>
                         <strong>
                             <f:translate key="tx_leseohren_domain_model_person.iban" />:
@@ -41,7 +52,7 @@
                         </strong><br />
                         {person.accountOwner}</br>
                     </f:then>
-                    <f:else>
+                    <f:else if="{person.paymentMethod} == 3">
                         <strong>
                             <f:translate key="tx_leseohren_domain_model_person.paypal" />:
                         </strong><br /> {person.paypal}</br>

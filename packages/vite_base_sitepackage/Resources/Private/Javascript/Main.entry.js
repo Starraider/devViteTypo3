@@ -16,14 +16,16 @@ import { Datepicker } from 'vanillajs-datepicker'
 
 // Import all of DataTables.net's JS
 // See https://datatables.net
+import JSZip from 'jszip'; // For Excel export
+import pdfMake from 'pdfmake/build/pdfmake'
+import * as pdfFonts from 'pdfmake/build/vfs_fonts'
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'
 import 'datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css'
 import 'datatables.net-searchpanes-bs5/css/searchPanes.bootstrap5.min.css'
 import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'
 import 'datatables.net-select-bs5/css/select.bootstrap5.min.css'
 import { DateTime } from 'luxon'
-import jszip from 'jszip'
-import pdfmake from 'pdfmake'
 import DataTable from 'datatables.net-bs5'
 import 'datatables.net-buttons-bs5'
 import 'datatables.net-buttons/js/buttons.html5.mjs'
@@ -37,6 +39,8 @@ import languageDE from 'datatables.net-plugins/i18n/de-DE.mjs'
 const now = DateTime.local()
 //DataTable.use(DateTime)
 //DataTable.datetime('dd.mm.YYYY')
+// DataTable.Buttons.jszip(JSZip)
+// DataTable.Buttons.pdfMake(pdfMake)
 
 let tablePersonList = new DataTable('#personList', {
   select: true,
@@ -45,7 +49,24 @@ let tablePersonList = new DataTable('#personList', {
   language: languageDE,
   layout: {
     topStart: {
-      buttons: ['copyHtml5', 'pdfHtml5', 'csvHtml5', 'print'],
+      buttons: [
+        {
+          extend: 'pdfHtml5',
+          download: 'open',
+          orientation: 'landscape',
+          pageSize: 'A4',
+          title: 'Personen Liste',
+          exportOptions: {
+            columns: [1, 2, 3, 4, 5, 6, 7, 8]
+          },
+          customize: function(doc) {
+            doc.defaultStyle.fontSize = 10;
+            doc.styles.tableHeader.fontSize = 11;
+            doc.styles.tableHeader.bold = true;
+          }
+        },
+        'copyHtml5', 'csvHtml5', 'print'
+      ],
     },
     bottom: {
       searchPanes: {
@@ -125,7 +146,24 @@ let tableOrganizationList = new DataTable('#organizationList', {
   language: languageDE,
   layout: {
     topStart: {
-      buttons: ['copyHtml5', 'pdfHtml5', 'csvHtml5', 'print'],
+      buttons: [
+        {
+          extend: 'pdfHtml5',
+          download: 'open',
+          orientation: 'landscape',
+          pageSize: 'A4',
+          title: 'Organisationen Liste',
+          exportOptions: {
+            columns: [1, 2, 3]
+          },
+          customize: function(doc) {
+            doc.defaultStyle.fontSize = 10;
+            doc.styles.tableHeader.fontSize = 11;
+            doc.styles.tableHeader.bold = true;
+          }
+        },
+        'copyHtml5', 'csvHtml5', 'print'
+      ],
     },
     bottom: {
       searchPanes: {
@@ -175,7 +213,24 @@ let tableEventList = new DataTable('#eventList', {
   language: languageDE,
   layout: {
     topStart: {
-      buttons: ['copyHtml5', 'pdfHtml5', 'csvHtml5', 'print'],
+      buttons: [
+        {
+          extend: 'pdfHtml5',
+          download: 'open',
+          orientation: 'landscape',
+          pageSize: 'A4',
+          title: 'Veranstaltungen Liste',
+          exportOptions: {
+            columns: [1, 2, 3, 4]
+          },
+          customize: function(doc) {
+            doc.defaultStyle.fontSize = 10;
+            doc.styles.tableHeader.fontSize = 11;
+            doc.styles.tableHeader.bold = true;
+          }
+        },
+        'copyHtml5', 'csvHtml5', 'print'
+      ],
     },
     bottom: {
       searchPanes: {
@@ -224,6 +279,73 @@ let tableEventList = new DataTable('#eventList', {
     },
   ],
 })
+
+let tableParticipantsList = new DataTable('#participantsList', {
+    select: true,
+    paging: false,
+    info: false,
+    searchPanes: false,
+    responsive: true,
+    language: languageDE,
+    language: {
+        searchPanes: {
+            emptyPanes: null,
+        }
+    },
+    layout: {
+      topStart: {
+        buttons: [
+            {
+                extend: 'pdfHtml5',
+                download: 'open',
+                orientation: 'landscape',
+                pageSize: 'A4',
+                title: 'Teilnehmer-Liste',
+                exportOptions: {
+                  columns: [0, 1, 2]
+                },
+                customize: function(doc) {
+                  doc.defaultStyle.fontSize = 10;
+                  doc.styles.tableHeader.fontSize = 12;
+                  doc.styles.tableHeader.bold = true;
+                }
+            },
+            'copyHtml5', 'csvHtml5', 'print'
+        ],
+      },
+      bottom: {
+        searchPanes: {
+          initCollapsed: true,
+        },
+      },
+    },
+    order: {
+        idx: 0,
+        dir: 'asc'
+    },
+    columnDefs: [
+        {
+            searchPanes: {
+                show: false,
+            },
+            visible: true,
+            targets: [0],
+        },
+        {
+            searchPanes: {
+                show: false,
+            },
+            targets: [1],
+        },
+        {
+            searchPanes: {
+                show: false,
+            },
+            targets: [2],
+        },
+    ],
+})
+
 
 const birthday = document.querySelector('input[id="birthday"]')
 if (birthday !== null) {

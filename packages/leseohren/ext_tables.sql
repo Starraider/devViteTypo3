@@ -14,12 +14,16 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	phone_mobile varchar(255) NOT NULL DEFAULT '',
 	email varchar(255) NOT NULL DEFAULT '',
 	whatsapp varchar(255) NOT NULL DEFAULT '',
+	awareness int(11) DEFAULT '0' NOT NULL,
 	notes text NOT NULL DEFAULT '',
 	status int(11) DEFAULT '0' NOT NULL,
+	statusendDate int(11) DEFAULT NULL,
 	travel_options int(11) DEFAULT '0' NOT NULL,
 	languages varchar(255) NOT NULL DEFAULT '',
 	preference_agegroup text NOT NULL DEFAULT '',
 	preference_organization_type text NOT NULL DEFAULT '',
+	membership_type int(11) DEFAULT '0' NOT NULL,
+	membership_fee varchar(255) NOT NULL DEFAULT '',
 	payment_method int(11) DEFAULT '0' NOT NULL,
 	iban varchar(255) NOT NULL DEFAULT '',
 	swift varchar(255) NOT NULL DEFAULT '',
@@ -32,8 +36,9 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	file_others int(11) unsigned NOT NULL DEFAULT '0',
 	donations int(11) unsigned NOT NULL DEFAULT '0',
 	blackboards int(11) unsigned NOT NULL DEFAULT '0',
-	events int(11) unsigned NOT NULL DEFAULT '0',
 	organizations int(11) unsigned NOT NULL DEFAULT '0',
+	speakerevent int(11) unsigned NOT NULL DEFAULT '0',
+	registrations int(11) unsigned NOT NULL DEFAULT '0'
 );
 
 CREATE TABLE tx_leseohren_domain_model_organization (
@@ -69,6 +74,13 @@ CREATE TABLE tx_leseohren_domain_model_present (
 	gift int(11) unsigned DEFAULT '0'
 );
 
+CREATE TABLE tx_leseohren_domain_model_registration (
+	person int(11) unsigned DEFAULT '0' NOT NULL,
+	onwaitlist smallint(1) unsigned NOT NULL DEFAULT '0',
+	registration_date bigint(11) DEFAULT '0' NOT NULL,
+	event int(11) unsigned DEFAULT '0'
+);
+
 CREATE TABLE tx_leseohren_domain_model_blackboard (
 	person int(11) unsigned DEFAULT '0' NOT NULL,
 	title varchar(255) NOT NULL DEFAULT '',
@@ -81,7 +93,7 @@ CREATE TABLE tx_leseohren_domain_model_event (
 	location text NOT NULL DEFAULT '',
 	start_date bigint(11) DEFAULT '0' NOT NULL,
 	end_date bigint(11) DEFAULT '0' NOT NULL,
-	participants int(11) unsigned NOT NULL DEFAULT '0',
+	speaker int(11) unsigned NOT NULL DEFAULT '0',
 	maxparticipants int(11) unsigned DEFAULT '0' NOT NULL,
 	reminder_sent int(11) DEFAULT '0' NOT NULL
 );

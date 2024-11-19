@@ -30,8 +30,10 @@ return [
                 description,
                 location,
                 categories,
+                speaker,
             --div--;Teilnehmer,
                 --palette--;;participantsPalette,
+                registrations,
                 participants,
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
                 hidden,
@@ -157,19 +159,6 @@ return [
                 'default' => ''
             ]
         ],
-        'participants' => [
-            'exclude' => false,
-            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.participants',
-            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.participants.description',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_leseohren_domain_model_person',
-                'MM' => 'tx_leseohren_event_person_mm',
-                'size' => 10,
-                'autoSizeMax' => 20,
-            ],
-        ],
         'maxparticipants' => [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.maxparticipants',
@@ -188,9 +177,22 @@ return [
                 'type' => 'check',
                 'items' => [
                     [
-                        'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.reminder_sent.sent',
+                        'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_event.reminder_sent.sent',
                     ],
                 ],
+            ],
+        ],
+        'speaker' => [
+            'exclude' => false,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren.speaker',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren.speaker.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectMultipleSideBySide',
+                'foreign_table' => 'tx_leseohren_domain_model_person',
+                'MM' => 'tx_leseohren_speakerevent_person_mm',
+                'size' => 10,
+                'autoSizeMax' => 20,
             ],
         ],
     ],
