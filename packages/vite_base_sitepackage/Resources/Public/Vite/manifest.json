@@ -8,7 +8,7 @@
     "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
   },
   "packages/vite_base_sitepackage/Resources/Private/Javascript/Main.entry.css": {
-    "file": "assets/Main.entry-d562ebce.css",
+    "file": "assets/Main.entry-a74495f4.css",
     "src": "packages/vite_base_sitepackage/Resources/Private/Javascript/Main.entry.css"
   },
   "packages/vite_base_sitepackage/Resources/Private/Javascript/Main.entry.js": {
@@ -17,9 +17,9 @@
       "assets/bootstrap-icons-bb1de989.woff"
     ],
     "css": [
-      "assets/Main.entry-d562ebce.css"
+      "assets/Main.entry-a74495f4.css"
     ],
-    "file": "assets/Main.entry-a6748543.js",
+    "file": "assets/Main.entry-8d78496a.js",
     "isEntry": true,
     "src": "packages/vite_base_sitepackage/Resources/Private/Javascript/Main.entry.js"
   }
