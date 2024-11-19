@@ -51,6 +51,19 @@
 			<trans-unit id="tx_leseohren.status.2" resname="tx_leseohren.status.2">
 				<source>ausgeschieden</source>
 			</trans-unit>
+            <trans-unit id="tx_leseohren.participants" resname="tx_leseohren.participants">
+				<source>Participants</source>
+			</trans-unit>
+            <trans-unit id="tx_leseohren.registrations" resname="tx_leseohren.registrations">
+				<source>Registrations</source>
+				<target>Anmeldungen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.noParticipants" resname="tx_leseohren.noParticipants">
+				<source>No participants</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren.waitList" resname="tx_leseohren.waitList">
+				<source>Wait list</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.bankData" resname="tx_leseohren.bankData">
 				<source>Bank data</source>
 			</trans-unit>

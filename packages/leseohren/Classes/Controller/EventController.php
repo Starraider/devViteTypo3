@@ -125,11 +125,12 @@ class EventController extends ActionController
      */
     public function showAction(Event $event): ResponseInterface
     {
-        $registrations = $this->registrationRepository->findByEvent($event);
+        $registrations = $this->registrationRepository->findRegistrationsByEvent($event);
         $this->view->assign('registrations', $registrations);
-        //DebugUtility::debug($registrations, 'meineVariable');
-        //DebugUtility::debug($event, 'meineVariable');
-        $this->view->assign('test', 'test');
+        $waitlist = $this->registrationRepository->findWaitlistByEvent($event);
+        $this->view->assign('waitlist', $waitlist);
+        // DebugUtility::debug($registrations, 'meineVariable');
+        // DebugUtility::debug($waitlist, 'meineVariable');
         $this->view->assign('event', $event);
         return $this->htmlResponse();
     }

@@ -16,6 +16,7 @@
                             <th><f:translate key="tx_leseohren_domain_model_event.start_date" /></th>
                             <th><f:translate key="tx_leseohren_domain_model_event.categories" /></th>
                             <th><f:translate key="tx_leseohren_domain_model_event.title" /></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,7 +24,7 @@
                             <tr>
                                 <td data-search="{registration.event.startDate -> f:format.date(format: 'Y/m/d')}">
                                     <f:link.action pageUid="{settings.pageIDs.eventShowPid}" action="show" controller="Event" arguments="{event: registration.event}">
-                                        {registration.event.startDate -> f:format.date(format: 'Y/m/d')}
+                                        {registration.event.startDate -> f:format.date(format: 'd.m.Y')}
                                     </f:link.action>
                                 </td>
                                 <td>
@@ -41,6 +42,11 @@
                                     <f:link.action pageUid="225" action="show" controller="Event" arguments="{event: registration.event}">
                                         {registration.event.title}
                                     </f:link.action>
+                                </td>
+                                <td>
+                                    <f:if condition="{registration.onwaitlist}">
+                                        <i class="bi bi-hourglass-split"></i>
+                                    </f:if>
                                 </td>
                             </tr>
                         </f:for>
