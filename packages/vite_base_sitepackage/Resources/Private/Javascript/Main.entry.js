@@ -17,10 +17,9 @@ import { Datepicker } from 'vanillajs-datepicker'
 // Import all of DataTables.net's JS
 // See https://datatables.net
 import JSZip from 'jszip'; // For Excel export
-import pdfMake from 'pdfmake/build/pdfmake.min.js'
-import pdfFonts from 'pdfmake/build/vfs_fonts.js'
+import pdfMake from 'pdfmake/build/pdfmake'
+import * as pdfFonts from 'pdfmake/build/vfs_fonts'
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
-import 'pdfmake/build/vfs_fonts.js'; // For PDF export
 import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'
 import 'datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css'
 import 'datatables.net-searchpanes-bs5/css/searchPanes.bootstrap5.min.css'
@@ -40,8 +39,8 @@ import languageDE from 'datatables.net-plugins/i18n/de-DE.mjs'
 const now = DateTime.local()
 //DataTable.use(DateTime)
 //DataTable.datetime('dd.mm.YYYY')
-DataTable.Buttons.jszip(JSZip);
-DataTable.Buttons.pdfMake(pdfMake);
+// DataTable.Buttons.jszip(JSZip)
+// DataTable.Buttons.pdfMake(pdfMake)
 
 let tablePersonList = new DataTable('#personList', {
   select: true,
