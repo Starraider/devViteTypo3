@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf8e627ce20cd5bf09c7eacdb039c1dc",
+    "content-hash": "57c76c8107977e3bab749d902162b32f",
     "packages": [
         {
             "name": "b13/container",
@@ -9860,16 +9860,16 @@
         },
         {
             "name": "mittwald/api-client",
-            "version": "v2.1.81",
+            "version": "v2.1.82",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mittwald/api-client-php.git",
-                "reference": "9ded0c3d6a106cad7edd350564fb83b48faa70a6"
+                "reference": "6774178af419d95c02b9ff806139eb425569e919"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mittwald/api-client-php/zipball/9ded0c3d6a106cad7edd350564fb83b48faa70a6",
-                "reference": "9ded0c3d6a106cad7edd350564fb83b48faa70a6",
+                "url": "https://api.github.com/repos/mittwald/api-client-php/zipball/6774178af419d95c02b9ff806139eb425569e919",
+                "reference": "6774178af419d95c02b9ff806139eb425569e919",
                 "shasum": ""
             },
             "require": {
@@ -9903,9 +9903,9 @@
             "description": "Client library for the mittwald mStudio v2 API",
             "support": {
                 "issues": "https://github.com/mittwald/api-client-php/issues",
-                "source": "https://github.com/mittwald/api-client-php/tree/v2.1.81"
+                "source": "https://github.com/mittwald/api-client-php/tree/v2.1.82"
             },
-            "time": "2024-11-14T19:10:27+00:00"
+            "time": "2024-11-19T19:10:53+00:00"
         },
         {
             "name": "mittwald/deployer-recipes",

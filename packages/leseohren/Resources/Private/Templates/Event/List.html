@@ -20,7 +20,7 @@
         <thead>
             <tr>
                 <th>Date</th>
-                <th><f:translate key="tx_leseohren_domain_model_event.start_date" /></th>
+                <th class="dt-head-left"><f:translate key="tx_leseohren_domain_model_event.start_date" /></th>
                 <th><f:translate key="tx_leseohren_domain_model_event.categories" /></th>
                 <th><f:translate key="tx_leseohren_domain_model_event.title" /></th>
                 <th class="dt-head-center"><f:translate key="tx_leseohren_domain_model_event.reminder_sent.title" /></th>
@@ -33,8 +33,8 @@
                     <td>
                         {event.startDate -> f:format.date(format: 'Y/m')}
                     </td>
-                    <td data-search="{event.startDate -> f:format.date(format: 'Y/m/d')}">
-                        <f:link.action action="show" arguments="{event : event}">{event.startDate -> f:format.date(format: 'Y/m/d')}</f:link.action>
+                    <td class="dt-body-left">
+                        {event.startDate -> f:format.date(format: 'Y-m-d')}
                     </td>
                     <td>
                         <f:if condition="{event.categories}">
