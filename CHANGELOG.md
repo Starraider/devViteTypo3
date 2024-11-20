@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0](https://github.com/Starraider/devViteTypo3/compare/v1.4.0...v1.5.0) (2024-11-20)
+
+
+### Features
+
+* Add export buttons to waitinglist ([50ca13b](https://github.com/Starraider/devViteTypo3/commit/50ca13b14a5e8f4c0bf2e6ae454340821185e6bb))
+
+
+### Miscellaneous Chores
+
+* Update dependencies ([8375a13](https://github.com/Starraider/devViteTypo3/commit/8375a134345362e67f23d72f5221539d14284db2))
+
 ## [1.4.0](https://github.com/Starraider/devViteTypo3/compare/v1.3.0...v1.4.0) (2024-11-19)
 
 
