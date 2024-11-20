@@ -1,5 +1,38 @@
 # Changelog
 
+## [1.4.0](https://github.com/Starraider/devViteTypo3/compare/v1.3.0...v1.4.0) (2024-11-19)
+
+
+### Features
+
+* Add .cursorrules AI instructions ([31b2729](https://github.com/Starraider/devViteTypo3/commit/31b27291701ca9d391ffef70e8a30a3a759ee0e5))
+* Add awareness field and import data ([99392e4](https://github.com/Starraider/devViteTypo3/commit/99392e4478dee8295dedecf8339d821110356e8c))
+* Add event registration ([51c3ab8](https://github.com/Starraider/devViteTypo3/commit/51c3ab854184cc4bb984dd813542142652543442))
+* Add event registrations ([dd66bd7](https://github.com/Starraider/devViteTypo3/commit/dd66bd7312296cafad78a8a94d8e56b98ba553b8))
+* Add membership fee and type ([287e16d](https://github.com/Starraider/devViteTypo3/commit/287e16dac98450107dedd7b603be731397d9e585))
+* Add PDF export ([9aebe90](https://github.com/Starraider/devViteTypo3/commit/9aebe90eded30fc0a2db79f55599319657b5728c))
+* Add registration management functionality to Person and Event classes. ([e54d12e](https://github.com/Starraider/devViteTypo3/commit/e54d12e91f0481c6fcb41bdbefb176548e68e6c9))
+* Change sorting of presents ([e5f1506](https://github.com/Starraider/devViteTypo3/commit/e5f1506cba140b731a253ae97265f3c5531e8fa6))
+* Import event registrations ([549e79f](https://github.com/Starraider/devViteTypo3/commit/549e79f822b217662cd518679773889b767e58f5))
+* Make compatible with TYPO3 13 ([efb00ff](https://github.com/Starraider/devViteTypo3/commit/efb00ff7a3c744574135c39d44fe4f924c0d6b49))
+* Show event registrations and waiting list ([0474e72](https://github.com/Starraider/devViteTypo3/commit/0474e725435bf364b53b106d2fe06dc65521fd2f))
+* Update dependencies ([a0f6090](https://github.com/Starraider/devViteTypo3/commit/a0f6090f9e5faa37c9bfad688c1b3aa312339016))
+* Update dependencies ([6a1e9d6](https://github.com/Starraider/devViteTypo3/commit/6a1e9d63df347e1937a44c9202318fda4e7f3ab8))
+
+
+### Bug Fixes
+
+* Change order of birthday list ([6bb8e0b](https://github.com/Starraider/devViteTypo3/commit/6bb8e0b688afa682d8be860f2d2563add6d815a9))
+* Fix import error ([ba18045](https://github.com/Starraider/devViteTypo3/commit/ba180451a1dc2116f9025a206a453250371e34bd))
+* Make rector changes ([5ab34aa](https://github.com/Starraider/devViteTypo3/commit/5ab34aa9897084faf3d3ffde35e3e3080f476fa8))
+
+
+### Miscellaneous Chores
+
+* chore:  ([46784e8](https://github.com/Starraider/devViteTypo3/commit/46784e829faa9eae1d23552879c50db6a71311de))
+* chore:  ([c905a5c](https://github.com/Starraider/devViteTypo3/commit/c905a5cae2d3401221e5a502931a3864116d4bde))
+* Update dependencies ([88be311](https://github.com/Starraider/devViteTypo3/commit/88be3117a734c6fb75f38e39f339eac62a256b44))
+
 ## [1.3.0](https://github.com/Starraider/devViteTypo3/compare/v1.2.0...v1.3.0) (2024-10-21)
 
 
