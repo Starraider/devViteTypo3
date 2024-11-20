@@ -59,8 +59,8 @@ set('shared_files', [
 ]);
 
 // Configure SSH multiplexing
-set('ssh_multiplexing', true);
-set('ssh_type', 'native');
+// set('ssh_multiplexing', true);
+// set('ssh_type', 'native');
 
 // Host configurations
 mittwald_app('2e9967b6-8ff0-4e0d-ac55-866fe5b357a9', hostname: 'beta')
