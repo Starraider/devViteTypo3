@@ -64,6 +64,24 @@
 			<trans-unit id="tx_leseohren.waitList" resname="tx_leseohren.waitList">
 				<source>Wait list</source>
 			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.newRegistration" resname="tx_leseohren_domain_model_registration.newRegistration">
+				<source>New registration</source>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.registration_for" resname="tx_leseohren_domain_model_registration.registration_for">
+				<source>Registration for</source>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.events" resname="tx_leseohren_domain_model_registration.events">
+				<source>Events</source>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.whichevent" resname="tx_leseohren_domain_model_registration.whichevent">
+				<source>Which event?</source>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.whichperson" resname="tx_leseohren_domain_model_registration.whichperson">
+				<source>Which person?</source>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.onwaitlist" resname="tx_leseohren_domain_model_registration.onwaitlist">
+				<source>On waiting list</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.bankData" resname="tx_leseohren.bankData">
 				<source>Bank data</source>
 			</trans-unit>

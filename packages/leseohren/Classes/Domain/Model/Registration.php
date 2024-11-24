@@ -23,7 +23,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 class Registration extends AbstractEntity
 {
     /**
-     * @var ObjectStorage<Person>
+     * @var Person
      */
     public $person;
 
@@ -66,50 +66,50 @@ class Registration extends AbstractEntity
      */
     public function initializeObject(): void
     {
-        $this->person = $this->person ?: new ObjectStorage();
+        //$this->person = $this->person ?: new ObjectStorage();
     }
 
-    /**
-     * Adds a Person
-     *
-     * @param Person $person The Person to be added
-     * @return void
-     */
-    public function addPerson(Person $person): void
-    {
-        $this->person->attach($person);
-    }
+    // /**
+    //  * Adds a Person
+    //  *
+    //  * @param Person $person The Person to be added
+    //  * @return void
+    //  */
+    // public function addPerson(Person $person): void
+    // {
+    //     $this->person->attach($person);
+    // }
 
-    /**
-     * Removes a Person
-     *
-     * @param Person $personToRemove The Person to be removed
-     * @return void
-     */
-    public function removePerson(Person $personToRemove): void
-    {
-        $this->person->detach($personToRemove);
-    }
+    // /**
+    //  * Removes a Person
+    //  *
+    //  * @param Person $personToRemove The Person to be removed
+    //  * @return void
+    //  */
+    // public function removePerson(Person $personToRemove): void
+    // {
+    //     $this->person->detach($personToRemove);
+    // }
 
-    /**
-     * Returns the person
-     *
-     * @return ObjectStorage<Person>
-     */
-    public function getPerson()
-    {
-        return $this->person;
-    }
+    // /**
+    //  * Returns the person
+    //  *
+    //  * @return ObjectStorage<Person>
+    //  */
+    // public function getPerson()
+    // {
+    //     return $this->person;
+    // }
 
-    /**
-     * Set person
-     * @param ObjectStorage<Person> $person
-     * @return void
-     */
-    public function setPerson(ObjectStorage $person): void
-    {
-        $this->person = $person;
-    }
+    // /**
+    //  * Set person
+    //  * @param ObjectStorage<Person> $person
+    //  * @return void
+    //  */
+    // public function setPerson(ObjectStorage $person): void
+    // {
+    //     $this->person = $person;
+    // }
 
     /**
      * Returns the registration_date
@@ -179,5 +179,25 @@ class Registration extends AbstractEntity
     public function setEvent(Event $event): void
     {
         $this->event = $event;
+    }
+
+    /**
+     * Returns the person
+     *
+     * @return Person
+     */
+    public function getPerson()
+    {
+        return $this->person;
+    }
+
+    /**
+     * Sets the person
+     *
+     * @return void
+     */
+    public function setPerson(Person $person): void
+    {
+        $this->person = $person;
     }
 }

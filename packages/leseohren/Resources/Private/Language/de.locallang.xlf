@@ -83,6 +83,30 @@
 				<source>Wait list</source>
 				<target>Warteliste</target>
 			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.newRegistration" resname="tx_leseohren_domain_model_registration.newRegistration">
+				<source>New registration</source>
+				<target>Neue Anmeldung</target>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.registration_for" resname="tx_leseohren_domain_model_registration.registration_for">
+				<source>Registration for</source>
+				<target>Anmeldung für</target>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.events" resname="tx_leseohren_domain_model_registration.events">
+				<source>Events</source>
+				<target>Veranstaltungen</target>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.whichevent" resname="tx_leseohren_domain_model_registration.whichevent">
+				<source>Which event?</source>
+				<target>Welche Veranstaltung?</target>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.whichperson" resname="tx_leseohren_domain_model_registration.whichperson">
+				<source>Which person?</source>
+				<target>Welche Person?</target>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.onwaitlist" resname="tx_leseohren_domain_model_registration.onwaitlist">
+				<source>On waiting list</source>
+				<target>Auf Warteliste</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.bankData" resname="tx_leseohren.bankData">
 				<source>Bank data</source>
 				<target>Bankdaten</target>

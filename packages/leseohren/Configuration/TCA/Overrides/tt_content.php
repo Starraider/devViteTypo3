@@ -67,3 +67,9 @@ ExtensionUtility::registerPlugin(
     'Presents',
     'Presents'
 );
+
+ExtensionUtility::registerPlugin(
+    'Leseohren',
+    'Registrations',
+    'Registrations'
+);

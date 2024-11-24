@@ -25,6 +25,7 @@ pageIDs {
   eventShowPid = 225
   blackboardShowPid = 228
   presentShowPid = 232
+  registrationShowPid = 233
 }
 
 plugin.tx_leseohren_personen {

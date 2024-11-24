@@ -83,6 +83,17 @@ defined('TYPO3') || die();
             \SKom\Leseohren\Controller\PresentController::class => 'new, create, edit, update, delete'
         ]
     );
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'Leseohren',
+        'Registrations',
+        [
+            \SKom\Leseohren\Controller\RegistrationController::class => 'list, show, new, create, edit, update, delete'
+        ],
+        // non-cacheable actions
+        [
+            \SKom\Leseohren\Controller\RegistrationController::class => 'new, create, edit, update, delete'
+        ]
+    );
 
     // wizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -150,6 +161,15 @@ defined('TYPO3') || die();
                         tt_content_defValues {
                             CType = list
                             list_type = leseohren_presents
+                        }
+                    }
+                    registrations {
+                        iconIdentifier = leseohren-plugin-registrations
+                        title = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_registrations.name
+                        description = LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_registrations.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = leseohren_registrations
                         }
                     }
                 }

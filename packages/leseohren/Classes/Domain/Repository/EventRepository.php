@@ -10,7 +10,9 @@ use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 use TYPO3\CMS\Core\Utility\DebugUtility;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
 
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 /**
  * This file is part of the "Leseohren" Extension for TYPO3 CMS.
  *
@@ -24,6 +26,13 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
  */
 class EventRepository extends Repository
 {
+    public function initializeObject(): void
+    {
+        $querySettings = GeneralUtility::makeInstance(Typo3QuerySettings::class);
+        $querySettings->setRespectStoragePage(false);
+        $this->setDefaultQuerySettings($querySettings);
+    }
+
     protected $defaultOrderings = [
         'start_date' => QueryInterface::ORDER_DESCENDING
     ];

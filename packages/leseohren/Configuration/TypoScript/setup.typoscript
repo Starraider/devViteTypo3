@@ -6,6 +6,7 @@ plugin.tx_leseohren_personen {
         eventShowPid = {$pageIDs.eventShowPid}
         blackboardShowPid = {$pageIDs.blackboardShowPid}
         presentShowPid = {$pageIDs.presentShowPid}
+        registrationShowPid = {$pageIDs.registrationShowPid}
       }
     }
     view {
@@ -48,6 +49,7 @@ plugin.tx_leseohren_persondashboard {
       eventShowPid = {$pageIDs.eventShowPid}
       blackboardShowPid = {$pageIDs.blackboardShowPid}
       presentShowPid = {$pageIDs.presentShowPid}
+      registrationShowPid = {$pageIDs.registrationShowPid}
     }
   }
 }
@@ -59,6 +61,7 @@ plugin.tx_leseohren_organizations {
         eventShowPid = {$pageIDs.eventShowPid}
         blackboardShowPid = {$pageIDs.blackboardShowPid}
         presentShowPid = {$pageIDs.presentShowPid}
+        registrationShowPid = {$pageIDs.registrationShowPid}
       }
     }
     view {
@@ -90,6 +93,7 @@ plugin.tx_leseohren_events {
         eventShowPid = {$pageIDs.eventShowPid}
         blackboardShowPid = {$pageIDs.blackboardShowPid}
         presentShowPid = {$pageIDs.presentShowPid}
+        registrationShowPid = {$pageIDs.registrationShowPid}
       }
     }
     view {
@@ -121,6 +125,7 @@ plugin.tx_leseohren_blackboards {
         eventShowPid = {$pageIDs.eventShowPid}
         blackboardShowPid = {$pageIDs.blackboardShowPid}
         presentShowPid = {$pageIDs.presentShowPid}
+        registrationShowPid = {$pageIDs.registrationShowPid}
       }
     }
     view {
@@ -152,6 +157,7 @@ plugin.tx_leseohren_presents {
         eventShowPid = {$pageIDs.eventShowPid}
         blackboardShowPid = {$pageIDs.blackboardShowPid}
         presentShowPid = {$pageIDs.presentShowPid}
+        registrationShowPid = {$pageIDs.registrationShowPid}
       }
     }
     view {
@@ -174,6 +180,18 @@ plugin.tx_leseohren_presents {
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
+}
+plugin.tx_leseohren_registrations {
+  settings {
+    pageIDs {
+      personShowPid = {$pageIDs.personShowPid}
+      organizationShowPid = {$pageIDs.organizationShowPid}
+      eventShowPid = {$pageIDs.eventShowPid}
+      blackboardShowPid = {$pageIDs.blackboardShowPid}
+      presentShowPid = {$pageIDs.presentShowPid}
+      registrationShowPid = {$pageIDs.registrationShowPid}
+    }
+  }
 }
 // config.tx_extbase {
 //   persistence {
