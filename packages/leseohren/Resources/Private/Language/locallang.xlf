@@ -82,6 +82,9 @@
             <trans-unit id="tx_leseohren_domain_model_registration.onwaitlist" resname="tx_leseohren_domain_model_registration.onwaitlist">
 				<source>On waiting list</source>
 			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.deleteConfirm" resname="tx_leseohren_domain_model_registration.deleteConfirm">
+				<source>Are you sure you want to delete this registration?</source>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.bankData" resname="tx_leseohren.bankData">
 				<source>Bank data</source>
 			</trans-unit>

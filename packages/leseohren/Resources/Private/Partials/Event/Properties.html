@@ -50,7 +50,7 @@
                     </f:if>
                     <f:if condition="{waitlist}">
                         <f:then>
-                            <f:render partial="Event/WaitList" arguments="{waitlist: waitlist}" />
+                            <f:render partial="Event/WaitList" arguments="{event: event, waitlist: waitlist}" />
                         </f:then>
                     </f:if>
                 </div>

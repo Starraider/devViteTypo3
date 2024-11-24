@@ -105,6 +105,46 @@ class RegistrationController extends ActionController
     }
 
     /**
+     * Deletes a registration
+     *
+     * @param Registration $registration
+     * @param Event|null $event
+     * @param Person|null $person
+     * @return ResponseInterface
+     * @throws IllegalObjectTypeException
+     */
+    public function deleteAction(Registration $registration, ?Event $event = null, ?Person $person = null): ResponseInterface
+    {
+        if($person){
+            $redirectPID = intval($this->settings['pageIDs']['personShowPid']);
+        }
+        if($event){
+            $redirectPID = intval($this->settings['pageIDs']['eventShowPid']);
+        }
+        try {
+            $this->registrationRepository->remove($registration);
+            $this->addFlashMessage(
+                'Registration deleted successfully.',
+                '',
+                ContextualFeedbackSeverity::OK
+            );
+        } catch (\Exception $e) {
+            $this->addFlashMessage(
+                'Error deleting registration: ' . $e->getMessage(),
+                '',
+                ContextualFeedbackSeverity::ERROR
+            );
+        }
+        if($person){
+            return $this->redirect('show', 'Person', 'Leseohren', ['person' => $person], $redirectPID, null, 303);
+        }
+        if($event){
+            return $this->redirect('show', 'Event', 'Leseohren', ['event' => $event], $redirectPID, null, 303);
+        }
+        //return $this->redirect('list');
+    }
+
+    /**
      * Shows a list of registrations
      *
      * @return ResponseInterface
@@ -175,30 +215,5 @@ class RegistrationController extends ActionController
         return $this->redirect('list');
     }
 
-    /**
-     * Deletes a registration
-     *
-     * @param Registration $registration
-     * @return ResponseInterface
-     * @throws IllegalObjectTypeException
-     */
-    public function deleteAction(Registration $registration): ResponseInterface
-    {
-        try {
-            $this->registrationRepository->remove($registration);
-            $this->addFlashMessage(
-                'Registration deleted successfully.',
-                '',
-                ContextualFeedbackSeverity::OK
-            );
-        } catch (\Exception $e) {
-            $this->addFlashMessage(
-                'Error deleting registration: ' . $e->getMessage(),
-                '',
-                ContextualFeedbackSeverity::ERROR
-            );
-        }
 
-        return $this->redirect('list');
-    }
 }

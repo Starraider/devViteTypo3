@@ -107,6 +107,10 @@
 				<source>On waiting list</source>
 				<target>Auf Warteliste</target>
 			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_registration.deleteConfirm" resname="tx_leseohren_domain_model_registration.deleteConfirm">
+				<source>Are you sure you want to delete this registration?</source>
+				<target>Sind Sie sicher, dass Sie diese Anmeldung löschen möchten?</target>
+			</trans-unit>
 			<trans-unit id="tx_leseohren.bankData" resname="tx_leseohren.bankData">
 				<source>Bank data</source>
 				<target>Bankdaten</target>
