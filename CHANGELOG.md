@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.6.0](https://github.com/Starraider/devViteTypo3/compare/v1.5.0...v1.6.0) (2024-11-25)
+
+
+### Features
+
+* Add delete function to event registrations ([24affa9](https://github.com/Starraider/devViteTypo3/commit/24affa956e54cc1d797bc0445bf588ec4333341d))
+* Make it possible to add new event registrations ([7807ca4](https://github.com/Starraider/devViteTypo3/commit/7807ca49d6ae2708cd94c01b7c819abe5d30cc9a))
+
+
+### Bug Fixes
+
+* Change to deployer v7.4.1 ([2a5bc38](https://github.com/Starraider/devViteTypo3/commit/2a5bc3864a4b8f58d7a8e93eefa558a1ad5b6c5a))
+
+
+### Miscellaneous Chores
+
+* Update dependencies ([e82aa38](https://github.com/Starraider/devViteTypo3/commit/e82aa386372b0f6a835f92b7953fc67e555ca076))
+
 ## [1.5.0](https://github.com/Starraider/devViteTypo3/compare/v1.4.0...v1.5.0) (2024-11-20)
 
 
