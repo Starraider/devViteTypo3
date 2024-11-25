@@ -17,10 +17,11 @@
                             <th><f:translate key="tx_leseohren_domain_model_event.categories" /></th>
                             <th><f:translate key="tx_leseohren_domain_model_event.title" /></th>
                             <th></th>
+                            <th class="dt-head-center">Aktionen</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <f:for each="{person.registrations}" as="registration">
+                        <f:for each="{person.registrations}" as="registration" iteration="personIterator">
                             <tr>
                                 <td data-search="{registration.event.startDate -> f:format.date(format: 'Y/m/d')}">
                                     <f:link.action pageUid="{settings.pageIDs.eventShowPid}" action="show" controller="Event" arguments="{event: registration.event}">
@@ -48,10 +49,22 @@
                                         <i class="bi bi-hourglass-split"></i>
                                     </f:if>
                                 </td>
+                                <td class="dt-body-center">
+                                    {f:variable(name: 'tableid', value: 'c')}
+                                    <a type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#deleteRegistrationModal{tableid}{personIterator.index}">
+                                        <i class="bi bi-trash3"></i>
+                                    </a>
+                                    <f:render partial="Registration/DeleteModal" arguments="{registration:registration, person:person, event:event, tableid:tableid, registrationnr:personIterator.index}" />
+                                </td>
                             </tr>
                         </f:for>
                     </tbody>
                 </table>
+
+                <f:link.action pageUid="{settings.pageIDs.registrationShowPid}" controller="Registration" action="new" arguments="{person: person}"
+                    class="btn btn-primary btn-sm">
+                    <i class="bi bi-plus-square"></i>
+                </f:link.action>
 
             </div>
         </div>

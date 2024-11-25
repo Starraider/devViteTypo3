@@ -20,7 +20,7 @@ import JSZip from 'jszip' // For Excel export
 import pdfMake from 'pdfmake/build/pdfmake'
 import * as pdfFonts from 'pdfmake/build/vfs_fonts'
 pdfMake.vfs = pdfFonts.pdfMake.vfs
-import { DateTime } from 'luxon'
+import * as luxon from 'luxon'
 import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'
 import 'datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css'
 import 'datatables.net-searchpanes-bs5/css/searchPanes.bootstrap5.min.css'
@@ -36,15 +36,15 @@ import 'datatables.net-searchpanes-bs5'
 import 'datatables.net-select-bs5'
 import languageDE from 'datatables.net-plugins/i18n/de-DE.mjs'
 //import 'datatables.net-plugins/sorting/datetime-moment.js'
-const now = DateTime.local()
-console.log(DateTime.now().toFormat('dd.MM.yyyy'))
+//const now = DateTime.local()
+//console.log(DateTime.now().toFormat('dd.MM.yyyy'))
 //DataTable.use(DateTime)
 //DataTable.datetime('dd.MM.yyyy')
 //DataTable.datetime('yyyy-MM-dd')
 
 // Add this date formatting function
 //DataTable.datetime('dd.MM.yyyy')
-
+DataTable.use(luxon)
 let tablePersonList = new DataTable('#personList', {
   select: true,
   searchPanes: true,

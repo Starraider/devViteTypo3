@@ -764,6 +764,14 @@
 				<source>Which event?</source>
 				<target>Welche Veranstaltung?</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_registrations.name" resname="tx_leseohren_registrations.name">
+				<source>Registrations</source>
+				<target>Anmeldungen</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_registrations.description" resname="tx_leseohren_registrations.description">
+				<source>Event registrations</source>
+				<target>Veranstaltungs-Anmeldungen</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

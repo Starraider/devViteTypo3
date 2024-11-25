@@ -42,7 +42,7 @@
                     <h3><f:translate key="tx_leseohren.participants" /> <small>(max. {event.maxparticipants})</small></h3>
                     <f:if condition="{registrations}">
                         <f:then>
-                            <f:render partial="Event/ParticipantsList" arguments="{registrations: registrations}" />
+                            <f:render partial="Event/ParticipantsList" arguments="{event: event, registrations: registrations}" />
                         </f:then>
                         <f:else>
                             <p><f:translate key="tx_leseohren.noParticipants" /></p>
@@ -50,7 +50,7 @@
                     </f:if>
                     <f:if condition="{waitlist}">
                         <f:then>
-                            <f:render partial="Event/WaitList" arguments="{waitlist: waitlist}" />
+                            <f:render partial="Event/WaitList" arguments="{event: event, waitlist: waitlist}" />
                         </f:then>
                     </f:if>
                 </div>

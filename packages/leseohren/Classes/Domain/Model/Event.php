@@ -162,6 +162,16 @@ class Event extends AbstractEntity
     }
 
     /**
+     * Returns the extendedtitle
+     *
+     * @return string
+     */
+    public function getExtendedTitle()
+    {
+        return $this->startDate->format('d.m.Y') . ': ' . $this->title;
+    }
+
+    /**
      * Returns the description
      *
      * @return string

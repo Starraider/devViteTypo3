@@ -627,6 +627,12 @@
 			<trans-unit id="tx_leseohren_domain_model_registration.event.description" resname="tx_leseohren_domain_model_registration.event.description">
 				<source>Which event?</source>
 			</trans-unit>
+            <trans-unit id="tx_leseohren_registrations.name" resname="tx_leseohren_registrations.name">
+				<source>Registrations</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_registrations.description" resname="tx_leseohren_registrations.description">
+				<source>Event registrations</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

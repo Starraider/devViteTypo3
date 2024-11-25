@@ -56,7 +56,7 @@
 		"a9f/fractor-extension-installer": "^0.2",
 		"a9f/fractor-fluid": "^0.2",
 		"a9f/typo3-fractor": "^0.2",
-		"deployer/deployer": "^7.4",
+		"deployer/deployer": "7.4.1",
 		"ergebnis/composer-normalize": "^2.42",
 		"mittwald/deployer-recipes": "@dev",
 		"seld/jsonlint": "^1.10",
