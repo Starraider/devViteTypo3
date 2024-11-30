@@ -8,8 +8,6 @@
 
     <f:render partial="FormErrors" />
 
-    <f:debug inline="true">{_all}</f:debug>
-
     <f:form action="create" name="newPresent" arguments="{person:person}" object="{newPresent}">
         <f:render partial="Present/FormFields" arguments="{_all}" />
         <f:form.submit value="{f:translate(key: 'tx_leseohren.save')}" class="btn btn-primary" />

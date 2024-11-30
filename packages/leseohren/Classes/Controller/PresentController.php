@@ -112,10 +112,17 @@ class PresentController extends ActionController
      */
     public function createAction(Present $newPresent, Person $person)
     {
+        if($person){
+            $redirectPID = intval($this->settings['pageIDs']['personShowPid']);
+        }
         $newPresent->addPerson($person);
         $this->addFlashMessage('Die neue Schenkung wurde erfolgreich gespeichert.', '', ContextualFeedbackSeverity::OK);
         $this->presentRepository->add($newPresent);
-        return $this->redirect('list');
+        if($person){
+            return $this->redirect('show', 'Person', 'Leseohren', ['person' => $person], $redirectPID, null, 303);
+        } else {
+            return $this->redirect('list');
+        }
     }
 
     /**

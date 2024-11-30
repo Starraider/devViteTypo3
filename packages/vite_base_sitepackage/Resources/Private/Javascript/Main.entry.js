@@ -498,4 +498,16 @@ if (endDate !== null) {
     todayHighlight: true,
   })
 }
+
+const giftDate = document.querySelector('input[id="giftDate"]')
+if (giftDate !== null) {
+  const datepicker1 = new Datepicker(giftDate, {
+    format: 'dd.mm.yyyy',
+    buttonClass: 'btn',
+    autohide: true,
+    todayButton: true,
+    clearButton: true,
+    todayHighlight: true,
+  })
+}
 console.log('Hello Sven, hello TYPO3!')
