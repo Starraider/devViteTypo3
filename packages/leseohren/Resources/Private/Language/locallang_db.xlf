@@ -633,6 +633,15 @@
 			<trans-unit id="tx_leseohren_registrations.description" resname="tx_leseohren_registrations.description">
 				<source>Event registrations</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.mandatsreferenz">
+				<source>Mandate Reference</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.mandatsreferenz.description">
+				<source>The mandate reference for SEPA direct debit</source>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.paymentPalette.description">
+				<source>Payment</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

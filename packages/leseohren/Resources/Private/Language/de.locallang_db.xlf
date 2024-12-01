@@ -772,6 +772,18 @@
 				<source>Event registrations</source>
 				<target>Veranstaltungs-Anmeldungen</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.mandatsreferenz" resname="tx_leseohren_domain_model_person.mandatsreferenz">
+				<source>Mandate Reference</source>
+				<target>Mandatsreferenz</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.mandatsreferenz.description" resname="tx_leseohren_domain_model_person.mandatsreferenz.description">
+				<source>The mandate reference for SEPA direct debit</source>
+				<target>Die Mandatsreferenz für den Lastschrifteinzug</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.paymentPalette.description" resname="tx_leseohren_domain_model_person.paymentPalette.description">
+				<source>Payment</source>
+				<target>Zahlungsinformationen</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

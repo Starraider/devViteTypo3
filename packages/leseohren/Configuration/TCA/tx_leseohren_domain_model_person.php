@@ -39,7 +39,7 @@ return [
                     organizations,
                 --div--;Mitgliedschaft,
                     --palette--;;membershipPalette,
-                    payment_method,
+                    --palette--;;paymentPalette,
                     --palette--;;bankaccountPalette,
                     paypal,
                 --div--;Files,
@@ -76,6 +76,10 @@ return [
         'membershipPalette' => [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.membershipPalette.description',
             'showitem' => 'membership_type, membership_fee',
+        ],
+        'paymentPalette' => [
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.paymentPalette.description',
+            'showitem' => 'payment_method, mandatsreferenz',
         ],
         'bankaccountPalette' => [
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.bankaccountPalette.description',
@@ -515,6 +519,7 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.membership_type',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.membership_type.description',
+            'onChange' => 'reload',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
@@ -535,6 +540,7 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.membership_fee',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.membership_fee.description',
+            'displayCond' => 'FIELD:membership_type:!=:0',
             'config' => [
                 'type' => 'number',
                 'default' => 0,
@@ -554,6 +560,7 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.payment_method',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.payment_method.description',
+            'displayCond' => 'FIELD:membership_type:!=:0',
             'onChange' => 'reload',
             'config' => [
                 'type' => 'select',
@@ -569,11 +576,30 @@ return [
                 'eval' => ''
             ],
         ],
+        'mandatsreferenz' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.mandatsreferenz',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.mandatsreferenz.description',
+            'displayCond' => 'FIELD:membership_type:!=:0',
+            'config' => [
+                'type' => 'input',
+                'size' => 34,
+                'min' => 0,
+                'max' => 34,
+                'eval' => 'alphanum,nospace',
+                'default' => ''
+            ],
+        ],
         'iban' => [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.iban',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.iban.description',
-            'displayCond' => 'FIELD:payment_method:!=:3',
+            'displayCond' => [
+                'OR' => [
+                    'FIELD:payment_method:=:1',
+                    'FIELD:payment_method:=:2'
+                ]
+            ],
             'config' => [
                 'type' => 'input',
                 'size' => 34,
@@ -587,7 +613,12 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.swift',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.swift.description',
-            'displayCond' => 'FIELD:payment_method:!=:3',
+            'displayCond' => [
+                'OR' => [
+                    'FIELD:payment_method:=:1',
+                    'FIELD:payment_method:=:2'
+                ]
+            ],
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -601,7 +632,12 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.account_owner',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.account_owner.description',
-            'displayCond' => 'FIELD:payment_method:!=:3',
+            'displayCond' => [
+                'OR' => [
+                    'FIELD:payment_method:=:1',
+                    'FIELD:payment_method:=:2'
+                ]
+            ],
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -613,7 +649,12 @@ return [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.bankname',
             'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.bankname.description',
-            'displayCond' => 'FIELD:payment_method:!=:3',
+            'displayCond' => [
+                'OR' => [
+                    'FIELD:payment_method:=:1',
+                    'FIELD:payment_method:=:2'
+                ]
+            ],
             'config' => [
                 'type' => 'input',
                 'size' => 30,
