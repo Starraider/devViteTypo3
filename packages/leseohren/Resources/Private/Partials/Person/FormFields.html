@@ -220,7 +220,7 @@
             </div>
         </div>
         <div class="row mb-3">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="travelOptions" class="form-label">
                     <f:translate key="tx_leseohren.paymentMethod" />:
                 </label>
@@ -231,6 +231,12 @@
                         </f:form.select.option>
                     </v:iterator.loop>
                 </f:form.select>
+            </div>
+            <div class="col-sm-6">
+                <label for="mandatsreferenz" class="form-label">
+                    <f:translate key="tx_leseohren_domain_model_person.mandatsreferenz" />:
+                </label>
+                <f:form.textfield property="mandatsreferenz" id="mandatsreferenz" class="form-control" />
             </div>
         </div>
         <div class="row mb-3">

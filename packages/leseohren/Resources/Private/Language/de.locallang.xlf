@@ -3,1173 +3,1173 @@
 	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:leseohren/Resources/Private/Language/locallang.xlf" date="2024-02-13T18:30:06Z" product-name="leseohren">
 		<header/>
 		<body>
-			<trans-unit id="tx_leseohren.save" resname="tx_leseohren.save">
+			<trans-unit id="tx_leseohren.save" approved="yes">
 				<source>Save</source>
 				<target>Speichern</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.edit" resname="tx_leseohren.edit">
+			<trans-unit id="tx_leseohren.edit" approved="yes">
 				<source>Edit</source>
 				<target>Bearbeiten</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.delete" resname="tx_leseohren.delete">
+			<trans-unit id="tx_leseohren.delete" approved="yes">
 				<source>Delete</source>
 				<target>Löschen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.cancel" resname="tx_leseohren.cancel">
+			<trans-unit id="tx_leseohren.cancel" approved="yes">
 				<source>Cancel</source>
 				<target>Abbrechen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.backToList" resname="tx_leseohren.backToList">
+			<trans-unit id="tx_leseohren.backToList" approved="yes">
 				<source>Back to list</source>
 				<target>Zurück zur Liste</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.archive" resname="tx_leseohren.archive">
+			<trans-unit id="tx_leseohren.archive" approved="yes">
 				<source>Archive</source>
 				<target>Archiv</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.info" resname="tx_leseohren.info">
+			<trans-unit id="tx_leseohren.info" approved="yes">
 				<source>Info</source>
 				<target>Info</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.contact" resname="tx_leseohren.contact">
+			<trans-unit id="tx_leseohren.contact" approved="yes">
 				<source>Contact</source>
 				<target>Kontakt</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.actions" resname="tx_leseohren.actions">
+			<trans-unit id="tx_leseohren.actions" approved="yes">
 				<source>Actions</source>
 				<target>Aktionen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.gender.0" resname="tx_leseohren.gender.0">
+			<trans-unit id="tx_leseohren.gender.0" approved="yes">
 				<source>female</source>
 				<target>weiblich</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.gender.1" resname="tx_leseohren.gender.1">
+			<trans-unit id="tx_leseohren.gender.1" approved="yes">
 				<source>male</source>
 				<target>mänlich</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.gender.2" resname="tx_leseohren.gender.2">
+			<trans-unit id="tx_leseohren.gender.2" approved="yes">
 				<source>divers</source>
 				<target>divers</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.status" resname="tx_leseohren.status">
+			<trans-unit id="tx_leseohren.status" approved="yes">
 				<source>Status</source>
 				<target>Status</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.status.0" resname="tx_leseohren.status.0">
+			<trans-unit id="tx_leseohren.status.0" approved="yes">
 				<source>active</source>
 				<target>aktiv</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.status.1" resname="tx_leseohren.status.1">
+			<trans-unit id="tx_leseohren.status.1" approved="yes">
 				<source>paused</source>
 				<target>pausiert</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.status.2" resname="tx_leseohren.status.2">
+			<trans-unit id="tx_leseohren.status.2" approved="yes">
 				<source>retired</source>
 				<target>ausgeschieden</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.participants" resname="tx_leseohren.participants">
+			<trans-unit id="tx_leseohren.participants" approved="yes">
 				<source>Participants</source>
 				<target>Teilnehmer</target>
 			</trans-unit>
-            <trans-unit id="tx_leseohren.registrations" resname="tx_leseohren.registrations">
+            <trans-unit id="tx_leseohren.registrations" approved="yes">
 				<source>Registrations</source>
 				<target>Anmeldungen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.noParticipants" resname="tx_leseohren.noParticipants">
+			<trans-unit id="tx_leseohren.noParticipants" approved="yes">
 				<source>No participants</source>
 				<target>Noch keine Teilnehmer</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.waitList" resname="tx_leseohren.waitList">
+			<trans-unit id="tx_leseohren.waitList" approved="yes">
 				<source>Wait list</source>
 				<target>Warteliste</target>
 			</trans-unit>
-            <trans-unit id="tx_leseohren_domain_model_registration.newRegistration" resname="tx_leseohren_domain_model_registration.newRegistration">
+            <trans-unit id="tx_leseohren_domain_model_registration.newRegistration" approved="yes">
 				<source>New registration</source>
 				<target>Neue Anmeldung</target>
 			</trans-unit>
-            <trans-unit id="tx_leseohren_domain_model_registration.registration_for" resname="tx_leseohren_domain_model_registration.registration_for">
+            <trans-unit id="tx_leseohren_domain_model_registration.registration_for" approved="yes">
 				<source>Registration for</source>
 				<target>Anmeldung für</target>
 			</trans-unit>
-            <trans-unit id="tx_leseohren_domain_model_registration.events" resname="tx_leseohren_domain_model_registration.events">
+            <trans-unit id="tx_leseohren_domain_model_registration.events" approved="yes">
 				<source>Events</source>
 				<target>Veranstaltungen</target>
 			</trans-unit>
-            <trans-unit id="tx_leseohren_domain_model_registration.whichevent" resname="tx_leseohren_domain_model_registration.whichevent">
+            <trans-unit id="tx_leseohren_domain_model_registration.whichevent" approved="yes">
 				<source>Which event?</source>
 				<target>Welche Veranstaltung?</target>
 			</trans-unit>
-            <trans-unit id="tx_leseohren_domain_model_registration.whichperson" resname="tx_leseohren_domain_model_registration.whichperson">
+            <trans-unit id="tx_leseohren_domain_model_registration.whichperson" approved="yes">
 				<source>Which person?</source>
 				<target>Welche Person?</target>
 			</trans-unit>
-            <trans-unit id="tx_leseohren_domain_model_registration.onwaitlist" resname="tx_leseohren_domain_model_registration.onwaitlist">
+            <trans-unit id="tx_leseohren_domain_model_registration.onwaitlist" approved="yes">
 				<source>On waiting list</source>
 				<target>Auf Warteliste</target>
 			</trans-unit>
-            <trans-unit id="tx_leseohren_domain_model_registration.deleteConfirm" resname="tx_leseohren_domain_model_registration.deleteConfirm">
+            <trans-unit id="tx_leseohren_domain_model_registration.deleteConfirm" approved="yes">
 				<source>Are you sure you want to delete this registration?</source>
 				<target>Sind Sie sicher, dass Sie diese Anmeldung löschen möchten?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.bankData" resname="tx_leseohren.bankData">
+			<trans-unit id="tx_leseohren.bankData" approved="yes">
 				<source>Bank data</source>
 				<target>Bankdaten</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.paymentMethod" resname="tx_leseohren.paymentMethod">
+			<trans-unit id="tx_leseohren.paymentMethod" approved="yes">
 				<source>Payment method</source>
 				<target>Zahlungsmethode</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.paymentMethod.0" resname="tx_leseohren.paymentMethod.0">
+			<trans-unit id="tx_leseohren.paymentMethod.0" approved="yes">
 				<source>k.A.</source>
 				<target>k.A.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.paymentMethod.1" resname="tx_leseohren.paymentMethod.1">
+			<trans-unit id="tx_leseohren.paymentMethod.1" approved="yes">
 				<source>Direct debit</source>
 				<target>Lastschrift</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.paymentMethod.2" resname="tx_leseohren.paymentMethod.2">
+			<trans-unit id="tx_leseohren.paymentMethod.2" approved="yes">
 				<source>Bank transfer</source>
 				<target>Überweisung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.paymentMethod.3" resname="tx_leseohren.paymentMethod.3">
+			<trans-unit id="tx_leseohren.paymentMethod.3" approved="yes">
 				<source>Paypal</source>
 				<target>Paypal</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.ageGroup" resname="tx_leseohren.ageGroup">
+			<trans-unit id="tx_leseohren.ageGroup" approved="yes">
 				<source>Age Group</source>
 				<target>Altersgruppe</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.ageGroup.description" resname="tx_leseohren.ageGroup.description">
+			<trans-unit id="tx_leseohren.ageGroup.description" approved="yes">
 				<source>Press and hold cmd-key to select multiple.</source>
 				<target>Drücke und halte cmd-Taste um mehrere auszuwählen.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.ageGroup.0" resname="tx_leseohren.ageGroup.0">
+			<trans-unit id="tx_leseohren.ageGroup.0" approved="yes">
 				<source>0-4 years</source>
 				<target>0-4 Jahre</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.ageGroup.1" resname="tx_leseohren.ageGroup.1">
+			<trans-unit id="tx_leseohren.ageGroup.1" approved="yes">
 				<source>4-8 years</source>
 				<target>4-8 Jahre</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.ageGroup.2" resname="tx_leseohren.ageGroup.2">
+			<trans-unit id="tx_leseohren.ageGroup.2" approved="yes">
 				<source>8-12 years</source>
 				<target>8-12 Jahre</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.ageGroup.3" resname="tx_leseohren.ageGroup.3">
+			<trans-unit id="tx_leseohren.ageGroup.3" approved="yes">
 				<source>12-16 years</source>
 				<target>12-16 Jahre</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.ageGroup.4" resname="tx_leseohren.ageGroup.4">
+			<trans-unit id="tx_leseohren.ageGroup.4" approved="yes">
 				<source>16-18 years</source>
 				<target>16-18 Jahre</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType" resname="tx_leseohren.orgType">
+			<trans-unit id="tx_leseohren.orgType" approved="yes">
 				<source>Organization Type</source>
 				<target>Organisationstyp</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.description" resname="tx_leseohren.orgType.description">
+			<trans-unit id="tx_leseohren.orgType.description" approved="yes">
 				<source>Press and hold cmd-key to select multiple.</source>
 				<target>Drücke und halte cmd-Taste um mehrere auszuwählen.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.1" resname="tx_leseohren.orgType.1">
+			<trans-unit id="tx_leseohren.orgType.1" approved="yes">
 				<source>Daycare center</source>
 				<target>Sonderveranstaltungen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.2" resname="tx_leseohren.orgType.2">
+			<trans-unit id="tx_leseohren.orgType.2" approved="yes">
 				<source>Daycare center</source>
 				<target>Kita</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.3" resname="tx_leseohren.orgType.3">
+			<trans-unit id="tx_leseohren.orgType.3" approved="yes">
 				<source>School</source>
 				<target>Schule</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.4" resname="tx_leseohren.orgType.4">
+			<trans-unit id="tx_leseohren.orgType.4" approved="yes">
 				<source>Library</source>
 				<target>Bibliothek</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.5" resname="tx_leseohren.orgType.5">
+			<trans-unit id="tx_leseohren.orgType.5" approved="yes">
 				<source>Refugees</source>
 				<target>Flüchtlinge</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.orgType.6" resname="tx_leseohren.orgType.6">
+			<trans-unit id="tx_leseohren.orgType.6" approved="yes">
 				<source>Training courses</source>
 				<target>Fortbildungen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.travelOptions" resname="tx_leseohren.travelOptions">
+			<trans-unit id="tx_leseohren.travelOptions" approved="yes">
 				<source>Travel Options</source>
 				<target>Anreisemöglichkeiten</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.travelOptions.0" resname="tx_leseohren.travelOptions.0">
+			<trans-unit id="tx_leseohren.travelOptions.0" approved="yes">
 				<source>Car</source>
 				<target>Auto</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.travelOptions.1" resname="tx_leseohren.travelOptions.1">
+			<trans-unit id="tx_leseohren.travelOptions.1" approved="yes">
 				<source>Motorcycle/Scooter</source>
 				<target>Motorrad/Roller</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.travelOptions.2" resname="tx_leseohren.travelOptions.2">
+			<trans-unit id="tx_leseohren.travelOptions.2" approved="yes">
 				<source>Public transport</source>
 				<target>ÖNV</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.travelOptions.3" resname="tx_leseohren.travelOptions.3">
+			<trans-unit id="tx_leseohren.travelOptions.3" approved="yes">
 				<source>Bycicle</source>
 				<target>Fahrrad</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.travelOptions.4" resname="tx_leseohren.travelOptions.4">
+			<trans-unit id="tx_leseohren.travelOptions.4" approved="yes">
 				<source>on foot</source>
 				<target>zu Fuß</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.travelOptions.5" resname="tx_leseohren.travelOptions.5">
+			<trans-unit id="tx_leseohren.travelOptions.5" approved="yes">
 				<source>Other</source>
 				<target>Sonstige</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages" resname="tx_leseohren.languages">
+			<trans-unit id="tx_leseohren.languages" approved="yes">
 				<source>Languages</source>
 				<target>Sprachen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.description" resname="tx_leseohren.languages.description">
+			<trans-unit id="tx_leseohren.languages.description" approved="yes">
 				<source>Press cmd to select multiple.</source>
 				<target>Drücken und halten Sie cmd, um mehrere auszuwählen.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.1" resname="tx_leseohren.languages.1">
+			<trans-unit id="tx_leseohren.languages.1" approved="yes">
 				<source>German</source>
 				<target>Deutsch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.2" resname="tx_leseohren.languages.2">
+			<trans-unit id="tx_leseohren.languages.2" approved="yes">
 				<source>English</source>
 				<target>Englisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.3" resname="tx_leseohren.languages.3">
+			<trans-unit id="tx_leseohren.languages.3" approved="yes">
 				<source>Turkish</source>
 				<target>Türkisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.4" resname="tx_leseohren.languages.4">
+			<trans-unit id="tx_leseohren.languages.4" approved="yes">
 				<source>Italien</source>
 				<target>Italienisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.5" resname="tx_leseohren.languages.5">
+			<trans-unit id="tx_leseohren.languages.5" approved="yes">
 				<source>Albanian</source>
 				<target>Albanisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.6" resname="tx_leseohren.languages.6">
+			<trans-unit id="tx_leseohren.languages.6" approved="yes">
 				<source>Chinese</source>
 				<target>Chinesisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.7" resname="tx_leseohren.languages.7">
+			<trans-unit id="tx_leseohren.languages.7" approved="yes">
 				<source>Russian</source>
 				<target>Russisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.8" resname="tx_leseohren.languages.8">
+			<trans-unit id="tx_leseohren.languages.8" approved="yes">
 				<source>Arabic</source>
 				<target>Arabisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.9" resname="tx_leseohren.languages.9">
+			<trans-unit id="tx_leseohren.languages.9" approved="yes">
 				<source>Greek</source>
 				<target>Griechisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.10" resname="tx_leseohren.languages.10">
+			<trans-unit id="tx_leseohren.languages.10" approved="yes">
 				<source>Romanian</source>
 				<target>Rumänisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.11" resname="tx_leseohren.languages.11">
+			<trans-unit id="tx_leseohren.languages.11" approved="yes">
 				<source>Kurdish</source>
 				<target>Kurdisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.12" resname="tx_leseohren.languages.12">
+			<trans-unit id="tx_leseohren.languages.12" approved="yes">
 				<source>Portuguese</source>
 				<target>Portugiesisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.13" resname="tx_leseohren.languages.13">
+			<trans-unit id="tx_leseohren.languages.13" approved="yes">
 				<source>French</source>
 				<target>Französisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.14" resname="tx_leseohren.languages.14">
+			<trans-unit id="tx_leseohren.languages.14" approved="yes">
 				<source>Indian</source>
 				<target>Indisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.15" resname="tx_leseohren.languages.15">
+			<trans-unit id="tx_leseohren.languages.15" approved="yes">
 				<source>Polish</source>
 				<target>Polnisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.16" resname="tx_leseohren.languages.16">
+			<trans-unit id="tx_leseohren.languages.16" approved="yes">
 				<source>Hungarian</source>
 				<target>Ungarisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.17" resname="tx_leseohren.languages.17">
+			<trans-unit id="tx_leseohren.languages.17" approved="yes">
 				<source>Spanish</source>
 				<target>Spanisch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.languages.18" resname="tx_leseohren.languages.18">
+			<trans-unit id="tx_leseohren.languages.18" approved="yes">
 				<source>Other</source>
 				<target>Sonstige</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district" resname="tx_leseohren.district">
+			<trans-unit id="tx_leseohren.district" approved="yes">
 				<source>District</source>
 				<target>Stadtbezirk</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.description" resname="tx_leseohren.district.description">
+			<trans-unit id="tx_leseohren.district.description" approved="yes">
 				<source>District</source>
 				<target>Stadtbezirk in Stuttgart</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.1" resname="tx_leseohren.district.1">
+			<trans-unit id="tx_leseohren.district.1" approved="yes">
 				<source>Stuttgart-Ost</source>
 				<target>Stuttgart-Ost</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.2" resname="tx_leseohren.district.2">
+			<trans-unit id="tx_leseohren.district.2" approved="yes">
 				<source>Stuttgart-West</source>
 				<target>Stuttgart-West</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.3" resname="tx_leseohren.district.3">
+			<trans-unit id="tx_leseohren.district.3" approved="yes">
 				<source>Weilimdorf</source>
 				<target>Weilimdorf</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.4" resname="tx_leseohren.district.4">
+			<trans-unit id="tx_leseohren.district.4" approved="yes">
 				<source>Zuffenhausen</source>
 				<target>Zuffenhausen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.5" resname="tx_leseohren.district.5">
+			<trans-unit id="tx_leseohren.district.5" approved="yes">
 				<source>Bad Cannstatt</source>
 				<target>Bad Cannstatt</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.7" resname="tx_leseohren.district.7">
+			<trans-unit id="tx_leseohren.district.7" approved="yes">
 				<source>Feuerbach</source>
 				<target>Feuerbach</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.8" resname="tx_leseohren.district.8">
+			<trans-unit id="tx_leseohren.district.8" approved="yes">
 				<source>Stammheim</source>
 				<target>Stammheim</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.9" resname="tx_leseohren.district.9">
+			<trans-unit id="tx_leseohren.district.9" approved="yes">
 				<source>Degerloch</source>
 				<target>Degerloch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.11" resname="tx_leseohren.district.11">
+			<trans-unit id="tx_leseohren.district.11" approved="yes">
 				<source>Plieningen</source>
 				<target>Plieningen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.12" resname="tx_leseohren.district.12">
+			<trans-unit id="tx_leseohren.district.12" approved="yes">
 				<source>Münster</source>
 				<target>Münster</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.13" resname="tx_leseohren.district.13">
+			<trans-unit id="tx_leseohren.district.13" approved="yes">
 				<source>Botnang</source>
 				<target>Botnang</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.14" resname="tx_leseohren.district.14">
+			<trans-unit id="tx_leseohren.district.14" approved="yes">
 				<source>Möhringen</source>
 				<target>Möhringen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.15" resname="tx_leseohren.district.15">
+			<trans-unit id="tx_leseohren.district.15" approved="yes">
 				<source>Vaihingen</source>
 				<target>Vaihingen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.16" resname="tx_leseohren.district.16">
+			<trans-unit id="tx_leseohren.district.16" approved="yes">
 				<source>Untertürkheim</source>
 				<target>Untertürkheim</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.17" resname="tx_leseohren.district.17">
+			<trans-unit id="tx_leseohren.district.17" approved="yes">
 				<source>Stuttgart‐Süd</source>
 				<target>Stuttgart‐Süd</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.18" resname="tx_leseohren.district.18">
+			<trans-unit id="tx_leseohren.district.18" approved="yes">
 				<source>Stuttgart‐Mitte</source>
 				<target>Stuttgart‐Mitte</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.19" resname="tx_leseohren.district.19">
+			<trans-unit id="tx_leseohren.district.19" approved="yes">
 				<source>andere Orte</source>
 				<target>andere Orte</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.20" resname="tx_leseohren.district.20">
+			<trans-unit id="tx_leseohren.district.20" approved="yes">
 				<source>Stuttgart</source>
 				<target>Stuttgart</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.21" resname="tx_leseohren.district.21">
+			<trans-unit id="tx_leseohren.district.21" approved="yes">
 				<source>Stuttgart-Nord</source>
 				<target>Stuttgart-Nord</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.22" resname="tx_leseohren.district.22">
+			<trans-unit id="tx_leseohren.district.22" approved="yes">
 				<source>Sillenbuch</source>
 				<target>Sillenbuch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.25" resname="tx_leseohren.district.25">
+			<trans-unit id="tx_leseohren.district.25" approved="yes">
 				<source>Hedelfingen</source>
 				<target>Hedelfingen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.26" resname="tx_leseohren.district.26">
+			<trans-unit id="tx_leseohren.district.26" approved="yes">
 				<source>Wangen</source>
 				<target>Wangen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.32" resname="tx_leseohren.district.32">
+			<trans-unit id="tx_leseohren.district.32" approved="yes">
 				<source>Birkach</source>
 				<target>Birkach</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.33" resname="tx_leseohren.district.33">
+			<trans-unit id="tx_leseohren.district.33" approved="yes">
 				<source>Obertürkheim</source>
 				<target>Obertürkheim</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.34" resname="tx_leseohren.district.34">
+			<trans-unit id="tx_leseohren.district.34" approved="yes">
 				<source>Mühlhausen</source>
 				<target>Mühlhausen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.district.35" resname="tx_leseohren.district.35">
+			<trans-unit id="tx_leseohren.district.35" approved="yes">
 				<source>Neugereut</source>
 				<target>Neugereut</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person" resname="tx_leseohren_domain_model_person">
+			<trans-unit id="tx_leseohren_domain_model_person" approved="yes">
 				<source>Person</source>
 				<target>Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.description" resname="tx_leseohren_domain_model_person.description">
+			<trans-unit id="tx_leseohren_domain_model_person.description" approved="yes">
 				<source>Person like members, employes etc.</source>
 				<source>Person wie z.B. Vorlesepaten, Mitglieder usw.</source>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.personList" resname="tx_leseohren_domain_model_person.personList">
+			<trans-unit id="tx_leseohren_domain_model_person.personList" approved="yes">
 				<source>Person List</source>
 				<target>Personen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.newPerson" resname="tx_leseohren_domain_model_person.newPerson">
+			<trans-unit id="tx_leseohren_domain_model_person.newPerson" approved="yes">
 				<source>New Person</source>
 				<target>Neue Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.editPerson" resname="tx_leseohren_domain_model_person.editPerson">
+			<trans-unit id="tx_leseohren_domain_model_person.editPerson" approved="yes">
 				<source>Edit Person</source>
 				<target>Person bearbeiten</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.deleteConfirm" resname="tx_leseohren_domain_model_person.deleteConfirm">
+			<trans-unit id="tx_leseohren_domain_model_person.deleteConfirm" approved="yes">
 				<source>Do you really want to delete this person?</source>
 				<target>Soll diese Person wirklich gelöscht werden?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.firstname" resname="tx_leseohren_domain_model_person.firstname">
+			<trans-unit id="tx_leseohren_domain_model_person.firstname" approved="yes">
 				<source>Firstname</source>
 				<target>Vorname</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.firstname.description" resname="tx_leseohren_domain_model_person.firstname.description">
+			<trans-unit id="tx_leseohren_domain_model_person.firstname.description" approved="yes">
 				<source>Firstname of the person</source>
 				<target>Vorname der Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.lastname" resname="tx_leseohren_domain_model_person.lastname">
+			<trans-unit id="tx_leseohren_domain_model_person.lastname" approved="yes">
 				<source>Lastname</source>
 				<target>Nachname</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.lastname.description" resname="tx_leseohren_domain_model_person.lastname.description">
+			<trans-unit id="tx_leseohren_domain_model_person.lastname.description" approved="yes">
 				<source>Lastname of the person</source>
 				<target>Nachname der Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.title" resname="tx_leseohren_domain_model_person.title">
+			<trans-unit id="tx_leseohren_domain_model_person.title" approved="yes">
 				<source>Title</source>
 				<target>Titel</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.title.description" resname="tx_leseohren_domain_model_person.title.description">
+			<trans-unit id="tx_leseohren_domain_model_person.title.description" approved="yes">
 				<source>f.e. Dr., Prof., M.A., MdL, MdB</source>
 				<target>Wie Dr., Prof., M.A., MdL, MdB</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.job" resname="tx_leseohren_domain_model_person.job">
+			<trans-unit id="tx_leseohren_domain_model_person.job" approved="yes">
 				<source>Job</source>
 				<target>Beruf</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.job.description" resname="tx_leseohren_domain_model_person.job.description">
+			<trans-unit id="tx_leseohren_domain_model_person.job.description" approved="yes">
 				<source>What's her/his job?</source>
 				<target>Beruf der Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.gender" resname="tx_leseohren_domain_model_person.gender">
+			<trans-unit id="tx_leseohren_domain_model_person.gender" approved="yes">
 				<source>Gender</source>
 				<target>Geschlecht</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.gender.description" resname="tx_leseohren_domain_model_person.gender.description">
+			<trans-unit id="tx_leseohren_domain_model_person.gender.description" approved="yes">
 				<source>Gender of the person</source>
 				<target>Geschlecht der Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.gender.1" resname="tx_leseohren_domain_model_person.gender.1">
+			<trans-unit id="tx_leseohren_domain_model_person.gender.1" approved="yes">
 				<source>female</source>
 				<target>weiblich</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.gender.2" resname="tx_leseohren_domain_model_person.gender.2">
+			<trans-unit id="tx_leseohren_domain_model_person.gender.2" approved="yes">
 				<source>male</source>
 				<target>mänlich</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.gender.3" resname="tx_leseohren_domain_model_person.gender.3">
+			<trans-unit id="tx_leseohren_domain_model_person.gender.3" approved="yes">
 				<source>diverse</source>
 				<target>divers</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.birthday" resname="tx_leseohren_domain_model_person.birthday">
+			<trans-unit id="tx_leseohren_domain_model_person.birthday" approved="yes">
 				<source>Birthday</source>
 				<target>Geburtstag</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.birthday.description" resname="tx_leseohren_domain_model_person.birthday.description">
+			<trans-unit id="tx_leseohren_domain_model_person.birthday.description" approved="yes">
 				<source>f.e. 09.11.1970</source>
 				<target>z.B. 09.11.1970</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.age" resname="tx_leseohren_domain_model_person.age">
+			<trans-unit id="tx_leseohren_domain_model_person.age" approved="yes">
 				<source>Age</source>
 				<target>Alter</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.categories" resname="tx_leseohren_domain_model_person.categories">
+			<trans-unit id="tx_leseohren_domain_model_person.categories" approved="yes">
 				<source>Categories</source>
 				<target>Kategorien</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.categories.description" resname="tx_leseohren_domain_model_person.categories.description">
+			<trans-unit id="tx_leseohren_domain_model_person.categories.description" approved="yes">
 				<source>Press and hold cmd to select multiple</source>
 				<target>Drücken und halten Sie cmd, um mehrere auszuwählen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.birthday.description" resname="tx_leseohren_domain_model_person.birthday.description">
+			<trans-unit id="tx_leseohren_domain_model_person.birthday.description" approved="yes">
 				<source>When was the person born?</source>
 				<target>Wann wurde die Person geboren?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.street1" resname="tx_leseohren_domain_model_person.street1">
+			<trans-unit id="tx_leseohren_domain_model_person.street1" approved="yes">
 				<source>Street 1</source>
 				<target>Straße</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.street1.description" resname="tx_leseohren_domain_model_person.street1.description">
+			<trans-unit id="tx_leseohren_domain_model_person.street1.description" approved="yes">
 				<source>Street where the person lives</source>
 				<target>Straße wo die Person wohnt</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.street2" resname="tx_leseohren_domain_model_person.street2">
+			<trans-unit id="tx_leseohren_domain_model_person.street2" approved="yes">
 				<source>Street 2</source>
 				<target>Adresszusatz</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.street2.description" resname="tx_leseohren_domain_model_person.street2.description">
+			<trans-unit id="tx_leseohren_domain_model_person.street2.description" approved="yes">
 				<source>Additional street info</source>
 				<target>Zusätzliche Adressinformation</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.zip" resname="tx_leseohren_domain_model_person.zip">
+			<trans-unit id="tx_leseohren_domain_model_person.zip" approved="yes">
 				<source>Zip</source>
 				<target>PLZ</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.zip.description" resname="tx_leseohren_domain_model_person.zip.description">
+			<trans-unit id="tx_leseohren_domain_model_person.zip.description" approved="yes">
 				<source>Zip code</source>
 				<target>Postleitzahl</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.city" resname="tx_leseohren_domain_model_person.city">
+			<trans-unit id="tx_leseohren_domain_model_person.city" approved="yes">
 				<source>City</source>
 				<target>Ort</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.city.description" resname="tx_leseohren_domain_model_person.city.description">
+			<trans-unit id="tx_leseohren_domain_model_person.city.description" approved="yes">
 				<source>City</source>
 				<target>Ort in der die Person lebt</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.district" resname="tx_leseohren_domain_model_person.district">
+			<trans-unit id="tx_leseohren_domain_model_person.district" approved="yes">
 				<source>District</source>
 				<target>Stadtbezirk</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.district.description" resname="tx_leseohren_domain_model_person.district.description">
+			<trans-unit id="tx_leseohren_domain_model_person.district.description" approved="yes">
 				<source>District</source>
 				<target>Stadtbezirk in Stuttgart</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.phoneLandline" resname="tx_leseohren_domain_model_person.phoneLandline">
+			<trans-unit id="tx_leseohren_domain_model_person.phoneLandline" approved="yes">
 				<source>Phone Landline</source>
 				<target>Festnetz-Nr.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.phoneLandline.description" resname="tx_leseohren_domain_model_person.phoneLandline.description">
+			<trans-unit id="tx_leseohren_domain_model_person.phoneLandline.description" approved="yes">
 				<source>Phone Landline</source>
 				<target>Festnetz-Nummer</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.phoneMobile" resname="tx_leseohren_domain_model_person.phoneMobile">
+			<trans-unit id="tx_leseohren_domain_model_person.phoneMobile" approved="yes">
 				<source>Phone Mobile</source>
 				<target>Handy-Nr.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.phoneMobile.description" resname="tx_leseohren_domain_model_person.phoneMobile.description">
+			<trans-unit id="tx_leseohren_domain_model_person.phoneMobile.description" approved="yes">
 				<source>Phone Mobile</source>
 				<target>Mobilfunk-Nummer</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.email" resname="tx_leseohren_domain_model_person.email">
+			<trans-unit id="tx_leseohren_domain_model_person.email" approved="yes">
 				<source>E-Mail</source>
 				<target>E-Mail</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.email.description" resname="tx_leseohren_domain_model_person.email.description">
+			<trans-unit id="tx_leseohren_domain_model_person.email.description" approved="yes">
 				<source>E-Mail address</source>
 				<target>E-Mail-Adresse</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.whatsapp" resname="tx_leseohren_domain_model_person.whatsapp">
+			<trans-unit id="tx_leseohren_domain_model_person.whatsapp" approved="yes">
 				<source>Whatsapp</source>
 				<target>Whatsapp</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.whatsapp.description" resname="tx_leseohren_domain_model_person.whatsapp.description">
+			<trans-unit id="tx_leseohren_domain_model_person.whatsapp.description" approved="yes">
 				<source>Whatsapp number</source>
 				<target>Whatsapp-Nummer</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.awareness" resname="tx_leseohren_domain_model_person.awareness">
+			<trans-unit id="tx_leseohren_domain_model_person.awareness" approved="yes">
 				<source>Awareness</source>
 				<target>Aufmerksam durch</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.awareness.0" resname="tx_leseohren.awareness.0">
+			<trans-unit id="tx_leseohren.awareness.0" approved="yes">
 				<source>k.A.</source>
 				<target>k.A.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.awareness.1" resname="tx_leseohren.awareness.1">
+			<trans-unit id="tx_leseohren.awareness.1" approved="yes">
 				<source>Homepage</source>
 				<target>Homepage</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.awareness.2" resname="tx_leseohren.awareness.2">
+			<trans-unit id="tx_leseohren.awareness.2" approved="yes">
 				<source>Betterplace</source>
 				<target>Betterplace</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.awareness.3" resname="tx_leseohren.awareness.3">
+			<trans-unit id="tx_leseohren.awareness.3" approved="yes">
 				<source>Press</source>
 				<target>Presse</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.awareness.4" resname="tx_leseohren.awareness.4">
+			<trans-unit id="tx_leseohren.awareness.4" approved="yes">
 				<source>Flyer</source>
 				<target>Flyer</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.awareness.5" resname="tx_leseohren.awareness.5">
+			<trans-unit id="tx_leseohren.awareness.5" approved="yes">
 				<source>Reading campaign</source>
 				<target>Vorleseaktion</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.awareness.6" resname="tx_leseohren.awareness.6">
+			<trans-unit id="tx_leseohren.awareness.6" approved="yes">
 				<source>District office</source>
 				<target>Bezirksamt</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.awareness.7" resname="tx_leseohren.awareness.7">
+			<trans-unit id="tx_leseohren.awareness.7" approved="yes">
 				<source>Volunteer agency</source>
 				<target>Freiwilligenagentur</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.awareness.8" resname="tx_leseohren.awareness.8">
+			<trans-unit id="tx_leseohren.awareness.8" approved="yes">
 				<source>Word of mouth</source>
 				<target>Mundpropaganda</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.notes" resname="tx_leseohren_domain_model_person.notes">
+			<trans-unit id="tx_leseohren_domain_model_person.notes" approved="yes">
 				<source>Notes</source>
 				<target>Anmerkungen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.notes.description" resname="tx_leseohren_domain_model_person.notes.description">
+			<trans-unit id="tx_leseohren_domain_model_person.notes.description" approved="yes">
 				<source>Additional notes to this person</source>
 				<target>Zusätzliche Anmerkungen zu dieser Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.status" resname="tx_leseohren_domain_model_person.status">
+			<trans-unit id="tx_leseohren_domain_model_person.status" approved="yes">
 				<source>Status</source>
 				<target>Status</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.status.description" resname="tx_leseohren_domain_model_person.status.description">
+			<trans-unit id="tx_leseohren_domain_model_person.status.description" approved="yes">
 				<source>Current status of this person</source>
 				<target>Aktueller Status dieser Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.statuschangeDate" resname="tx_leseohren_domain_model_person.statuschangeDate">
+			<trans-unit id="tx_leseohren_domain_model_person.statuschangeDate" approved="yes">
 				<source>Status change date</source>
 				<target>Status wurde geändert am</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.statuschangeDate.description" resname="tx_leseohren_domain_model_person.statuschangeDate.description">
+			<trans-unit id="tx_leseohren_domain_model_person.statuschangeDate.description" approved="yes">
 				<source>When was this status changed?</source>
 				<target>Wann wurde der Status geändert?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.statusbeginDate" resname="tx_leseohren_domain_model_person.statusbeginDate">
+			<trans-unit id="tx_leseohren_domain_model_person.statusbeginDate" approved="yes">
 				<source>Statusbegin Date</source>
 				<target>Statusbeginn</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.statusbeginDate.description" resname="tx_leseohren_domain_model_person.statusbeginDate.description">
+			<trans-unit id="tx_leseohren_domain_model_person.statusbeginDate.description" approved="yes">
 				<source>When did this status begin?</source>
 				<target>Wann hat dieser Status begonnen?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.statusendDate" resname="tx_leseohren_domain_model_person.statusendDate">
+			<trans-unit id="tx_leseohren_domain_model_person.statusendDate" approved="yes">
 				<source>Statusend Date</source>
 				<target>Statusende</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.statusend_date.description" resname="tx_leseohren_domain_model_person.statusend_date.description">
+			<trans-unit id="tx_leseohren_domain_model_person.statusend_date.description" approved="yes">
 				<source>When will this status end?</source>
 				<target>Wann endet dieser Status</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.travel_options" resname="tx_leseohren_domain_model_person.travel_options">
+			<trans-unit id="tx_leseohren_domain_model_person.travel_options" approved="yes">
 				<source>Travel Options</source>
 				<target>Anreisemöglichkeiten</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.travel_options.description" resname="tx_leseohren_domain_model_person.travel_options.description">
+			<trans-unit id="tx_leseohren_domain_model_person.travel_options.description" approved="yes">
 				<source>How can this person reach the location?</source>
 				<target>Wie kann diese Person den Einsatzort erreichen?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.languages" resname="tx_leseohren_domain_model_person.languages">
+			<trans-unit id="tx_leseohren_domain_model_person.languages" approved="yes">
 				<source>Languages</source>
 				<target>Sprachen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.languages.description" resname="tx_leseohren_domain_model_person.languages.description">
+			<trans-unit id="tx_leseohren_domain_model_person.languages.description" approved="yes">
 				<source>Which languages is this person fluent in?</source>
 				<target>Welche Sprachen spricht diese Person?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.preferences" resname="tx_leseohren.preferences">
+			<trans-unit id="tx_leseohren.preferences" approved="yes">
 				<source>Preferences</source>
 				<target>Präferenzen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.preference_agegroup" resname="tx_leseohren_domain_model_person.preference_agegroup">
+			<trans-unit id="tx_leseohren_domain_model_person.preference_agegroup" approved="yes">
 				<source>Preference Agegroup</source>
 				<target>Präferierte Altersgruppe</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.preference_agegroup.description" resname="tx_leseohren_domain_model_person.preference_agegroup.description">
+			<trans-unit id="tx_leseohren_domain_model_person.preference_agegroup.description" approved="yes">
 				<source>Preference Agegroup</source>
 				<target>Zu welchen Altersgruppen möchte diese Person vorlesen?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.preference_organization_type" resname="tx_leseohren_domain_model_person.preference_organization_type">
+			<trans-unit id="tx_leseohren_domain_model_person.preference_organization_type" approved="yes">
 				<source>Preference Organization Type</source>
 				<target>Präferierter Organisationstyp</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.preference_organization_type.description" resname="tx_leseohren_domain_model_person.preference_organization_type.description">
+			<trans-unit id="tx_leseohren_domain_model_person.preference_organization_type.description" approved="yes">
 				<source>Preference Organization Type</source>
 				<target>In welchen Organisationstypen möchte diese Person vorlesen?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.membership" resname="tx_leseohren.membership">
+			<trans-unit id="tx_leseohren.membership" approved="yes">
 				<source>Membership</source>
 				<target>Mitgliedschaft</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.membership_type" resname="tx_leseohren_domain_model_person.membership_type">
+			<trans-unit id="tx_leseohren_domain_model_person.membership_type" approved="yes">
 				<source>Membership Type</source>
 				<target>Art der Mitgliedschaft</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.membershipType.0" resname="tx_leseohren.membershipType.0">
+			<trans-unit id="tx_leseohren.membershipType.0" approved="yes">
 				<source>k.A.</source>
 				<target>k.A.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.membershipType.1" resname="tx_leseohren.membershipType.1">
+			<trans-unit id="tx_leseohren.membershipType.1" approved="yes">
 				<source>private Person</source>
 				<target>Privatperson</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.membershipType.2" resname="tx_leseohren.membershipType.2">
+			<trans-unit id="tx_leseohren.membershipType.2" approved="yes">
 				<source>Pupil/Student</source>
 				<target>Schüler/Student</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.membershipType.3" resname="tx_leseohren.membershipType.3">
+			<trans-unit id="tx_leseohren.membershipType.3" approved="yes">
 				<source>Institution</source>
 				<target>Institution</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.membershipType.4" resname="tx_leseohren.membershipType.4">
+			<trans-unit id="tx_leseohren.membershipType.4" approved="yes">
 				<source>Unternehmen</source>
 				<target>Unternehmen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.membershipType.5" resname="tx_leseohren.membershipType.5">
+			<trans-unit id="tx_leseohren.membershipType.5" approved="yes">
 				<source>Investor</source>
 				<target>Investor</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.membership_fee" resname="tx_leseohren_domain_model_person.membership_fee">
+			<trans-unit id="tx_leseohren_domain_model_person.membership_fee" approved="yes">
 				<source>Membership Fee</source>
 				<target>Mitgliedschaftsbeitrag</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.payment_method" resname="tx_leseohren_domain_model_person.payment_method">
+			<trans-unit id="tx_leseohren_domain_model_person.payment_method" approved="yes">
 				<source>Payment Method</source>
 				<target>Zahlungsmethode</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.payment_method.description" resname="tx_leseohren_domain_model_person.payment_method.description">
+			<trans-unit id="tx_leseohren_domain_model_person.payment_method.description" approved="yes">
 				<source>How does this person want to pay?</source>
 				<target>Wie möchte diese Person zahlen?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.iban" resname="tx_leseohren_domain_model_person.iban">
+			<trans-unit id="tx_leseohren_domain_model_person.iban" approved="yes">
 				<source>IBAN</source>
 				<target>IBAN</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.iban.description" resname="tx_leseohren_domain_model_person.iban.description">
+			<trans-unit id="tx_leseohren_domain_model_person.iban.description" approved="yes">
 				<source>IBAN number</source>
 				<target>IBAN-Nummer</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.swift" resname="tx_leseohren_domain_model_person.swift">
+			<trans-unit id="tx_leseohren_domain_model_person.swift" approved="yes">
 				<source>Swift/BIC</source>
 				<target>Swift/BIC</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.swift.description" resname="tx_leseohren_domain_model_person.swift.description">
+			<trans-unit id="tx_leseohren_domain_model_person.swift.description" approved="yes">
 				<source>Swift</source>
 				<target>Swift/BIC-Code</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.account_owner" resname="tx_leseohren_domain_model_person.account_owner">
+			<trans-unit id="tx_leseohren_domain_model_person.account_owner" approved="yes">
 				<source>Account Owner</source>
 				<target>Kontoinhaber</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.account_owner.description" resname="tx_leseohren_domain_model_person.account_owner.description">
+			<trans-unit id="tx_leseohren_domain_model_person.account_owner.description" approved="yes">
 				<source>Who is the owner of the bank account?</source>
 				<target>Wer ist der Kontoinhaber?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.bankname" resname="tx_leseohren_domain_model_person.bankname">
+			<trans-unit id="tx_leseohren_domain_model_person.bankname" approved="yes">
 				<source>Bankname</source>
 				<target>Name der Bank</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.bankname.description" resname="tx_leseohren_domain_model_person.bankname.description">
+			<trans-unit id="tx_leseohren_domain_model_person.bankname.description" approved="yes">
 				<source>Name of the bank</source>
 				<target>Name der Bank</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.paypal" resname="tx_leseohren_domain_model_person.paypal">
+			<trans-unit id="tx_leseohren_domain_model_person.paypal" approved="yes">
 				<source>Paypal</source>
 				<target>Paypal Nummer</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.paypal.description" resname="tx_leseohren_domain_model_person.paypal.description">
+			<trans-unit id="tx_leseohren_domain_model_person.paypal.description" approved="yes">
 				<source>Paypal number</source>
 				<target>Paypal-Nummer</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.files" resname="tx_leseohren_domain_model_person.files">
+			<trans-unit id="tx_leseohren_domain_model_person.files" approved="yes">
 				<source>Files</source>
 				<target>Dateien</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis">
+			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis" approved="yes">
 				<source>Certificate of good conduct</source>
 				<target>Führungszeugnis</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" resname="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description">
+			<trans-unit id="tx_leseohren_domain_model_person.file_fuehrungszeugnis.description" approved="yes">
 				<source>Certificate of good conduct</source>
 				<target>Nur pdf,doc,xls Dateien erlaubt</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date" resname="tx_leseohren_domain_model_person.fuehrungszeugnis_date">
+			<trans-unit id="tx_leseohren_domain_model_person.fuehrungszeugnis_date" approved="yes">
 				<source>Führungszeugnis date</source>
 				<target>Führungszeugnis-Datum</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" resname="tx_leseohren_domain_model_person.file_mandat">
+			<trans-unit id="tx_leseohren_domain_model_person.file_mandat" approved="yes">
 				<source>Mandate</source>
 				<target>Mandat</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.file_mandat.description" resname="tx_leseohren_domain_model_person.file_mandat.description">
+			<trans-unit id="tx_leseohren_domain_model_person.file_mandat.description" approved="yes">
 				<source>Writen mandate</source>
 				<target>Schriftliches Mandat</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.file_others" resname="tx_leseohren_domain_model_person.file_others">
+			<trans-unit id="tx_leseohren_domain_model_person.file_others" approved="yes">
 				<source>Other files</source>
 				<target>Sonstige Dateien</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.file_others.description" resname="tx_leseohren_domain_model_person.file_others.description">
+			<trans-unit id="tx_leseohren_domain_model_person.file_others.description" approved="yes">
 				<source>Other files belonging to this person</source>
 				<target>Sonstige Dateien zu dieser Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.donations" resname="tx_leseohren_domain_model_person.donations">
+			<trans-unit id="tx_leseohren_domain_model_person.donations" approved="yes">
 				<source>Donations</source>
 				<target>Geschenke</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.donations.description" resname="tx_leseohren_domain_model_person.donations.description">
+			<trans-unit id="tx_leseohren_domain_model_person.donations.description" approved="yes">
 				<source>Donations to this person</source>
 				<target>Geschenke an diese Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.blackboards" resname="tx_leseohren_domain_model_person.blackboards">
+			<trans-unit id="tx_leseohren_domain_model_person.blackboards" approved="yes">
 				<source>Notice boards</source>
 				<target>Schwarze Bretter</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_person.blackboards.description" resname="tx_leseohren_domain_model_person.blackboards.description">
+			<trans-unit id="tx_leseohren_domain_model_person.blackboards.description" approved="yes">
 				<source>Notices of this person</source>
 				<target>Schwarze Bretter dieser Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization" resname="tx_leseohren_domain_model_organization">
+			<trans-unit id="tx_leseohren_domain_model_organization" approved="yes">
 				<source>Organization</source>
 				<target>Organisation</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organizations" resname="tx_leseohren_domain_model_organization">
+			<trans-unit id="tx_leseohren_domain_model_organizations" approved="yes">
 				<source>Organizations</source>
 				<target>Organisationen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.description" resname="tx_leseohren_domain_model_organization.description">
+			<trans-unit id="tx_leseohren_domain_model_organization.description" approved="yes">
 				<source>Organisations</source>
 				<target>Organisationen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.newOrganization" resname="tx_leseohren_domain_model_organization.newOrganization">
+			<trans-unit id="tx_leseohren_domain_model_organization.newOrganization" approved="yes">
 				<source>New Organization</source>
 				<target>Neue Organisation</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.editOrganization" resname="tx_leseohren_domain_model_organization.editOrganization">
+			<trans-unit id="tx_leseohren_domain_model_organization.editOrganization" approved="yes">
 				<source>Edit Organization</source>
 				<target>Organisation bearbeiten</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.deleteConfirm" resname="tx_leseohren_domain_model_person.deleteConfirm">
+			<trans-unit id="tx_leseohren_domain_model_organization.deleteConfirm" approved="yes">
 				<source>Do you really want to delete this organization?</source>
 				<target>Soll diese Organisation wirklich gelöscht werden?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.name" resname="tx_leseohren_domain_model_organization.name">
+			<trans-unit id="tx_leseohren_domain_model_organization.name" approved="yes">
 				<source>Name</source>
 				<target>Name</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.name.description" resname="tx_leseohren_domain_model_organization.name.description">
+			<trans-unit id="tx_leseohren_domain_model_organization.name.description" approved="yes">
 				<source>Name of the organisation</source>
 				<target>Name der Organisation</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.categories" resname="tx_leseohren_domain_model_organization.categories">
+			<trans-unit id="tx_leseohren_domain_model_organization.categories" approved="yes">
 				<source>Categories</source>
 				<target>Kategorien</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.categories.description" resname="tx_leseohren_domain_model_organization.categories.description">
+			<trans-unit id="tx_leseohren_domain_model_organization.categories.description" approved="yes">
 				<source>Press and hold cmd to select multiple</source>
 				<target>Drücken und halten Sie cmd, um mehrere auszuwählen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.street1" resname="tx_leseohren_domain_model_organization.street1">
+			<trans-unit id="tx_leseohren_domain_model_organization.street1" approved="yes">
 				<source>Street</source>
 				<target>Straße</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.street2" resname="tx_leseohren_domain_model_organization.street2">
+			<trans-unit id="tx_leseohren_domain_model_organization.street2" approved="yes">
 				<source>Street 2</source>
 				<target>Adresszusatz</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.zip" resname="tx_leseohren_domain_model_organization.zip">
+			<trans-unit id="tx_leseohren_domain_model_organization.zip" approved="yes">
 				<source>Zip</source>
 				<target>PLZ</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.city" resname="tx_leseohren_domain_model_organization.city">
+			<trans-unit id="tx_leseohren_domain_model_organization.city" approved="yes">
 				<source>City</source>
 				<target>Ort</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.district" resname="tx_leseohren_domain_model_organization.district">
+			<trans-unit id="tx_leseohren_domain_model_organization.district" approved="yes">
 				<source>District</source>
 				<target>Stadtbezirk</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.district" resname="tx_leseohren_domain_model_organization.district">
-				<source>District</source>
-				<target>Stadtbezirk</target>
-			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.phone1" resname="tx_leseohren_domain_model_organization.phone1">
+			<trans-unit id="tx_leseohren_domain_model_organization.phone1" approved="yes">
 				<source>Phone 1</source>
 				<target>Telefon 1</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.phone2" resname="tx_leseohren_domain_model_organization.phone2">
+			<trans-unit id="tx_leseohren_domain_model_organization.phone2" approved="yes">
 				<source>Phone 2</source>
 				<target>Telefon 2</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.email" resname="tx_leseohren_domain_model_organization.email">
+			<trans-unit id="tx_leseohren_domain_model_organization.email" approved="yes">
 				<source>E-Mail</source>
 				<target>E-Mail</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.whatsapp" resname="tx_leseohren_domain_model_organization.whatsapp">
+			<trans-unit id="tx_leseohren_domain_model_organization.whatsapp" approved="yes">
 				<source>WhatsApp</source>
 				<target>WhatsApp</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.contact_person" resname="tx_leseohren_domain_model_organization.contact_person">
+			<trans-unit id="tx_leseohren_domain_model_organization.contact_person" approved="yes">
 				<source>Contact Person</source>
 				<target>Kontaktperson</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.contact_person.description" resname="tx_leseohren_domain_model_organization.contact_person.description">
+			<trans-unit id="tx_leseohren_domain_model_organization.contact_person.description" approved="yes">
 				<source>Who is the contact person?</source>
 				<target>Wer ist die Kontaktperson?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.readers" resname="tx_leseohren_domain_model_organization.readers">
+			<trans-unit id="tx_leseohren_domain_model_organization.readers" approved="yes">
 				<source>Reading mentors</source>
 				<target>Vorlesepaten</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.openingHours" resname="tx_leseohren_domain_model_organization.openingHours">
+			<trans-unit id="tx_leseohren_domain_model_organization.openingHours" approved="yes">
 				<source>Opening hours</source>
 				<target>Öffnungszeiten</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.notes" resname="tx_leseohren_domain_model_organization.notes">
+			<trans-unit id="tx_leseohren_domain_model_organization.notes" approved="yes">
 				<source>Notes</source>
 				<target>Anmerkungen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_organization.url" resname="tx_leseohren_domain_model_organization.url">
+			<trans-unit id="tx_leseohren_domain_model_organization.url" approved="yes">
 				<source>URL</source>
 				<target>URL</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_gift" resname="tx_leseohren_domain_model_gift">
+			<trans-unit id="tx_leseohren_domain_model_gift" approved="yes">
 				<source>Gift</source>
 				<target>Geschenk</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_gift.description" resname="tx_leseohren_domain_model_gift.description">
+			<trans-unit id="tx_leseohren_domain_model_gift.description" approved="yes">
 				<source>What is the gift?</source>
 				<target>Was ist das Geschenk?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_gift.deleteConfirm" resname="tx_leseohren_domain_model_gift.deleteConfirm">
+			<trans-unit id="tx_leseohren_domain_model_gift.deleteConfirm" approved="yes">
 				<source>Do you really want to delete this gift?</source>
 				<target>Soll dieses Geschenk wirklich gelöscht werden?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_gift.title" resname="tx_leseohren_domain_model_gift.title">
+			<trans-unit id="tx_leseohren_domain_model_gift.title" approved="yes">
 				<source>Title</source>
 				<target>Bezeichnung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_gift.title.description" resname="tx_leseohren_domain_model_gift.title.description">
+			<trans-unit id="tx_leseohren_domain_model_gift.title.description" approved="yes">
 				<source>Title of the gift</source>
 				<target>Bezeichnung des Geschenks</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_gift.description.description" resname="tx_leseohren_domain_model_gift.description.description">
+			<trans-unit id="tx_leseohren_domain_model_gift.description.description" approved="yes">
 				<source>Description</source>
 				<target>Beschreibung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present" resname="tx_leseohren_domain_model_present">
+			<trans-unit id="tx_leseohren_domain_model_present" approved="yes">
 				<source>Donations</source>
 				<target>Schenkungen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present.description" resname="tx_leseohren_domain_model_present.description">
+			<trans-unit id="tx_leseohren_domain_model_present.description" approved="yes">
 				<source>Donations to this person</source>
 				<target>Schenkungen an diese Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present.newPresent" resname="tx_leseohren_domain_model_present.newPresent">
+			<trans-unit id="tx_leseohren_domain_model_present.newPresent" approved="yes">
 				<source>New donation</source>
 				<target>Neue Schenkung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present.deleteConfirm" resname="tx_leseohren_domain_model_present.deleteConfirm">
+			<trans-unit id="tx_leseohren_domain_model_present.deleteConfirm" approved="yes">
 				<source>Do you really want to delete this present?</source>
 				<target>Soll diese Schenkung wirklich gelöscht werden?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present.present_to" resname="tx_leseohren_domain_model_present.present_to">
+			<trans-unit id="tx_leseohren_domain_model_present.present_to" approved="yes">
 				<source>Donation to</source>
 				<target>Schenkung an</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present.gift_date" resname="tx_leseohren_domain_model_present.gift_date">
+			<trans-unit id="tx_leseohren_domain_model_present.gift_date" approved="yes">
 				<source>Gift Date</source>
 				<target>Schenkungsdatum</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present.gift_date.description" resname="tx_leseohren_domain_model_present.gift_date.description">
+			<trans-unit id="tx_leseohren_domain_model_present.gift_date.description" approved="yes">
 				<source>When was the gift presented to the person?</source>
 				<target>Wann wurde das Geschenk der Person überreicht?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present.given" resname="tx_leseohren_domain_model_present.given">
+			<trans-unit id="tx_leseohren_domain_model_present.given" approved="yes">
 				<source>Given</source>
 				<target>Überreicht</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present.given.description" resname="tx_leseohren_domain_model_present.given.description">
+			<trans-unit id="tx_leseohren_domain_model_present.given.description" approved="yes">
 				<source>Was the gift already given to the person?</source>
 				<target>Wurde das Geschenk der Person bereits überreicht?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present.gift" resname="tx_leseohren_domain_model_present.gift">
+			<trans-unit id="tx_leseohren_domain_model_present.gift" approved="yes">
 				<source>Gift</source>
 				<target>Geschenk</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_present.gift.description" resname="tx_leseohren_domain_model_present.gift.description">
+			<trans-unit id="tx_leseohren_domain_model_present.gift.description" approved="yes">
 				<source>Gift for this person</source>
 				<target>Geschenk für diese Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard" resname="tx_leseohren_domain_model_blackboard">
+			<trans-unit id="tx_leseohren_domain_model_blackboard" approved="yes">
 				<source>Notice board</source>
 				<target>Schwarzes Brett</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.description" resname="tx_leseohren_domain_model_blackboard.description">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.description" approved="yes">
 				<source>Notice board of this person</source>
 				<target>Schwarzes Brett dieser Person</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.newBlackboard" resname="tx_leseohren_domain_model_blackboard.newBlackboard">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.newBlackboard" approved="yes">
 				<source>New notice board</source>
 				<target>Neues Schwarzes Brett</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.edit_blackboard" resname="tx_leseohren_domain_model_blackboard.edit_blackboard">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.edit_blackboard" approved="yes">
 				<source>Edit Blackboard</source>
 				<target>Schwarzes Brett bearbeiten</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.deleteConfirm" resname="tx_leseohren_domain_model_blackboard.deleteConfirm">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.deleteConfirm" approved="yes">
 				<source>Do you really want to delete the Notice Board?</source>
 				<target>Soll dieses Schwarze Brett wirklich gelöscht werden?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.author" resname="tx_leseohren_domain_model_blackboard.author">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.author" approved="yes">
 				<source>Author</source>
 				<target>VerfasserInn</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.title" resname="tx_leseohren_domain_model_blackboard.title">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.title" approved="yes">
 				<source>Title</source>
 				<target>Titel</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.title.description" resname="tx_leseohren_domain_model_blackboard.title.description">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.title.description" approved="yes">
 				<source>Title of the notice board</source>
 				<target>Titel des Schwarzen Bretts</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.description.description" resname="tx_leseohren_domain_model_blackboard.description.description">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.description.description" approved="yes">
 				<source>Content</source>
 				<target>Inhalt</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.start_date" resname="tx_leseohren_domain_model_blackboard.start_date">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.start_date" approved="yes">
 				<source>Start Date</source>
 				<target>Start-Datum</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.start_date.description" resname="tx_leseohren_domain_model_blackboard.start_date.description">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.start_date.description" approved="yes">
 				<source>Start date for this notice board</source>
 				<target>Startdatum für dieses Schwarze Brett</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.end_date" resname="tx_leseohren_domain_model_blackboard.end_date">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.end_date" approved="yes">
 				<source>End Date</source>
 				<target>End-Datum</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_blackboard.end_date.description" resname="tx_leseohren_domain_model_blackboard.end_date.description">
+			<trans-unit id="tx_leseohren_domain_model_blackboard.end_date.description" approved="yes">
 				<source>End date for this notice board</source>
 				<target>Enddatum für dieses Schwarze Brett</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event" resname="tx_leseohren_domain_model_event">
+			<trans-unit id="tx_leseohren_domain_model_event" approved="yes">
 				<source>Event</source>
 				<target>Veranstaltung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_events" resname="tx_leseohren_domain_model_events">
+			<trans-unit id="tx_leseohren_domain_model_events" approved="yes">
 				<source>Events</source>
 				<target>Veranstaltungen</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.description" resname="tx_leseohren_domain_model_event.description">
+			<trans-unit id="tx_leseohren_domain_model_event.description" approved="yes">
 				<source>Description</source>
 				<target>Beschreibung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.newEvent" resname="tx_leseohren_domain_model_event.newEvent">
+			<trans-unit id="tx_leseohren_domain_model_event.newEvent" approved="yes">
 				<source>New Event</source>
 				<target>Neue Veranstaltung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.deleteConfirm" resname="tx_leseohren_domain_model_event.deleteConfirm">
+			<trans-unit id="tx_leseohren_domain_model_event.deleteConfirm" approved="yes">
 				<source>Do you really want to delete this event?</source>
 				<target>Soll diese Veranstaltung wirklich gelöscht werden?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.description.description" resname="tx_leseohren_domain_model_event.description.description">
+			<trans-unit id="tx_leseohren_domain_model_event.description.description" approved="yes">
 				<source>Events like birthdays</source>
 				<target>Veranstaltungen wie Fortbildungen, Vorlesungen, Geburtstage etc.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.title" resname="tx_leseohren_domain_model_event.title">
+			<trans-unit id="tx_leseohren_domain_model_event.title" approved="yes">
 				<source>Title</source>
 				<target>Titel</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.title.description" resname="tx_leseohren_domain_model_event.title.description">
+			<trans-unit id="tx_leseohren_domain_model_event.title.description" approved="yes">
 				<source>Title of the event</source>
 				<target>Titel der Veranstaltung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.categories" resname="tx_leseohren_domain_model_event.categories">
+			<trans-unit id="tx_leseohren_domain_model_event.categories" approved="yes">
 				<source>Categories</source>
 				<target>Kategorien</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.categories.description" resname="tx_leseohren_domain_model_event.categories.description">
+			<trans-unit id="tx_leseohren_domain_model_event.categories.description" approved="yes">
 				<source>Press and hold cmd-key to select multiple.</source>
 				<target>Drücke und halte cmd-Taste um mehrere auszuwählen.</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.description.description" resname="tx_leseohren_domain_model_event.description.description">
+			<trans-unit id="tx_leseohren_domain_model_event.description.description" approved="yes">
 				<source>Description</source>
 				<target>Beschreibung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.start_date" resname="tx_leseohren_domain_model_event.start_date">
+			<trans-unit id="tx_leseohren_domain_model_event.start_date" approved="yes">
 				<source>Start Date</source>
 				<target>Start-Datum</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.start_date.description" resname="tx_leseohren_domain_model_event.start_date.description">
+			<trans-unit id="tx_leseohren_domain_model_event.start_date.description" approved="yes">
 				<source>Start date of the event</source>
 				<target>Startdatum der Veranstaltung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.end_date" resname="tx_leseohren_domain_model_event.end_date">
+			<trans-unit id="tx_leseohren_domain_model_event.end_date" approved="yes">
 				<source>End Date</source>
 				<target>End-Datum</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.end_date.description" resname="tx_leseohren_domain_model_event.end_date.description">
+			<trans-unit id="tx_leseohren_domain_model_event.end_date.description" approved="yes">
 				<source>End date of the event</source>
 				<target>Enddatum der Veranstaltung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.location" resname="tx_leseohren_domain_model_event.location">
+			<trans-unit id="tx_leseohren_domain_model_event.location" approved="yes">
 				<source>Location</source>
 				<target>Veranstaltungsort</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.location.description" resname="tx_leseohren_domain_model_event.location.description">
+			<trans-unit id="tx_leseohren_domain_model_event.location.description" approved="yes">
 				<source>Location of the event</source>
 				<target>Ort der Veranstaltung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.participants" resname="tx_leseohren_domain_model_event.participants">
+			<trans-unit id="tx_leseohren_domain_model_event.participants" approved="yes">
 				<source>Participants</source>
 				<target>Teilnehmer</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.participants.description" resname="tx_leseohren_domain_model_event.participants.description">
+			<trans-unit id="tx_leseohren_domain_model_event.participants.description" approved="yes">
 				<source>Who takes part in this event?</source>
 				<target>Wer nimmt an dieser Veranstaltung teil?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants" resname="tx_leseohren_domain_model_event.maxparticipants">
+			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants" approved="yes">
 				<source>Max. Participants</source>
 				<target>Max. Teilnehmeranzahl</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants.description" resname="tx_leseohren_domain_model_event.maxparticipants.description">
+			<trans-unit id="tx_leseohren_domain_model_event.maxparticipants.description" approved="yes">
 				<source>How many people can take part?</source>
 				<target>Wieviele können teilnehmen?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.title" resname="tx_leseohren_domain_model_event.reminder_sent.title">
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.title" approved="yes">
 				<source>Reminder</source>
 				<target>Erinnerung</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent" resname="tx_leseohren_domain_model_event.reminder_sent">
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent" approved="yes">
 				<source>Reminder mail</source>
 				<target>Erinnerungs-Mail</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.description" resname="tx_leseohren_domain_model_event.reminder_sent.description">
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.description" approved="yes">
 				<source>Has the reminder e-mail been sent?</source>
 				<target>Wurde die Erinnerungs-Mail verschickt?</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.sent" resname="tx_leseohren_domain_model_event.reminder_sent.sent">
+			<trans-unit id="tx_leseohren_domain_model_event.reminder_sent.sent" approved="yes">
 				<source>sent</source>
 				<target>verschickt</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_holidays.daystochristmas" resname="tx_leseohren_holidays.daystochristmas">
+			<trans-unit id="tx_leseohren_holidays.daystochristmas" approved="yes">
 				<source>days until Christmas</source>
 				<target>Tage bis Weihnachten</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren_holidays.daystoeaster" resname="tx_leseohren_holidays.daystoeaster">
+			<trans-unit id="tx_leseohren_holidays.daystoeaster" approved="yes">
 				<source>days until Easter</source>
 				<target>Tage bis Ostern</target>
 			</trans-unit>
-			<trans-unit id="tx_leseohren.speaker" resname="tx_leseohren.speaker">
+			<trans-unit id="tx_leseohren.speaker" approved="yes">
 				<source>Speaker</source>
 				<target>Referent</target>
+			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.mandatsreferenz" approved="yes">
+                <source>Mandate Reference</source>
+				<target>Mandatsreferenz</target>
 			</trans-unit>
 		</body>
 	</file>

@@ -231,6 +231,13 @@ class Person extends AbstractEntity
     protected $paymentMethod = 0;
 
     /**
+     * mandatsreferenz
+     *
+     * @var string
+     */
+    protected $mandatsreferenz = '';
+
+    /**
      * iban
      *
      * @var string
@@ -968,6 +975,26 @@ class Person extends AbstractEntity
     public function setPaymentMethod(int $paymentMethod): void
     {
         $this->paymentMethod = $paymentMethod;
+    }
+
+    /**
+     * Returns the mandatsreferenz
+     *
+     * @return string
+     */
+    public function getMandatsreferenz(): string
+    {
+        return $this->mandatsreferenz;
+    }
+
+    /**
+     * Sets the mandatsreferenz
+     *
+     * @return void
+     */
+    public function setMandatsreferenz(string $mandatsreferenz): void
+    {
+        $this->mandatsreferenz = $mandatsreferenz;
     }
 
     /**

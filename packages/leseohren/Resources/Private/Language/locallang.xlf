@@ -865,6 +865,9 @@
 			<trans-unit id="tx_leseohren_holidays.daystoeaster" resname="tx_leseohren_holidays.daystoeaster">
 				<source>days until Easter</source>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.mandatsreferenz">
+				<source>Mandate Reference</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -33,6 +33,20 @@
                     <f:defaultCase></f:defaultCase>
                 </f:switch>
                 </br>
+                <strong>
+                    <f:translate key="tx_leseohren_domain_model_person.mandatsreferenz" />:
+                </strong><br />
+                <f:if condition="{person.mandatsreferenz}">
+                    <f:then>
+                        {person.mandatsreferenz}
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{person.paymentMethod} == 1 OR {person.paymentMethod} == 3">
+                            <span class="text-danger">Fehlt!</span>
+                        </f:if>
+                    </f:else>
+                </f:if>
+                </br>
                 <f:if condition="{person.paymentMethod} == 1">
                     <f:then>
                         <strong>
