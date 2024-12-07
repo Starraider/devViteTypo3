@@ -1171,6 +1171,10 @@
                 <source>Mandate Reference</source>
 				<target>Mandatsreferenz</target>
 			</trans-unit>
+			<trans-unit id="tx_leseohren_domain_model_person.memberorg" approved="yes">
+				<source>Member Organization</source>
+				<target>Mitgliedsorganisation</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

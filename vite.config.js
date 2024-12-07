@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import autoOrigin from 'vite-plugin-auto-origin'
+import liveReload from 'vite-plugin-live-reload'
 
 // TYPO3 root path (relative to this config file)
 const VITE_TYPO3_ROOT = './'
@@ -28,6 +29,9 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
-  plugins: [autoOrigin()],
+  plugins: [
+    autoOrigin(),
+    liveReload('packages/**/*.php', 'packages/**/*.html'),
+  ],
   publicDir: false,
 })

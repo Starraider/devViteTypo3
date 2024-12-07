@@ -273,6 +273,13 @@ class Person extends AbstractEntity
     protected $paypal = '';
 
     /**
+     * memberorg
+     *
+     * @var string
+     */
+    protected $memberorg = '';
+
+    /**
      * fileFuehrungszeugnis
      *
      * @var FileReference
@@ -1095,6 +1102,27 @@ class Person extends AbstractEntity
     public function setPaypal(string $paypal): void
     {
         $this->paypal = $paypal;
+    }
+
+    /**
+     * Returns the memberorg
+     *
+     * @return string
+     */
+    public function getMemberorg(): string
+    {
+        return $this->memberorg;
+    }
+
+    /**
+     * Sets the memberorg
+     *
+     * @param string $memberorg
+     * @return void
+     */
+    public function setMemberorg(string $memberorg): void
+    {
+        $this->memberorg = $memberorg;
     }
 
     /**

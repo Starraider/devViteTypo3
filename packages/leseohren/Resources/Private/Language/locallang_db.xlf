@@ -319,22 +319,22 @@
 				<source>Phone2</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.email" resname="tx_leseohren_domain_model_organization.email">
-				<source>Email</source>
+				<source>E-Mail</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.email.description" resname="tx_leseohren_domain_model_organization.email.description">
-				<source>Email</source>
+				<source>E-Mail address</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.url" resname="tx_leseohren_domain_model_organization.url">
 				<source>Url</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.url.description" resname="tx_leseohren_domain_model_organization.url.description">
-				<source>Url</source>
+				<source>Website of the organisation</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.whatsapp" resname="tx_leseohren_domain_model_organization.whatsapp">
 				<source>Whatsapp</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.whatsapp.description" resname="tx_leseohren_domain_model_organization.whatsapp.description">
-				<source>Whatsapp</source>
+				<source>Whatsapp number</source>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.opening_hours" resname="tx_leseohren_domain_model_organization.opening_hours">
 				<source>Opening Hours</source>
@@ -641,6 +641,12 @@
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_person.paymentPalette.description">
 				<source>Payment</source>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_person.memberorg" approved="yes">
+				<source>Member Organisation</source>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_person.memberorg.description" approved="yes">
+				<source>The name of the organisation, which is a member</source>
 			</trans-unit>
 		</body>
 	</file>

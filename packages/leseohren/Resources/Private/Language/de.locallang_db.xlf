@@ -403,19 +403,24 @@
 				<target>E-Mail</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.email.description" approved="yes">
-				<source></source>
+				<source>E-Mail address</source>
+                <target>E-Mail-Adresse</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.url" approved="yes">
 				<source>Url</source>
+                <target>Url</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.url.description" approved="yes">
-				<source>Url</source>
+				<source>Website of the organisation</source>
+                <target>Website der Organisation</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.whatsapp" approved="yes">
 				<source>Whatsapp</source>
+                <target>Whatsapp</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.whatsapp.description" approved="yes">
-				<source>Whatsapp</source>
+				<source>Whatsapp number</source>
+                <target>Whatsapp-Nummer</target>
 			</trans-unit>
 			<trans-unit id="tx_leseohren_domain_model_organization.opening_hours" approved="yes">
 				<source>Opening Hours</source>
@@ -783,6 +788,14 @@
 			<trans-unit id="tx_leseohren_domain_model_person.paymentPalette.description" approved="yes">
 				<source>Payment</source>
 				<target>Zahlungsinformationen</target>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_person.memberorg" approved="yes">
+				<source>Member Organisation</source>
+				<target>Mitglieds-Organisation</target>
+			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_person.memberorg.description" approved="yes">
+				<source>The name of the organisation, which is a member</source>
+				<target>Name der Organisation, die Mitglied ist</target>
 			</trans-unit>
 		</body>
 	</file>

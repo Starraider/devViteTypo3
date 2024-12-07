@@ -868,6 +868,9 @@
 			<trans-unit id="tx_leseohren_domain_model_person.mandatsreferenz">
 				<source>Mandate Reference</source>
 			</trans-unit>
+            <trans-unit id="tx_leseohren_domain_model_person.memberorg" approved="yes">
+				<source>Member Organization</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

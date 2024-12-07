@@ -39,6 +39,7 @@ return [
                     organizations,
                 --div--;Mitgliedschaft,
                     --palette--;;membershipPalette,
+                    memberorg,
                     --palette--;;paymentPalette,
                     --palette--;;bankaccountPalette,
                     paypal,
@@ -576,6 +577,18 @@ return [
                 'eval' => ''
             ],
         ],
+        'memberorg' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.memberorg',
+            'description' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.memberorg.description',
+            'displayCond' => 'FIELD:membership_type:=:4',
+            'config' => [
+                'type' => 'input',
+                'size' => 34,
+                'eval' => 'trim',
+                'default' => ''
+            ],
+        ],
         'mandatsreferenz' => [
             'exclude' => true,
             'label' => 'LLL:EXT:leseohren/Resources/Private/Language/locallang_db.xlf:tx_leseohren_domain_model_person.mandatsreferenz',
@@ -586,7 +599,8 @@ return [
                 'size' => 34,
                 'min' => 0,
                 'max' => 34,
-                'eval' => 'alphanum,nospace',
+                'eval' => 'trim,is_in',
+                'is_in' => 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .,+-/',
                 'default' => ''
             ],
         ],
