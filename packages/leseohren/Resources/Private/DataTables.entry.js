@@ -14,20 +14,11 @@ import DataTable from 'datatables.net-bs5'
 import 'datatables.net-buttons-bs5'
 import 'datatables.net-buttons/js/buttons.html5.mjs'
 import 'datatables.net-buttons/js/buttons.print.mjs'
-//import DateTime from 'datatables.net-datetime'
 import 'datatables.net-responsive-bs5'
 import 'datatables.net-searchpanes-bs5'
 import 'datatables.net-select-bs5'
 import languageDE from 'datatables.net-plugins/i18n/de-DE.mjs'
-//import 'datatables.net-plugins/sorting/datetime-moment.js'
-//const now = DateTime.local()
-//console.log(DateTime.now().toFormat('dd.MM.yyyy'))
-//DataTable.use(DateTime)
-//DataTable.datetime('dd.MM.yyyy')
-//DataTable.datetime('yyyy-MM-dd')
 
-// Add this date formatting function
-//DataTable.datetime('dd.MM.yyyy')
 DataTable.use(luxon)
 let tablePersonList = new DataTable('#personList', {
   select: true,

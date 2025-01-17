@@ -4,4 +4,5 @@ import liveReload from 'vite-plugin-live-reload'
 
 export default defineConfig({
   plugins: [typo3(), liveReload('packages/**/*.php', 'packages/**/*.html')],
+  esbuild: { legalComments: 'none' },
 })
