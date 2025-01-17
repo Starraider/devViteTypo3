@@ -1,0 +1,47 @@
+{
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "packages/leseohren/Resources/Private/DataTables.entry.js": {
+    "file": "assets/DataTables.entry-DQbqGy9_.js",
+    "name": "DataTables.entry",
+    "src": "packages/leseohren/Resources/Private/DataTables.entry.js",
+    "isEntry": true,
+    "css": [
+      "assets/DataTables-AI0mAx9Z.css"
+    ]
+  },
+  "packages/leseohren/Resources/Private/Datepicker.entry.js": {
+    "file": "assets/Datepicker.entry-B9RkEkFI.js",
+    "name": "Datepicker.entry",
+    "src": "packages/leseohren/Resources/Private/Datepicker.entry.js",
+    "isEntry": true
+  },
+  "packages/leseohren/Resources/Private/ext.leseohren.entry.js": {
+    "file": "assets/ext.leseohren.entry-Bfw_oO43.js",
+    "name": "ext.leseohren.entry",
+    "src": "packages/leseohren/Resources/Private/ext.leseohren.entry.js",
+    "isEntry": true,
+    "css": [
+      "assets/ext.leseohren-jfEk34mi.css"
+    ]
+  },
+  "packages/vite_base_sitepackage/Resources/Private/Main.entry.js": {
+    "file": "assets/Main.entry-CleZ-H6E.js",
+    "name": "Main.entry",
+    "src": "packages/vite_base_sitepackage/Resources/Private/Main.entry.js",
+    "isEntry": true,
+    "css": [
+      "assets/Main-BhCMYEM4.css"
+    ],
+    "assets": [
+      "assets/bootstrap-icons-BtvjY1KL.woff2",
+      "assets/bootstrap-icons-BOrJxbIo.woff"
+    ]
+  }
+}
