@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.7.0](https://github.com/Starraider/devViteTypo3/compare/v1.6.0...v1.7.0) (2025-01-17)
+
+
+### Features
+
+* Add member organization field to Person model and update related files ([2d8a091](https://github.com/Starraider/devViteTypo3/commit/2d8a091c42cfa959c9e643eb3d757967e705dbce))
+* Add new mandatsreferenz to backend ([1a0a6b7](https://github.com/Starraider/devViteTypo3/commit/1a0a6b7c03086b2aba0299b49c0f58fce4d1cfb2))
+* Add new present function ([65daa95](https://github.com/Starraider/devViteTypo3/commit/65daa95b5fb8aaeab1e3ffcee88d2f99d29f3215))
+* Import new field mandatsreferenz ([c9a6284](https://github.com/Starraider/devViteTypo3/commit/c9a62840d0315129ee3dc0e523a2135414df9dde))
+* New field "mandatsreferenz" in frontend and form ([92f474d](https://github.com/Starraider/devViteTypo3/commit/92f474d2c74949d1a2c4ec43e5cf6026f8129669))
+* Update TYPO3 package dependencies and enhance language files ([9b98612](https://github.com/Starraider/devViteTypo3/commit/9b986127d38bcdf10d4566ebed984f2cb3570217))
+
+
+### Miscellaneous Chores
+
+* Update .gitignore, package-lock.json, and various files for improved asset handling and dependency management ([b4d704e](https://github.com/Starraider/devViteTypo3/commit/b4d704e43fc077d06020725e089aa31a30f1bcff))
+* Update composer.lock and deploy configuration ([ffacae5](https://github.com/Starraider/devViteTypo3/commit/ffacae5cbaf51ce98220b88ba912421d819caaf0))
+* Update dependencies ([3d33b2a](https://github.com/Starraider/devViteTypo3/commit/3d33b2a8f7ca6f6c167a7cb9223ddf507b66e85e))
+
 ## [1.6.0](https://github.com/Starraider/devViteTypo3/compare/v1.5.0...v1.6.0) (2024-11-25)
 
 
