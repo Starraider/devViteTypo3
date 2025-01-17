@@ -48,6 +48,8 @@
 ### TYPO3 ###
 /var/
 /public/*
+!/public/_assets/vite/assets
+!/public/_assets/vite/assets/*
 !/public/build
 !/public/typo3conf
 /public/typo3conf/*
@@ -58,6 +60,7 @@
 !/public/fileadmin/.htaccess
 !/public/fileadmin/index.html
 !/public/.htaccess
+
 
 
 ### secure files

@@ -10,8 +10,7 @@ Get going quickly with TYPO3 CMS and Vite.
 ## Vite
 
 ```bash
-nvm use system
-npm run build
+ddev vite build
 ```
 
 ## Deployment
