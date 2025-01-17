@@ -11,7 +11,7 @@
 // third-party stylesheets
 //
 @import "bootstrap/scss/bootstrap";
-@import "bootstrap-icons/font/bootstrap-icons";
+//@import "bootstrap-icons/font/bootstrap-icons";
 
 // Bootstrap Compat
 @import "../../../../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/bootstrap5/compat/text";
@@ -59,7 +59,7 @@
 
 @import "../../../../../vendor/bk2k/bootstrap-package/Resources/Public/Scss/plugins/photoswipe";
 
-@import 'vanillajs-datepicker/sass/datepicker';
+//@import 'vanillajs-datepicker/sass/datepicker';
 //
 // base
 // boilerplate used throughout the entire site
@@ -78,6 +78,7 @@
 // plugins
 // TYPO3 plugins
 //
+@import "EXT:leseohren/Resources/Private/Scss/Main.entry.scss";
 @import "plugins/plugins";
 //@import "plugins/forms";
 
