@@ -25,6 +25,8 @@ CREATE TABLE tx_leseohren_domain_model_person (
 	membership_type int(11) DEFAULT '0' NOT NULL,
 	membership_fee varchar(255) NOT NULL DEFAULT '',
 	payment_method int(11) DEFAULT '0' NOT NULL,
+    memberorg varchar(255) NOT NULL DEFAULT '',
+    mandatsreferenz varchar(255) NOT NULL DEFAULT '',
 	iban varchar(255) NOT NULL DEFAULT '',
 	swift varchar(255) NOT NULL DEFAULT '',
 	account_owner varchar(255) NOT NULL DEFAULT '',

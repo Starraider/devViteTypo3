@@ -200,7 +200,7 @@
     <div class="card-header text-bg-primary"><f:translate key="tx_leseohren.membership" /></div>
     <div class="card-body">
         <div class="row mb-3">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <label for="membershipType" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_person.membership_type" />:
                 </label>
@@ -212,7 +212,13 @@
                     </v:iterator.loop>
                 </f:form.select>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
+                <label for="memberorg" class="form-label">
+                    <f:translate key="tx_leseohren_domain_model_person.memberorg" />:
+                </label>
+                <f:form.textfield property="memberorg" id="memberorg" class="form-control" />
+            </div>
+            <div class="col-sm-4">
                 <label for="membershipFee" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_person.membership_fee" />:
                 </label>
@@ -220,7 +226,7 @@
             </div>
         </div>
         <div class="row mb-3">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="travelOptions" class="form-label">
                     <f:translate key="tx_leseohren.paymentMethod" />:
                 </label>
@@ -231,6 +237,12 @@
                         </f:form.select.option>
                     </v:iterator.loop>
                 </f:form.select>
+            </div>
+            <div class="col-sm-6">
+                <label for="mandatsreferenz" class="form-label">
+                    <f:translate key="tx_leseohren_domain_model_person.mandatsreferenz" />:
+                </label>
+                <f:form.textfield property="mandatsreferenz" id="mandatsreferenz" class="form-control" />
             </div>
         </div>
         <div class="row mb-3">

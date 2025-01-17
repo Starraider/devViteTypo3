@@ -231,6 +231,13 @@ class Person extends AbstractEntity
     protected $paymentMethod = 0;
 
     /**
+     * mandatsreferenz
+     *
+     * @var string
+     */
+    protected $mandatsreferenz = '';
+
+    /**
      * iban
      *
      * @var string
@@ -264,6 +271,13 @@ class Person extends AbstractEntity
      * @var string
      */
     protected $paypal = '';
+
+    /**
+     * memberorg
+     *
+     * @var string
+     */
+    protected $memberorg = '';
 
     /**
      * fileFuehrungszeugnis
@@ -971,6 +985,26 @@ class Person extends AbstractEntity
     }
 
     /**
+     * Returns the mandatsreferenz
+     *
+     * @return string
+     */
+    public function getMandatsreferenz(): string
+    {
+        return $this->mandatsreferenz;
+    }
+
+    /**
+     * Sets the mandatsreferenz
+     *
+     * @return void
+     */
+    public function setMandatsreferenz(string $mandatsreferenz): void
+    {
+        $this->mandatsreferenz = $mandatsreferenz;
+    }
+
+    /**
      * Returns the iban
      *
      * @return string
@@ -1068,6 +1102,27 @@ class Person extends AbstractEntity
     public function setPaypal(string $paypal): void
     {
         $this->paypal = $paypal;
+    }
+
+    /**
+     * Returns the memberorg
+     *
+     * @return string
+     */
+    public function getMemberorg(): string
+    {
+        return $this->memberorg;
+    }
+
+    /**
+     * Sets the memberorg
+     *
+     * @param string $memberorg
+     * @return void
+     */
+    public function setMemberorg(string $memberorg): void
+    {
+        $this->memberorg = $memberorg;
     }
 
     /**

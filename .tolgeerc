@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.tolgee.io/cli-schema.json",
+  "projectId": 123,
+  "apiUrl": "https://tolgee.skom-service.de",
+  "format": "XLIFF_PHP",
+  "strictNamespace": false,
+  "defaultNamespace": "urn:oasis:names:tc:xliff:document:1.2",
+  "patterns": ["./packages/leseohren/Resources/Private/Language/**/*.xlf"],
+  "push": {
+    "files": [{
+      "path": "./packages/leseohren/Resources/Private/Language/en.xlf",
+      "language": "de"
+    }],
+    "forceMode": "OVERRIDE",
+  },
+  "pull": {
+    "path": "./packages/leseohren/Resources/Private/Language"
+  }
+}

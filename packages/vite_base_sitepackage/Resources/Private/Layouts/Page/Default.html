@@ -1,16 +1,17 @@
 <html   xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
         xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
         data-namespace-typo3-fluid="true">
-<vac:asset.vite
-    manifest="EXT:vite_base_sitepackage/Resources/Public/Vite/manifest.json"
-    entry="EXT:vite_base_sitepackage/Resources/Private/Javascript/Main.entry.js"
+
+<vac:asset.vite entry="EXT:vite_base_sitepackage/Resources/Private/Main.entry.js"
     scriptTagAttributes="{
         type: 'text/javascript',
         async: 1
     }"
     addCss="1"
     priority="1"
+    useNonce="1"
 />
+
 
 <div id="top"></div>
 <div class="body-bg{f:if(condition:theme.navigation.type, then:' body-bg-{theme.navigation.type}')}">

@@ -16,6 +16,12 @@
                         <v:l key="tx_leseohren_domain_model_person.membership_type" />:
                     </strong><br />
                     <v:l key="tx_leseohren.membershipType.{person.membershipType}" /><br />
+                    <f:if condition="{person.memberorg}">
+                        <strong>
+                            <f:translate key="tx_leseohren_domain_model_person.memberorg" />:
+                        </strong><br />
+                        <span class="text-danger">{person.memberorg}</span><br />
+                    </f:if>
                     <strong>
                         <v:l key="tx_leseohren_domain_model_person.membership_fee" />:
                     </strong><br />
@@ -32,6 +38,20 @@
                     <f:case value="3"><i class="bi bi-paypal"></i>&nbsp;<v:l key="tx_leseohren.paymentMethod.3" /></f:case>
                     <f:defaultCase></f:defaultCase>
                 </f:switch>
+                </br>
+                <strong>
+                    <f:translate key="tx_leseohren_domain_model_person.mandatsreferenz" />:
+                </strong><br />
+                <f:if condition="{person.mandatsreferenz}">
+                    <f:then>
+                        {person.mandatsreferenz}
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{person.paymentMethod} == 1 OR {person.paymentMethod} == 3">
+                            <span class="text-danger">Fehlt!</span>
+                        </f:if>
+                    </f:else>
+                </f:if>
                 </br>
                 <f:if condition="{person.paymentMethod} == 1">
                     <f:then>

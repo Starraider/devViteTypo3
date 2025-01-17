@@ -20,24 +20,23 @@
             </div>
         </div>
         <div class="row mb-3">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="title" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_present.gift" />:
                 </label>
-                <f:form.select name="gift" options="{gifts}" optionValueField="uid" optionLabelField="title" />
-
+                <f:form.select class="form-select" property="gift" id="gift" options="{gifts}" optionValueField="uid" optionLabelField="title" />
             </div>
-        </div>
-        <div class="row mb-3">
             <div class="col-sm-6">
-                <label for="startDate" class="form-label">
+                <label for="giftDate" class="form-label">
                     <f:translate key="tx_leseohren_domain_model_present.gift_date" />:
                 </label>
                 <f:form.textfield property="giftDate" id="giftDate" class="form-control"
                     value="{present.giftDate -> f:format.date(format: 'd.m.Y')}" />
             </div>
-            <div class="col-sm-6">
-                <f:form.checkbox class="form-check-input" property="given" value="{present.given}" id="given" multiple="0" />
+        </div>
+        <div class="row mb-3">
+            <div class="col-sm-12">
+                <f:form.checkbox class="form-check-input" property="given" value="true" id="given" multiple="0" />
                 <label class="form-check-label" for="given">
                     <f:translate key="tx_leseohren_domain_model_present.given" />
                 </label>

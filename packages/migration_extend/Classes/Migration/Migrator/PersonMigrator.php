@@ -76,6 +76,14 @@ class PersonMigrator extends AbstractMigrator implements MigratorInterface
                 ]
             ]
         ],
+        'mandatsreferenz' => [
+            [
+                'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetMandatsreferenzPropertyHelper::class,
+                'configuration' => [
+
+                ]
+            ]
+        ],
         'membership_fee' => [
             [
                 'className' => \Skom\MigrationExtend\Migration\PropertyHelpers\GetMembershipFeePropertyHelper::class,
